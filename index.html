@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master APUSH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0d0f;
+      --surface: #141418;
+      --surface-soft: #17171d;
+      --accent: #5b5bd6;
+      --accent-soft: rgba(91, 91, 214, 0.18);
+      --gold: #e8b84b;
+      --gold-soft: rgba(232, 184, 75, 0.16);
+      --text: #e8e6e0;
+      --muted: #7a7880;
+      --border: rgba(255, 255, 255, 0.06);
+      --raised-shadow: 6px 6px 14px #08080a, -4px -4px 10px #1e1e26;
+      --inset-shadow: inset 4px 4px 10px #08080a, inset -3px -3px 8px #1e1e26;
+      --radius: 14px;
+      --button-radius: 8px;
+      --transition: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+      --container: min(1180px, calc(100% - 48px));
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      position: relative;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 16% 16%, rgba(96, 196, 255, 0.16), transparent 26%),
+        radial-gradient(circle at 84% 12%, rgba(28, 140, 255, 0.16), transparent 24%),
+        radial-gradient(circle at 50% 100%, rgba(91, 91, 214, 0.1), transparent 36%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+      background-size: 96px 96px;
+      mask-image: radial-gradient(circle at center, black 15%, transparent 75%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at center, transparent 40%, rgba(4, 8, 18, 0.3) 100%),
+        linear-gradient(180deg, rgba(4, 8, 18, 0) 0%, rgba(4, 8, 18, 0.18) 100%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .ambient-blobs {
+      position: fixed;
+      inset: -12%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: -2;
+      filter: saturate(118%);
+    }
+
+    .ambient-blob {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.46;
+      filter: blur(82px);
+      will-change: transform, opacity;
+      animation: blob-drift 20s ease-in-out infinite alternate, blob-breathe 12s ease-in-out infinite;
+    }
+
+    .ambient-blob.one {
+      top: 2%;
+      left: 4%;
+      width: 430px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(123, 230, 255, 0.74) 0%, rgba(38, 142, 255, 0.42) 44%, rgba(0, 0, 0, 0) 78%);
+      animation-delay: -5s;
+    }
+
+    .ambient-blob.two {
+      top: 10%;
+      right: 2%;
+      width: 360px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(86, 171, 255, 0.66) 0%, rgba(24, 113, 230, 0.34) 48%, rgba(0, 0, 0, 0) 78%);
+      animation-duration: 24s, 12s;
+      animation-delay: -8s;
+    }
+
+    .ambient-blob.three {
+      bottom: 8%;
+      left: 22%;
+      width: 500px;
+      height: 340px;
+      background: radial-gradient(circle, rgba(70, 146, 255, 0.34) 0%, rgba(34, 74, 172, 0.2) 50%, rgba(0, 0, 0, 0) 78%);
+      animation-duration: 28s, 14s;
+      animation-delay: -12s;
+    }
+
+    .ambient-blob.four {
+      bottom: -4%;
+      right: 10%;
+      width: 300px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(232, 184, 75, 0.14) 0%, rgba(91, 91, 214, 0.16) 54%, rgba(0, 0, 0, 0) 78%);
+      opacity: 0.24;
+      animation-duration: 18s, 10s;
+      animation-delay: -7s;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    section {
+      scroll-margin-top: 112px;
+    }
+
+    .site-header {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      width: var(--container);
+      transform: translateX(-50%);
+      z-index: 30;
+    }
+
+    .nav-shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 18px;
+      background: rgba(20, 20, 24, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 999px;
+      box-shadow: var(--raised-shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.86rem;
+      white-space: nowrap;
+    }
+
+    .brand::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--gold));
+      box-shadow: 0 0 18px rgba(91, 91, 214, 0.35);
+    }
+
+    .nav-links {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 2px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      transition: color var(--transition), background-color var(--transition), box-shadow var(--transition);
+      white-space: nowrap;
+    }
+
+    .nav-link.is-active {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+      box-shadow: var(--inset-shadow);
+    }
+
+    .nav-link:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .nav-underline {
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(91, 91, 214, 0.45);
+      opacity: 0;
+      transition: transform 200ms ease, width 200ms ease, opacity 200ms ease;
+      pointer-events: none;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 144px 24px 72px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(20px);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .hero-glow-one {
+      width: 320px;
+      height: 320px;
+      top: 14%;
+      left: 6%;
+      background: radial-gradient(circle, rgba(91, 91, 214, 0.3), transparent 70%);
+    }
+
+    .hero-glow-two {
+      width: 360px;
+      height: 360px;
+      right: 4%;
+      bottom: 10%;
+      background: radial-gradient(circle, rgba(232, 184, 75, 0.22), transparent 72%);
+    }
+
+    .particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.95), rgba(91, 91, 214, 0.14));
+      animation: drift var(--duration, 22s) linear infinite;
+      opacity: var(--opacity, 0.14);
+    }
+
+    .particle.gold {
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(232, 184, 75, 0.2));
+    }
+
+    .hero-copy {
+      position: relative;
+      width: min(840px, 100%);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity var(--transition), transform var(--transition);
+    }
+
+    body.is-loaded .hero-copy {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .eyebrow,
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(20, 20, 24, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--muted);
+      box-shadow: var(--raised-shadow);
+      font-size: 0.84rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before,
+    .section-label::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--gold));
+    }
+
+    .hero h1 {
+      margin: 24px 0 18px;
+      font-size: clamp(3.7rem, 10vw, 7rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      background: linear-gradient(110deg, var(--accent), #8b86ff, var(--gold), #f6da8f);
+      background-size: 220% 220%;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: gradient-shift 8s ease infinite;
+    }
+
+    .hero-subtitle {
+      margin: 0 auto;
+      max-width: 720px;
+      color: var(--text);
+      font-size: clamp(1.05rem, 2.8vw, 1.36rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 172px;
+      padding: 14px 20px;
+      border-radius: var(--button-radius);
+      border: 1px solid transparent;
+      box-shadow: var(--raised-shadow);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background-color var(--transition), color var(--transition);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button:active {
+      transform: translateY(1px);
+      box-shadow: var(--inset-shadow);
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, rgba(91, 91, 214, 0.9), rgba(232, 184, 75, 0.9));
+      color: #fffdf6;
+    }
+
+    .button-primary:hover {
+      box-shadow: 0 12px 26px rgba(91, 91, 214, 0.18), var(--raised-shadow);
+    }
+
+    .button-ghost {
+      background: var(--surface);
+      color: var(--text);
+      border-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .content-section {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 0 0 84px;
+    }
+
+    .section-head {
+      margin-bottom: 34px;
+      max-width: 760px;
+    }
+
+    .section-head h2 {
+      margin: 20px 0 12px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .period-grid,
+    .feature-strip,
+    .flow-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .period-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .feature-strip {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .flow-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      position: relative;
+      align-items: start;
+    }
+
+    .flow-grid::before {
+      content: "";
+      position: absolute;
+      top: 34px;
+      left: 12%;
+      right: 12%;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(91, 91, 214, 0.08), rgba(91, 91, 214, 0.62), rgba(232, 184, 75, 0.42), rgba(232, 184, 75, 0.08));
+      z-index: 0;
+    }
+
+    .reveal-card {
+      opacity: 0;
+      transform: translateY(20px) scale(0.985);
+      transition: opacity var(--transition), transform var(--transition), box-shadow var(--transition), border-color var(--transition), background-color var(--transition), color var(--transition);
+      will-change: transform, opacity;
+    }
+
+    .reveal-card.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .period-card,
+    .feature-card,
+    .step-card,
+    .period-detail {
+      background: linear-gradient(180deg, rgba(23, 23, 29, 0.96), rgba(20, 20, 24, 0.96));
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      box-shadow: var(--raised-shadow);
+    }
+
+    .period-card {
+      position: relative;
+      width: 100%;
+      padding: 22px;
+      text-align: left;
+      color: inherit;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .period-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(91, 91, 214, 0.18), transparent 34%),
+        radial-gradient(circle at bottom left, rgba(232, 184, 75, 0.12), transparent 28%);
+      opacity: 0;
+      transition: opacity var(--transition);
+      pointer-events: none;
+    }
+
+    .period-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      border-color: rgba(91, 91, 214, 0.34);
+      box-shadow: 10px 10px 24px #070709, -6px -6px 16px #20202a, 0 0 0 1px rgba(91, 91, 214, 0.14), 0 0 28px rgba(91, 91, 214, 0.12);
+    }
+
+    .period-card:hover::before {
+      opacity: 1;
+    }
+
+    .period-card.is-active {
+      border-color: rgba(232, 184, 75, 0.34);
+      box-shadow: var(--inset-shadow), 0 0 0 1px rgba(232, 184, 75, 0.12);
+      transform: translateY(0) scale(1);
+    }
+
+    .period-card.is-active::before {
+      opacity: 1;
+    }
+
+    .period-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .period-chip strong {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .period-range {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.02rem;
+      color: var(--text);
+    }
+
+    .period-theme {
+      margin: 0;
+      font-size: 1.45rem;
+      line-height: 1.14;
+      letter-spacing: -0.03em;
+    }
+
+    .period-note {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .period-detail {
+      display: grid;
+      grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+      gap: 28px;
+      margin-top: 26px;
+      padding: 28px;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+
+    .period-detail.is-swapping {
+      opacity: 0.7;
+      transform: translateY(4px);
+    }
+
+    .detail-meta {
+      padding-right: 10px;
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .detail-label {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .detail-title {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .detail-range {
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .detail-theme {
+      display: inline-flex;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(91, 91, 214, 0.12);
+      color: var(--text);
+      border: 1px solid rgba(91, 91, 214, 0.16);
+      box-shadow: var(--inset-shadow);
+    }
+
+    .detail-body p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 58ch;
+    }
+
+    .detail-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .detail-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--text);
+    }
+
+    .detail-list li::before {
+      content: "";
+      position: absolute;
+      top: 0.65em;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--gold));
+      box-shadow: 0 0 12px rgba(91, 91, 214, 0.24);
+    }
+
+    .feature-card,
+    .step-card {
+      display: block;
+      position: relative;
+      padding: 22px 20px;
+      overflow: hidden;
+    }
+
+    .feature-card::before,
+    .step-card::before {
+      content: "";
+      position: absolute;
+      inset: auto auto 0 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(91, 91, 214, 0.32), rgba(232, 184, 75, 0));
+    }
+
+    .feature-card:hover,
+    .step-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .feature-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      background: rgba(91, 91, 214, 0.11);
+      color: var(--accent);
+      box-shadow: var(--inset-shadow);
+    }
+
+    .feature-card:nth-child(2n) .feature-icon,
+    .step-card:nth-child(2n) .step-number {
+      background: rgba(232, 184, 75, 0.1);
+      color: var(--gold);
+    }
+
+    .feature-card h3,
+    .step-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      letter-spacing: -0.02em;
+    }
+
+    .feature-card p,
+    .step-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .step-card {
+      z-index: 1;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      background: rgba(91, 91, 214, 0.12);
+      color: var(--accent);
+      font-weight: 600;
+      box-shadow: var(--raised-shadow);
+    }
+
+    .footer-note {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 0 0 56px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    @keyframes gradient-shift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes drift {
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      50% {
+        transform: translate3d(var(--drift-x), var(--drift-y), 0) scale(1.08);
+      }
+      100% {
+        transform: translate3d(calc(var(--drift-x) * -1), calc(var(--drift-y) * -1), 0) scale(0.94);
+      }
+    }
+
+    @keyframes blob-drift {
+      0% {
+        transform: translate3d(-4%, -2%, 0) scale(0.96);
+      }
+
+      50% {
+        transform: translate3d(5%, 3%, 0) scale(1.04);
+      }
+
+      100% {
+        transform: translate3d(-2%, 6%, 0) scale(0.99);
+      }
+    }
+
+    @keyframes blob-breathe {
+      0%,
+      100% {
+        opacity: 0.28;
+      }
+
+      50% {
+        opacity: 0.58;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .period-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feature-strip {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .period-detail {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-meta {
+        padding-right: 0;
+        padding-bottom: 20px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .site-header {
+        top: 12px;
+      }
+
+      .nav-shell {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 24px;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .feature-strip,
+      .flow-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .flow-grid::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --container: min(100%, calc(100% - 28px));
+      }
+
+      .hero {
+        padding-top: 160px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 18vw, 4.5rem);
+      }
+
+      .period-grid,
+      .feature-strip,
+      .flow-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .period-card,
+      .feature-card,
+      .step-card,
+      .period-detail {
+        padding: 20px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .hero-copy,
+      .reveal-card {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient-blobs" aria-hidden="true">
+    <span class="ambient-blob one"></span>
+    <span class="ambient-blob two"></span>
+    <span class="ambient-blob three"></span>
+    <span class="ambient-blob four"></span>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary">
+      <a class="brand" href="#top">Master APUSH</a>
+      <div class="nav-links" id="nav-links">
+        <a class="nav-link is-active" href="#top">Home</a>
+        <a class="nav-link" href="#timeline">Timeline</a>
+        <a class="nav-link" href="#features">Tools</a>
+        <a class="nav-link" href="#how-to">Method</a>
+        <span class="nav-underline" id="nav-underline" aria-hidden="true"></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top" data-nav-section>
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="particles" id="particles" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <span class="eyebrow">Premium APUSH Study Guide</span>
+        <h1>Master APUSH</h1>
+        <p class="hero-subtitle" id="home-hero-subtitle">Live chapters will appear here as their textbook data is integrated into the site.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="timeline.html">Start Timeline</a>
+          <a class="button button-ghost" href="#chapter-focus">Browse Live Chapters</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="timeline" data-nav-section>
+      <div class="section-head">
+        <span class="section-label">Current Chapters</span>
+        <h2 id="chapter-focus">Study the live chapter builds.</h2>
+        <p id="chapter-focus-copy">The chapter cards below are generated from the loaded source-backed chapter files.</p>
+      </div>
+
+      <div class="period-grid" id="chapter-grid" data-stagger-group>
+      </div>
+
+      <div class="period-detail" id="period-detail" aria-live="polite">
+        <div class="detail-meta">
+          <p class="detail-label">Selected Chapter</p>
+          <h3 class="detail-title" id="detail-title">Live Chapter</h3>
+          <p class="detail-range" id="detail-range">Period data loads here</p>
+          <span class="detail-theme" id="detail-theme">Source-backed chapter</span>
+        </div>
+        <div class="detail-body">
+          <p id="detail-summary">Use the chapter cards to inspect the loaded APUSH chapter builds and compare their central themes.</p>
+          <ul class="detail-list" id="detail-list">
+            <li>Each card is generated from the active chapter data files.</li>
+            <li>The detail panel highlights summary themes and major takeaways.</li>
+            <li>Use the Notes Study Map and term-definition flashcards to turn those chapter patterns into review and argument practice.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="content-section" id="features" data-nav-section>
+      <div class="section-head">
+        <span class="section-label">Study Toolkit</span>
+        <h2>Built for timeline control, recall, and writing speed.</h2>
+        <p>Use the page as a compact review hub before quizzes, SAQs, LEQs, DBQs, or a full unit reset.</p>
+      </div>
+
+      <div class="feature-strip" data-stagger-group>
+        <a class="feature-card reveal-card" data-reveal href="timeline.html" aria-label="Open the APUSH vertical timeline page">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 4v16"></path>
+              <path d="M12 8v12"></path>
+              <path d="M16 2v20"></path>
+              <path d="M5 6h6"></path>
+              <path d="M9 14h7"></path>
+            </svg>
+          </span>
+          <h3>Vertical Timeline</h3>
+          <p>Track continuity and change over time without losing chronology.</p>
+        </a>
+
+        <a class="feature-card reveal-card" data-reveal href="notes.html" aria-label="Open the APUSH notes page">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 4.5h7l3 3V19a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1Z"></path>
+              <path d="M14 4.5V8h3"></path>
+              <path d="M9 11h6"></path>
+              <path d="M9 15h6"></path>
+            </svg>
+          </span>
+          <h3>Detailed Notes</h3>
+          <p>Use the expanded Study Map to move through overview, context, events, figures, vocabulary, and essay prep without cramped navigation.</p>
+        </a>
+
+        <a class="feature-card reveal-card" data-reveal href="practice.html?tool=flashcards#flashcards" aria-label="Open the APUSH flashcards tool">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="7" width="12" height="10" rx="2"></rect>
+              <path d="M9 4h10v10"></path>
+            </svg>
+          </span>
+          <h3>Flashcards</h3>
+          <p>Flip vocabulary terms to reveal their definitions and descriptions with a clean front-to-back recall flow.</p>
+        </a>
+
+        <a class="feature-card reveal-card" data-reveal href="practice.html?tool=mcq#mcq" aria-label="Open the APUSH practice quiz tool">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11.5 11.5 14 16 9.5"></path>
+              <circle cx="12" cy="12" r="8"></circle>
+            </svg>
+          </span>
+          <h3>Practice Quizzes</h3>
+          <p>Stress-test recall before the exam catches weak links in your timeline.</p>
+        </a>
+
+        <a class="feature-card reveal-card" data-reveal href="practice.html?tool=essay#essay" aria-label="Open the APUSH essay builder tool">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 17 9-9 3 3-9 9H6v-3Z"></path>
+              <path d="m13 7 3 3"></path>
+            </svg>
+          </span>
+          <h3>Essay Builder</h3>
+          <p>Translate notes into thesis, evidence, sourcing, and contextualization.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="content-section" id="how-to" data-nav-section>
+      <div class="section-head">
+        <span class="section-label">How To Use</span>
+        <h2>Review the chapter in three deliberate moves.</h2>
+        <p>Work from chronology to theme, then theme to argument. That keeps recall usable under timed pressure.</p>
+      </div>
+
+      <div class="flow-grid" data-stagger-group>
+        <article class="step-card reveal-card" data-reveal>
+          <span class="step-number">1</span>
+          <h3>Start with the live chapter.</h3>
+          <p>Lock in the range, turning points, and central theme before you try to write or quiz on it.</p>
+        </article>
+
+        <article class="step-card reveal-card" data-reveal>
+          <span class="step-number">2</span>
+          <h3>Link events to themes.</h3>
+          <p>Connect politics, economics, society, and foreign policy so facts become patterns instead of isolated names.</p>
+        </article>
+
+        <article class="step-card reveal-card" data-reveal>
+          <span class="step-number">3</span>
+          <h3>Practice the argument.</h3>
+          <p>Turn those patterns into thesis statements, contextualization, and evidence chains for AP-style writing.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <p class="footer-note">Master the chronology, then use it to explain change, continuity, causation, and comparison.</p>
+
+  <script src="chapter-manifest.js"></script>
+  <script src="chapter-loader.js"></script>
+  <script>
+    window.chapterDataReady.then(() => {
+      const body = document.body;
+      const particlesRoot = document.getElementById("particles");
+      const revealGroups = document.querySelectorAll("[data-stagger-group]");
+      let revealItems = [];
+      let periodCards = [];
+      const chapterGrid = document.getElementById("chapter-grid");
+      const heroSubtitle = document.getElementById("home-hero-subtitle");
+      const chapterFocusCopy = document.getElementById("chapter-focus-copy");
+      const periodDetail = document.getElementById("period-detail");
+      const detailTitle = document.getElementById("detail-title");
+      const detailRange = document.getElementById("detail-range");
+      const detailTheme = document.getElementById("detail-theme");
+      const detailSummary = document.getElementById("detail-summary");
+      const detailList = document.getElementById("detail-list");
+      const navLinks = document.getElementById("nav-links");
+      const underline = document.getElementById("nav-underline");
+      const navLinkItems = Array.from(document.querySelectorAll(".nav-link"));
+      const navSections = Array.from(document.querySelectorAll("[data-nav-section]"));
+      const chapterData = (window.getChapterConfigs ? window.getChapterConfigs() : [])
+        .map(({ number, data }) => ({ number, short: `Chapter ${number}`, data }))
+        .filter((entry) => entry.data?.chapterMeta);
+
+    const truncate = (text, maxLength = 96) => {
+      const value = String(text || "").trim();
+      return value.length > maxLength ? `${value.slice(0, maxLength - 3).trim()}...` : value;
+    };
+
+    const chapterCards = chapterData.map(({ number, short, data }) => ({
+      number,
+      title: short,
+      range: `${data.chapterMeta.period} - ${data.chapterMeta.dateRange}`,
+      theme: data.chapterMeta.chapterTitle,
+      summary: data.chapterMeta.oneLineSummary,
+      note: truncate(data.chapterMeta.bigPictureThemes?.[0] || data.chapterMeta.oneLineSummary),
+      points: (data.chapterMeta.bigPictureThemes || []).slice(0, 3)
+    }));
+
+    const escapeHtml = (value) => String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/\"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+
+    const createParticles = () => {
+      const particleCount = window.innerWidth < 640 ? 18 : 30;
+
+      for (let index = 0; index < particleCount; index += 1) {
+        const particle = document.createElement("span");
+        const size = 2 + Math.random() * 5;
+        const duration = 18 + Math.random() * 22;
+        const delay = Math.random() * -18;
+        const opacity = 0.08 + Math.random() * 0.16;
+        const driftX = `${(Math.random() - 0.5) * 120}px`;
+        const driftY = `${(Math.random() - 0.5) * 90}px`;
+
+        particle.className = `particle${index % 4 === 0 ? " gold" : ""}`;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        particle.style.setProperty("--duration", `${duration}s`);
+        particle.style.setProperty("--opacity", opacity.toFixed(2));
+        particle.style.setProperty("--drift-x", driftX);
+        particle.style.setProperty("--drift-y", driftY);
+        particle.style.animationDelay = `${delay}s`;
+
+        particlesRoot.appendChild(particle);
+      }
+    };
+
+    const applyRevealDelays = () => {
+      revealGroups.forEach((group) => {
+        const items = group.querySelectorAll("[data-reveal]");
+        items.forEach((item, index) => {
+          item.dataset.revealDelay = String(index * 60);
+        });
+      });
+    };
+
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          const delay = Number(entry.target.dataset.revealDelay || 0);
+          window.setTimeout(() => {
+            entry.target.classList.add("is-visible");
+          }, delay);
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.18,
+        rootMargin: "0px 0px -40px 0px"
+      }
+    );
+
+    const renderChapterCards = () => {
+      chapterGrid.innerHTML = chapterCards.map((card, index) => `
+        <button
+          class="period-card reveal-card${index === 0 ? " is-active" : ""}"
+          type="button"
+          data-reveal
+          data-title="${escapeHtml(card.title)}"
+          data-range="${escapeHtml(card.range)}"
+          data-theme="${escapeHtml(card.theme)}"
+          data-summary="${escapeHtml(card.summary)}"
+          data-points="${escapeHtml(card.points.join("|"))}"
+          aria-pressed="${index === 0 ? "true" : "false"}">
+          <span class="period-chip"><strong>${escapeHtml(card.title)}</strong> Live</span>
+          <span class="period-range">${escapeHtml(card.range)}</span>
+          <h3 class="period-theme">${escapeHtml(card.theme)}</h3>
+          <p class="period-note">${escapeHtml(card.note)}</p>
+        </button>
+      `).join("");
+
+      periodCards = Array.from(chapterGrid.querySelectorAll(".period-card"));
+      revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
+    };
+
+    const updateHomeCopy = () => {
+      const chapterNames = chapterCards.map((card) => card.title);
+      const joinedNames = chapterNames.length <= 2
+        ? chapterNames.join(" and ")
+        : `${chapterNames.slice(0, -1).join(", ")}, and ${chapterNames[chapterNames.length - 1]}`;
+
+      if (heroSubtitle) {
+        heroSubtitle.textContent = `${joinedNames} ${chapterCards.length === 1 ? "is" : "are"} live now. Use the site to move from chapter chronology to theme-level argument practice.`;
+      }
+
+      if (chapterFocusCopy) {
+        chapterFocusCopy.textContent = `The chapter cards below are generated from the ${chapterCards.length} loaded source-backed chapter file${chapterCards.length === 1 ? "" : "s"}.`;
+      }
+    };
+
+    const updatePeriodDetail = (card) => {
+      const points = (card.dataset.points || "").split("|").filter(Boolean);
+
+      periodDetail.classList.add("is-swapping");
+
+      window.setTimeout(() => {
+        detailTitle.textContent = card.dataset.title || "";
+        detailRange.textContent = card.dataset.range || "";
+        detailTheme.textContent = card.dataset.theme || "";
+        detailSummary.textContent = card.dataset.summary || "";
+        detailList.innerHTML = points.map((point) => `<li>${point}</li>`).join("");
+        periodDetail.classList.remove("is-swapping");
+      }, 120);
+    };
+
+    const setActiveCard = (selectedCard) => {
+      periodCards.forEach((card) => {
+        const isActive = card === selectedCard;
+        card.classList.toggle("is-active", isActive);
+        card.setAttribute("aria-pressed", String(isActive));
+      });
+
+      updatePeriodDetail(selectedCard);
+    };
+
+    const setActiveNav = (activeLink) => {
+      if (!activeLink) {
+        underline.style.opacity = "0";
+        return;
+      }
+
+      navLinkItems.forEach((link) => {
+        link.classList.toggle("is-active", link === activeLink);
+      });
+
+      const left = activeLink.offsetLeft - navLinks.scrollLeft;
+      underline.style.width = `${activeLink.offsetWidth}px`;
+      underline.style.transform = `translateX(${left}px)`;
+      underline.style.opacity = "1";
+    };
+
+    const syncNavToScroll = () => {
+      const marker = window.scrollY + window.innerHeight * 0.32;
+      let currentSection = navSections[0];
+
+      navSections.forEach((section) => {
+        if (marker >= section.offsetTop) {
+          currentSection = section;
+        }
+      });
+
+      const activeLink = navLinkItems.find((link) => link.getAttribute("href") === `#${currentSection.id}`);
+      setActiveNav(activeLink);
+    };
+
+      renderChapterCards();
+      updateHomeCopy();
+      applyRevealDelays();
+
+      revealItems.forEach((item) => {
+        revealObserver.observe(item);
+      });
+
+      periodCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          setActiveCard(card);
+        });
+      });
+
+      if (periodCards[0]) {
+        updatePeriodDetail(periodCards[0]);
+      }
+
+      navLinkItems.forEach((link) => {
+        link.addEventListener("click", () => {
+          window.setTimeout(() => setActiveNav(link), 60);
+        });
+      });
+
+      const activateLoadedState = () => {
+        body.classList.add("is-loaded");
+        syncNavToScroll();
+      };
+
+      window.addEventListener("scroll", syncNavToScroll, { passive: true });
+      window.addEventListener("resize", syncNavToScroll);
+
+      if (document.readyState === "complete") {
+        activateLoadedState();
+      } else {
+        window.addEventListener("load", activateLoadedState, { once: true });
+      }
+
+      createParticles();
+      syncNavToScroll();
+    }).catch((error) => {
+      console.error("Failed to initialize chapter data on the home page.", error);
+    });
+  </script>
+
+</body>
+</html>
+
