@@ -96,8 +96,7 @@ const buildNotesPeriod = ({ id, short, data }) => {
           role: figure.title,
           bio: figure.bio,
           significance: figure.significance,
-          perspective: figure.perspective,
-          impact: figure.significance || figure.perspective || figure.title
+          perspective: figure.perspective
         });
       }
     });
@@ -426,12 +425,15 @@ const renderPeriod = (period) => {
 
   const figuresMarkup = period.figures.map((figure) => `
     <article class="figure-card">
-      <h4>${escapeHtml(figure.name)}</h4>
-      <div class="figure-role">${escapeHtml(figure.role)}</div>
-      <p>${renderNoteText(figure.bio, period)}</p>
-      ${figure.significance ? `<p class="figure-extra"><strong>Significance:</strong> ${renderNoteText(figure.significance, period)}</p>` : ""}
-      ${figure.perspective ? `<p class="figure-extra"><strong>Perspective:</strong> ${renderNoteText(figure.perspective, period)}</p>` : ""}
-      <span class="impact-badge">${escapeHtml(figure.impact)}</span>
+      <div class="figure-meta">
+        <h4>${escapeHtml(figure.name)}</h4>
+        <div class="figure-role">${escapeHtml(figure.role)}</div>
+      </div>
+      <div class="figure-body">
+        <p>${renderNoteText(figure.bio, period)}</p>
+        ${figure.significance ? `<p class="figure-extra"><strong>Significance:</strong> ${renderNoteText(figure.significance, period)}</p>` : ""}
+        ${figure.perspective ? `<p class="figure-extra"><strong>Perspective:</strong> ${renderNoteText(figure.perspective, period)}</p>` : ""}
+      </div>
     </article>
   `).join("");
 

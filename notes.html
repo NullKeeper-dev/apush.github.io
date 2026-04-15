@@ -250,9 +250,7 @@
 
     .eyebrow,
     .theme-chip,
-    .big-theme,
-    .impact-badge,
-    .impact-pill {
+    .big-theme {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -1000,44 +998,54 @@
     }
 
     .figure-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: 1fr;
     }
 
     .figure-card {
       padding: 18px;
+      display: grid;
+      grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .figure-meta,
+    .figure-body {
+      min-width: 0;
+    }
+
+    .figure-meta {
+      display: grid;
+      align-content: start;
+      gap: 6px;
     }
 
     .figure-card h4 {
-      margin: 0 0 6px;
+      margin: 0;
       font-size: 1rem;
     }
 
     .figure-role {
       color: var(--gold);
       font-size: 0.88rem;
-      margin-bottom: 10px;
+      margin: 0;
+    }
+
+    .figure-body {
+      display: grid;
+      gap: 12px;
     }
 
     .figure-card p {
-      margin: 0 0 12px;
+      margin: 0;
       color: var(--muted);
     }
 
     .figure-extra {
-      margin: 0 0 12px;
+      margin: 0;
       color: rgba(232, 230, 224, 0.88);
       font-size: 0.92rem;
       line-height: 1.75;
-    }
-
-    .impact-badge,
-    .impact-pill {
-      padding: 7px 11px;
-      background: rgba(91, 91, 214, 0.08);
-      color: var(--text);
-      border: 1px solid rgba(91, 91, 214, 0.16);
-      box-shadow: var(--inset-shadow);
-      font-size: 0.8rem;
     }
 
     .vocab-filter {
@@ -1322,6 +1330,10 @@
         grid-template-columns: 1fr;
       }
 
+      .figure-card {
+        grid-template-columns: 1fr;
+      }
+
       .vocab-row {
         grid-template-columns: 1fr;
       }
@@ -1425,8 +1437,6 @@
 
       .theme-chip,
       .big-theme,
-      .impact-badge,
-      .impact-pill,
       .event-date,
       .period-number {
         color: #111111 !important;
