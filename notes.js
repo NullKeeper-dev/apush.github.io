@@ -240,6 +240,7 @@ const state = {
 
 let sectionAnchors = [];
 let vocabHighlightTimer = 0;
+let noteLinkIdCounter = 0;
 
 const escapeHtml = (value) => String(value)
   .replace(/&/g, "&amp;")
@@ -249,6 +250,19 @@ const escapeHtml = (value) => String(value)
   .replace(/'/g, "&#39;");
 
 const getPeriodById = (periodId) => periods.find((period) => period.id === periodId) || null;
+
+const ensureElementId = (element, prefix = "notes-link") => {
+  if (!element) {
+    return "";
+  }
+
+  if (!element.id) {
+    noteLinkIdCounter += 1;
+    element.id = `${prefix}-${noteLinkIdCounter}`;
+  }
+
+  return element.id;
+};
 
 const renderNoteText = (value, period) => {
   const text = String(value || "");
@@ -656,15 +670,12 @@ const getPreviewClearance = (gap = 18) => {
   return previewTop + previewHeight + gap;
 };
 
-const getCenteredVocabularyOffset = (target, previewGap = 22) => {
-  const previewClearance = getPreviewClearance(previewGap);
+const getCenteredViewportOffset = (target, minimumTop = 118) => {
   const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
   const targetHeight = target.getBoundingClientRect().height || 0;
-  const viewportBottomPadding = 28;
-  const availableHeight = Math.max(0, viewportHeight - previewClearance - viewportBottomPadding);
-  const centeredOffset = previewClearance + Math.max(18, (availableHeight - targetHeight) / 2);
+  const centeredOffset = Math.max(18, (viewportHeight - targetHeight) / 2);
 
-  return Math.max(128, centeredOffset);
+  return Math.max(minimumTop, centeredOffset);
 };
 
 const scrollToElement = (target, offset = 118) => {
@@ -694,11 +705,12 @@ const updatePreviewActions = () => {
   }
 };
 
-const captureNoteReturnPoint = () => {
+const captureNoteReturnPoint = (sourceElement = null) => {
   const currentSection = pickCurrentSection();
   state.noteReturnPoint = {
     scrollY: window.scrollY,
-    sectionId: currentSection?.id || state.activeSectionId || `${state.currentPeriodId}-overview`
+    sectionId: currentSection?.id || state.activeSectionId || `${state.currentPeriodId}-overview`,
+    sourceLinkId: ensureElementId(sourceElement, "note-vocab-link")
   };
   updatePreviewActions();
 };
@@ -712,7 +724,7 @@ const openVocabPreview = (periodId, termKey, options = {}) => {
   }
 
   if (options.captureReturn !== false) {
-    captureNoteReturnPoint();
+    captureNoteReturnPoint(options.sourceElement || null);
   }
 
   state.activeVocabPreview = {
@@ -793,7 +805,8 @@ const jumpToVocabularyEntry = () => {
 
   highlightVocabRow(vocabItem.id);
   window.requestAnimationFrame(() => {
-    const offset = getCenteredVocabularyOffset(target, 22);
+    const minimumTop = Math.max(128, getPreviewClearance(16));
+    const offset = getCenteredViewportOffset(target, minimumTop);
     scrollToElement(target, offset);
   });
 };
@@ -811,6 +824,16 @@ const jumpBackToNotes = () => {
     state.openPeriods.add(section.dataset.period);
     updateNavTreeState();
     updateMiniTocState();
+  }
+
+  const sourceElement = returnPoint.sourceLinkId ? document.getElementById(returnPoint.sourceLinkId) : null;
+  if (sourceElement) {
+    window.requestAnimationFrame(() => {
+      const minimumTop = Math.max(118, getPreviewClearance(16));
+      const offset = getCenteredViewportOffset(sourceElement, minimumTop);
+      scrollToElement(sourceElement, offset);
+    });
+    return;
   }
 
   window.scrollTo({
@@ -929,7 +952,7 @@ const handleNotesClick = (event) => {
   const vocabLink = event.target.closest(".note-vocab-link");
   if (vocabLink) {
     event.preventDefault();
-    openVocabPreview(vocabLink.dataset.period, vocabLink.dataset.termKey);
+    openVocabPreview(vocabLink.dataset.period, vocabLink.dataset.termKey, { sourceElement: vocabLink });
     return;
   }
 
