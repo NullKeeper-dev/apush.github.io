@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="search.css">
   <style>
     :root {
       --bg: #0d0d0f;
@@ -1309,6 +1310,13 @@
         <a class="nav-link" href="practice.html">Practice</a>
         <a class="nav-link" href="#top">Top</a>
       </div>
+      <button class="search-trigger" type="button" data-search-open aria-label="Open quick search">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10.5 4a6.5 6.5 0 1 0 4.015 11.615l4.435 4.435 1.414-1.414-4.435-4.435A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"></path>
+        </svg>
+        <span>Search</span>
+        <kbd>Ctrl K</kbd>
+      </button>
     </nav>
   </header>
 
@@ -1359,6 +1367,7 @@
 
   <script src="chapter-manifest.js"></script>
   <script src="chapter-loader.js"></script>
+  <script src="search.js"></script>
   <script src="notes.js"></script>
 </body>
 </html>

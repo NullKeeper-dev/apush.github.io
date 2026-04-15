@@ -144,6 +144,44 @@ const buildNotesPeriod = ({ id, short, data }) => {
 
 const periods = chapterConfigs.map(buildNotesPeriod);
 const maxWeightValue = Math.max(1, ...periods.map((period) => period.weightValue));
+const pageUrl = new URL(window.location.href);
+const requestedChapterId = pageUrl.searchParams.get("chapter");
+const requestedSectionKey = pageUrl.searchParams.get("section");
+
+const getRequestedPeriodId = () => {
+  const hashMatch = pageUrl.hash.match(/^#(ch\d+)-/i);
+  const hashPeriodId = hashMatch ? hashMatch[1].toLowerCase() : "";
+
+  if (periods.some((period) => period.id === hashPeriodId)) {
+    return hashPeriodId;
+  }
+
+  if (periods.some((period) => period.id === requestedChapterId)) {
+    return requestedChapterId;
+  }
+
+  return "";
+};
+
+const getRequestedSectionId = () => {
+  if (pageUrl.hash) {
+    const sectionId = pageUrl.hash.slice(1);
+    if (document.getElementById(sectionId) || sectionId) {
+      return sectionId;
+    }
+  }
+
+  const requestedPeriodId = getRequestedPeriodId();
+  if (requestedPeriodId && requestedSectionKey) {
+    return `${requestedPeriodId}-${requestedSectionKey}`;
+  }
+
+  if (requestedPeriodId) {
+    return `${requestedPeriodId}-overview`;
+  }
+
+  return "";
+};
 
 const navTree = document.getElementById("nav-tree");
 const notesContent = document.getElementById("notes-content");
@@ -157,10 +195,10 @@ const heroChapters = document.getElementById("notes-hero-chapters");
 const heroSections = document.getElementById("notes-hero-sections");
 const heroVocabulary = document.getElementById("notes-hero-vocab");
 
-const defaultPeriodId = periods[0]?.id || "ch19";
+const defaultPeriodId = getRequestedPeriodId() || periods[0]?.id || "ch19";
 
 const state = {
-  activeSectionId: `${defaultPeriodId}-overview`,
+  activeSectionId: getRequestedSectionId() || `${defaultPeriodId}-overview`,
   currentPeriodId: defaultPeriodId,
   openPeriods: new Set(defaultPeriodId ? [defaultPeriodId] : []),
   vocabFilters: Object.fromEntries(periods.map((period) => [period.id, "All"]))
@@ -512,6 +550,33 @@ const updateReadingProgress = () => {
   progressBar.style.transform = `scaleX(${Math.min(1, Math.max(0, progress))})`;
 };
 
+const scrollToRequestedSection = () => {
+  const requestedSectionId = getRequestedSectionId();
+  if (!requestedSectionId) {
+    return;
+  }
+
+  const target = document.getElementById(requestedSectionId);
+  if (!target) {
+    return;
+  }
+
+  state.activeSectionId = requestedSectionId;
+  state.currentPeriodId = target.dataset.period || requestedSectionId.split("-")[0];
+  state.openPeriods.add(state.currentPeriodId);
+  updateNavTreeState();
+  updateMiniTocState();
+
+  const offset = 118;
+  window.requestAnimationFrame(() => {
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({
+      top,
+      behavior: "smooth"
+    });
+  });
+};
+
 const getAnchorMetrics = () => sectionAnchors.map((anchor) => ({
   anchor,
   top: anchor.getBoundingClientRect().top + window.scrollY
@@ -629,6 +694,7 @@ const initializeNotesLayout = () => {
 };
 
 window.requestAnimationFrame(initializeNotesLayout);
+window.requestAnimationFrame(scrollToRequestedSection);
 window.addEventListener("load", initializeNotesLayout);
 
 if (document.fonts?.ready) {

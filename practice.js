@@ -256,6 +256,26 @@ const getToolFromLocation = () => {
   return ["mcq", "flashcards", "essay"].includes(hash) ? hash : null;
 };
 
+const getPeriodParam = (name) => {
+  const value = new URLSearchParams(window.location.search).get(name);
+  return periodMeta.some((period) => period.id === value) ? value : null;
+};
+
+const getPromptIdFromLocation = () => {
+  const explicitPromptId = new URLSearchParams(window.location.search).get("promptId");
+  if (essayPrompts.some((prompt) => prompt.id === explicitPromptId)) {
+    return explicitPromptId;
+  }
+
+  const promptPeriod = getPeriodParam("promptPeriod");
+  if (!promptPeriod) {
+    return null;
+  }
+
+  const matchingPrompt = essayPrompts.find((prompt) => prompt.period === promptPeriod);
+  return matchingPrompt ? matchingPrompt.id : null;
+};
+
 const updateTabIndicator = () => {
   const activeTab = toolTabs.find((tab) => tab.dataset.toolTab === state.activeTool);
 
@@ -1124,6 +1144,22 @@ window.addEventListener("hashchange", () => {
 });
 
 updateHero();
+
+const requestedQuizPeriod = getPeriodParam("period");
+if (requestedQuizPeriod) {
+  state.quiz.selectedPeriods = new Set([requestedQuizPeriod]);
+}
+
+const requestedDeck = getPeriodParam("deck");
+if (requestedDeck) {
+  state.flashcards.deck = requestedDeck;
+}
+
+const requestedPromptId = getPromptIdFromLocation();
+if (requestedPromptId) {
+  state.essay.promptId = requestedPromptId;
+}
+
 renderQuizControls();
 renderQuizStage();
 renderFlashcardDecks();
