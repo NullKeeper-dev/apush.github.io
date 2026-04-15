@@ -576,6 +576,9 @@
 
     .notes-main {
       min-width: 0;
+      display: grid;
+      align-content: start;
+      gap: 18px;
     }
 
     main {
@@ -587,6 +590,102 @@
       max-width: var(--content-width);
       margin: 0 auto;
       line-height: 1.85;
+    }
+
+    .vocab-preview {
+      position: sticky;
+      top: calc(var(--top-offset) + 12px);
+      z-index: 18;
+      max-width: var(--content-width);
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 22px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(18, 26, 42, 0.96), rgba(14, 18, 30, 0.98));
+      border: 1px solid rgba(91, 91, 214, 0.22);
+      box-shadow: 0 20px 42px rgba(5, 8, 18, 0.34), inset 0 0 24px rgba(91, 91, 214, 0.12);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .vocab-preview[hidden] {
+      display: none;
+    }
+
+    .vocab-preview-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .vocab-preview-copy h3 {
+      margin: 6px 0 0;
+      font-size: 1.12rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .vocab-preview-definition {
+      margin: 14px 0 0;
+      color: rgba(232, 230, 224, 0.94);
+      line-height: 1.75;
+    }
+
+    .vocab-preview-context {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .vocab-preview-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .preview-action,
+    .preview-dismiss {
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: border-color var(--transition), background-color var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+
+    .preview-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: var(--raised-shadow);
+    }
+
+    .preview-action.is-primary {
+      background: linear-gradient(135deg, rgba(91, 91, 214, 0.32), rgba(123, 230, 255, 0.12));
+      border-color: rgba(123, 230, 255, 0.24);
+      color: var(--text);
+    }
+
+    .preview-action:hover:not(:disabled),
+    .preview-dismiss:hover {
+      transform: translateY(-1px);
+      border-color: rgba(123, 230, 255, 0.24);
+      color: var(--text);
+    }
+
+    .preview-action:disabled {
+      opacity: 0.45;
+      cursor: default;
+      box-shadow: none;
+    }
+
+    .preview-dismiss {
+      flex: 0 0 auto;
+      min-height: 40px;
+      padding: 10px 12px;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
     }
 
     .period-section {
@@ -753,6 +852,31 @@
     .section-intro {
       margin: 0;
       color: var(--muted);
+    }
+
+    .note-vocab-link {
+      display: inline;
+      margin: 0;
+      padding: 0 0.14em;
+      color: #87cbff;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      text-decoration: underline;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.16em;
+      border-radius: 0.4em;
+      transition: color var(--transition), background-color var(--transition), box-shadow var(--transition);
+    }
+
+    .note-vocab-link:hover {
+      color: #d9f0ff;
+      background: rgba(91, 91, 214, 0.16);
+      box-shadow: 0 0 0 6px rgba(91, 91, 214, 0.08);
+    }
+
+    .note-vocab-link:focus-visible {
+      outline: 2px solid rgba(123, 230, 255, 0.48);
+      outline-offset: 2px;
     }
 
     .theme-meta {
@@ -957,10 +1081,10 @@
       grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
       gap: 18px;
       padding: 18px 20px;
-      max-height: 220px;
+      max-height: 1000px;
       opacity: 1;
       overflow: hidden;
-      transition: max-height var(--transition), opacity var(--transition), padding var(--transition), margin var(--transition), border-color var(--transition);
+      transition: max-height var(--transition), opacity var(--transition), padding var(--transition), margin var(--transition), border-color var(--transition), background-color var(--transition), box-shadow var(--transition);
     }
 
     .vocab-row.is-hidden {
@@ -972,6 +1096,12 @@
       border-width: 0;
       box-shadow: none;
       pointer-events: none;
+    }
+
+    .vocab-row.is-targeted {
+      border-color: rgba(232, 184, 75, 0.34);
+      background: linear-gradient(180deg, rgba(28, 30, 42, 0.98), rgba(21, 21, 28, 0.98));
+      box-shadow: 0 0 0 1px rgba(232, 184, 75, 0.12), var(--raised-shadow);
     }
 
     .term {
@@ -1180,7 +1310,8 @@
       }
 
       .period-topline,
-      .event-head {
+      .event-head,
+      .vocab-preview-head {
         flex-direction: column;
         align-items: flex-start;
       }
@@ -1194,6 +1325,19 @@
       .vocab-row {
         grid-template-columns: 1fr;
       }
+
+      .vocab-preview {
+        top: calc(var(--top-offset) + 4px);
+      }
+
+      .vocab-preview-actions {
+        width: 100%;
+      }
+
+      .preview-action {
+        width: 100%;
+        justify-content: center;
+      }
     }
 
     @media (max-width: 560px) {
@@ -1204,7 +1348,8 @@
       .period-header-card,
       .notes-section,
       .essay-callout,
-      .nav-panel {
+      .nav-panel,
+      .vocab-preview {
         padding: 20px;
       }
 
@@ -1249,6 +1394,7 @@
       .site-header,
       .nav-panel,
       .toc-panel,
+      .vocab-preview,
       .reading-progress,
       .hero-stats {
         display: none !important;
@@ -1350,6 +1496,21 @@
       </aside>
 
       <section class="notes-main">
+        <aside class="vocab-preview" id="vocab-preview" hidden aria-live="polite">
+          <div class="vocab-preview-head">
+            <div class="vocab-preview-copy">
+              <p class="panel-label" id="vocab-preview-eyebrow">Vocabulary Preview</p>
+              <h3 id="vocab-preview-term">Select a vocabulary link in the notes</h3>
+            </div>
+            <button class="preview-dismiss" type="button" data-action="close-vocab-preview" aria-label="Close vocabulary preview">Close</button>
+          </div>
+          <p class="vocab-preview-definition" id="vocab-preview-definition"></p>
+          <p class="vocab-preview-context" id="vocab-preview-context" hidden></p>
+          <div class="vocab-preview-actions">
+            <button class="preview-action is-primary" type="button" id="vocab-preview-jump" data-action="jump-to-vocab">Jump to vocabulary</button>
+            <button class="preview-action" type="button" id="vocab-preview-return" data-action="jump-back-to-notes">Jump back to notes</button>
+          </div>
+        </aside>
         <div class="notes-content" id="notes-content"></div>
       </section>
 

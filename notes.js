@@ -44,6 +44,15 @@ const parseWeightValue = (label) => {
   return Number(values[values.length - 1]);
 };
 
+const normalizeTerm = (value) => String(value || "").trim().toLowerCase();
+
+const escapeRegex = (value) => String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const slugifyFragment = (value) => String(value || "")
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-+|-+$/g, "");
+
 const toThemeKeys = (themes = []) => Array.from(
   new Set(themes.map((theme) => themeKeyMap[theme]).filter(Boolean))
 );
@@ -59,6 +68,25 @@ const mergeThemeKeys = (sections = [], fallback = []) => {
 const buildNotesPeriod = ({ id, short, data }) => {
   const sections = data.notes.sections || [];
   const figureMap = new Map();
+  const vocabulary = (data.vocabulary || []).map((item, index) => {
+    const term = String(item.term || "");
+    const slug = slugifyFragment(term) || `term-${index + 1}`;
+    return {
+      id: `${id}-vocab-${slug}-${index + 1}`,
+      key: normalizeTerm(term),
+      letter: term.charAt(0).toUpperCase(),
+      term,
+      definition: item.definition,
+      context: item.context,
+      apRelevance: item.apRelevance
+    };
+  });
+  const vocabLookup = new Map(vocabulary.map((item) => [item.key, item]));
+  const vocabTerms = Array.from(new Set(vocabulary.map((item) => item.term)))
+    .sort((left, right) => right.length - left.length);
+  const vocabPattern = vocabTerms.length
+    ? new RegExp(`\\b(${vocabTerms.map(escapeRegex).join("|")})\\b`, "gi")
+    : null;
 
   sections.forEach((section) => {
     (section.keyFigures || []).forEach((figure) => {
@@ -116,12 +144,9 @@ const buildNotesPeriod = ({ id, short, data }) => {
       sources: section.primarySourceConnections || []
     })),
     figures: Array.from(figureMap.values()),
-    vocabulary: (data.vocabulary || []).map((item) => ({
-      term: item.term,
-      definition: item.definition,
-      context: item.context,
-      apRelevance: item.apRelevance
-    })),
+    vocabulary,
+    vocabLookup,
+    vocabPattern,
     essay: {
       intro: data.notes.overarchingAnalysis?.complexity || "",
       prompts: [
@@ -194,6 +219,13 @@ const heroSubtitle = document.getElementById("notes-hero-subtitle");
 const heroChapters = document.getElementById("notes-hero-chapters");
 const heroSections = document.getElementById("notes-hero-sections");
 const heroVocabulary = document.getElementById("notes-hero-vocab");
+const vocabPreview = document.getElementById("vocab-preview");
+const vocabPreviewEyebrow = document.getElementById("vocab-preview-eyebrow");
+const vocabPreviewTerm = document.getElementById("vocab-preview-term");
+const vocabPreviewDefinition = document.getElementById("vocab-preview-definition");
+const vocabPreviewContext = document.getElementById("vocab-preview-context");
+const vocabPreviewJump = document.getElementById("vocab-preview-jump");
+const vocabPreviewReturn = document.getElementById("vocab-preview-return");
 
 const defaultPeriodId = getRequestedPeriodId() || periods[0]?.id || "ch19";
 
@@ -201,10 +233,13 @@ const state = {
   activeSectionId: getRequestedSectionId() || `${defaultPeriodId}-overview`,
   currentPeriodId: defaultPeriodId,
   openPeriods: new Set(defaultPeriodId ? [defaultPeriodId] : []),
-  vocabFilters: Object.fromEntries(periods.map((period) => [period.id, "All"]))
+  vocabFilters: Object.fromEntries(periods.map((period) => [period.id, "All"])),
+  activeVocabPreview: null,
+  noteReturnPoint: null
 };
 
 let sectionAnchors = [];
+let vocabHighlightTimer = 0;
 
 const escapeHtml = (value) => String(value)
   .replace(/&/g, "&amp;")
@@ -212,6 +247,48 @@ const escapeHtml = (value) => String(value)
   .replace(/>/g, "&gt;")
   .replace(/"/g, "&quot;")
   .replace(/'/g, "&#39;");
+
+const getPeriodById = (periodId) => periods.find((period) => period.id === periodId) || null;
+
+const renderNoteText = (value, period) => {
+  const text = String(value || "");
+
+  if (!text) {
+    return "";
+  }
+
+  if (!period?.vocabPattern) {
+    return escapeHtml(text);
+  }
+
+  period.vocabPattern.lastIndex = 0;
+  const matches = Array.from(text.matchAll(period.vocabPattern));
+  period.vocabPattern.lastIndex = 0;
+
+  if (!matches.length) {
+    return escapeHtml(text);
+  }
+
+  let cursor = 0;
+  let markup = "";
+
+  matches.forEach((match) => {
+    const index = match.index ?? 0;
+    const matchedText = match[0];
+    const vocabItem = period.vocabLookup.get(normalizeTerm(matchedText));
+
+    if (!vocabItem) {
+      return;
+    }
+
+    markup += escapeHtml(text.slice(cursor, index));
+    markup += `<button class="note-vocab-link" type="button" data-period="${period.id}" data-term-key="${escapeHtml(vocabItem.key)}" data-vocab-id="${escapeHtml(vocabItem.id)}">${escapeHtml(matchedText)}</button>`;
+    cursor = index + matchedText.length;
+  });
+
+  markup += escapeHtml(text.slice(cursor));
+  return markup;
+};
 
 const renderThemeChips = (themeKeys) => themeKeys
   .map((key) => `<span class="theme-chip">${escapeHtml(themeLabels[key])}</span>`)
@@ -266,7 +343,7 @@ const renderPeriod = (period) => {
       <div class="significance-callout">
         <strong>Exam Tips</strong>
         <ul class="arrow-list">
-          ${(period.examTips || []).map((tip) => `<li>${escapeHtml(tip)}</li>`).join("")}
+          ${(period.examTips || []).map((tip) => `<li>${renderNoteText(tip, period)}</li>`).join("")}
         </ul>
       </div>
     `
@@ -278,8 +355,8 @@ const renderPeriod = (period) => {
           <div class="arrow-block">
             <h5>${escapeHtml(block.title)}</h5>
             ${block.items?.length
-              ? `<ul class="arrow-list">${block.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`
-              : `<p>${escapeHtml(block.text || "")}</p>`}
+              ? `<ul class="arrow-list">${block.items.map((item) => `<li>${renderNoteText(item, period)}</li>`).join("")}</ul>`
+              : `<p>${renderNoteText(block.text || "", period)}</p>`}
           </div>
         `).join("")}
       </div>
@@ -295,29 +372,29 @@ const renderPeriod = (period) => {
         </div>
         <span class="event-date">${escapeHtml(event.date)}</span>
       </div>
-      <p>${escapeHtml(event.description)}</p>
+      <p>${renderNoteText(event.description, period)}</p>
       <div class="significance-callout">
         <strong>Significance</strong>
-        <p>${escapeHtml(event.significance)}</p>
+        <p>${renderNoteText(event.significance, period)}</p>
       </div>
       <div class="arrow-grid">
         <div class="arrow-block">
           <h5>Causes</h5>
           <ul class="arrow-list">
-            ${event.causes.map((cause) => `<li>&rarr; ${escapeHtml(cause)}</li>`).join("")}
+            ${event.causes.map((cause) => `<li>&rarr; ${renderNoteText(cause, period)}</li>`).join("")}
           </ul>
         </div>
         <div class="arrow-block">
           <h5>Effects</h5>
           <ul class="arrow-list">
-            ${event.effects.map((effect) => `<li>&rarr; ${escapeHtml(effect)}</li>`).join("")}
+            ${event.effects.map((effect) => `<li>&rarr; ${renderNoteText(effect, period)}</li>`).join("")}
           </ul>
         </div>
         ${event.connections?.length ? `
           <div class="arrow-block">
             <h5>Connections</h5>
             <ul class="arrow-list">
-              ${event.connections.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+              ${event.connections.map((item) => `<li>${renderNoteText(item, period)}</li>`).join("")}
             </ul>
           </div>
         ` : ""}
@@ -325,7 +402,7 @@ const renderPeriod = (period) => {
           <div class="arrow-block">
             <h5>Primary Sources</h5>
             <ul class="arrow-list">
-              ${event.sources.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+              ${event.sources.map((item) => `<li>${renderNoteText(item, period)}</li>`).join("")}
             </ul>
           </div>
         ` : ""}
@@ -337,9 +414,9 @@ const renderPeriod = (period) => {
     <article class="figure-card">
       <h4>${escapeHtml(figure.name)}</h4>
       <div class="figure-role">${escapeHtml(figure.role)}</div>
-      <p>${escapeHtml(figure.bio)}</p>
-      ${figure.significance ? `<p class="figure-extra"><strong>Significance:</strong> ${escapeHtml(figure.significance)}</p>` : ""}
-      ${figure.perspective ? `<p class="figure-extra"><strong>Perspective:</strong> ${escapeHtml(figure.perspective)}</p>` : ""}
+      <p>${renderNoteText(figure.bio, period)}</p>
+      ${figure.significance ? `<p class="figure-extra"><strong>Significance:</strong> ${renderNoteText(figure.significance, period)}</p>` : ""}
+      ${figure.perspective ? `<p class="figure-extra"><strong>Perspective:</strong> ${renderNoteText(figure.perspective, period)}</p>` : ""}
       <span class="impact-badge">${escapeHtml(figure.impact)}</span>
     </article>
   `).join("");
@@ -354,7 +431,7 @@ const renderPeriod = (period) => {
   }).join("");
 
   const vocabMarkup = period.vocabulary.map((item) => `
-    <article class="vocab-row" data-letter="${escapeHtml(item.term.charAt(0).toUpperCase())}" data-period="${period.id}">
+    <article class="vocab-row" id="${escapeHtml(item.id)}" data-letter="${escapeHtml(item.letter)}" data-period="${period.id}" data-term-key="${escapeHtml(item.key)}">
       <div class="term">${escapeHtml(item.term)}</div>
       <div>
         <div class="definition">${escapeHtml(item.definition)}</div>
@@ -378,7 +455,7 @@ const renderPeriod = (period) => {
           </div>
         </div>
         <h2>${escapeHtml(period.title)}</h2>
-        <p>${escapeHtml(period.overview)}</p>
+        <p>${renderNoteText(period.overview, period)}</p>
         <div class="big-theme-row">
           ${period.bigThemes.map((theme) => `<span class="big-theme">${escapeHtml(theme)}</span>`).join("")}
         </div>
@@ -387,7 +464,7 @@ const renderPeriod = (period) => {
 
       <article class="notes-section section-anchor" id="${period.id}-context" data-period="${period.id}" data-label="Historical Context">
         ${renderSectionHeading("Historical Context", period.sectionThemes.context)}
-        <p class="section-intro">${escapeHtml(period.context)}</p>
+        <p class="section-intro">${renderNoteText(period.context, period)}</p>
         ${contextHighlightsMarkup}
       </article>
 
@@ -412,25 +489,25 @@ const renderPeriod = (period) => {
       <article class="notes-section section-anchor" id="${period.id}-essay" data-period="${period.id}" data-label="Essay Tips">
         ${renderSectionHeading("Essay Tips", period.sectionThemes.essay)}
         <div class="essay-callout">
-          <p>${escapeHtml(period.essay.intro || "Use these prompts to move from recall to argument. The strongest answers connect chronology, change over time, and causation instead of listing facts.")}</p>
+          <p>${renderNoteText(period.essay.intro || "Use these prompts to move from recall to argument. The strongest answers connect chronology, change over time, and causation instead of listing facts.", period)}</p>
           <div class="essay-grid">
             <div class="essay-block">
               <h4>Practice Prompts</h4>
               <ul class="essay-list">
-                ${period.essay.prompts.map((prompt) => `<li>${escapeHtml(prompt)}</li>`).join("")}
+                ${period.essay.prompts.map((prompt) => `<li>${renderNoteText(prompt, period)}</li>`).join("")}
               </ul>
             </div>
             <div class="essay-block">
               <h4>LEQ Thesis Models</h4>
               <ul class="essay-list">
-                ${period.essay.theses.map((thesis) => `<li>${escapeHtml(thesis)}</li>`).join("")}
+                ${period.essay.theses.map((thesis) => `<li>${renderNoteText(thesis, period)}</li>`).join("")}
               </ul>
             </div>
             ${period.essay.analysis?.length ? `
               <div class="essay-block">
                 <h4>Analysis Angles</h4>
                 <ul class="essay-list">
-                  ${period.essay.analysis.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+                  ${period.essay.analysis.map((item) => `<li>${renderNoteText(item, period)}</li>`).join("")}
                 </ul>
               </div>
             ` : ""}
@@ -544,6 +621,204 @@ const updateAllVocabFilters = () => {
   periods.forEach((period) => updateVocabPeriod(period.id));
 };
 
+const updateVocabPeriodImmediately = (periodId) => {
+  const rows = Array.from(notesContent.querySelectorAll(`.vocab-row[data-period="${periodId}"]`));
+
+  rows.forEach((row) => {
+    row.style.transition = "none";
+  });
+
+  updateVocabPeriod(periodId);
+
+  // Force layout so the non-animated filter state is committed before scrolling.
+  void notesContent.offsetHeight;
+
+  window.requestAnimationFrame(() => {
+    rows.forEach((row) => {
+      row.style.transition = "";
+    });
+  });
+};
+
+const getPreviewClearance = (gap = 18) => {
+  if (!vocabPreview || vocabPreview.hidden) {
+    return 0;
+  }
+
+  const previewStyles = window.getComputedStyle(vocabPreview);
+  const previewTop = Number.parseFloat(previewStyles.top) || 0;
+  const previewHeight = vocabPreview.getBoundingClientRect().height;
+
+  if (!Number.isFinite(previewHeight) || previewHeight <= 0) {
+    return 0;
+  }
+
+  return previewTop + previewHeight + gap;
+};
+
+const getCenteredVocabularyOffset = (target, previewGap = 22) => {
+  const previewClearance = getPreviewClearance(previewGap);
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+  const targetHeight = target.getBoundingClientRect().height || 0;
+  const viewportBottomPadding = 28;
+  const availableHeight = Math.max(0, viewportHeight - previewClearance - viewportBottomPadding);
+  const centeredOffset = previewClearance + Math.max(18, (availableHeight - targetHeight) / 2);
+
+  return Math.max(128, centeredOffset);
+};
+
+const scrollToElement = (target, offset = 118) => {
+  const top = target.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({
+    top,
+    behavior: "smooth"
+  });
+};
+
+const setPreviewVisibility = (isVisible) => {
+  if (!vocabPreview) {
+    return;
+  }
+
+  vocabPreview.hidden = !isVisible;
+  vocabPreview.classList.toggle("is-active", isVisible);
+};
+
+const updatePreviewActions = () => {
+  if (vocabPreviewJump) {
+    vocabPreviewJump.disabled = !state.activeVocabPreview;
+  }
+
+  if (vocabPreviewReturn) {
+    vocabPreviewReturn.disabled = !state.noteReturnPoint;
+  }
+};
+
+const captureNoteReturnPoint = () => {
+  const currentSection = pickCurrentSection();
+  state.noteReturnPoint = {
+    scrollY: window.scrollY,
+    sectionId: currentSection?.id || state.activeSectionId || `${state.currentPeriodId}-overview`
+  };
+  updatePreviewActions();
+};
+
+const openVocabPreview = (periodId, termKey, options = {}) => {
+  const period = getPeriodById(periodId);
+  const vocabItem = period?.vocabLookup.get(termKey);
+
+  if (!period || !vocabItem || !vocabPreview) {
+    return;
+  }
+
+  if (options.captureReturn !== false) {
+    captureNoteReturnPoint();
+  }
+
+  state.activeVocabPreview = {
+    periodId,
+    termKey,
+    vocabId: vocabItem.id
+  };
+
+  if (vocabPreviewEyebrow) {
+    vocabPreviewEyebrow.textContent = `${period.short} vocabulary preview`;
+  }
+
+  if (vocabPreviewTerm) {
+    vocabPreviewTerm.textContent = vocabItem.term;
+  }
+
+  if (vocabPreviewDefinition) {
+    vocabPreviewDefinition.textContent = vocabItem.definition;
+  }
+
+  if (vocabPreviewContext) {
+    const supportingText = vocabItem.context || "";
+    vocabPreviewContext.hidden = !supportingText;
+    vocabPreviewContext.textContent = supportingText ? `Context: ${supportingText}` : "";
+  }
+
+  setPreviewVisibility(true);
+  updatePreviewActions();
+};
+
+const closeVocabPreview = () => {
+  state.activeVocabPreview = null;
+  setPreviewVisibility(false);
+  updatePreviewActions();
+};
+
+const highlightVocabRow = (vocabId) => {
+  window.clearTimeout(vocabHighlightTimer);
+  notesContent.querySelectorAll(".vocab-row.is-targeted").forEach((row) => {
+    row.classList.remove("is-targeted");
+  });
+
+  const row = document.getElementById(vocabId);
+  if (!row) {
+    return;
+  }
+
+  row.classList.add("is-targeted");
+  vocabHighlightTimer = window.setTimeout(() => {
+    row.classList.remove("is-targeted");
+  }, 2600);
+};
+
+const jumpToVocabularyEntry = () => {
+  const previewState = state.activeVocabPreview;
+  if (!previewState) {
+    return;
+  }
+
+  const period = getPeriodById(previewState.periodId);
+  const vocabItem = period?.vocabLookup.get(previewState.termKey);
+  if (!period || !vocabItem) {
+    return;
+  }
+
+  state.vocabFilters[period.id] = vocabItem.letter;
+  updateVocabPeriodImmediately(period.id);
+  state.currentPeriodId = period.id;
+  state.activeSectionId = `${period.id}-vocabulary`;
+  state.openPeriods.add(period.id);
+  updateNavTreeState();
+  updateMiniTocState();
+
+  const target = document.getElementById(vocabItem.id) || document.getElementById(`${period.id}-vocabulary`);
+  if (!target) {
+    return;
+  }
+
+  highlightVocabRow(vocabItem.id);
+  window.requestAnimationFrame(() => {
+    const offset = getCenteredVocabularyOffset(target, 22);
+    scrollToElement(target, offset);
+  });
+};
+
+const jumpBackToNotes = () => {
+  const returnPoint = state.noteReturnPoint;
+  if (!returnPoint) {
+    return;
+  }
+
+  const section = document.getElementById(returnPoint.sectionId);
+  if (section?.dataset.period) {
+    state.currentPeriodId = section.dataset.period;
+    state.activeSectionId = section.id;
+    state.openPeriods.add(section.dataset.period);
+    updateNavTreeState();
+    updateMiniTocState();
+  }
+
+  window.scrollTo({
+    top: Math.max(0, returnPoint.scrollY),
+    behavior: "smooth"
+  });
+};
+
 const updateReadingProgress = () => {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
   const progress = scrollable <= 0 ? 0 : window.scrollY / scrollable;
@@ -567,13 +842,8 @@ const scrollToRequestedSection = () => {
   updateNavTreeState();
   updateMiniTocState();
 
-  const offset = 118;
   window.requestAnimationFrame(() => {
-    const top = target.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({
-      top,
-      behavior: "smooth"
-    });
+    scrollToElement(target, 118);
   });
 };
 
@@ -656,6 +926,13 @@ const handleNavPanelClick = (event) => {
 };
 
 const handleNotesClick = (event) => {
+  const vocabLink = event.target.closest(".note-vocab-link");
+  if (vocabLink) {
+    event.preventDefault();
+    openVocabPreview(vocabLink.dataset.period, vocabLink.dataset.termKey);
+    return;
+  }
+
   const button = event.target.closest(".vocab-letter");
 
   if (!button || button.disabled) {
@@ -667,15 +944,40 @@ const handleNotesClick = (event) => {
   updateVocabPeriod(period);
 };
 
+const handleVocabPreviewClick = (event) => {
+  const action = event.target.closest("[data-action]")?.dataset.action;
+  if (!action) {
+    return;
+  }
+
+  if (action === "close-vocab-preview") {
+    closeVocabPreview();
+    return;
+  }
+
+  if (action === "jump-to-vocab") {
+    jumpToVocabularyEntry();
+    return;
+  }
+
+  if (action === "jump-back-to-notes") {
+    jumpBackToNotes();
+  }
+};
+
 updateHero();
 renderNotes();
 renderNavTree();
 renderMiniToc();
 updateAllVocabFilters();
 updateNavTreeState();
+updatePreviewActions();
 
 document.getElementById("nav-panel").addEventListener("click", handleNavPanelClick);
 notesContent.addEventListener("click", handleNotesClick);
+if (vocabPreview) {
+  vocabPreview.addEventListener("click", handleVocabPreviewClick);
+}
 
 window.addEventListener("scroll", () => {
   updateReadingProgress();
@@ -696,6 +998,11 @@ const initializeNotesLayout = () => {
 window.requestAnimationFrame(initializeNotesLayout);
 window.requestAnimationFrame(scrollToRequestedSection);
 window.addEventListener("load", initializeNotesLayout);
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && state.activeVocabPreview) {
+    closeVocabPreview();
+  }
+});
 
 if (document.fonts?.ready) {
   document.fonts.ready.then(initializeNotesLayout);
