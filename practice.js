@@ -216,6 +216,21 @@ const shuffle = (items) => {
   return copy;
 };
 
+const shuffleMcqQuestion = (question) => {
+  const shuffledOptions = shuffle(
+    question.options.map((text, index) => ({
+      text,
+      isCorrect: index === question.answer
+    }))
+  );
+
+  return {
+    ...question,
+    options: shuffledOptions.map((option) => option.text),
+    answer: shuffledOptions.findIndex((option) => option.isCorrect)
+  };
+};
+
 const getPeriodMeta = (periodId) => periodMeta.find((period) => period.id === periodId) || {
   id: periodId,
   short: periodId,
@@ -334,7 +349,11 @@ const renderQuizControls = () => {
 };
 
 const startQuiz = (periodIds = Array.from(state.quiz.selectedPeriods)) => {
-  const pool = shuffle(mcqBank.filter((question) => periodIds.includes(question.period)));
+  const pool = shuffle(
+    mcqBank
+      .filter((question) => periodIds.includes(question.period))
+      .map(shuffleMcqQuestion)
+  );
   const questions = pool.slice(0, Math.min(state.quiz.targetCount, pool.length));
 
   state.quiz.session = {
