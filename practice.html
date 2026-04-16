@@ -178,11 +178,23 @@
     }
 
     .site-header {
+      --header-visible-transform: none;
+      --header-hidden-transform: translateY(calc(-100% - 18px));
       position: sticky;
       top: 18px;
       z-index: 30;
       width: var(--page-shell);
       margin: 18px auto 0;
+      transform: var(--header-visible-transform);
+      opacity: 1;
+      transition: transform var(--transition), opacity 220ms ease;
+      will-change: transform, opacity;
+    }
+
+    body.is-mobile-nav-hidden .site-header {
+      transform: var(--header-hidden-transform);
+      opacity: 0;
+      pointer-events: none;
     }
 
     .nav-shell {
@@ -338,8 +350,7 @@
     }
 
     .tool-tabs {
-      position: sticky;
-      top: 102px;
+      position: relative;
       z-index: 20;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1400,10 +1411,6 @@
         padding-top: 78px;
       }
 
-      .tool-tabs {
-        top: 134px;
-      }
-
       .metric-stack,
       .swipe-actions,
       .analysis-grid {
@@ -1668,6 +1675,7 @@
   <script src="chapter-manifest.js"></script>
   <script src="chapter-loader.js"></script>
   <script src="search.js"></script>
+  <script src="mobile-nav.js"></script>
   <script src="practice.js"></script>
 </body>
 </html>

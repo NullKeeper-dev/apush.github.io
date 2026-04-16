@@ -157,12 +157,23 @@
     }
 
     .site-header {
+      --header-visible-transform: translateX(-50%);
+      --header-hidden-transform: translate(-50%, calc(-100% - 18px));
       position: fixed;
       top: 18px;
       left: 50%;
       width: var(--container);
-      transform: translateX(-50%);
+      transform: var(--header-visible-transform);
       z-index: 30;
+      opacity: 1;
+      transition: transform var(--transition), opacity 220ms ease;
+      will-change: transform, opacity;
+    }
+
+    body.is-mobile-nav-hidden .site-header {
+      transform: var(--header-hidden-transform);
+      opacity: 0;
+      pointer-events: none;
     }
 
     .nav-shell {
@@ -1059,6 +1070,7 @@
   <script src="chapter-manifest.js"></script>
   <script src="chapter-loader.js"></script>
   <script src="search.js"></script>
+  <script src="mobile-nav.js"></script>
   <script>
     window.chapterDataReady.then(() => {
       const body = document.body;
