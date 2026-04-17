@@ -20,6 +20,9 @@
   let ticking = false;
 
   const isMobileLayout = () => window.getComputedStyle(navShell).flexDirection === "column";
+  const syncViewportMetrics = () => {
+    document.documentElement.style.setProperty("--layout-viewport-width", `${document.documentElement.clientWidth}px`);
+  };
 
   const resetTravel = () => {
     downwardTravel = 0;
@@ -93,6 +96,7 @@
   };
 
   const resetState = () => {
+    syncViewportMetrics();
     revealHeader();
     lastScrollY = Math.max(window.scrollY, 0);
   };

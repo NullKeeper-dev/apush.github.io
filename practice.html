@@ -719,6 +719,46 @@
       white-space: pre-wrap;
     }
 
+    .question-stimulus > * + * {
+      margin-top: 14px;
+    }
+
+    .stimulus-media,
+    .flashcard-media {
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .stimulus-media img,
+    .flashcard-media img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 18px 34px rgba(4, 6, 18, 0.26);
+      object-fit: cover;
+    }
+
+    .stimulus-media figcaption,
+    .flashcard-media figcaption,
+    .stimulus-caption,
+    .flashcard-cue {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .stimulus-caption,
+    .stimulus-text,
+    .flashcard-cue {
+      margin: 0;
+    }
+
+    .stimulus-text {
+      color: rgba(232, 230, 224, 0.96);
+    }
+
     .option-grid {
       display: grid;
       gap: 14px;
@@ -1046,11 +1086,19 @@
       line-height: 1.05;
     }
 
-    .flashcard-face p {
+    .flashcard-face p,
+    .flashcard-copy {
       margin: 0;
       color: var(--muted);
       line-height: 1.8;
       font-size: 1.02rem;
+    }
+
+    .flashcard-copy {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+      min-width: 0;
     }
 
     .flashcard-back {
@@ -1614,7 +1662,7 @@
                       <span class="swipe-hint">Tap card to flip</span>
                     </span>
                     <h3 id="flashcard-front-title"></h3>
-                    <p id="flashcard-front-copy"></p>
+                    <div id="flashcard-front-copy" class="flashcard-copy"></div>
                   </span>
                   <span class="flashcard-face flashcard-back">
                     <span class="flashcard-meta">
@@ -1622,7 +1670,7 @@
                       <span class="swipe-hint">Swipe or use arrows to score it</span>
                     </span>
                     <h3 id="flashcard-back-title"></h3>
-                    <p id="flashcard-back-copy"></p>
+                    <div id="flashcard-back-copy" class="flashcard-copy"></div>
                   </span>
                 </button>
               </div>

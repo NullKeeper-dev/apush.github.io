@@ -209,23 +209,26 @@
 
   function getChapterEntries() {
     const configs = typeof window.getChapterConfigs === "function" ? window.getChapterConfigs() : [];
-    if (Array.isArray(configs) && configs.length) {
-      return configs.map(function (entry) {
-        return {
+    const configMap = new Map((Array.isArray(configs) ? configs : []).map(function (entry) {
+      return [entry.id, {
+        id: entry.id,
+        short: entry.short,
+        title: (entry.data && entry.data.chapterMeta && entry.data.chapterMeta.chapterTitle) || entry.title || entry.short
+      }];
+    }));
+    const manifestEntries = Array.isArray(window.chapterManifest) ? window.chapterManifest : [];
+
+    if (manifestEntries.length) {
+      return manifestEntries.map(function (entry) {
+        return configMap.get(entry.id) || {
           id: entry.id,
           short: entry.short,
-          title: (entry.data && entry.data.chapterMeta && entry.data.chapterMeta.chapterTitle) || entry.title || entry.short
+          title: entry.title
         };
       });
     }
 
-    return Array.isArray(window.chapterManifest) ? window.chapterManifest.map(function (entry) {
-      return {
-        id: entry.id,
-        short: entry.short,
-        title: entry.title
-      };
-    }) : [];
+    return Array.from(configMap.values());
   }
 
   function dedupeEntries(entries) {

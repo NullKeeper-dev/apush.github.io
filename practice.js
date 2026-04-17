@@ -96,6 +96,8 @@ const buildEssayPrompts = (chapterId, chapter) => {
 };
 
 chapterConfigs.forEach(({ id, data }) => {
+  const imageMap = new Map((data.images || []).map((image) => [image.imageId, image]));
+
   (data.mcqQuestions || []).forEach((item) => {
     mcqBank.push({
       id: `${id}-${item.id}`,
@@ -103,7 +105,10 @@ chapterConfigs.forEach(({ id, data }) => {
       theme: item.apTheme,
       skill: item.apSkill,
       difficulty: item.difficulty,
-      stimulus: item.stimulus,
+      stimulusText: item.stimulusText || item.stimulus || "",
+      stimulusCaption: item.stimulusCaption || "",
+      stimulusType: item.stimulusType || "",
+      stimulusImage: item.stimulusImageId ? (imageMap.get(item.stimulusImageId) || null) : null,
       question: item.question,
       options: ["A", "B", "C", "D"].map((letter) => item.options[letter]),
       answer: ({ A: 0, B: 1, C: 2, D: 3 })[item.correctAnswer] ?? 0,
@@ -118,7 +123,8 @@ chapterConfigs.forEach(({ id, data }) => {
       kind: card.type,
       front: card.front,
       cue: card.hint,
-      back: card.back
+      back: card.back,
+      image: card.imageId ? (imageMap.get(card.imageId) || null) : null
     });
   });
 
@@ -204,6 +210,68 @@ const escapeHtml = (value) => String(value)
   .replace(/>/g, "&gt;")
   .replace(/"/g, "&quot;")
   .replace(/'/g, "&#39;");
+
+const renderMediaFigure = (image, caption, className = "") => {
+  if (!image?.src) {
+    return "";
+  }
+
+  const classes = ["stimulus-media"];
+  if (className) {
+    classes.push(className);
+  }
+
+  return `
+    <figure class="${classes.join(" ")}">
+      <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt || caption || "")}" loading="lazy">
+      ${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ""}
+    </figure>
+  `;
+};
+
+const renderQuestionStimulus = (question) => {
+  const parts = [];
+
+  if (question.stimulusImage) {
+    parts.push(renderMediaFigure(
+      question.stimulusImage,
+      question.stimulusCaption || question.stimulusImage.caption || "",
+      ""
+    ));
+  } else if (question.stimulusCaption) {
+    parts.push(`<p class="stimulus-caption">${escapeHtml(question.stimulusCaption)}</p>`);
+  }
+
+  if (question.stimulusText) {
+    parts.push(`<p class="stimulus-text">${escapeHtml(question.stimulusText)}</p>`);
+  }
+
+  return parts.length ? `<div class="question-stimulus">${parts.join("")}</div>` : "";
+};
+
+const renderFlashcardFrontMarkup = (card) => {
+  const parts = [];
+
+  if (card.image) {
+    parts.push(renderMediaFigure(card.image, card.image.caption || "", "flashcard-media"));
+  }
+
+  if (card.cue) {
+    parts.push(`<p class="flashcard-cue">${escapeHtml(card.cue)}</p>`);
+  }
+
+  return parts.join("");
+};
+
+const renderFlashcardBackMarkup = (card) => {
+  const parts = [`<p>${escapeHtml(card.back || "")}</p>`];
+
+  if (card.image) {
+    parts.push(renderMediaFigure(card.image, card.image.caption || "", "flashcard-media"));
+  }
+
+  return parts.join("");
+};
 
 const shuffle = (items) => {
   const copy = [...items];
@@ -534,7 +602,7 @@ const renderQuizStage = () => {
           ${question.difficulty ? `<span class="badge">${escapeHtml(question.difficulty)}</span>` : ""}
         </div>
       </div>
-      ${question.stimulus ? `<div class="question-stimulus">${escapeHtml(question.stimulus)}</div>` : ""}
+      ${renderQuestionStimulus(question)}
       <h3 class="question-text">${escapeHtml(question.question)}</h3>
       <div class="option-grid">
         ${question.options.map((option, optionIndex) => {
@@ -706,9 +774,9 @@ const renderFlashcard = () => {
     flashcardPeriodBadge.textContent = "Deck Complete";
     flashcardBackType.textContent = "Review";
     flashcardFrontTitle.textContent = "Deck complete.";
-    flashcardFrontCopy.textContent = "";
+    flashcardFrontCopy.innerHTML = "";
     flashcardBackTitle.textContent = "";
-    flashcardBackCopy.textContent = "Known cards went right, misses went left. Use the counters to see how this run felt before starting again.";
+    flashcardBackCopy.innerHTML = "<p>Known cards went right, misses went left. Use the counters to see how this run felt before starting again.</p>";
     flashcard.setAttribute("aria-label", "Flashcard deck complete. Reset the deck to start a new run.");
     flashcardKnownButton.disabled = true;
     flashcardUnknownButton.disabled = true;
@@ -718,9 +786,9 @@ const renderFlashcard = () => {
   flashcardPeriodBadge.textContent = getFlashcardFrontLabel(card);
   flashcardBackType.textContent = getFlashcardBackLabel(card);
   flashcardFrontTitle.textContent = card.front;
-  flashcardFrontCopy.textContent = "";
+  flashcardFrontCopy.innerHTML = renderFlashcardFrontMarkup(card);
   flashcardBackTitle.textContent = "";
-  flashcardBackCopy.textContent = card.back;
+  flashcardBackCopy.innerHTML = renderFlashcardBackMarkup(card);
   flashcard.setAttribute("aria-label", `${card.front}. ${state.flashcards.flipped ? "Answer side visible." : "Prompt side visible."} Click, tap, Enter, or Space to flip.`);
   flashcardKnownButton.disabled = false;
   flashcardUnknownButton.disabled = false;

@@ -22,5 +22,13 @@ window.chapterManifest = [
     title: "The New Deal",
     script: "chapter21-data.js",
     global: "chapter21Data"
+  },
+  {
+    id: "ch22",
+    number: 22,
+    short: "Ch 22",
+    title: "Fighting for the Four Freedoms: World War II, 1941-1945",
+    script: "chapter22-data.js",
+    global: "chapter22Data"
   }
 ];

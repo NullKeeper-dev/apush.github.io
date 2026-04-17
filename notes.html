@@ -365,6 +365,25 @@
       min-height: 0;
     }
 
+    .nav-panel-group {
+      display: grid;
+      gap: 12px;
+    }
+
+    .nav-panel-group-fill {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      flex: 1 1 auto;
+    }
+
+    .nav-panel-group-fill > div {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      flex: 1 1 auto;
+    }
+
     .panel-label {
       margin: 0 0 14px;
       color: var(--muted);
@@ -374,13 +393,82 @@
     }
 
     .nav-tree {
-      display: grid;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
       gap: 14px;
       min-height: 0;
       overflow: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
       padding-right: 6px;
       scrollbar-width: thin;
       scrollbar-color: rgba(91, 91, 214, 0.4) transparent;
+    }
+
+    .chapter-switcher {
+      display: grid;
+      gap: 10px;
+    }
+
+    .chapter-link {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 12px;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.018);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: var(--raised-shadow);
+      transition: color var(--transition), background-color var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+
+    .chapter-link:hover {
+      color: var(--text);
+      transform: translateY(-1px);
+      border-color: rgba(123, 230, 255, 0.14);
+    }
+
+    .chapter-link.is-active {
+      color: var(--text);
+      background: linear-gradient(180deg, rgba(31, 31, 45, 0.96), rgba(24, 24, 34, 0.96));
+      border-color: rgba(91, 91, 214, 0.18);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025), 0 12px 24px rgba(8, 10, 22, 0.22);
+    }
+
+    .chapter-link-code {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 64px;
+      min-height: 40px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(91, 91, 214, 0.24), rgba(232, 184, 75, 0.14));
+      border: 1px solid rgba(123, 230, 255, 0.1);
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      box-shadow: var(--inset-shadow);
+    }
+
+    .chapter-link-copy {
+      min-width: 0;
+      display: grid;
+      gap: 4px;
+    }
+
+    .chapter-link-copy strong {
+      font-size: 0.94rem;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    .chapter-link-copy span {
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.45;
     }
 
     .nav-tree::-webkit-scrollbar {
@@ -397,6 +485,7 @@
     }
 
     .nav-period {
+      flex: 0 0 auto;
       border-radius: 18px;
       background: linear-gradient(180deg, rgba(25, 25, 31, 0.98), rgba(19, 19, 25, 0.98));
       border: 1px solid rgba(255, 255, 255, 0.04);
@@ -928,6 +1017,33 @@
       gap: 16px;
     }
 
+    .note-media-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .note-media {
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .note-media img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 18px 34px rgba(4, 6, 18, 0.26);
+      object-fit: cover;
+    }
+
+    .note-media figcaption {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
     .event-card {
       padding: 20px;
     }
@@ -1311,6 +1427,10 @@
         padding-right: 0;
       }
 
+      .chapter-switcher {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .hero-stats {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -1329,6 +1449,10 @@
 
       .nav-links {
         width: 100%;
+      }
+
+      .chapter-switcher {
+        grid-template-columns: 1fr;
       }
 
       .page-hero {
@@ -1531,8 +1655,18 @@
 
     <section class="notes-layout">
       <aside class="nav-panel" id="nav-panel">
-        <p class="panel-label">Study Map</p>
-        <div class="nav-tree" id="nav-tree"></div>
+        <section class="nav-panel-group">
+          <div>
+            <p class="panel-label">Chapter</p>
+            <div class="chapter-switcher" id="chapter-switcher"></div>
+          </div>
+        </section>
+        <section class="nav-panel-group nav-panel-group-fill">
+          <div>
+            <p class="panel-label">Study Map</p>
+            <div class="nav-tree" id="nav-tree"></div>
+          </div>
+        </section>
       </aside>
 
       <section class="notes-main">
@@ -1567,6 +1701,20 @@
   </main>
 
   <script src="chapter-manifest.js"></script>
+  <script>
+    (() => {
+      const chapterEntries = Array.isArray(window.chapterManifest) ? window.chapterManifest : [];
+      const chapterIds = chapterEntries.map((entry) => String(entry.id || "").toLowerCase()).filter(Boolean);
+      const requestedChapterId = String(new URL(window.location.href).searchParams.get("chapter") || "").toLowerCase();
+      const defaultChapterId = chapterIds[chapterIds.length - 1] || "";
+      const activeChapterId = chapterIds.includes(requestedChapterId) ? requestedChapterId : defaultChapterId;
+
+      if (activeChapterId) {
+        window.notesDefaultChapterId = activeChapterId;
+        window.chapterLoadFilter = [activeChapterId];
+      }
+    })();
+  </script>
   <script src="chapter-loader.js"></script>
   <script src="search.js"></script>
   <script src="mobile-nav.js"></script>

@@ -617,13 +617,20 @@
     }
 
     .detail-theme {
-      display: inline-flex;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(91, 91, 214, 0.12);
+      display: block;
+      width: 100%;
+      max-width: 30ch;
+      padding: 14px 18px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(31, 31, 45, 0.96), rgba(24, 24, 34, 0.96));
       color: var(--text);
       border: 1px solid rgba(91, 91, 214, 0.16);
       box-shadow: var(--inset-shadow);
+      font-size: 0.98rem;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+      text-wrap: pretty;
+      overflow-wrap: anywhere;
     }
 
     .detail-body p {

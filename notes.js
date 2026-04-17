@@ -65,8 +65,32 @@ const mergeThemeKeys = (sections = [], fallback = []) => {
   return Array.from(keys);
 };
 
+const buildImageLookup = (images = []) => new Map(
+  images
+    .filter((image) => image?.imageId && image?.src)
+    .map((image) => [image.imageId, image])
+);
+
+const resolveNoteImage = (ref, imageLookup) => {
+  if (!ref?.imageId) {
+    return null;
+  }
+
+  const image = imageLookup.get(ref.imageId);
+  if (!image) {
+    return null;
+  }
+
+  return {
+    ...image,
+    placement: ref.placement || "after-paragraph",
+    displayCaption: ref.displayCaption || image.caption || ""
+  };
+};
+
 const buildNotesPeriod = ({ id, short, data }) => {
   const sections = data.notes.sections || [];
+  const imageLookup = buildImageLookup(data.images || []);
   const figureMap = new Map();
   const vocabulary = (data.vocabulary || []).map((item, index) => {
     const term = String(item.term || "");
@@ -96,7 +120,8 @@ const buildNotesPeriod = ({ id, short, data }) => {
           role: figure.title,
           bio: figure.bio,
           significance: figure.significance,
-          perspective: figure.perspective
+          perspective: figure.perspective,
+          image: figure.imageId ? (imageLookup.get(figure.imageId) || null) : null
         });
       }
     });
@@ -131,6 +156,7 @@ const buildNotesPeriod = ({ id, short, data }) => {
         text: data.notes.historicalContext?.geographicContext || ""
       }
     ],
+    contextImage: resolveNoteImage(data.notes.historicalContext?.contextImage, imageLookup),
     events: sections.map((section, index) => ({
       title: section.sectionTitle,
       date: `Section ${index + 1}`,
@@ -140,7 +166,10 @@ const buildNotesPeriod = ({ id, short, data }) => {
       causes: section.causes || [],
       effects: section.effects || [],
       connections: section.connections || [],
-      sources: section.primarySourceConnections || []
+      sources: section.primarySourceConnections || [],
+      images: (section.sectionImages || [])
+        .map((imageRef) => resolveNoteImage(imageRef, imageLookup))
+        .filter(Boolean)
     })),
     figures: Array.from(figureMap.values()),
     vocabulary,
@@ -166,11 +195,23 @@ const buildNotesPeriod = ({ id, short, data }) => {
   };
 };
 
-const periods = chapterConfigs.map(buildNotesPeriod);
+const allPeriods = chapterConfigs.map(buildNotesPeriod);
+const fallbackPeriodId = String(window.notesDefaultChapterId || "").toLowerCase();
+const periods = fallbackPeriodId && allPeriods.some((period) => period.id === fallbackPeriodId)
+  ? allPeriods.filter((period) => period.id === fallbackPeriodId)
+  : allPeriods;
 const maxWeightValue = Math.max(1, ...periods.map((period) => period.weightValue));
 const pageUrl = new URL(window.location.href);
-const requestedChapterId = pageUrl.searchParams.get("chapter");
-const requestedSectionKey = pageUrl.searchParams.get("section");
+const requestedChapterId = String(pageUrl.searchParams.get("chapter") || "").toLowerCase();
+const requestedSectionKey = String(pageUrl.searchParams.get("section") || "").toLowerCase();
+const chapterEntries = (Array.isArray(window.chapterManifest) ? window.chapterManifest : []).map((entry) => ({
+  id: String(entry.id || "").toLowerCase(),
+  short: entry.short,
+  title: entry.title
+}));
+const resolvedRequestedSectionKey = subtopics.some((subtopic) => subtopic.key === requestedSectionKey)
+  ? requestedSectionKey
+  : "overview";
 
 const getRequestedPeriodId = () => {
   const hashMatch = pageUrl.hash.match(/^#(ch\d+)-/i);
@@ -212,6 +253,7 @@ const notesContent = document.getElementById("notes-content");
 const miniToc = document.getElementById("mini-toc");
 const tocIndicator = document.getElementById("toc-indicator");
 const progressBar = document.getElementById("reading-progress");
+const chapterSwitcher = document.getElementById("chapter-switcher");
 const heroEyebrow = document.getElementById("notes-hero-eyebrow");
 const heroTitle = document.getElementById("notes-hero-title");
 const heroSubtitle = document.getElementById("notes-hero-subtitle");
@@ -249,6 +291,15 @@ const escapeHtml = (value) => String(value)
   .replace(/'/g, "&#39;");
 
 const getPeriodById = (periodId) => periods.find((period) => period.id === periodId) || null;
+
+const buildChapterHref = (chapterId, sectionKey = resolvedRequestedSectionKey) => {
+  const queryParts = [`chapter=${encodeURIComponent(chapterId)}`];
+  if (sectionKey && sectionKey !== "overview") {
+    queryParts.push(`section=${encodeURIComponent(sectionKey)}`);
+  }
+
+  return `notes.html?${queryParts.join("&")}#${chapterId}-${sectionKey || "overview"}`;
+};
 
 const ensureElementId = (element, prefix = "notes-link") => {
   if (!element) {
@@ -317,6 +368,27 @@ const renderSectionHeading = (title, themeKeys) => `
   </div>
 `;
 
+const renderNoteMedia = (image, period) => {
+  if (!image?.src) {
+    return "";
+  }
+
+  return `
+    <figure class="note-media">
+      <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt || image.displayCaption || "")}" loading="lazy">
+      ${image.displayCaption ? `<figcaption>${renderNoteText(image.displayCaption, period)}</figcaption>` : ""}
+    </figure>
+  `;
+};
+
+const renderNoteMediaGrid = (images, period) => {
+  if (!images?.length) {
+    return "";
+  }
+
+  return `<div class="note-media-grid">${images.map((image) => renderNoteMedia(image, period)).join("")}</div>`;
+};
+
 const updateHero = () => {
   const totalSections = periods.reduce((sum, period) => sum + period.events.length, 0);
   const totalVocabulary = periods.reduce((sum, period) => sum + period.vocabulary.length, 0);
@@ -348,6 +420,25 @@ const updateHero = () => {
   }
 };
 
+const renderChapterSwitcher = () => {
+  if (!chapterSwitcher) {
+    return;
+  }
+
+  chapterSwitcher.innerHTML = chapterEntries.map((chapter) => {
+    const isActive = chapter.id === state.currentPeriodId;
+    return `
+      <a class="chapter-link${isActive ? " is-active" : ""}" href="${escapeHtml(buildChapterHref(chapter.id))}"${isActive ? ' aria-current="page"' : ""}>
+        <span class="chapter-link-code">${escapeHtml(chapter.short)}</span>
+        <span class="chapter-link-copy">
+          <strong>${escapeHtml(chapter.title)}</strong>
+          <span>${isActive ? "Current notes page" : "Open chapter notes"}</span>
+        </span>
+      </a>
+    `;
+  }).join("");
+};
+
 const renderPeriod = (period) => {
   const weightWidth = Math.min(100, (period.weightValue / maxWeightValue) * 100);
   const vocabLetters = new Set(period.vocabulary.map((item) => item.term.charAt(0).toUpperCase()));
@@ -375,6 +466,7 @@ const renderPeriod = (period) => {
       </div>
     `
     : "";
+  const contextImageMarkup = renderNoteMediaGrid(period.contextImage ? [period.contextImage] : [], period);
 
   const eventsMarkup = period.events.map((event) => `
     <article class="event-card">
@@ -386,6 +478,7 @@ const renderPeriod = (period) => {
         <span class="event-date">${escapeHtml(event.date)}</span>
       </div>
       <p>${renderNoteText(event.description, period)}</p>
+      ${renderNoteMediaGrid(event.images, period)}
       <div class="significance-callout">
         <strong>Significance</strong>
         <p>${renderNoteText(event.significance, period)}</p>
@@ -430,6 +523,7 @@ const renderPeriod = (period) => {
         <div class="figure-role">${escapeHtml(figure.role)}</div>
       </div>
       <div class="figure-body">
+        ${figure.image ? renderNoteMediaGrid([figure.image], period) : ""}
         <p>${renderNoteText(figure.bio, period)}</p>
         ${figure.significance ? `<p class="figure-extra"><strong>Significance:</strong> ${renderNoteText(figure.significance, period)}</p>` : ""}
         ${figure.perspective ? `<p class="figure-extra"><strong>Perspective:</strong> ${renderNoteText(figure.perspective, period)}</p>` : ""}
@@ -481,6 +575,7 @@ const renderPeriod = (period) => {
       <article class="notes-section section-anchor" id="${period.id}-context" data-period="${period.id}" data-label="Historical Context">
         ${renderSectionHeading("Historical Context", period.sectionThemes.context)}
         <p class="section-intro">${renderNoteText(period.context, period)}</p>
+        ${contextImageMarkup}
         ${contextHighlightsMarkup}
       </article>
 
@@ -924,6 +1019,9 @@ const syncScrollState = () => {
   state.openPeriods.add(nextPeriodId);
 
   if (sectionChanged || periodChanged) {
+    if (periodChanged) {
+      renderChapterSwitcher();
+    }
     updateNavTreeState();
     updateMiniTocState();
     return;
@@ -991,6 +1089,7 @@ const handleVocabPreviewClick = (event) => {
 };
 
 updateHero();
+renderChapterSwitcher();
 renderNotes();
 renderNavTree();
 renderMiniToc();
@@ -1004,15 +1103,27 @@ if (vocabPreview) {
   vocabPreview.addEventListener("click", handleVocabPreviewClick);
 }
 
-window.addEventListener("scroll", () => {
+let layoutFrame = 0;
+
+const runLayoutSync = () => {
+  layoutFrame = 0;
   updateReadingProgress();
   syncScrollState();
-}, { passive: true });
+};
+
+const scheduleLayoutSync = () => {
+  if (layoutFrame) {
+    return;
+  }
+
+  layoutFrame = window.requestAnimationFrame(runLayoutSync);
+};
+
+window.addEventListener("scroll", scheduleLayoutSync, { passive: true });
 
 window.addEventListener("resize", () => {
   updateTocIndicator();
-  updateReadingProgress();
-  syncScrollState();
+  scheduleLayoutSync();
 });
 
 const initializeNotesLayout = () => {
