@@ -342,10 +342,27 @@
       position: sticky;
       top: var(--top-offset);
       padding: 24px;
+      max-height: calc(100vh - var(--top-offset) - 18px);
+      min-height: 0;
+      overflow-y: auto;
+      overscroll-behavior: contain;
       border-radius: 22px;
       background: linear-gradient(180deg, rgba(23, 23, 29, 0.96), rgba(20, 20, 24, 0.96));
       border: 1px solid rgba(255, 255, 255, 0.04);
       box-shadow: var(--raised-shadow);
+    }
+
+    .sidebar::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(91, 91, 214, 0.46), rgba(96, 196, 255, 0.34));
     }
 
     .sidebar-block + .sidebar-block {
@@ -847,6 +864,8 @@
       .sidebar {
         position: relative;
         top: 0;
+        max-height: none;
+        overflow: visible;
       }
 
       .hero-meta {
@@ -981,6 +1000,7 @@
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link is-active" href="timeline.html" aria-current="page">Timeline</a>
         <a class="nav-link" href="notes.html">Notes</a>
+        <a class="nav-link" href="progress.html">Progress Check</a>
         <a class="nav-link" href="practice.html">Practice</a>
         <a class="nav-link" href="#filters">Filters</a>
         <a class="nav-link" href="#top">Top</a>

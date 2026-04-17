@@ -14,6 +14,18 @@
     lastFocusedElement: null
   };
 
+  function slugifyFragment(value) {
+    return String(value || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
+  function buildEventId(chapterId, title, index) {
+    const slug = slugifyFragment(title) || ("section-" + (index + 1));
+    return chapterId + "-event-" + slug + "-" + (index + 1);
+  }
+
   document.addEventListener("DOMContentLoaded", init);
 
   function init() {
@@ -145,6 +157,12 @@
         keywords: ["notes", "study map", "vocabulary", "essay"]
       },
       {
+        label: "Progress Check",
+        subtitle: "Final-review board with chapter summaries, section tracking, and direct note jumps.",
+        url: "progress.html",
+        keywords: ["progress", "review", "final review", "checklist", "sections"]
+      },
+      {
         label: "MCQ Quiz",
         subtitle: "Practice APUSH multiple-choice questions.",
         url: "practice.html?tool=mcq#mcq",
@@ -170,6 +188,13 @@
         subtitle: chapter.title,
         url: "timeline.html?chapter=" + encodeURIComponent(chapter.short),
         keywords: [chapter.id, chapter.short, "timeline", "events", chapter.title]
+      });
+
+      baseEntries.push({
+        label: chapter.short + " · Progress Check",
+        subtitle: chapter.title,
+        url: "progress.html#review-" + encodeURIComponent(chapter.id),
+        keywords: [chapter.id, chapter.short, "progress", "review", "checkpoint", chapter.title]
       });
 
       NOTES_SECTIONS.forEach(function (section) {
@@ -202,6 +227,25 @@
         url: "practice.html?tool=essay&promptPeriod=" + encodeURIComponent(chapter.id) + "#essay",
         keywords: [chapter.id, chapter.short, "essay", "saq", "leq", "dbq", chapter.title]
       });
+
+      ((chapter.data && chapter.data.notes && chapter.data.notes.sections) || []).forEach(function (section, index) {
+        const eventId = buildEventId(chapter.id, section.sectionTitle, index);
+        const reviewAnchor = "review-" + eventId;
+
+        baseEntries.push({
+          label: chapter.short + " · Review · " + section.sectionTitle,
+          subtitle: chapter.title,
+          url: "progress.html#" + encodeURIComponent(reviewAnchor),
+          keywords: [chapter.id, chapter.short, "progress", "review", "section", section.sectionTitle].concat(section.apThemes || [], [chapter.title])
+        });
+
+        baseEntries.push({
+          label: chapter.short + " · Notes · " + section.sectionTitle,
+          subtitle: chapter.title,
+          url: "notes.html?chapter=" + encodeURIComponent(chapter.id) + "&section=events#" + encodeURIComponent(eventId),
+          keywords: [chapter.id, chapter.short, "notes", "events", "section", section.sectionTitle].concat(section.apThemes || [], [chapter.title])
+        });
+      });
     });
 
     return dedupeEntries(baseEntries);
@@ -213,7 +257,8 @@
       return [entry.id, {
         id: entry.id,
         short: entry.short,
-        title: (entry.data && entry.data.chapterMeta && entry.data.chapterMeta.chapterTitle) || entry.title || entry.short
+        title: (entry.data && entry.data.chapterMeta && entry.data.chapterMeta.chapterTitle) || entry.title || entry.short,
+        data: entry.data || null
       }];
     }));
     const manifestEntries = Array.isArray(window.chapterManifest) ? window.chapterManifest : [];
@@ -223,7 +268,8 @@
         return configMap.get(entry.id) || {
           id: entry.id,
           short: entry.short,
-          title: entry.title
+          title: entry.title,
+          data: null
         };
       });
     }

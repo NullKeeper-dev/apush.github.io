@@ -158,6 +158,7 @@ const buildNotesPeriod = ({ id, short, data }) => {
     ],
     contextImage: resolveNoteImage(data.notes.historicalContext?.contextImage, imageLookup),
     events: sections.map((section, index) => ({
+      eventId: `${id}-event-${slugifyFragment(section.sectionTitle) || `section-${index + 1}`}-${index + 1}`,
       title: section.sectionTitle,
       date: `Section ${index + 1}`,
       meta: (section.apThemes || []).join(" · "),
@@ -469,7 +470,7 @@ const renderPeriod = (period) => {
   const contextImageMarkup = renderNoteMediaGrid(period.contextImage ? [period.contextImage] : [], period);
 
   const eventsMarkup = period.events.map((event) => `
-    <article class="event-card">
+    <article class="event-card" id="${escapeHtml(event.eventId)}" data-period="${period.id}">
       <div class="event-head">
         <div>
           <h4>${escapeHtml(event.title)}</h4>
@@ -775,11 +776,17 @@ const getCenteredViewportOffset = (target, minimumTop = 118) => {
   return Math.max(minimumTop, centeredOffset);
 };
 
-const scrollToElement = (target, offset = 118) => {
+const scrollToElement = (target, offset = 118, behavior = "smooth") => {
   const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+  if (behavior === "auto") {
+    window.scrollTo(0, top);
+    return;
+  }
+
   window.scrollTo({
     top,
-    behavior: "smooth"
+    behavior
   });
 };
 
@@ -962,9 +969,24 @@ const scrollToRequestedSection = () => {
   updateNavTreeState();
   updateMiniTocState();
 
-  window.requestAnimationFrame(() => {
-    scrollToElement(target, 118);
-  });
+  let attempts = 0;
+  const alignTarget = () => {
+    const liveTarget = document.getElementById(requestedSectionId);
+    if (!liveTarget) {
+      return;
+    }
+
+    scrollToElement(liveTarget, 118, "auto");
+    const rect = liveTarget.getBoundingClientRect();
+    const isSettled = rect.top >= 96 && rect.top <= Math.max(220, window.innerHeight * 0.55);
+
+    if (!isSettled && attempts < 6) {
+      attempts += 1;
+      window.setTimeout(alignTarget, 180);
+    }
+  };
+
+  window.requestAnimationFrame(alignTarget);
 };
 
 const getAnchorMetrics = () => sectionAnchors.map((anchor) => ({
@@ -1104,6 +1126,7 @@ if (vocabPreview) {
 }
 
 let layoutFrame = 0;
+let requestedScrollSyncArmed = false;
 
 const runLayoutSync = () => {
   layoutFrame = 0;
@@ -1119,6 +1142,19 @@ const scheduleLayoutSync = () => {
   layoutFrame = window.requestAnimationFrame(runLayoutSync);
 };
 
+const scheduleRequestedScrollSync = () => {
+  if (requestedScrollSyncArmed) {
+    return;
+  }
+
+  requestedScrollSyncArmed = true;
+  [0, 240, 900].forEach((delay) => {
+    window.setTimeout(() => {
+      scrollToRequestedSection();
+    }, delay);
+  });
+};
+
 window.addEventListener("scroll", scheduleLayoutSync, { passive: true });
 
 window.addEventListener("resize", () => {
@@ -1132,7 +1168,7 @@ const initializeNotesLayout = () => {
 };
 
 window.requestAnimationFrame(initializeNotesLayout);
-window.requestAnimationFrame(scrollToRequestedSection);
+scheduleRequestedScrollSync();
 window.addEventListener("load", initializeNotesLayout);
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && state.activeVocabPreview) {
@@ -1141,7 +1177,10 @@ window.addEventListener("keydown", (event) => {
 });
 
 if (document.fonts?.ready) {
-  document.fonts.ready.then(initializeNotesLayout);
+  document.fonts.ready.then(() => {
+    initializeNotesLayout();
+    scrollToRequestedSection();
+  });
 }
 }).catch((error) => {
   console.error("Failed to initialize chapter data on the notes page.", error);
