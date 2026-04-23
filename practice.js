@@ -12,6 +12,12 @@ const periodMeta = chapterConfigs.map(({ id, short, data }) => ({
 
 const mcqBank = [];
 
+const MCQ_OPTION_LABELS = ["A", "B", "C", "D"];
+const MCQ_ANSWER_INDEX_BY_LABEL = MCQ_OPTION_LABELS.reduce((lookup, label, index) => ({
+  ...lookup,
+  [label]: index
+}), {});
+
 const flashcardBank = [];
 
 const essaySteps = [
@@ -40,6 +46,29 @@ const buildPromptTitle = (prompt, fallback) => {
 };
 
 const buildLeqEvidencePrompt = (paragraph) => `Claim: ${paragraph.claim || ""} Evidence: ${(paragraph.evidence || []).join(", ")}`;
+
+const escapeRegExp = (value) => String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const formatMcqExplanation = (explanation, originalCorrectLabel, displayedCorrectLabel) => {
+  const text = String(explanation || "");
+
+  if (!text) {
+    return "";
+  }
+
+  const formatted = text
+    .replaceAll("{correctLetter}", displayedCorrectLabel)
+    .replaceAll("{correctAnswerLetter}", displayedCorrectLabel);
+
+  if (!originalCorrectLabel || originalCorrectLabel === displayedCorrectLabel) {
+    return formatted;
+  }
+
+  return formatted.replace(
+    new RegExp(`^${escapeRegExp(originalCorrectLabel)}(?=\\s+is\\s+correct\\b)`, "i"),
+    displayedCorrectLabel
+  );
+};
 
 const buildEssayPrompts = (chapterId, chapter) => {
   const saqs = (chapter.essayPractice?.saq || []).map((item, index) => ({
@@ -99,6 +128,8 @@ chapterConfigs.forEach(({ id, data }) => {
   const imageMap = new Map((data.images || []).map((image) => [image.imageId, image]));
 
   (data.mcqQuestions || []).forEach((item) => {
+    const answer = MCQ_ANSWER_INDEX_BY_LABEL[item.correctAnswer] ?? 0;
+
     mcqBank.push({
       id: `${id}-${item.id}`,
       period: id,
@@ -110,8 +141,9 @@ chapterConfigs.forEach(({ id, data }) => {
       stimulusType: item.stimulusType || "",
       stimulusImage: item.stimulusImageId ? (imageMap.get(item.stimulusImageId) || null) : null,
       question: item.question,
-      options: ["A", "B", "C", "D"].map((letter) => item.options[letter]),
-      answer: ({ A: 0, B: 1, C: 2, D: 3 })[item.correctAnswer] ?? 0,
+      options: MCQ_OPTION_LABELS.map((letter) => item.options[letter]),
+      answer,
+      answerLabel: MCQ_OPTION_LABELS[answer] || "A",
       explanation: item.explanation?.correct || ""
     });
   });
@@ -288,14 +320,20 @@ const shuffleMcqQuestion = (question) => {
   const shuffledOptions = shuffle(
     question.options.map((text, index) => ({
       text,
+      label: MCQ_OPTION_LABELS[index],
       isCorrect: index === question.answer
     }))
   );
+  const answer = shuffledOptions.findIndex((option) => option.isCorrect);
+  const answerLabel = MCQ_OPTION_LABELS[answer] || "";
+  const originalAnswerLabel = shuffledOptions[answer]?.label || question.answerLabel;
 
   return {
     ...question,
     options: shuffledOptions.map((option) => option.text),
-    answer: shuffledOptions.findIndex((option) => option.isCorrect)
+    answer,
+    answerLabel,
+    explanation: formatMcqExplanation(question.explanation, originalAnswerLabel, answerLabel)
   };
 };
 
