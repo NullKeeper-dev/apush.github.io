@@ -31,6 +31,8 @@
       --nav-width: 304px;
       --toc-width: 200px;
       --top-offset: 108px;
+      --note-text: rgba(248, 249, 252, 0.96);
+      --note-text-soft: rgba(248, 249, 252, 0.88);
     }
 
     * {
@@ -936,7 +938,7 @@
 
     .period-header-card p {
       margin: 0;
-      color: var(--muted);
+      color: var(--note-text-soft);
     }
 
     .theme-row {
@@ -1002,7 +1004,19 @@
 
     .section-intro {
       margin: 0;
-      color: var(--muted);
+      color: var(--note-text-soft);
+    }
+
+    .note-emphasis {
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .note-point {
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: -0.01em;
     }
 
     .note-vocab-link {
@@ -1010,7 +1024,7 @@
       margin: 0;
       padding: 0 0.14em;
       color: #87cbff;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: -0.01em;
       text-decoration: underline;
       text-decoration-thickness: 0.08em;
@@ -1081,7 +1095,7 @@
     }
 
     .note-media figcaption {
-      color: var(--muted);
+      color: var(--note-text-soft);
       font-size: 0.92rem;
       line-height: 1.7;
     }
@@ -1123,7 +1137,7 @@
 
     .event-card p {
       margin: 0;
-      color: var(--muted);
+      color: var(--note-text-soft);
     }
 
     .significance-callout {
@@ -1171,6 +1185,7 @@
     .arrow-list {
       margin: 0;
       padding-left: 18px;
+      color: var(--note-text-soft);
     }
 
     .arrow-list li + li {
@@ -1218,12 +1233,12 @@
 
     .figure-card p {
       margin: 0;
-      color: var(--muted);
+      color: var(--note-text-soft);
     }
 
     .figure-extra {
       margin: 0;
-      color: rgba(232, 230, 224, 0.88);
+      color: var(--note-text-soft);
       font-size: 0.92rem;
       line-height: 1.75;
     }
@@ -1298,7 +1313,7 @@
     }
 
     .definition {
-      color: var(--muted);
+      color: var(--note-text-soft);
     }
 
     .definition + .definition {
@@ -1317,7 +1332,7 @@
 
     .essay-callout p {
       margin: 0;
-      color: rgba(232, 230, 224, 0.92);
+      color: var(--note-text);
     }
 
     .essay-grid {
@@ -1349,6 +1364,11 @@
 
     .essay-list li + li {
       margin-top: 10px;
+    }
+
+    .essay-list,
+    .arrow-block p {
+      color: var(--note-text-soft);
     }
 
     .toc-list-wrap {

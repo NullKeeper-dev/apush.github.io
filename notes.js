@@ -291,6 +291,144 @@ const escapeHtml = (value) => String(value)
   .replace(/"/g, "&quot;")
   .replace(/'/g, "&#39;");
 
+const noteIgnoredEmphasisPhrases = new Set([
+  "United States",
+  "The United States"
+]);
+
+const shouldSkipCapitalizedPhrase = (matchedText) => (
+  noteIgnoredEmphasisPhrases.has(String(matchedText || "").trim())
+  || /^(?:The|A|An)\s+[A-Z]{2,}$/.test(String(matchedText || "").trim())
+);
+
+const noteEmphasisPatterns = [
+  /\b(?:17|18|19|20)\d{2}(?:\s*[-–]\s*(?:\d{2}|\d{4}))?\b/g,
+  /"[^"\n]{3,72}"|'[^'\n]{3,72}'/g,
+  /\b(?:[A-Z][\w.-]*(?:\s+(?:[A-Z][\w.-]*|and|of|the|for|to|in|on|at|by|from|with|without|against|under|over|v\.|v|I|II|III|IV)){0,6})\s(?:Act|Amendment|Agreement|Army|Bill|Campaign|Case|Charter|Coalition|Conference|Convention|Corollary|Crusade|Debate|Deal|Decision|Diplomacy|Doctrine|Era|Expedition|Front|Movement|Order|Party|Plan|Platform|Policy|Program|Proclamation|Purchase|Rebellion|Revolution|Scare|Society|Speech|Strike|System|Tariff|Treaty|War)\b/g,
+  /\b(?:[A-Z][\w.-]*|[A-Z]\.)(?:\s+(?:(?:of|the|and|for|to|in|on|at|by|from|with|without|against|under|over|v\.|v)\s+)?(?:[A-Z][\w.-]*|[A-Z]\.|I|II|III|IV)){1,5}\b/g,
+  /\b(?:(?!a\b|an\b|and\b|as\b|at\b|by\b|for\b|from\b|in\b|into\b|of\b|on\b|or\b|the\b|to\b|under\b|with\b)[a-z][\w'-]*)(?:\s+(?:(?!a\b|an\b|and\b|as\b|at\b|by\b|for\b|from\b|in\b|into\b|of\b|on\b|or\b|the\b|to\b|under\b|with\b)[a-z][\w'-]*)){0,2}\s(?:capitalism|consumerism|imperialism|internationalism|pluralism|nativism|segregation|liberties|rights|freedom|democracy|nationalism|conservatism|liberalism|industrialization|urbanization|deindustrialization|assimilation|intervention|containment|detente|stagflation|economy|production|credit|advertising|enterprise|welfare|citizenship|repression|mobilization|migration|activism)\b/g
+];
+
+const noteTakeawaySentencePatterns = [
+  /\b(?:APUSH|AP exam|For APUSH)\b/i,
+  /\bThis\s+(?:section|topic|material|chapter|case|development|pattern|shift|change|conflict|law|policy|movement)\s+(?:matters|shows|explains|reveals|illustrates|highlights|helps|marks|is)\b/i,
+  /\b(?:This|That|These)\s+(?:matters?|shows?|explains?|reveals?|illustrates?|captures?|demonstrates?|marks?|connects?|foreshadows?|highlights?)\b/i,
+  /\b(?:The result|The effect|The outcome)\s+(?:was|is)\b/i,
+  /\b(?:is|was)\s+(?:central|crucial|critical|vital|essential|core)\s+(?:to|for)\b/i
+];
+
+const mergeRanges = (ranges) => {
+  if (!ranges.length) {
+    return [];
+  }
+
+  const sorted = [...ranges]
+    .filter((range) => Number.isFinite(range.start) && Number.isFinite(range.end) && range.end > range.start)
+    .sort((left, right) => left.start - right.start || left.end - right.end);
+
+  if (!sorted.length) {
+    return [];
+  }
+
+  return sorted.reduce((merged, range) => {
+    const lastRange = merged[merged.length - 1];
+    if (!lastRange || range.start > lastRange.end) {
+      merged.push({ ...range });
+      return merged;
+    }
+
+    lastRange.end = Math.max(lastRange.end, range.end);
+    return merged;
+  }, []);
+};
+
+const collectPatternRanges = (text, pattern, skipMatch = null) => {
+  const ranges = [];
+  pattern.lastIndex = 0;
+
+  let match = pattern.exec(text);
+  while (match) {
+    const matchedText = match[0];
+    const start = match.index ?? 0;
+    const end = start + matchedText.length;
+
+    if (!skipMatch || !skipMatch(matchedText)) {
+      ranges.push({ start, end });
+    }
+
+    if (!matchedText.length) {
+      pattern.lastIndex += 1;
+    }
+
+    match = pattern.exec(text);
+  }
+
+  pattern.lastIndex = 0;
+  return ranges;
+};
+
+const collectTakeawayRanges = (text) => {
+  const sentenceRanges = [];
+  const sentencePattern = /[^.!?]+(?:[.!?](?:"|')?)?/g;
+  let match = sentencePattern.exec(text);
+
+  while (match) {
+    const sentence = match[0];
+    const trimmedSentence = sentence.trim();
+
+    if (trimmedSentence && trimmedSentence.length >= 40 && trimmedSentence.length <= 320) {
+      const isTakeaway = noteTakeawaySentencePatterns.some((pattern) => pattern.test(trimmedSentence));
+      if (isTakeaway) {
+        const leadingWhitespace = sentence.match(/^\s*/)?.[0].length || 0;
+        const trailingWhitespace = sentence.match(/\s*$/)?.[0].length || 0;
+        sentenceRanges.push({
+          start: (match.index ?? 0) + leadingWhitespace,
+          end: (match.index ?? 0) + sentence.length - trailingWhitespace
+        });
+      }
+    }
+
+    match = sentencePattern.exec(text);
+  }
+
+  return sentenceRanges;
+};
+
+const renderEmphasizedText = (text) => {
+  const value = String(text || "");
+  if (!value) {
+    return "";
+  }
+
+  const ranges = noteEmphasisPatterns.flatMap((pattern, index) => collectPatternRanges(
+    value,
+    pattern,
+    index === 3 ? shouldSkipCapitalizedPhrase : index === 2 ? (matchedText) => noteIgnoredEmphasisPhrases.has(matchedText.trim()) : null
+  ));
+  ranges.push(...collectTakeawayRanges(value));
+  const mergedRanges = mergeRanges(ranges);
+
+  if (!mergedRanges.length) {
+    return escapeHtml(value);
+  }
+
+  let cursor = 0;
+  let markup = "";
+
+  mergedRanges.forEach((range) => {
+    if (range.start < cursor) {
+      return;
+    }
+
+    markup += escapeHtml(value.slice(cursor, range.start));
+    markup += `<strong class="note-emphasis">${escapeHtml(value.slice(range.start, range.end))}</strong>`;
+    cursor = range.end;
+  });
+
+  markup += escapeHtml(value.slice(cursor));
+  return markup;
+};
+
 const getPeriodById = (periodId) => periods.find((period) => period.id === periodId) || null;
 
 const buildChapterHref = (chapterId, sectionKey = resolvedRequestedSectionKey) => {
@@ -323,7 +461,7 @@ const renderNoteText = (value, period) => {
   }
 
   if (!period?.vocabPattern) {
-    return escapeHtml(text);
+    return renderEmphasizedText(text);
   }
 
   period.vocabPattern.lastIndex = 0;
@@ -331,11 +469,12 @@ const renderNoteText = (value, period) => {
   period.vocabPattern.lastIndex = 0;
 
   if (!matches.length) {
-    return escapeHtml(text);
+    return renderEmphasizedText(text);
   }
 
   let cursor = 0;
-  let markup = "";
+  let tokenizedText = "";
+  const vocabReplacements = [];
 
   matches.forEach((match) => {
     const index = match.index ?? 0;
@@ -346,14 +485,26 @@ const renderNoteText = (value, period) => {
       return;
     }
 
-    markup += escapeHtml(text.slice(cursor, index));
-    markup += `<button class="note-vocab-link" type="button" data-period="${period.id}" data-term-key="${escapeHtml(vocabItem.key)}" data-vocab-id="${escapeHtml(vocabItem.id)}">${escapeHtml(matchedText)}</button>`;
+    const token = `__NOTE_VOCAB_${vocabReplacements.length}__`;
+    tokenizedText += text.slice(cursor, index);
+    tokenizedText += token;
+    vocabReplacements.push({
+      token,
+      markup: `<button class="note-vocab-link" type="button" data-period="${period.id}" data-term-key="${escapeHtml(vocabItem.key)}" data-vocab-id="${escapeHtml(vocabItem.id)}">${escapeHtml(matchedText)}</button>`
+    });
     cursor = index + matchedText.length;
   });
 
-  markup += escapeHtml(text.slice(cursor));
+  tokenizedText += text.slice(cursor);
+  let markup = renderEmphasizedText(tokenizedText);
+  vocabReplacements.forEach(({ token, markup: replacementMarkup }) => {
+    markup = markup.replaceAll(token, replacementMarkup);
+  });
+
   return markup;
 };
+
+const renderKeyPointText = (value, period) => `<span class="note-point">${renderNoteText(value, period)}</span>`;
 
 const renderThemeChips = (themeKeys) => themeKeys
   .map((key) => `<span class="theme-chip">${escapeHtml(themeLabels[key])}</span>`)
@@ -448,7 +599,7 @@ const renderPeriod = (period) => {
       <div class="significance-callout">
         <strong>Exam Tips</strong>
         <ul class="arrow-list">
-          ${(period.examTips || []).map((tip) => `<li>${renderNoteText(tip, period)}</li>`).join("")}
+          ${(period.examTips || []).map((tip) => `<li>${renderKeyPointText(tip, period)}</li>`).join("")}
         </ul>
       </div>
     `
@@ -460,8 +611,8 @@ const renderPeriod = (period) => {
           <div class="arrow-block">
             <h5>${escapeHtml(block.title)}</h5>
             ${block.items?.length
-              ? `<ul class="arrow-list">${block.items.map((item) => `<li>${renderNoteText(item, period)}</li>`).join("")}</ul>`
-              : `<p>${renderNoteText(block.text || "", period)}</p>`}
+              ? `<ul class="arrow-list">${block.items.map((item) => `<li>${renderKeyPointText(item, period)}</li>`).join("")}</ul>`
+              : `<p>${renderKeyPointText(block.text || "", period)}</p>`}
           </div>
         `).join("")}
       </div>
@@ -482,26 +633,26 @@ const renderPeriod = (period) => {
       ${renderNoteMediaGrid(event.images, period)}
       <div class="significance-callout">
         <strong>Significance</strong>
-        <p>${renderNoteText(event.significance, period)}</p>
+        <p>${renderKeyPointText(event.significance, period)}</p>
       </div>
       <div class="arrow-grid">
         <div class="arrow-block">
           <h5>Causes</h5>
           <ul class="arrow-list">
-            ${event.causes.map((cause) => `<li>&rarr; ${renderNoteText(cause, period)}</li>`).join("")}
+            ${event.causes.map((cause) => `<li>&rarr; ${renderKeyPointText(cause, period)}</li>`).join("")}
           </ul>
         </div>
         <div class="arrow-block">
           <h5>Effects</h5>
           <ul class="arrow-list">
-            ${event.effects.map((effect) => `<li>&rarr; ${renderNoteText(effect, period)}</li>`).join("")}
+            ${event.effects.map((effect) => `<li>&rarr; ${renderKeyPointText(effect, period)}</li>`).join("")}
           </ul>
         </div>
         ${event.connections?.length ? `
           <div class="arrow-block">
             <h5>Connections</h5>
             <ul class="arrow-list">
-              ${event.connections.map((item) => `<li>${renderNoteText(item, period)}</li>`).join("")}
+              ${event.connections.map((item) => `<li>${renderKeyPointText(item, period)}</li>`).join("")}
             </ul>
           </div>
         ` : ""}
@@ -509,7 +660,7 @@ const renderPeriod = (period) => {
           <div class="arrow-block">
             <h5>Primary Sources</h5>
             <ul class="arrow-list">
-              ${event.sources.map((item) => `<li>${renderNoteText(item, period)}</li>`).join("")}
+              ${event.sources.map((item) => `<li>${renderKeyPointText(item, period)}</li>`).join("")}
             </ul>
           </div>
         ` : ""}
