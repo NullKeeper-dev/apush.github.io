@@ -46,6 +46,16 @@ const parseWeightValue = (label) => {
 
 const normalizeTerm = (value) => String(value || "").trim().toLowerCase();
 
+const normalizeInlineText = (value) => String(value || "")
+  .replace(/[\u0000-\u001f\u007f\u00a0\u2028\u2029]+/g, " ")
+  .replace(/\s+/g, " ")
+  .replace(/\s+([,.;:!?])/g, "$1")
+  .trim();
+
+const normalizeTextList = (values = []) => values
+  .map((value) => normalizeInlineText(value))
+  .filter(Boolean);
+
 const escapeRegex = (value) => String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 const slugifyFragment = (value) => String(value || "")
@@ -135,9 +145,9 @@ const buildNotesPeriod = ({ id, short, data }) => {
     range: data.chapterMeta.dateRange,
     weightLabel: data.chapterMeta.apExamWeight,
     weightValue: parseWeightValue(data.chapterMeta.apExamWeight),
-    overview: data.chapterMeta.oneLineSummary,
+    overview: normalizeInlineText(data.chapterMeta.oneLineSummary),
     bigThemes: data.chapterMeta.bigPictureThemes || [],
-    examTips: data.chapterMeta.examTips || [],
+    examTips: normalizeTextList(data.chapterMeta.examTips || []),
     sectionThemes: {
       context: mergeThemeKeys(sections, ["wor", "pol", "mig"]),
       events: mergeThemeKeys(sections, ["wor", "pol", "cul"]),
@@ -145,15 +155,15 @@ const buildNotesPeriod = ({ id, short, data }) => {
       vocabulary: mergeThemeKeys(sections, ["wor", "pol", "cul"]),
       essay: mergeThemeKeys(sections, ["pol", "wor", "nat"])
     },
-    context: data.notes.historicalContext?.overview || "",
+    context: normalizeInlineText(data.notes.historicalContext?.overview || ""),
     contextHighlights: [
       {
         title: "Preceding Causes",
-        items: data.notes.historicalContext?.precedingCauses || []
+        items: normalizeTextList(data.notes.historicalContext?.precedingCauses || [])
       },
       {
         title: "Geographic Context",
-        text: data.notes.historicalContext?.geographicContext || ""
+        text: normalizeInlineText(data.notes.historicalContext?.geographicContext || "")
       }
     ],
     contextImage: resolveNoteImage(data.notes.historicalContext?.contextImage, imageLookup),
@@ -162,12 +172,12 @@ const buildNotesPeriod = ({ id, short, data }) => {
       title: section.sectionTitle,
       date: `Section ${index + 1}`,
       meta: (section.apThemes || []).join(" · "),
-      description: section.narrative,
-      significance: section.significance,
-      causes: section.causes || [],
-      effects: section.effects || [],
-      connections: section.connections || [],
-      sources: section.primarySourceConnections || [],
+      description: normalizeInlineText(section.narrative),
+      significance: normalizeInlineText(section.significance),
+      causes: normalizeTextList(section.causes || []),
+      effects: normalizeTextList(section.effects || []),
+      connections: normalizeTextList(section.connections || []),
+      sources: normalizeTextList(section.primarySourceConnections || []),
       images: (section.sectionImages || [])
         .map((imageRef) => resolveNoteImage(imageRef, imageLookup))
         .filter(Boolean)
@@ -177,21 +187,21 @@ const buildNotesPeriod = ({ id, short, data }) => {
     vocabLookup,
     vocabPattern,
     essay: {
-      intro: data.notes.overarchingAnalysis?.complexity || "",
+      intro: normalizeInlineText(data.notes.overarchingAnalysis?.complexity || ""),
       prompts: [
         ...(data.essayPractice?.saq || []).map((item) => item.prompt),
         ...(data.essayPractice?.leq || []).map((item) => item.prompt),
         ...(data.essayPractice?.dbq || []).map((item) => item.prompt)
-      ],
+      ].map((item) => normalizeInlineText(item)).filter(Boolean),
       theses: [
         ...(data.essayPractice?.leq || []).flatMap((item) => item.thesisExamples || []),
         ...(data.essayPractice?.dbq || []).map((item) => item.thesisExample).filter(Boolean)
-      ],
+      ].map((item) => normalizeInlineText(item)).filter(Boolean),
       analysis: [
         data.notes.overarchingAnalysis?.continuity ? `Continuity: ${data.notes.overarchingAnalysis.continuity}` : "",
         data.notes.overarchingAnalysis?.change ? `Change: ${data.notes.overarchingAnalysis.change}` : "",
         ...(data.notes.overarchingAnalysis?.comparisonAngles || [])
-      ].filter(Boolean)
+      ].map((item) => normalizeInlineText(item)).filter(Boolean)
     }
   };
 };
@@ -454,7 +464,7 @@ const ensureElementId = (element, prefix = "notes-link") => {
 };
 
 const renderNoteText = (value, period) => {
-  const text = String(value || "");
+  const text = normalizeInlineText(value);
 
   if (!text) {
     return "";
@@ -490,7 +500,7 @@ const renderNoteText = (value, period) => {
     tokenizedText += token;
     vocabReplacements.push({
       token,
-      markup: `<button class="note-vocab-link" type="button" data-period="${period.id}" data-term-key="${escapeHtml(vocabItem.key)}" data-vocab-id="${escapeHtml(vocabItem.id)}">${escapeHtml(matchedText)}</button>`
+      markup: `<a class="note-vocab-link" href="#${escapeHtml(vocabItem.id)}" data-period="${period.id}" data-term-key="${escapeHtml(vocabItem.key)}" data-vocab-id="${escapeHtml(vocabItem.id)}">${escapeHtml(matchedText)}</a>`
     });
     cursor = index + matchedText.length;
   });
