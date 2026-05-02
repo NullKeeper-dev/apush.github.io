@@ -93,9 +93,328 @@ const resolveNoteImage = (ref, imageLookup) => {
 
   return {
     ...image,
-    placement: ref.placement || "after-paragraph",
+    placement: ref.placement || "after-overview",
     displayCaption: ref.displayCaption || image.caption || ""
   };
+};
+
+const splitIntoSentences = (value) => {
+  const placeholders = [
+    ["U.S.", "__US__"],
+    ["U.N.", "__UN__"],
+    ["Mr.", "__MR__"],
+    ["Mrs.", "__MRS__"],
+    ["Ms.", "__MS__"],
+    ["Dr.", "__DR__"],
+    ["Jr.", "__JR__"],
+    ["Sr.", "__SR__"],
+    ["St.", "__ST__"],
+    ["v.", "__V__"]
+  ];
+
+  let text = normalizeInlineText(value);
+  if (!text) {
+    return [];
+  }
+
+  placeholders.forEach(([needle, token]) => {
+    text = text.replaceAll(needle, token);
+  });
+
+  return text
+    .split(/(?<=[.!?])\s+/)
+    .map((sentence) => {
+      let restored = sentence;
+      placeholders.forEach(([needle, token]) => {
+        restored = restored.replaceAll(token, needle);
+      });
+      return normalizeInlineText(restored);
+    })
+    .filter(Boolean);
+};
+
+const dedupeTextList = (values = []) => Array.from(new Set(
+  normalizeTextList(values).filter(Boolean)
+));
+
+const flattenContentBlock = (block) => {
+  if (!block || typeof block !== "object") {
+    return "";
+  }
+
+  switch (block.type) {
+    case "fact":
+      return [block.label, block.text, block.apSignificance].filter(Boolean).join(" ");
+    case "definition":
+      return [block.term, block.definition, block.inContext, block.apRelevance].filter(Boolean).join(" ");
+    case "stat":
+      return [block.label, block.value, block.date, block.apSignificance].filter(Boolean).join(" ");
+    case "quote":
+      return [block.text, block.attribution, block.context, block.apSignificance].filter(Boolean).join(" ");
+    case "who":
+      return [block.name, block.title, ...(block.keyActions || []), block.perspective, block.legacy, block.apSignificance].filter(Boolean).join(" ");
+    case "chain":
+      return [block.label, ...(block.steps || []).flatMap((step) => [step.event, step.result]), block.apSignificance].filter(Boolean).join(" ");
+    case "cluster":
+      return [block.label, ...(block.items || []).flatMap((item) => [item.name, item.description, item.date]), block.apSignificance].filter(Boolean).join(" ");
+    case "comparison":
+      return [
+        block.label,
+        block.itemA?.label,
+        ...(block.itemA?.points || []),
+        block.itemB?.label,
+        ...(block.itemB?.points || []),
+        ...(block.sharedTraits || []),
+        block.apSignificance
+      ].filter(Boolean).join(" ");
+    case "tension":
+      return [
+        block.label,
+        block.sideA?.label,
+        ...(block.sideA?.points || []),
+        block.sideB?.label,
+        ...(block.sideB?.points || []),
+        block.outcome,
+        block.apSignificance
+      ].filter(Boolean).join(" ");
+    default:
+      return Object.values(block).flat().filter(Boolean).join(" ");
+  }
+};
+
+const buildLegacyBlocks = (section) => {
+  const sentences = splitIntoSentences(section.narrative || "");
+  const blocks = [];
+
+  sentences.slice(2).forEach((sentence, index) => {
+    blocks.push({
+      type: "fact",
+      label: index === 0 ? section.sectionTitle : `Section Detail ${index + 1}`,
+      text: sentence,
+      apSignificance: section.significance || ""
+    });
+  });
+
+  if ((section.causes || []).length || (section.effects || []).length) {
+    const steps = [];
+    const causes = normalizeTextList(section.causes || []).slice(0, 2);
+    const effects = normalizeTextList(section.effects || []).slice(0, 2);
+
+    causes.forEach((cause, index) => {
+      steps.push({
+        step: steps.length + 1,
+        event: cause,
+        result: index === causes.length - 1 ? `${section.sectionTitle} gathered momentum.` : "The pressure for change kept building."
+      });
+    });
+
+    steps.push({
+      step: steps.length + 1,
+      event: section.sectionTitle,
+      result: section.significance || `${section.sectionTitle} reshaped the politics of the era.`
+    });
+
+    effects.forEach((effect) => {
+      steps.push({
+        step: steps.length + 1,
+        event: "The immediate aftermath",
+        result: effect
+      });
+    });
+
+    blocks.push({
+      type: "chain",
+      label: `How ${section.sectionTitle} unfolded`,
+      steps: steps.slice(0, 5),
+      apSignificance: section.significance || ""
+    });
+  }
+
+  if ((section.primarySourceConnections || []).length) {
+    blocks.push({
+      type: "cluster",
+      label: "Primary source windows",
+      items: normalizeTextList(section.primarySourceConnections || []).map((item, index) => ({
+        name: `Source ${index + 1}`,
+        description: item,
+        date: null
+      })),
+      apSignificance: "Primary-source analysis questions often use these examples to test contextualization and argumentation."
+    });
+  }
+
+  (section.keyFigures || []).forEach((figure) => {
+    const bioSentences = splitIntoSentences(figure.bio || "");
+    const significanceSentences = splitIntoSentences(figure.significance || "");
+    blocks.push({
+      type: "who",
+      name: figure.name,
+      title: figure.title,
+      dates: "",
+      keyActions: [
+        bioSentences[0] || figure.bio || "",
+        significanceSentences[0] || bioSentences[1] || ""
+      ].filter(Boolean),
+      perspective: figure.perspective || "",
+      legacy: figure.significance || "",
+      apSignificance: figure.significance || figure.bio || "",
+      imageId: figure.imageId || null
+    });
+  });
+
+  if (section.significance) {
+    blocks.push({
+      type: "fact",
+      label: "AP significance",
+      text: section.significance,
+      apSignificance: "This is the clearest claim the section makes about why the development matters."
+    });
+  }
+
+  while (blocks.length < 5) {
+    const fallbackSentence = sentences[blocks.length + 1] || sentences[0] || section.sectionTitle || "";
+    blocks.push({
+      type: "fact",
+      label: "Section takeaway",
+      text: fallbackSentence,
+      apSignificance: section.significance || ""
+    });
+  }
+
+  return blocks;
+};
+
+const getSectionOverview = (section) => {
+  if (section?.overview) {
+    return normalizeInlineText(section.overview);
+  }
+
+  return splitIntoSentences(section?.narrative || "").slice(0, 2).join(" ");
+};
+
+const getSectionBlocks = (section) => {
+  if (Array.isArray(section?.contentBlocks) && section.contentBlocks.length) {
+    return section.contentBlocks;
+  }
+
+  return buildLegacyBlocks(section || {});
+};
+
+const deriveSectionChains = (blocks = []) => blocks
+  .filter((block) => block?.type === "chain" && Array.isArray(block.steps) && block.steps.length);
+
+const deriveSectionCauses = (section, blocks) => {
+  if (Array.isArray(section?.causes) && section.causes.length) {
+    return normalizeTextList(section.causes);
+  }
+
+  const chain = deriveSectionChains(blocks)[0];
+  if (!chain) {
+    return [];
+  }
+
+  return dedupeTextList(chain.steps.slice(0, Math.max(chain.steps.length - 1, 1)).map((step) => step.event)).slice(0, 3);
+};
+
+const deriveSectionEffects = (section, blocks) => {
+  if (Array.isArray(section?.effects) && section.effects.length) {
+    return normalizeTextList(section.effects);
+  }
+
+  const chain = deriveSectionChains(blocks)[0];
+  if (!chain) {
+    return [];
+  }
+
+  return dedupeTextList(chain.steps.map((step) => step.result)).slice(-3);
+};
+
+const deriveSectionSources = (section, blocks) => {
+  if (Array.isArray(section?.primarySourceConnections) && section.primarySourceConnections.length) {
+    return normalizeTextList(section.primarySourceConnections);
+  }
+
+  const sources = [];
+  blocks.forEach((block) => {
+    if (block?.type === "quote") {
+      sources.push([block.attribution, block.text].filter(Boolean).join(": "));
+    }
+
+    if (block?.type === "cluster" && /primary source/i.test(String(block.label || ""))) {
+      (block.items || []).forEach((item) => {
+        sources.push([item.name, item.description].filter(Boolean).join(": "));
+      });
+    }
+  });
+
+  return dedupeTextList(sources);
+};
+
+const deriveSectionSignificance = (section, blocks) => normalizeInlineText(
+  section?.significance
+  || (Array.isArray(section?.apExamAngles) ? section.apExamAngles[0] : "")
+  || blocks.map((block) => block?.apSignificance || block?.apRelevance).find(Boolean)
+  || ""
+);
+
+const collectSectionFigures = (section, blocks, imageLookup) => {
+  const figures = [];
+
+  (section?.keyFigures || []).forEach((figure) => {
+    figures.push({
+      name: figure.name,
+      role: figure.title,
+      bio: figure.bio,
+      significance: figure.significance,
+      perspective: figure.perspective,
+      image: figure.imageId ? (imageLookup.get(figure.imageId) || null) : null
+    });
+  });
+
+  blocks
+    .filter((block) => block?.type === "who" && block.name)
+    .forEach((block) => {
+      figures.push({
+        name: block.name,
+        role: block.title,
+        bio: normalizeTextList(block.keyActions || []).join(" "),
+        significance: block.legacy || block.apSignificance || "",
+        perspective: block.perspective || "",
+        image: block.imageId ? (imageLookup.get(block.imageId) || null) : null
+      });
+    });
+
+  return figures;
+};
+
+const buildPlacedImages = (images = []) => {
+  const placed = {
+    afterOverview: [],
+    afterKeyFigures: [],
+    afterBlocks: new Map()
+  };
+
+  images.forEach((image) => {
+    const placement = String(image?.placement || "after-overview");
+    const blockMatch = placement.match(/^after-block-(\d+)$/i);
+
+    if (blockMatch) {
+      const blockIndex = Number(blockMatch[1]);
+      const current = placed.afterBlocks.get(blockIndex) || [];
+      current.push(image);
+      placed.afterBlocks.set(blockIndex, current);
+      return;
+    }
+
+    if (placement === "after-key-figures") {
+      placed.afterKeyFigures.push(image);
+      return;
+    }
+
+    placed.afterOverview.push(image);
+  });
+
+  return placed;
 };
 
 const buildNotesPeriod = ({ id, short, data }) => {
@@ -122,24 +441,39 @@ const buildNotesPeriod = ({ id, short, data }) => {
     ? new RegExp(`\\b(${vocabTerms.map(escapeRegex).join("|")})\\b`, "gi")
     : null;
 
-  sections.forEach((section) => {
-    (section.keyFigures || []).forEach((figure) => {
+  const normalizedSections = sections.map((section, index) => {
+    const blocks = getSectionBlocks(section);
+    const resolvedImages = (section.sectionImages || [])
+      .map((imageRef) => resolveNoteImage(imageRef, imageLookup))
+      .filter(Boolean);
+
+    collectSectionFigures(section, blocks, imageLookup).forEach((figure) => {
       if (!figureMap.has(figure.name)) {
-        figureMap.set(figure.name, {
-          name: figure.name,
-          role: figure.title,
-          bio: figure.bio,
-          significance: figure.significance,
-          perspective: figure.perspective,
-          image: figure.imageId ? (imageLookup.get(figure.imageId) || null) : null
-        });
+        figureMap.set(figure.name, figure);
       }
     });
+
+    return {
+      eventId: `${id}-event-${slugifyFragment(section.sectionTitle) || `section-${index + 1}`}-${index + 1}`,
+      title: section.sectionTitle,
+      date: `Section ${index + 1}`,
+      meta: (section.apThemes || []).join(" · "),
+      overview: getSectionOverview(section),
+      blocks,
+      significance: deriveSectionSignificance(section, blocks),
+      causes: deriveSectionCauses(section, blocks),
+      effects: deriveSectionEffects(section, blocks),
+      connections: normalizeTextList(section.connections || []),
+      sources: deriveSectionSources(section, blocks),
+      apExamAngles: normalizeTextList(section.apExamAngles || []),
+      images: buildPlacedImages(resolvedImages)
+    };
   });
 
   return {
     id,
     short,
+    images: data.images || [],
     navTitle: data.chapterMeta.chapterTitle,
     title: data.chapterMeta.chapterTitle,
     range: data.chapterMeta.dateRange,
@@ -167,21 +501,7 @@ const buildNotesPeriod = ({ id, short, data }) => {
       }
     ],
     contextImage: resolveNoteImage(data.notes.historicalContext?.contextImage, imageLookup),
-    events: sections.map((section, index) => ({
-      eventId: `${id}-event-${slugifyFragment(section.sectionTitle) || `section-${index + 1}`}-${index + 1}`,
-      title: section.sectionTitle,
-      date: `Section ${index + 1}`,
-      meta: (section.apThemes || []).join(" · "),
-      description: normalizeInlineText(section.narrative),
-      significance: normalizeInlineText(section.significance),
-      causes: normalizeTextList(section.causes || []),
-      effects: normalizeTextList(section.effects || []),
-      connections: normalizeTextList(section.connections || []),
-      sources: normalizeTextList(section.primarySourceConnections || []),
-      images: (section.sectionImages || [])
-        .map((imageRef) => resolveNoteImage(imageRef, imageLookup))
-        .filter(Boolean)
-    })),
+    events: normalizedSections,
     figures: Array.from(figureMap.values()),
     vocabulary,
     vocabLookup,
@@ -551,6 +871,206 @@ const renderNoteMediaGrid = (images, period) => {
   return `<div class="note-media-grid">${images.map((image) => renderNoteMedia(image, period)).join("")}</div>`;
 };
 
+const contentBlockTypeLabels = {
+  fact: "Fact",
+  chain: "Cause and Effect",
+  tension: "Tension",
+  comparison: "Comparison",
+  cluster: "Cluster",
+  quote: "Quote",
+  who: "Who",
+  stat: "Statistic",
+  definition: "Definition"
+};
+
+const renderBulletList = (items, period, className = "arrow-list", prefix = "") => `
+  <ul class="${className}">
+    ${items.map((item) => `<li>${prefix}${renderKeyPointText(item, period)}</li>`).join("")}
+  </ul>
+`;
+
+const renderContentBlockHeader = (block, label) => `
+  <div class="content-block-head">
+    <span class="content-block-type">${escapeHtml(contentBlockTypeLabels[block.type] || "Block")}</span>
+    ${label ? `<span class="content-block-label">${escapeHtml(label)}</span>` : ""}
+  </div>
+`;
+
+const renderContentBlockFooter = (block, period) => {
+  const significance = normalizeInlineText(block.apSignificance || block.apRelevance || "");
+  if (!significance) {
+    return "";
+  }
+
+  return `
+    <div class="content-block-footer">
+      <strong>AP Angle</strong>
+      <p>${renderNoteText(significance, period)}</p>
+    </div>
+  `;
+};
+
+const renderContentBlock = (block, period) => {
+  if (!block?.type) {
+    return "";
+  }
+
+  if (block.type === "fact") {
+    return `
+      <article class="content-block content-block-fact">
+        ${renderContentBlockHeader(block, block.label)}
+        <div class="content-block-copy">
+          <p>${renderNoteText(block.text, period)}</p>
+        </div>
+        ${renderContentBlockFooter(block, period)}
+      </article>
+    `;
+  }
+
+  if (block.type === "definition") {
+    return `
+      <article class="content-block content-block-definition">
+        ${renderContentBlockHeader(block, block.term)}
+        <div class="content-block-copy">
+          <p>${renderNoteText(block.definition, period)}</p>
+          ${block.inContext ? `<p><strong>In Context:</strong> ${renderNoteText(block.inContext, period)}</p>` : ""}
+          ${block.apRelevance ? `<p><strong>AP Relevance:</strong> ${renderNoteText(block.apRelevance, period)}</p>` : ""}
+        </div>
+      </article>
+    `;
+  }
+
+  if (block.type === "stat") {
+    return `
+      <article class="content-block content-block-stat">
+        ${renderContentBlockHeader(block, block.label)}
+        <div class="content-block-statline">
+          <strong class="content-block-value">${escapeHtml(block.value || "")}</strong>
+          ${block.date ? `<span class="content-block-date">${escapeHtml(block.date)}</span>` : ""}
+        </div>
+        ${renderContentBlockFooter(block, period)}
+      </article>
+    `;
+  }
+
+  if (block.type === "quote") {
+    return `
+      <article class="content-block content-block-quote-wrap">
+        ${renderContentBlockHeader(block, block.attribution)}
+        <blockquote class="content-block-quote">
+          <p>${renderNoteText(block.text, period)}</p>
+          ${block.context ? `<footer>${renderNoteText(block.context, period)}</footer>` : ""}
+        </blockquote>
+        ${renderContentBlockFooter(block, period)}
+      </article>
+    `;
+  }
+
+  if (block.type === "who") {
+    return `
+      <article class="content-block content-block-who">
+        ${renderContentBlockHeader(block, block.name)}
+        <div class="content-block-who-grid">
+          ${block.imageId && getPeriodById(period.id)
+            ? renderNoteMediaGrid([buildImageLookup(getPeriodById(period.id)?.images || []).get(block.imageId)].filter(Boolean), period)
+            : ""}
+          <div class="content-block-copy">
+            ${block.title ? `<p><strong>${escapeHtml(block.title)}</strong>${block.dates ? ` · ${escapeHtml(block.dates)}` : ""}</p>` : ""}
+            ${(block.keyActions || []).length ? renderBulletList(block.keyActions, period, "content-block-list") : ""}
+            ${block.perspective ? `<p><strong>Perspective:</strong> ${renderNoteText(block.perspective, period)}</p>` : ""}
+            ${block.legacy ? `<p><strong>Legacy:</strong> ${renderNoteText(block.legacy, period)}</p>` : ""}
+          </div>
+        </div>
+        ${renderContentBlockFooter(block, period)}
+      </article>
+    `;
+  }
+
+  if (block.type === "chain") {
+    return `
+      <article class="content-block content-block-chain">
+        ${renderContentBlockHeader(block, block.label)}
+        <div class="content-block-steps">
+          ${(block.steps || []).map((step) => `
+            <div class="content-block-step">
+              <span class="content-block-step-index">Step ${escapeHtml(step.step)}</span>
+              <p><strong>Event:</strong> ${renderNoteText(step.event, period)}</p>
+              <p><strong>Result:</strong> ${renderNoteText(step.result, period)}</p>
+            </div>
+          `).join("")}
+        </div>
+        ${renderContentBlockFooter(block, period)}
+      </article>
+    `;
+  }
+
+  if (block.type === "cluster") {
+    return `
+      <article class="content-block content-block-cluster">
+        ${renderContentBlockHeader(block, block.label)}
+        <div class="content-block-items">
+          ${(block.items || []).map((item) => `
+            <div class="content-block-item">
+              <p><strong>${escapeHtml(item.name || "")}</strong>${item.date ? ` <span class="content-block-date">${escapeHtml(item.date)}</span>` : ""}</p>
+              <p>${renderNoteText(item.description, period)}</p>
+            </div>
+          `).join("")}
+        </div>
+        ${renderContentBlockFooter(block, period)}
+      </article>
+    `;
+  }
+
+  if (block.type === "comparison" || block.type === "tension") {
+    const left = block.type === "comparison" ? block.itemA : block.sideA;
+    const right = block.type === "comparison" ? block.itemB : block.sideB;
+    const shared = block.type === "comparison" ? (block.sharedTraits || []) : [];
+    const outro = block.type === "comparison" ? "" : normalizeInlineText(block.outcome || "");
+
+    return `
+      <article class="content-block content-block-grid-wrap">
+        ${renderContentBlockHeader(block, block.label)}
+        <div class="content-block-grid">
+          <div class="content-block-panel">
+            <h5>${escapeHtml(left?.label || "Side A")}</h5>
+            ${(left?.points || []).length ? renderBulletList(left.points, period, "content-block-list") : ""}
+          </div>
+          <div class="content-block-panel">
+            <h5>${escapeHtml(right?.label || "Side B")}</h5>
+            ${(right?.points || []).length ? renderBulletList(right.points, period, "content-block-list") : ""}
+          </div>
+        </div>
+        ${shared.length ? `<div class="content-block-footer"><strong>Shared Traits</strong>${renderBulletList(shared, period, "content-block-list")}</div>` : ""}
+        ${outro ? `<div class="content-block-footer"><strong>Outcome</strong><p>${renderNoteText(outro, period)}</p></div>` : ""}
+        ${renderContentBlockFooter(block, period)}
+      </article>
+    `;
+  }
+
+  return `
+    <article class="content-block">
+      ${renderContentBlockHeader(block, block.label || "")}
+      <div class="content-block-copy">
+        <p>${renderNoteText(flattenContentBlock(block), period)}</p>
+      </div>
+    </article>
+  `;
+};
+
+const renderEventBlockStack = (event, period) => {
+  const blockMarkup = event.blocks.map((block, index) => `
+    ${renderContentBlock(block, period)}
+    ${renderNoteMediaGrid(event.images.afterBlocks.get(index + 1) || [], period)}
+  `).join("");
+
+  return `
+    <div class="content-block-stack">
+      ${blockMarkup}
+      ${renderNoteMediaGrid(event.images.afterKeyFigures || [], period)}
+    </div>
+  `;
+};
+
 const updateHero = () => {
   const totalSections = periods.reduce((sum, period) => sum + period.events.length, 0);
   const totalVocabulary = periods.reduce((sum, period) => sum + period.vocabulary.length, 0);
@@ -639,42 +1159,49 @@ const renderPeriod = (period) => {
         </div>
         <span class="event-date">${escapeHtml(event.date)}</span>
       </div>
-      <p>${renderNoteText(event.description, period)}</p>
-      ${renderNoteMediaGrid(event.images, period)}
-      <div class="significance-callout">
-        <strong>Significance</strong>
-        <p>${renderKeyPointText(event.significance, period)}</p>
-      </div>
-      <div class="arrow-grid">
-        <div class="arrow-block">
-          <h5>Causes</h5>
-          <ul class="arrow-list">
-            ${event.causes.map((cause) => `<li>&rarr; ${renderKeyPointText(cause, period)}</li>`).join("")}
-          </ul>
+      ${event.overview ? `<p class="event-overview">${renderNoteText(event.overview, period)}</p>` : ""}
+      ${renderNoteMediaGrid(event.images.afterOverview || [], period)}
+      ${renderEventBlockStack(event, period)}
+      ${event.significance ? `
+        <div class="significance-callout">
+          <strong>Section Significance</strong>
+          <p>${renderKeyPointText(event.significance, period)}</p>
         </div>
-        <div class="arrow-block">
-          <h5>Effects</h5>
-          <ul class="arrow-list">
-            ${event.effects.map((effect) => `<li>&rarr; ${renderKeyPointText(effect, period)}</li>`).join("")}
-          </ul>
+      ` : ""}
+      ${(event.causes.length || event.effects.length || event.apExamAngles.length || event.connections?.length || event.sources?.length) ? `
+        <div class="arrow-grid">
+          ${event.causes.length ? `
+            <div class="arrow-block">
+              <h5>Drivers</h5>
+              ${renderBulletList(event.causes, period, "arrow-list", "&rarr; ")}
+            </div>
+          ` : ""}
+          ${event.effects.length ? `
+            <div class="arrow-block">
+              <h5>Consequences</h5>
+              ${renderBulletList(event.effects, period, "arrow-list", "&rarr; ")}
+            </div>
+          ` : ""}
+          ${event.apExamAngles.length ? `
+            <div class="arrow-block">
+              <h5>AP Exam Angles</h5>
+              ${renderBulletList(event.apExamAngles, period)}
+            </div>
+          ` : ""}
+          ${event.connections?.length ? `
+            <div class="arrow-block">
+              <h5>Connections</h5>
+              ${renderBulletList(event.connections, period)}
+            </div>
+          ` : ""}
+          ${event.sources?.length ? `
+            <div class="arrow-block">
+              <h5>Primary Sources</h5>
+              ${renderBulletList(event.sources, period)}
+            </div>
+          ` : ""}
         </div>
-        ${event.connections?.length ? `
-          <div class="arrow-block">
-            <h5>Connections</h5>
-            <ul class="arrow-list">
-              ${event.connections.map((item) => `<li>${renderKeyPointText(item, period)}</li>`).join("")}
-            </ul>
-          </div>
-        ` : ""}
-        ${event.sources?.length ? `
-          <div class="arrow-block">
-            <h5>Primary Sources</h5>
-            <ul class="arrow-list">
-              ${event.sources.map((item) => `<li>${renderKeyPointText(item, period)}</li>`).join("")}
-            </ul>
-          </div>
-        ` : ""}
-      </div>
+      ` : ""}
     </article>
   `).join("");
 

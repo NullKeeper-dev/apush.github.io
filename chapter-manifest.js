@@ -62,5 +62,21 @@ window.chapterManifest = [
     title: "The Conservative Turn, 1969-1988",
     script: "chapter26-data.js",
     global: "chapter26Data"
+  },
+  {
+    id: "ch27",
+    number: 27,
+    short: "Ch 27",
+    title: "From Triumph to Tragedy, 1989-2004",
+    script: "chapter27-data.js",
+    global: "chapter27Data"
+  },
+  {
+    id: "ch28",
+    number: 28,
+    short: "Ch 28",
+    title: "A Divided Nation",
+    script: "chapter28-data.js",
+    global: "chapter28Data"
   }
 ];

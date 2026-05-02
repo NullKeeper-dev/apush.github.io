@@ -27,7 +27,7 @@ window.chapter24Data = {
     {
       "imageId": "chapter24-img-002",
       "src": "images/chapter24/chapter24-img-002.jpg",
-      "alt": "Eisenhower",
+      "alt": "Eisenhower supporters shout “We Like Ike” during a campaign stop in Baltimore",
       "caption": "Eisenhower's popularity was evident during his 1952 presidential campaign.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -47,7 +47,7 @@ window.chapter24Data = {
     {
       "imageId": "chapter24-img-003",
       "src": "images/chapter24/chapter24-img-003.jpg",
-      "alt": "A",
+      "alt": "A photograph taken in 1955 showing a family in their underground bomb shelter where - the manufacturer claimed - the occupents could survive for five days after a nuclear war.",
       "caption": "A 1955 family bomb shelter photograph captures nuclear anxiety under massive retaliation.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -67,7 +67,7 @@ window.chapter24Data = {
     {
       "imageId": "chapter24-img-004",
       "src": "images/chapter24/chapter24-img-004.png",
-      "alt": "Elvis",
+      "alt": "Elvis Presley, 1950s",
       "caption": "Elvis Presley symbolized youth culture and the commercialization of rock and roll.",
       "relevanceScore": 4,
       "apCategory": "Photograph",
@@ -87,7 +87,7 @@ window.chapter24Data = {
     {
       "imageId": "chapter24-img-005",
       "src": "images/chapter24/chapter24-img-005.jpg",
-      "alt": "anti-catholic",
+      "alt": "anti-catholic propaganda produced during the 1960 presidential race",
       "caption": "Anti-Catholic propaganda circulated during the 1960 presidential campaign against John F. Kennedy.",
       "relevanceScore": 5,
       "apCategory": "Primary Source",
@@ -107,7 +107,7 @@ window.chapter24Data = {
     {
       "imageId": "chapter24-img-006",
       "src": "images/chapter24/chapter24-img-006.png",
-      "alt": "THE",
+      "alt": "THE PRESIDENTIAL ELECTION OF 1960",
       "caption": "The 1960 presidential election map shows the narrow Kennedy-Nixon contest.",
       "relevanceScore": 5,
       "apCategory": "Chart/Graph",
@@ -127,7 +127,7 @@ window.chapter24Data = {
     {
       "imageId": "chapter24-img-007",
       "src": "images/chapter24/chapter24-img-007.jpg",
-      "alt": "Linda",
+      "alt": "Linda and Terry Lynn Brown walking to school bus stop, Topeka, Kansas, 1953",
       "caption": "Linda Brown was connected to the legal challenge that became Brown v. Board of Education.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -147,7 +147,7 @@ window.chapter24Data = {
     {
       "imageId": "chapter24-img-008",
       "src": "images/chapter24/chapter24-img-008.jpg",
-      "alt": "Rosa",
+      "alt": "Rosa Parks mug shot",
       "caption": "Rosa Parks helped spark the Montgomery bus boycott after refusing to give up her bus seat.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -167,7 +167,7 @@ window.chapter24Data = {
     {
       "imageId": "chapter24-img-009",
       "src": "images/chapter24/chapter24-img-009.jpg",
-      "alt": "Black",
+      "alt": "Black women walking down the sidewalk to work. Above them is a sign for Coca-Cola in bottles.",
       "caption": "The Montgomery bus boycott marked a turning point in the freedom movement.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -187,7 +187,7 @@ window.chapter24Data = {
     {
       "imageId": "chapter24-img-010",
       "src": "images/chapter24/chapter24-img-010.jpg",
-      "alt": "The",
+      "alt": "The Little Rock Crisis, Armed troops escort the “Little Rock Nine” from Central High, October 1957",
       "caption": "Federal enforcement at Little Rock revealed how segregation damaged the United States' international reputation.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -207,7 +207,7 @@ window.chapter24Data = {
     {
       "imageId": "chapter24-img-011",
       "src": "images/chapter24/chapter24-img-011.jpg",
-      "alt": "Khrushchev",
+      "alt": "Khrushchev and Nixon debate merits of capitalism near a model of an American kitchen, American National Exhibition in Moscow, 1959",
       "caption": "Richard Nixon and Nikita Khrushchev debated consumer abundance during the 1959 Kitchen Debate.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -227,7 +227,7 @@ window.chapter24Data = {
     {
       "imageId": "chapter24-img-012",
       "src": "images/chapter24/chapter24-img-012.jpg",
-      "alt": "A",
+      "alt": "A photograph of a poster on the side of a highway in southern California in 1948 advertising a segregated community.",
       "caption": "Some suburban builders openly advertised communities as racially exclusive.",
       "relevanceScore": 5,
       "apCategory": "Primary Source",
@@ -2418,13 +2418,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of suburbanization.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "suburbanization",
-      "apTheme": "Migration and Settlement"
+      "apTheme": "Migration and Settlement",
+      "stimulus": "Norman Rockwell's The Problem We All Live With depicts Ruby Bridges integrating a New Orleans school."
     },
     {
       "id": "chapter24-mcq-002",
@@ -2444,13 +2446,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of consumer culture.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "consumer culture",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": "Eisenhower's popularity was evident during his 1952 presidential campaign."
     },
     {
       "id": "chapter24-mcq-003",
@@ -2470,13 +2474,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Interstate Highway Act.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Interstate Highway Act",
-      "apTheme": "Geography and Environment"
+      "apTheme": "Geography and Environment",
+      "stimulus": "A 1955 family bomb shelter photograph captures nuclear anxiety under massive retaliation."
     },
     {
       "id": "chapter24-mcq-004",
@@ -2496,13 +2502,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of modern Republicanism.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "modern Republicanism",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "Elvis Presley symbolized youth culture and the commercialization of rock and roll."
     },
     {
       "id": "chapter24-mcq-005",
@@ -2522,13 +2530,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the social contract.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the social contract",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": "Anti-Catholic propaganda circulated during the 1960 presidential campaign against John F. Kennedy."
     },
     {
       "id": "chapter24-mcq-006",
@@ -2548,13 +2558,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of massive retaliation.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "massive retaliation",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "The 1960 presidential election map shows the narrow Kennedy-Nixon contest."
     },
     {
       "id": "chapter24-mcq-007",
@@ -2574,13 +2586,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Suez crisis.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Suez crisis",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "Linda Brown was connected to the legal challenge that became Brown v. Board of Education."
     },
     {
       "id": "chapter24-mcq-008",
@@ -2600,13 +2614,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of youth culture.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "youth culture",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": "Rosa Parks helped spark the Montgomery bus boycott after refusing to give up her bus seat."
     },
     {
       "id": "chapter24-mcq-009",
@@ -2626,13 +2642,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The 1960 election exposed continuing debates over religion, identity, and national leadership.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of anti-Catholic attacks on Kennedy.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "anti-Catholic attacks on Kennedy",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": "Separate educational facilities are inherently unequal."
     },
     {
       "id": "chapter24-mcq-010",
@@ -2652,13 +2670,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Television became a powerful force in shaping presidential politics and public image.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Kennedy-Nixon debates.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Kennedy-Nixon debates",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": "I believe in an America where the separation of church and state is absolute."
     },
     {
       "id": "chapter24-mcq-011",
@@ -2678,13 +2698,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Brown v. Board of Education.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Brown v. Board of Education",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "We must be strong enough to deter aggression but wise enough to avoid unnecessary war."
     },
     {
       "id": "chapter24-mcq-012",
@@ -2704,13 +2726,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Grassroots black activism used boycotts and nonviolent protest to attack segregation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Rosa Parks and Montgomery.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Rosa Parks and Montgomery",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": "The problem is not merely a legal problem but a moral problem affecting the whole community."
     },
     {
       "id": "chapter24-mcq-013",
@@ -2730,13 +2754,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Federal enforcement became necessary when states resisted school desegregation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Little Rock.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Little Rock",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "We will bury you in the peaceful competition of production and living standards."
     },
     {
       "id": "chapter24-mcq-014",
@@ -2756,13 +2782,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Kitchen Debate.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Kitchen Debate",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": "Federal highways are essential to the national interest and national defense."
     },
     {
       "id": "chapter24-mcq-015",
@@ -2782,13 +2810,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of restrictive suburban practices.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "restrictive suburban practices",
-      "apTheme": "Migration and Settlement"
+      "apTheme": "Migration and Settlement",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-016",
@@ -2808,13 +2838,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Postwar population growth increased demand for housing, schools, and consumer goods.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the baby boom.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the baby boom",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-017",
@@ -2834,13 +2866,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Defense spending, air conditioning, and migration shifted population and political influence toward the South and West.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Sunbelt.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Sunbelt",
-      "apTheme": "Migration and Settlement"
+      "apTheme": "Migration and Settlement",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-018",
@@ -2860,13 +2894,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Mass media standardized consumer desires and political messaging across the nation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of television advertising.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "television advertising",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-019",
@@ -2886,13 +2922,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Civil Rights Act of 1957.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Civil Rights Act of 1957",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-020",
@@ -2912,13 +2950,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the election of 1960.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the election of 1960",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-021",
@@ -2938,13 +2978,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of suburbanization.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "suburbanization",
-      "apTheme": "Migration and Settlement"
+      "apTheme": "Migration and Settlement",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-022",
@@ -2964,13 +3006,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of consumer culture.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "consumer culture",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-023",
@@ -2990,13 +3034,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Interstate Highway Act.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Interstate Highway Act",
-      "apTheme": "Geography and Environment"
+      "apTheme": "Geography and Environment",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-024",
@@ -3016,13 +3062,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of modern Republicanism.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "modern Republicanism",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-025",
@@ -3042,13 +3090,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the social contract.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the social contract",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-026",
@@ -3068,13 +3118,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of massive retaliation.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "massive retaliation",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-027",
@@ -3094,13 +3146,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Suez crisis.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Suez crisis",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-028",
@@ -3120,13 +3174,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of youth culture.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "youth culture",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-029",
@@ -3146,13 +3202,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The 1960 election exposed continuing debates over religion, identity, and national leadership.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of anti-Catholic attacks on Kennedy.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "anti-Catholic attacks on Kennedy",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-030",
@@ -3172,13 +3230,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Television became a powerful force in shaping presidential politics and public image.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Kennedy-Nixon debates.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Kennedy-Nixon debates",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-031",
@@ -3198,13 +3258,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Brown v. Board of Education.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Brown v. Board of Education",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-032",
@@ -3224,13 +3286,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Grassroots black activism used boycotts and nonviolent protest to attack segregation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Rosa Parks and Montgomery.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Rosa Parks and Montgomery",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-033",
@@ -3250,13 +3314,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Federal enforcement became necessary when states resisted school desegregation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Little Rock.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Little Rock",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-034",
@@ -3276,13 +3342,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Kitchen Debate.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Kitchen Debate",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-035",
@@ -3302,13 +3370,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of restrictive suburban practices.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "restrictive suburban practices",
-      "apTheme": "Migration and Settlement"
+      "apTheme": "Migration and Settlement",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-036",
@@ -3328,13 +3398,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Postwar population growth increased demand for housing, schools, and consumer goods.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the baby boom.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the baby boom",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-037",
@@ -3354,13 +3426,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Defense spending, air conditioning, and migration shifted population and political influence toward the South and West.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Sunbelt.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Sunbelt",
-      "apTheme": "Migration and Settlement"
+      "apTheme": "Migration and Settlement",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-038",
@@ -3380,13 +3454,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Mass media standardized consumer desires and political messaging across the nation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of television advertising.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "television advertising",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-039",
@@ -3406,13 +3482,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Civil Rights Act of 1957.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Civil Rights Act of 1957",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-040",
@@ -3432,13 +3510,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the election of 1960.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the election of 1960",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-041",
@@ -3458,13 +3538,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of suburbanization.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "suburbanization",
-      "apTheme": "Migration and Settlement"
+      "apTheme": "Migration and Settlement",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-042",
@@ -3484,13 +3566,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of consumer culture.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "consumer culture",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-043",
@@ -3510,13 +3594,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Interstate Highway Act.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Interstate Highway Act",
-      "apTheme": "Geography and Environment"
+      "apTheme": "Geography and Environment",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-044",
@@ -3536,13 +3622,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of modern Republicanism.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "modern Republicanism",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-045",
@@ -3562,13 +3650,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the social contract.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the social contract",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-046",
@@ -3588,13 +3678,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of massive retaliation.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "massive retaliation",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-047",
@@ -3614,13 +3706,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Suez crisis.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Suez crisis",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-048",
@@ -3640,13 +3734,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of youth culture.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "youth culture",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-049",
@@ -3666,13 +3762,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The 1960 election exposed continuing debates over religion, identity, and national leadership.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of anti-Catholic attacks on Kennedy.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "anti-Catholic attacks on Kennedy",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter24-mcq-050",
@@ -3692,13 +3790,15 @@ window.chapter24Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Television became a powerful force in shaping presidential politics and public image.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Kennedy-Nixon debates.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Kennedy-Nixon debates",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     }
   ],
   "flashcards": [
@@ -3712,7 +3812,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-002",
@@ -3724,7 +3825,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-003",
@@ -3736,7 +3838,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-004",
@@ -3748,7 +3851,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-005",
@@ -3760,7 +3864,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-006",
@@ -3772,7 +3877,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-007",
@@ -3784,7 +3890,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-008",
@@ -3796,7 +3903,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-009",
@@ -3808,7 +3916,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-010",
@@ -3820,7 +3929,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-011",
@@ -3832,7 +3942,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-012",
@@ -3844,7 +3955,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-013",
@@ -3856,7 +3968,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-014",
@@ -3868,7 +3981,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-015",
@@ -3880,7 +3994,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-016",
@@ -3892,7 +4007,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-017",
@@ -3904,7 +4020,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-018",
@@ -3916,7 +4033,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-019",
@@ -3928,7 +4046,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-020",
@@ -3940,7 +4059,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-021",
@@ -3952,7 +4072,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-022",
@@ -3964,7 +4085,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-023",
@@ -3976,7 +4098,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-008",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-024",
@@ -3988,7 +4111,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-025",
@@ -4000,7 +4124,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-026",
@@ -4012,7 +4137,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-027",
@@ -4024,7 +4150,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-002",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-028",
@@ -4036,7 +4163,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-029",
@@ -4048,7 +4176,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-007",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-030",
@@ -4060,7 +4189,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-031",
@@ -4072,7 +4202,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-008",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-032",
@@ -4084,7 +4215,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-033",
@@ -4096,7 +4228,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-034",
@@ -4108,7 +4241,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-010",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-035",
@@ -4120,7 +4254,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-036",
@@ -4132,7 +4267,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-037",
@@ -4144,7 +4280,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-011",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-038",
@@ -4156,7 +4293,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-039",
@@ -4168,7 +4306,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Hard",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-040",
@@ -4180,7 +4319,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-041",
@@ -4192,7 +4332,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-042",
@@ -4204,7 +4345,8 @@ window.chapter24Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-043",
@@ -4216,7 +4358,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-001",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-044",
@@ -4228,7 +4371,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-002",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-045",
@@ -4240,7 +4384,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-003",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-046",
@@ -4252,7 +4397,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-004",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-047",
@@ -4264,7 +4410,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-005",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-048",
@@ -4276,7 +4423,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-006",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-049",
@@ -4288,7 +4436,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-007",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-050",
@@ -4300,7 +4449,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-008",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-051",
@@ -4312,7 +4462,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-009",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-052",
@@ -4324,7 +4475,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-010",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-053",
@@ -4336,7 +4488,8 @@ window.chapter24Data = {
       "imageId": "chapter24-img-011",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter24-fc-054",
@@ -4348,6 +4501,73 @@ window.chapter24Data = {
       "imageId": "chapter24-img-012",
       "periodId": "p8",
       "difficulty": "Medium",
+      "apPriority": true,
+      "period": 8
+    }
+  ],
+  "overallTimelineEvents": [
+    {
+      "id": "chapter24-eisenhower-elected-president",
+      "year": 1952,
+      "title": "Eisenhower Elected President",
+      "summary": "Dwight Eisenhower won the presidency as a moderate Republican and Cold War hero.",
+      "period": 8,
+      "significance": "Useful for politics of consensus.",
+      "categories": [
+        "Political"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter24-brown-v-board-of-education",
+      "year": 1954,
+      "title": "Brown v. Board of Education",
+      "summary": "The Supreme Court ruled that segregated public schools were unconstitutional.",
+      "period": 8,
+      "significance": "Essential evidence for the modern civil rights movement.",
+      "categories": [
+        "Political",
+        "Social"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter24-massive-retaliation-announced",
+      "year": 1954,
+      "title": "Massive Retaliation Announced",
+      "summary": "The Eisenhower administration emphasized nuclear deterrence as a cost-effective Cold War strategy.",
+      "period": 8,
+      "significance": "Useful for comparing Truman and Eisenhower containment.",
+      "categories": [
+        "Military",
+        "Diplomatic"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter24-montgomery-bus-boycott-begins",
+      "year": 1955,
+      "title": "Montgomery Bus Boycott Begins",
+      "summary": "Black residents of Montgomery boycotted segregated buses after Rosa Parks's arrest.",
+      "period": 8,
+      "significance": "Key evidence for grassroots civil rights activism.",
+      "categories": [
+        "Social",
+        "Political"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter24-interstate-highway-act",
+      "year": 1956,
+      "title": "Interstate Highway Act",
+      "summary": "Congress funded a national highway system.",
+      "period": 8,
+      "significance": "Excellent evidence for federal role in suburbanization.",
+      "categories": [
+        "Economic",
+        "Social"
+      ],
       "apPriority": true
     }
   ]

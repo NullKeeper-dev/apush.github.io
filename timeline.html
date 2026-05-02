@@ -1076,7 +1076,7 @@
     window.chapterDataReady.then(() => {
       const chapterConfigs = (window.getChapterConfigs ? window.getChapterConfigs() : [])
         .map(({ short, data }) => ({ short, data }))
-        .filter((entry) => entry.data?.periodTimeline?.length);
+        .filter((entry) => (entry.data?.chapterTimeline?.length || entry.data?.periodTimeline?.length));
 
     const periods = chapterConfigs.map((entry) => entry.short);
     const categories = [];
@@ -1095,7 +1095,9 @@
 
     const formatTimelineYear = (year, month) => month ? `${monthLabels[month - 1]} ${year}` : String(year);
 
-    const buildTimelineEvents = (chapter, periodLabel) => (chapter.periodTimeline || []).map((event) => ({
+    const buildTimelineEvents = (chapter, periodLabel) => ((chapter.chapterTimeline && chapter.chapterTimeline.length)
+      ? chapter.chapterTimeline
+      : (chapter.periodTimeline || [])).map((event) => ({
       id: event.id,
       year: formatTimelineYear(event.year, event.month),
       sortKey: (Number(event.year) * 100) + (event.month || 0),

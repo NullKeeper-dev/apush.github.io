@@ -107,13 +107,107 @@
       .join("");
   }
 
+  function flattenContentBlock(block) {
+    if (!block || typeof block !== "object") {
+      return "";
+    }
+
+    switch (block.type) {
+      case "fact":
+        return [block.label, block.text, block.apSignificance].filter(Boolean).join(" ");
+      case "definition":
+        return [block.term, block.definition, block.inContext, block.apRelevance].filter(Boolean).join(" ");
+      case "stat":
+        return [block.label, block.value, block.date, block.apSignificance].filter(Boolean).join(" ");
+      case "quote":
+        return [block.text, block.attribution, block.context, block.apSignificance].filter(Boolean).join(" ");
+      case "who":
+        return [block.name, block.title, ...(block.keyActions || []), block.perspective, block.legacy, block.apSignificance].filter(Boolean).join(" ");
+      case "chain":
+        return [block.label, ...(block.steps || []).flatMap((step) => [step.event, step.result]), block.apSignificance].filter(Boolean).join(" ");
+      case "cluster":
+        return [block.label, ...(block.items || []).flatMap((item) => [item.name, item.description, item.date]), block.apSignificance].filter(Boolean).join(" ");
+      case "comparison":
+        return [
+          block.label,
+          block.itemA?.label,
+          ...(block.itemA?.points || []),
+          block.itemB?.label,
+          ...(block.itemB?.points || []),
+          ...(block.sharedTraits || []),
+          block.apSignificance
+        ].filter(Boolean).join(" ");
+      case "tension":
+        return [
+          block.label,
+          block.sideA?.label,
+          ...(block.sideA?.points || []),
+          block.sideB?.label,
+          ...(block.sideB?.points || []),
+          block.outcome,
+          block.apSignificance
+        ].filter(Boolean).join(" ");
+      default:
+        return Object.values(block).flat().filter(Boolean).join(" ");
+    }
+  }
+
+  function getSectionBlocks(section) {
+    return Array.isArray(section?.contentBlocks) ? section.contentBlocks : [];
+  }
+
+  function getSectionOverview(section) {
+    return normalizeCopy(section?.overview || section?.narrative);
+  }
+
+  function getSectionChain(section) {
+    if (Array.isArray(section?.causes) && section.causes.length) {
+      return null;
+    }
+
+    return getSectionBlocks(section).find((block) => block?.type === "chain" && Array.isArray(block.steps) && block.steps.length) || null;
+  }
+
+  function getSectionDrivers(section) {
+    if (Array.isArray(section?.causes) && section.causes.length) {
+      return section.causes;
+    }
+
+    const chain = getSectionChain(section);
+    return chain ? chain.steps.slice(0, Math.max(chain.steps.length - 1, 1)).map((step) => step.event) : [];
+  }
+
+  function getSectionConsequences(section) {
+    if (Array.isArray(section?.effects) && section.effects.length) {
+      return section.effects;
+    }
+
+    const chain = getSectionChain(section);
+    return chain ? chain.steps.map((step) => step.result) : [];
+  }
+
+  function getSectionCue(section) {
+    const blockCue = getSectionBlocks(section)
+      .map((block) => block?.apSignificance || block?.apRelevance || "")
+      .find(Boolean);
+
+    return normalizeCopy(
+      section?.significance
+      || (Array.isArray(section?.apExamAngles) ? section.apExamAngles[0] : "")
+      || blockCue
+      || getSectionConsequences(section)[0]
+      || getSectionDrivers(section)[0]
+    );
+  }
+
   function collectSectionText(section) {
     return [
       section.sectionTitle,
-      section.narrative,
-      section.significance,
-      ...(section.causes || []),
-      ...(section.effects || []),
+      getSectionOverview(section),
+      ...getSectionBlocks(section).map(flattenContentBlock),
+      getSectionCue(section),
+      ...getSectionDrivers(section),
+      ...getSectionConsequences(section),
       ...(section.connections || [])
     ]
       .map(normalizeCopy)
@@ -122,20 +216,34 @@
   }
 
   function buildSectionSummary(section) {
-    const narrative = normalizeCopy(section.narrative);
-    if (narrative) {
-      return narrative;
+    const overview = getSectionOverview(section);
+    if (overview) {
+      return overview;
+    }
+
+    const blockSummary = getSectionBlocks(section)
+      .map(flattenContentBlock)
+      .map(normalizeCopy)
+      .filter(Boolean)
+      .slice(0, 2)
+      .join(" ");
+
+    if (blockSummary) {
+      return blockSummary;
     }
 
     const summaryParts = [];
-    if (Array.isArray(section.causes) && section.causes.length) {
-      summaryParts.push(`Key drivers: ${section.causes.slice(0, 2).map(normalizeCopy).filter(Boolean).join("; ")}`);
+    const drivers = getSectionDrivers(section);
+    const consequences = getSectionConsequences(section);
+
+    if (drivers.length) {
+      summaryParts.push(`Key drivers: ${drivers.slice(0, 2).map(normalizeCopy).filter(Boolean).join("; ")}`);
     }
-    if (Array.isArray(section.effects) && section.effects.length) {
-      summaryParts.push(`Major results: ${section.effects.slice(0, 2).map(normalizeCopy).filter(Boolean).join("; ")}`);
+    if (consequences.length) {
+      summaryParts.push(`Major results: ${consequences.slice(0, 2).map(normalizeCopy).filter(Boolean).join("; ")}`);
     }
-    if (section.significance) {
-      summaryParts.push(normalizeCopy(section.significance));
+    if (getSectionCue(section)) {
+      summaryParts.push(getSectionCue(section));
     }
 
     return summaryParts.join(" ");
@@ -258,10 +366,10 @@
         title: section.sectionTitle,
         index: index + 1,
         preview: buildSectionSummary(section),
-        significance: section.significance || "",
-        cue: section.significance || section.effects?.[0] || section.causes?.[0] || "",
-        drivers: buildSectionDigest(section.causes, 2),
-        consequences: buildSectionDigest(section.effects, 2),
+        significance: getSectionCue(section),
+        cue: getSectionCue(section),
+        drivers: buildSectionDigest(getSectionDrivers(section), 2),
+        consequences: buildSectionDigest(getSectionConsequences(section), 2),
         keyTerms: getSectionKeyTerms(section, vocabulary),
         themes: section.apThemes || [],
         href: buildNotesHref(id, "events", sectionId)

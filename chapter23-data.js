@@ -27,7 +27,7 @@ window.chapter23Data = {
     {
       "imageId": "chapter23-img-002",
       "src": "images/chapter23/chapter23-img-002.jpg",
-      "alt": "Bales",
+      "alt": "Bales of American cotton in a warehouse at the French port of Le Havre, 1949.",
       "caption": "The Marshall Plan offered a positive economic vision to accompany containment.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -67,7 +67,7 @@ window.chapter23Data = {
     {
       "imageId": "chapter23-img-004",
       "src": "images/chapter23/chapter23-img-004.png",
-      "alt": "COLD",
+      "alt": "COLD WAR EUROPE, 1956 The division of Europe between communist and noncommunist nations, solidified by the early 1950s, would last for nearly forty years.",
       "caption": "The division of Europe between communist and noncommunist nations hardened by the early 1950s.",
       "relevanceScore": 5,
       "apCategory": "Map",
@@ -87,7 +87,7 @@ window.chapter23Data = {
     {
       "imageId": "chapter23-img-005",
       "src": "images/chapter23/chapter23-img-005.png",
-      "alt": "THE",
+      "alt": "THE KOREAN WAR, 1950–1953 As this map indicates, when General Douglas MacArthur launched his surprise landing at Inchon, North Korean forces controlled nearly the entire Korean peninsula.",
       "caption": "The Korean War map shows the Inchon landing and the shifting battle lines on the Korean peninsula.",
       "relevanceScore": 5,
       "apCategory": "Map",
@@ -107,7 +107,7 @@ window.chapter23Data = {
     {
       "imageId": "chapter23-img-006",
       "src": "images/chapter23/chapter23-img-006.jpg",
-      "alt": "Movie",
+      "alt": "Movie stars led by actors Humphrey Bogart and Lauren Bacall, on their way to attend the 1947 hearings of the House Un-American Activities Committee",
       "caption": "Humphrey Bogart, Lauren Bacall, and other movie figures travel to the 1947 HUAC hearings.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -127,7 +127,7 @@ window.chapter23Data = {
     {
       "imageId": "chapter23-img-007",
       "src": "images/chapter23/chapter23-img-007.jpg",
-      "alt": "Senator",
+      "alt": "Senator Joseph R. McCarthy at the Army-McCarthy Hearings of 1954",
       "caption": "Senator Joseph R. McCarthy became the best-known figure in the domestic anticommunist crusade.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -147,7 +147,7 @@ window.chapter23Data = {
     {
       "imageId": "chapter23-img-008",
       "src": "images/chapter23/chapter23-img-008.png",
-      "alt": "Cartoonist",
+      "alt": "Cartoonist Herbert Block, known as Herblock, offered this comment in 1949 on the danger to American freedom posed by the anti-Communist crusade",
       "caption": "This cartoon criticizes the atmosphere of fear created by the anticommunist crusade.",
       "relevanceScore": 5,
       "apCategory": "Political Cartoon",
@@ -167,7 +167,7 @@ window.chapter23Data = {
     {
       "imageId": "chapter23-img-009",
       "src": "images/chapter23/chapter23-img-009.jpg",
-      "alt": "NAACP",
+      "alt": "NAACP Youth March vs. Texas segregation laws, Houston, 1947",
       "caption": "Cold War pressures encouraged civil rights groups to challenge segregation as a global embarrassment.",
       "relevanceScore": 4,
       "apCategory": "Photograph",
@@ -2290,13 +2290,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of This Godless Communism.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "This Godless Communism",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": "This Godless Communism linked religious faith, capitalism, and anticommunism in Cold War popular culture."
     },
     {
       "id": "chapter23-mcq-002",
@@ -2316,13 +2318,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Marshall Plan.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Marshall Plan",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "The Marshall Plan offered a positive economic vision to accompany containment."
     },
     {
       "id": "chapter23-mcq-003",
@@ -2342,13 +2346,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Berlin Airlift.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Berlin Airlift",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "Children in Berlin celebrate supplies arriving during the Berlin Airlift, 1948."
     },
     {
       "id": "chapter23-mcq-004",
@@ -2368,13 +2374,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the division of Europe.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the division of Europe",
-      "apTheme": "Geography and Environment"
+      "apTheme": "Geography and Environment",
+      "stimulus": "The division of Europe between communist and noncommunist nations hardened by the early 1950s."
     },
     {
       "id": "chapter23-mcq-005",
@@ -2394,13 +2402,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Containment expanded into Asia and produced a limited war under United Nations authority.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Korean War.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Korean War",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "The Korean War map shows the Inchon landing and the shifting battle lines on the Korean peninsula."
     },
     {
       "id": "chapter23-mcq-006",
@@ -2420,13 +2430,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of HUAC hearings.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "HUAC hearings",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "Humphrey Bogart, Lauren Bacall, and other movie figures travel to the 1947 HUAC hearings."
     },
     {
       "id": "chapter23-mcq-007",
@@ -2446,13 +2458,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Joseph McCarthy.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Joseph McCarthy",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "Senator Joseph R. McCarthy became the best-known figure in the domestic anticommunist crusade."
     },
     {
       "id": "chapter23-mcq-008",
@@ -2472,13 +2486,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Civil rights groups used global criticism of racism to press the federal government for reform.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Cold War civil rights arguments.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Cold War civil rights arguments",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": "This cartoon criticizes the atmosphere of fear created by the anticommunist crusade."
     },
     {
       "id": "chapter23-mcq-009",
@@ -2498,13 +2514,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The United States committed itself to supporting governments resisting communist influence.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Truman Doctrine.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Truman Doctrine",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "It must be the policy of the United States to support free peoples who are resisting attempted subjugation by armed minorities or by outside pressures."
     },
     {
       "id": "chapter23-mcq-010",
@@ -2524,13 +2542,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of NSC-68.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "NSC-68",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "Our policy is directed not against any country or doctrine but against hunger, poverty, desperation, and chaos."
     },
     {
       "id": "chapter23-mcq-011",
@@ -2550,13 +2570,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Fair Deal.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Fair Deal",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "I have here in my hand a list of names that were made known to the Secretary of State as being members of the Communist Party."
     },
     {
       "id": "chapter23-mcq-012",
@@ -2576,13 +2598,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Taft-Hartley.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Taft-Hartley",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": "All human beings are born free and equal in dignity and rights."
     },
     {
       "id": "chapter23-mcq-013",
@@ -2602,13 +2626,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Southern Democrats split from Truman over federal civil rights initiatives.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Dixiecrat revolt.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Dixiecrat revolt",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "The United States must rapidly build up the political, economic, and military strength of the free world."
     },
     {
       "id": "chapter23-mcq-014",
@@ -2628,13 +2654,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the National Security Act.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the National Security Act",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "There shall be equality of treatment and opportunity for all persons in the armed services without regard to race, color, religion, or national origin."
     },
     {
       "id": "chapter23-mcq-015",
@@ -2654,13 +2682,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the reconstruction of Japan.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the reconstruction of Japan",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-016",
@@ -2680,13 +2710,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The fall of China intensified American fears that containment was failing in Asia.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Chinese Communist Revolution.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Chinese Communist Revolution",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-017",
@@ -2706,13 +2738,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Spy cases encouraged Americans to view dissent and espionage as closely connected threats.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Rosenberg trial.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Rosenberg trial",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-018",
@@ -2732,13 +2766,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Private industries enforced anticommunist conformity even without criminal convictions.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Hollywood blacklist.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Hollywood blacklist",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-019",
@@ -2758,13 +2794,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Human rights language gave reformers a global vocabulary for criticizing racial inequality.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Universal Declaration of Human Rights.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Universal Declaration of Human Rights",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-020",
@@ -2784,13 +2822,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The war ended in stalemate, showing both the reach and limits of containment.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Korean armistice.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Korean armistice",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-021",
@@ -2810,13 +2850,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of This Godless Communism.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "This Godless Communism",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-022",
@@ -2836,13 +2878,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Marshall Plan.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Marshall Plan",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-023",
@@ -2862,13 +2906,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Berlin Airlift.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Berlin Airlift",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-024",
@@ -2888,13 +2934,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the division of Europe.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the division of Europe",
-      "apTheme": "Geography and Environment"
+      "apTheme": "Geography and Environment",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-025",
@@ -2914,13 +2962,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Containment expanded into Asia and produced a limited war under United Nations authority.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Korean War.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Korean War",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-026",
@@ -2940,13 +2990,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of HUAC hearings.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "HUAC hearings",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-027",
@@ -2966,13 +3018,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Joseph McCarthy.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Joseph McCarthy",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-028",
@@ -2992,13 +3046,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Civil rights groups used global criticism of racism to press the federal government for reform.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Cold War civil rights arguments.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Cold War civil rights arguments",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-029",
@@ -3018,13 +3074,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The United States committed itself to supporting governments resisting communist influence.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Truman Doctrine.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Truman Doctrine",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-030",
@@ -3044,13 +3102,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of NSC-68.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "NSC-68",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-031",
@@ -3070,13 +3130,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Fair Deal.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Fair Deal",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-032",
@@ -3096,13 +3158,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Taft-Hartley.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Taft-Hartley",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-033",
@@ -3122,13 +3186,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Southern Democrats split from Truman over federal civil rights initiatives.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Dixiecrat revolt.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Dixiecrat revolt",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-034",
@@ -3148,13 +3214,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the National Security Act.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the National Security Act",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-035",
@@ -3174,13 +3242,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the reconstruction of Japan.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the reconstruction of Japan",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-036",
@@ -3200,13 +3270,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The fall of China intensified American fears that containment was failing in Asia.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Chinese Communist Revolution.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Chinese Communist Revolution",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-037",
@@ -3226,13 +3298,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Spy cases encouraged Americans to view dissent and espionage as closely connected threats.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Rosenberg trial.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Rosenberg trial",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-038",
@@ -3252,13 +3326,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Private industries enforced anticommunist conformity even without criminal convictions.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Hollywood blacklist.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Hollywood blacklist",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-039",
@@ -3278,13 +3354,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Human rights language gave reformers a global vocabulary for criticizing racial inequality.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Universal Declaration of Human Rights.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Universal Declaration of Human Rights",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-040",
@@ -3304,13 +3382,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The war ended in stalemate, showing both the reach and limits of containment.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Korean armistice.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Korean armistice",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-041",
@@ -3330,13 +3410,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of This Godless Communism.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "This Godless Communism",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-042",
@@ -3356,13 +3438,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Marshall Plan.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Marshall Plan",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-043",
@@ -3382,13 +3466,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Berlin Airlift.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Berlin Airlift",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-044",
@@ -3408,13 +3494,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the division of Europe.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the division of Europe",
-      "apTheme": "Geography and Environment"
+      "apTheme": "Geography and Environment",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-045",
@@ -3434,13 +3522,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Containment expanded into Asia and produced a limited war under United Nations authority.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Korean War.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Korean War",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-046",
@@ -3460,13 +3550,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of HUAC hearings.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "HUAC hearings",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-047",
@@ -3486,13 +3578,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Joseph McCarthy.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Joseph McCarthy",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-048",
@@ -3512,13 +3606,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Civil rights groups used global criticism of racism to press the federal government for reform.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Cold War civil rights arguments.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Cold War civil rights arguments",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-049",
@@ -3538,13 +3634,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The United States committed itself to supporting governments resisting communist influence.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Truman Doctrine.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Truman Doctrine",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter23-mcq-050",
@@ -3564,13 +3662,15 @@ window.chapter23Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of NSC-68.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "NSC-68",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     }
   ],
   "flashcards": [
@@ -3584,7 +3684,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-002",
@@ -3596,7 +3697,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-003",
@@ -3608,7 +3710,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-004",
@@ -3620,7 +3723,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-005",
@@ -3632,7 +3736,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-006",
@@ -3644,7 +3749,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-007",
@@ -3656,7 +3762,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-008",
@@ -3668,7 +3775,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-009",
@@ -3680,7 +3788,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-010",
@@ -3692,7 +3801,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-011",
@@ -3704,7 +3814,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-012",
@@ -3716,7 +3827,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-013",
@@ -3728,7 +3840,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-014",
@@ -3740,7 +3853,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-015",
@@ -3752,7 +3866,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-016",
@@ -3764,7 +3879,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-017",
@@ -3776,7 +3892,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-018",
@@ -3788,7 +3905,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-019",
@@ -3800,7 +3918,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-020",
@@ -3812,7 +3931,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-021",
@@ -3824,7 +3944,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-022",
@@ -3836,7 +3957,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-007",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-023",
@@ -3848,7 +3970,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-002",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-024",
@@ -3860,7 +3983,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-025",
@@ -3872,7 +3996,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-026",
@@ -3884,7 +4009,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-027",
@@ -3896,7 +4022,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-004",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-028",
@@ -3908,7 +4035,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-029",
@@ -3920,7 +4048,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-030",
@@ -3932,7 +4061,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-006",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-031",
@@ -3944,7 +4074,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-002",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-032",
@@ -3956,7 +4087,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-003",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-033",
@@ -3968,7 +4100,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-009",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-034",
@@ -3980,7 +4113,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-004",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-035",
@@ -3992,7 +4126,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-036",
@@ -4004,7 +4139,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-037",
@@ -4016,7 +4152,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-005",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-038",
@@ -4028,7 +4165,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Hard",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-039",
@@ -4040,7 +4178,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Hard",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-040",
@@ -4052,7 +4191,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-041",
@@ -4064,7 +4204,8 @@ window.chapter23Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-042",
@@ -4076,7 +4217,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-001",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-043",
@@ -4088,7 +4230,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-002",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-044",
@@ -4100,7 +4243,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-003",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-045",
@@ -4112,7 +4256,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-004",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-046",
@@ -4124,7 +4269,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-005",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-047",
@@ -4136,7 +4282,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-006",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-048",
@@ -4148,7 +4295,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-007",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-049",
@@ -4160,7 +4308,8 @@ window.chapter23Data = {
       "imageId": "chapter23-img-008",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter23-fc-050",
@@ -4172,6 +4321,74 @@ window.chapter23Data = {
       "imageId": "chapter23-img-009",
       "periodId": "p8",
       "difficulty": "Medium",
+      "apPriority": true,
+      "period": 8
+    }
+  ],
+  "overallTimelineEvents": [
+    {
+      "id": "chapter23-united-nations-founded",
+      "year": 1945,
+      "title": "United Nations Founded",
+      "summary": "The United Nations was created to promote collective security after World War II.",
+      "period": 8,
+      "significance": "Useful for essays on internationalism after World War II.",
+      "categories": [
+        "Diplomatic",
+        "Political"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter23-truman-doctrine",
+      "year": 1947,
+      "title": "Truman Doctrine",
+      "summary": "Truman asked Congress to aid Greece and Turkey against communist pressure.",
+      "period": 8,
+      "significance": "Core evidence for the origins of containment.",
+      "categories": [
+        "Diplomatic",
+        "Political"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter23-marshall-plan-begins",
+      "year": 1948,
+      "title": "Marshall Plan Begins",
+      "summary": "The United States funded European economic recovery through the Marshall Plan.",
+      "period": 8,
+      "significance": "Excellent evidence for economic containment.",
+      "categories": [
+        "Economic",
+        "Diplomatic"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter23-berlin-airlift",
+      "year": 1948,
+      "title": "Berlin Airlift",
+      "summary": "The United States and its allies supplied West Berlin by air after the Soviet blockade.",
+      "period": 8,
+      "significance": "Useful for showing containment through noncombat pressure.",
+      "categories": [
+        "Diplomatic",
+        "Military"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter23-executive-order-9981",
+      "year": 1948,
+      "title": "Executive Order 9981",
+      "summary": "Truman ordered the desegregation of the armed forces.",
+      "period": 8,
+      "significance": "Strong evidence for federal civil rights before the 1960s.",
+      "categories": [
+        "Political",
+        "Social"
+      ],
       "apPriority": true
     }
   ]

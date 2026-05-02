@@ -27,7 +27,7 @@ window.chapter25Data = {
     {
       "imageId": "chapter25-img-002",
       "src": "images/chapter25/chapter25-img-002.png",
-      "alt": "FIGURE",
+      "alt": "FIGURE 25.1 Percentage of Population Below Poverty Level, by Race, 1959–1969* During the 1960s, an expanding economy and government programs assisting the poor produced a steady decrease in the percentage of Americans living in poverty.",
       "caption": "A poverty chart shows racial inequality and the effects of 1960s antipoverty policy.",
       "relevanceScore": 5,
       "apCategory": "Chart/Graph",
@@ -47,7 +47,7 @@ window.chapter25Data = {
     {
       "imageId": "chapter25-img-003",
       "src": "images/chapter25/chapter25-img-003.jpg",
-      "alt": "A",
+      "alt": "A photograph of residents watching as fire cosumes buildiungs in Detroit during the uprising of 1967.",
       "caption": "Residents watch buildings burn during the Detroit uprising of 1967.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -67,7 +67,7 @@ window.chapter25Data = {
     {
       "imageId": "chapter25-img-004",
       "src": "images/chapter25/chapter25-img-004.jpg",
-      "alt": "A",
+      "alt": "A young man with glasses in a suit and tie stands in front of a drug store handing out a newspaper.",
       "caption": "Malcolm X was a major intellectual influence on Black Power.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -87,7 +87,7 @@ window.chapter25Data = {
     {
       "imageId": "chapter25-img-005",
       "src": "images/chapter25/chapter25-img-005.jpg",
-      "alt": "A",
+      "alt": "A phoptograph of participants in a sit-in in Raleigh, North Carolina, in 1960. The protesters, students from a local college, brought books and newspapers to emphasize the seriousness of their intentions and their commitment to nonviolence. Two waitresses decline to serve them.",
       "caption": "Participants in a sit-in in Raleigh, North Carolina, in 1960 confront segregated public accommodations.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -107,7 +107,7 @@ window.chapter25Data = {
     {
       "imageId": "chapter25-img-006",
       "src": "images/chapter25/chapter25-img-006.jpg",
-      "alt": "A",
+      "alt": "A photograph of young African-Americans being assaulted by firemen with high-pressure hoses during the demonstrations in Birmingham.",
       "caption": "Events in Birmingham forced white Americans to confront the violence used to defend segregation.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -127,7 +127,7 @@ window.chapter25Data = {
     {
       "imageId": "chapter25-img-007",
       "src": "images/chapter25/chapter25-img-007.jpg",
-      "alt": "James",
+      "alt": "James Meredith isolated in class by refusal of white classmates to sit near him, by Ed Meek",
       "caption": "James Meredith became the first black student to attend the University of Mississippi.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -147,7 +147,7 @@ window.chapter25Data = {
     {
       "imageId": "chapter25-img-008",
       "src": "images/chapter25/chapter25-img-008.jpg",
-      "alt": "First",
+      "alt": "First Woman to run Boston Marathon",
       "caption": "Kathrine Switzer's 1967 Boston Marathon run became a celebrated image of second-wave feminism.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -167,7 +167,7 @@ window.chapter25Data = {
     {
       "imageId": "chapter25-img-009",
       "src": "images/chapter25/chapter25-img-009.jpg",
-      "alt": "A",
+      "alt": "A poster of people walking arm in arm down a city street, some with their fists raised in the air with the text, “Come out! Join the sisters & brothers of the gay liberation front.”",
       "caption": "A Gay Liberation Front poster urged gay men and lesbians to join a new rights movement.",
       "relevanceScore": 5,
       "apCategory": "Primary Source",
@@ -185,9 +185,29 @@ window.chapter25Data = {
       ]
     },
     {
+      "imageId": "chapter25-img-010",
+      "src": "images/chapter25/chapter25-img-010.jpg",
+      "alt": "The takeover of Alcatraz Prison, 1969",
+      "caption": "Native activists' occupation of Alcatraz symbolized demands for sovereignty and treaty rights.",
+      "relevanceScore": 5,
+      "apCategory": "Photograph",
+      "description": "The image represents Red Power and Native activism. It is significant because it broadened the rights revolution beyond black-white civil rights to include sovereignty, land, and self-determination.",
+      "apThemes": [
+        "American and National Identity",
+        "Geography and Environment"
+      ],
+      "period": "p8",
+      "suggestedUse": [
+        "notes",
+        "mcq-stimulus",
+        "saq-stimulus",
+        "flashcard"
+      ]
+    },
+    {
       "imageId": "chapter25-img-011",
       "src": "images/chapter25/chapter25-img-011.jpg",
-      "alt": "A",
+      "alt": "A photograph of Mario Savio, a leader of the 1964 Free Speech movement at the University of California, Berkeley, addressing a crowd on campus from the roof of a police car.",
       "caption": "Mario Savio and the Free Speech Movement at Berkeley challenged university restrictions and bureaucratic authority.",
       "relevanceScore": 5,
       "apCategory": "Photograph",
@@ -207,7 +227,7 @@ window.chapter25Data = {
     {
       "imageId": "chapter25-img-012",
       "src": "images/chapter25/chapter25-img-012.jpg",
-      "alt": "A",
+      "alt": "A photograph, date unknown, of members of the National Liberation Front, which fought the United States in Vietnam. Women made up a substantial part of the NLF.",
       "caption": "Members of the National Liberation Front in Vietnam show that women participated in revolutionary movements.",
       "relevanceScore": 4,
       "apCategory": "Photograph",
@@ -227,7 +247,7 @@ window.chapter25Data = {
     {
       "imageId": "chapter25-img-013",
       "src": "images/chapter25/chapter25-img-013.png",
-      "alt": "THE",
+      "alt": "THE VIETNAM WAR, 1964–1975 A war of aerial bombing and small guerilla skirmishes rather than fixed land battles, at the time it was fought, Vietnam was the longest war in American history and the only one the United States has lost.",
       "caption": "The Vietnam War map shows the geography of escalation after the Gulf of Tonkin Resolution.",
       "relevanceScore": 5,
       "apCategory": "Map",
@@ -582,6 +602,11 @@ window.chapter25Data = {
             "imageId": "chapter25-img-009",
             "placement": "after-causes",
             "displayCaption": "Gay liberation activism broadened the meaning of civil rights and personal freedom."
+          },
+          {
+            "imageId": "chapter25-img-010",
+            "placement": "after-key-figures",
+            "displayCaption": "Native activism emphasized sovereignty, treaty rights, and self-determination."
           }
         ],
         "keyFigures": [
@@ -2682,13 +2707,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Cuban Missile Crisis.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Cuban Missile Crisis",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "An antiwar demonstrator offers a flower to military police outside the Pentagon in 1967."
     },
     {
       "id": "chapter25-mcq-002",
@@ -2708,13 +2735,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Birmingham campaign.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Birmingham campaign",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "A poverty chart shows racial inequality and the effects of 1960s antipoverty policy."
     },
     {
       "id": "chapter25-mcq-003",
@@ -2734,13 +2763,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the March on Washington.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the March on Washington",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": "Residents watch buildings burn during the Detroit uprising of 1967."
     },
     {
       "id": "chapter25-mcq-004",
@@ -2760,13 +2791,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Federal law banned segregation in public accommodations and employment discrimination.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Civil Rights Act of 1964.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Civil Rights Act of 1964",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "Malcolm X was a major intellectual influence on Black Power."
     },
     {
       "id": "chapter25-mcq-005",
@@ -2786,13 +2819,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Grassroots activists exposed violent resistance to black voting rights in Mississippi.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Freedom Summer.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Freedom Summer",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "Participants in a sit-in in Raleigh, North Carolina, in 1960 confront segregated public accommodations."
     },
     {
       "id": "chapter25-mcq-006",
@@ -2812,13 +2847,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Federal protection of voting rights transformed southern politics and black political participation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Voting Rights Act of 1965.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Voting Rights Act of 1965",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "Events in Birmingham forced white Americans to confront the violence used to defend segregation."
     },
     {
       "id": "chapter25-mcq-007",
@@ -2838,13 +2875,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Great Society.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Great Society",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "James Meredith became the first black student to attend the University of Mississippi."
     },
     {
       "id": "chapter25-mcq-008",
@@ -2864,13 +2903,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Congress gave Johnson broad authority to escalate the Vietnam War.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Gulf of Tonkin Resolution.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Gulf of Tonkin Resolution",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "Kathrine Switzer's 1967 Boston Marathon run became a celebrated image of second-wave feminism."
     },
     {
       "id": "chapter25-mcq-009",
@@ -2890,13 +2931,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Student activists criticized bureaucracy, racism, and Cold War militarism through calls for participatory democracy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the New Left.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the New Left",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": "Ask not what your country can do for you; ask what you can do for your country."
     },
     {
       "id": "chapter25-mcq-010",
@@ -2916,13 +2959,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of antiwar protest.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "antiwar protest",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "Injustice anywhere is a threat to justice everywhere."
     },
     {
       "id": "chapter25-mcq-011",
@@ -2942,13 +2987,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Black Power.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Black Power",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": "We seek an America in which every citizen shares all the opportunities of his society."
     },
     {
       "id": "chapter25-mcq-012",
@@ -2968,13 +3015,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of urban uprisings.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "urban uprisings",
-      "apTheme": "Migration and Settlement"
+      "apTheme": "Migration and Settlement",
+      "stimulus": "The personal is political."
     },
     {
       "id": "chapter25-mcq-013",
@@ -2994,13 +3043,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Betty Friedan challenged the idea that middle-class domesticity fulfilled all women.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of The Feminine Mystique.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "The Feminine Mystique",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": "We are people of this generation, bred in at least modest comfort, housed now in universities, looking uncomfortably to the world we inherit."
     },
     {
       "id": "chapter25-mcq-014",
@@ -3020,13 +3071,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Feminists demanded equal employment, legal rights, and full participation in public life.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the National Organization for Women.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the National Organization for Women",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "Extremism in the defense of liberty is no vice."
     },
     {
       "id": "chapter25-mcq-015",
@@ -3046,13 +3099,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of gay liberation.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "gay liberation",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-016",
@@ -3072,13 +3127,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Native American activism.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Native American activism",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-017",
@@ -3098,13 +3155,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Supreme Court rulings expanded civil liberties, due process, and privacy rights.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Warren Court.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Warren Court",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-018",
@@ -3124,13 +3183,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of 1968.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "1968",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-019",
@@ -3150,13 +3211,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the conservative backlash.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the conservative backlash",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-020",
@@ -3176,13 +3239,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The offensive undermined official claims that victory in Vietnam was near.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Tet Offensive.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Tet Offensive",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-021",
@@ -3202,13 +3267,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Cuban Missile Crisis.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Cuban Missile Crisis",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-022",
@@ -3228,13 +3295,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Birmingham campaign.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Birmingham campaign",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-023",
@@ -3254,13 +3323,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the March on Washington.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the March on Washington",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-024",
@@ -3280,13 +3351,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Federal law banned segregation in public accommodations and employment discrimination.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Civil Rights Act of 1964.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Civil Rights Act of 1964",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-025",
@@ -3306,13 +3379,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Grassroots activists exposed violent resistance to black voting rights in Mississippi.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Freedom Summer.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Freedom Summer",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-026",
@@ -3332,13 +3407,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Federal protection of voting rights transformed southern politics and black political participation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Voting Rights Act of 1965.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Voting Rights Act of 1965",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-027",
@@ -3358,13 +3435,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Great Society.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Great Society",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-028",
@@ -3384,13 +3463,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Congress gave Johnson broad authority to escalate the Vietnam War.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Gulf of Tonkin Resolution.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Gulf of Tonkin Resolution",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-029",
@@ -3410,13 +3491,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Student activists criticized bureaucracy, racism, and Cold War militarism through calls for participatory democracy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the New Left.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the New Left",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-030",
@@ -3436,13 +3519,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of antiwar protest.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "antiwar protest",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-031",
@@ -3462,13 +3547,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Black Power.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Black Power",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-032",
@@ -3488,13 +3575,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of urban uprisings.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "urban uprisings",
-      "apTheme": "Migration and Settlement"
+      "apTheme": "Migration and Settlement",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-033",
@@ -3514,13 +3603,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Betty Friedan challenged the idea that middle-class domesticity fulfilled all women.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of The Feminine Mystique.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "The Feminine Mystique",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-034",
@@ -3540,13 +3631,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Feminists demanded equal employment, legal rights, and full participation in public life.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the National Organization for Women.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the National Organization for Women",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-035",
@@ -3566,13 +3659,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of gay liberation.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "gay liberation",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-036",
@@ -3592,13 +3687,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Native American activism.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Native American activism",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-037",
@@ -3618,13 +3715,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Supreme Court rulings expanded civil liberties, due process, and privacy rights.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Warren Court.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Warren Court",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-038",
@@ -3644,13 +3743,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of 1968.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "1968",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-039",
@@ -3670,13 +3771,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the conservative backlash.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the conservative backlash",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-040",
@@ -3696,13 +3799,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The offensive undermined official claims that victory in Vietnam was near.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Tet Offensive.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Tet Offensive",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-041",
@@ -3722,13 +3827,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Cuban Missile Crisis.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Cuban Missile Crisis",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-042",
@@ -3748,13 +3855,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Birmingham campaign.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Birmingham campaign",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-043",
@@ -3774,13 +3883,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the March on Washington.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the March on Washington",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-044",
@@ -3800,13 +3911,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Federal law banned segregation in public accommodations and employment discrimination.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Civil Rights Act of 1964.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Civil Rights Act of 1964",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-045",
@@ -3826,13 +3939,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Grassroots activists exposed violent resistance to black voting rights in Mississippi.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Freedom Summer.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Freedom Summer",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-046",
@@ -3852,13 +3967,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Federal protection of voting rights transformed southern politics and black political participation.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Voting Rights Act of 1965.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Voting Rights Act of 1965",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-047",
@@ -3878,13 +3995,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Great Society.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Great Society",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-048",
@@ -3904,13 +4023,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Congress gave Johnson broad authority to escalate the Vietnam War.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Gulf of Tonkin Resolution.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Gulf of Tonkin Resolution",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-049",
@@ -3930,13 +4051,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Student activists criticized bureaucracy, racism, and Cold War militarism through calls for participatory democracy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the New Left.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the New Left",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter25-mcq-050",
@@ -3956,13 +4079,15 @@ window.chapter25Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of antiwar protest.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "antiwar protest",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     }
   ],
   "flashcards": [
@@ -3976,7 +4101,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-002",
@@ -3988,7 +4114,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-003",
@@ -4000,7 +4127,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-004",
@@ -4012,7 +4140,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-005",
@@ -4024,7 +4153,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-006",
@@ -4036,7 +4166,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-007",
@@ -4048,7 +4179,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-008",
@@ -4060,7 +4192,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-009",
@@ -4072,7 +4205,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-010",
@@ -4084,7 +4218,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-011",
@@ -4096,7 +4231,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-012",
@@ -4108,7 +4244,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-013",
@@ -4120,7 +4257,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-014",
@@ -4132,7 +4270,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-015",
@@ -4144,7 +4283,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-016",
@@ -4156,7 +4296,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-017",
@@ -4168,7 +4309,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-018",
@@ -4180,7 +4322,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-019",
@@ -4192,7 +4335,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-020",
@@ -4204,7 +4348,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-021",
@@ -4216,7 +4361,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-022",
@@ -4228,7 +4374,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-023",
@@ -4240,7 +4387,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-024",
@@ -4252,7 +4400,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-025",
@@ -4264,7 +4413,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-026",
@@ -4276,7 +4426,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-004",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-027",
@@ -4288,7 +4439,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-028",
@@ -4300,7 +4452,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-029",
@@ -4312,7 +4465,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-011",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-030",
@@ -4324,7 +4478,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-005",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-031",
@@ -4336,7 +4491,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-032",
@@ -4348,7 +4504,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-033",
@@ -4360,7 +4517,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-034",
@@ -4372,7 +4530,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-006",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-035",
@@ -4384,7 +4543,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-036",
@@ -4396,7 +4556,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-037",
@@ -4408,7 +4569,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-038",
@@ -4420,7 +4582,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-039",
@@ -4432,7 +4595,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-013",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-040",
@@ -4444,7 +4608,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-041",
@@ -4456,7 +4621,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-042",
@@ -4468,7 +4634,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Hard",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-043",
@@ -4480,7 +4647,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Hard",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-044",
@@ -4492,7 +4660,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-045",
@@ -4504,7 +4673,8 @@ window.chapter25Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-046",
@@ -4516,7 +4686,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-001",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-047",
@@ -4528,7 +4699,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-002",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-048",
@@ -4540,7 +4712,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-003",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-049",
@@ -4552,7 +4725,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-004",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-050",
@@ -4564,7 +4738,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-005",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-051",
@@ -4576,7 +4751,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-006",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-052",
@@ -4588,7 +4764,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-007",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-053",
@@ -4600,7 +4777,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-008",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-054",
@@ -4612,7 +4790,21 @@ window.chapter25Data = {
       "imageId": "chapter25-img-009",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
+    },
+    {
+      "id": "chapter25-fc-055",
+      "chapterId": "chapter25",
+      "type": "Visual",
+      "front": "What does this image show and why is it significant?",
+      "back": "The image represents Red Power and Native activism. It is significant because it broadened the rights revolution beyond black-white civil rights to include sovereignty, land, and self-determination.",
+      "hint": "Native activists' occupation of Alcatraz symbolized demands for sovereignty and treaty rights.",
+      "imageId": "chapter25-img-010",
+      "periodId": "p8",
+      "difficulty": "Medium",
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-056",
@@ -4624,7 +4816,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-011",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-057",
@@ -4636,7 +4829,8 @@ window.chapter25Data = {
       "imageId": "chapter25-img-012",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter25-fc-058",
@@ -4648,6 +4842,74 @@ window.chapter25Data = {
       "imageId": "chapter25-img-013",
       "periodId": "p8",
       "difficulty": "Medium",
+      "apPriority": true,
+      "period": 8
+    }
+  ],
+  "overallTimelineEvents": [
+    {
+      "id": "chapter25-sit-in-movement-spreads",
+      "year": 1960,
+      "title": "Sit-In Movement Spreads",
+      "summary": "Student sit-ins challenged segregated lunch counters across the South.",
+      "period": 8,
+      "significance": "Key evidence for youth activism in civil rights.",
+      "categories": [
+        "Social",
+        "Political"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter25-bay-of-pigs-invasion",
+      "year": 1961,
+      "title": "Bay of Pigs Invasion",
+      "summary": "A U.S.-backed invasion by Cuban exiles failed to overthrow Fidel Castro.",
+      "period": 8,
+      "significance": "Useful for Cold War intervention and executive decision-making.",
+      "categories": [
+        "Diplomatic",
+        "Military"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter25-cuban-missile-crisis",
+      "year": 1962,
+      "title": "Cuban Missile Crisis",
+      "summary": "The United States and Soviet Union confronted each other over Soviet missiles in Cuba.",
+      "period": 8,
+      "significance": "Major Cold War crisis evidence.",
+      "categories": [
+        "Diplomatic",
+        "Military"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter25-birmingham-campaign",
+      "year": 1963,
+      "title": "Birmingham Campaign",
+      "summary": "Civil rights activists confronted segregation in Birmingham, Alabama.",
+      "period": 8,
+      "significance": "Essential evidence for civil rights direct action.",
+      "categories": [
+        "Social",
+        "Political"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter25-march-on-washington",
+      "year": 1963,
+      "title": "March on Washington",
+      "summary": "Civil rights supporters marched for jobs and freedom in Washington, D.C.",
+      "period": 8,
+      "significance": "Use to show civil rights included jobs and economic claims.",
+      "categories": [
+        "Social",
+        "Political"
+      ],
       "apPriority": true
     }
   ]

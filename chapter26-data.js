@@ -2978,13 +2978,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Vietnamization.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Vietnamization",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "Ronald Reagan addressed the 1984 Republican National Convention after consolidating conservative power in the White House."
     },
     {
       "id": "chapter26-mcq-002",
@@ -3004,13 +3006,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Kent State and Jackson State.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Kent State and Jackson State",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": "President Nixon met with African American leaders and celebrities, including Jim Brown, while promoting black capitalism and limited civil rights accommodation."
     },
     {
       "id": "chapter26-mcq-003",
@@ -3030,13 +3034,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Watergate.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Watergate",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "Figure 26.1, Median Age at First Marriage, 1947-1981, shows delayed marriage during and after the sexual revolution."
     },
     {
       "id": "chapter26-mcq-004",
@@ -3056,13 +3062,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Nixon's trip to China.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Nixon's trip to China",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "Richard Nixon attended a banquet during his 1972 visit to China with Premier Zhou Enlai."
     },
     {
       "id": "chapter26-mcq-005",
@@ -3082,13 +3090,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Debates over racial remedies showed that civil rights politics continued after the 1960s.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of affirmative action.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "affirmative action",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "Drivers lined up for gasoline in San Jose during the 1974 gas shortage."
     },
     {
       "id": "chapter26-mcq-006",
@@ -3108,13 +3118,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of stagflation.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "stagflation",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": "Figure 26.2, Real Average Weekly Wages, 1955-1990, shows wages peaking in the early 1970s and then declining."
     },
     {
       "id": "chapter26-mcq-007",
@@ -3134,13 +3146,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of deindustrialization.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "deindustrialization",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": "The WIN card came from Ford's Whip Inflation Now campaign."
     },
     {
       "id": "chapter26-mcq-008",
@@ -3160,13 +3174,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the oil shocks.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the oil shocks",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "Jimmy Carter, Anwar Sadat, and Menachem Begin celebrated the 1979 Egypt-Israel peace treaty after the Camp David Accords."
     },
     {
       "id": "chapter26-mcq-009",
@@ -3186,13 +3202,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Carter's human rights policy.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Carter's human rights policy",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "The great silent majority of my fellow Americans - I ask for your support."
     },
     {
       "id": "chapter26-mcq-010",
@@ -3212,13 +3230,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Iranian hostage crisis.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Iranian hostage crisis",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": "No person is above the law, including the president of the United States."
     },
     {
       "id": "chapter26-mcq-011",
@@ -3238,13 +3258,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Equal Rights Amendment battle.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Equal Rights Amendment battle",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": "The condition of confidence has eroded because the people no longer trust their government."
     },
     {
       "id": "chapter26-mcq-012",
@@ -3264,13 +3286,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The abortion controversy helped unite religious conservatives and reshape party politics.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Roe v. Wade and abortion politics.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Roe v. Wade and abortion politics",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "Government is not the solution to our problem; government is the problem."
     },
     {
       "id": "chapter26-mcq-013",
@@ -3290,13 +3314,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the tax revolt.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the tax revolt",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "The Equal Rights Amendment would remove protections that women already possess in family life."
     },
     {
       "id": "chapter26-mcq-014",
@@ -3316,13 +3342,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the election of 1980.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the election of 1980",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": "The United States must support freedom fighters resisting communist expansion."
     },
     {
       "id": "chapter26-mcq-015",
@@ -3342,13 +3370,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Reaganomics.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Reaganomics",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-016",
@@ -3368,13 +3398,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the PATCO strike.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the PATCO strike",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-017",
@@ -3394,13 +3426,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The 1980s saw growing inequality as wealth gains flowed disproportionately to higher-income Americans.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the second Gilded Age.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the second Gilded Age",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-018",
@@ -3420,13 +3454,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the war on drugs.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the war on drugs",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-019",
@@ -3446,13 +3482,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Iran-Contra affair.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Iran-Contra affair",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-020",
@@ -3472,13 +3510,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Reagan and Gorbachev.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Reagan and Gorbachev",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-021",
@@ -3498,13 +3538,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Vietnamization.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Vietnamization",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-022",
@@ -3524,13 +3566,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Kent State and Jackson State.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Kent State and Jackson State",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-023",
@@ -3550,13 +3594,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Watergate.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Watergate",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-024",
@@ -3576,13 +3622,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Nixon's trip to China.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Nixon's trip to China",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-025",
@@ -3602,13 +3650,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Debates over racial remedies showed that civil rights politics continued after the 1960s.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of affirmative action.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "affirmative action",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-026",
@@ -3628,13 +3678,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of stagflation.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "stagflation",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-027",
@@ -3654,13 +3706,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of deindustrialization.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "deindustrialization",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-028",
@@ -3680,13 +3734,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the oil shocks.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the oil shocks",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-029",
@@ -3706,13 +3762,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Carter's human rights policy.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Carter's human rights policy",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-030",
@@ -3732,13 +3790,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Iranian hostage crisis.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Iranian hostage crisis",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-031",
@@ -3758,13 +3818,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Equal Rights Amendment battle.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Equal Rights Amendment battle",
-      "apTheme": "American and National Identity"
+      "apTheme": "American and National Identity",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-032",
@@ -3784,13 +3846,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The abortion controversy helped unite religious conservatives and reshape party politics.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Roe v. Wade and abortion politics.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Roe v. Wade and abortion politics",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-033",
@@ -3810,13 +3874,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the tax revolt.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the tax revolt",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-034",
@@ -3836,13 +3902,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the election of 1980.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the election of 1980",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-035",
@@ -3862,13 +3930,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Reaganomics.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Reaganomics",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-036",
@@ -3888,13 +3958,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the PATCO strike.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the PATCO strike",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-037",
@@ -3914,13 +3986,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The 1980s saw growing inequality as wealth gains flowed disproportionately to higher-income Americans.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the second Gilded Age.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the second Gilded Age",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-038",
@@ -3940,13 +4014,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the war on drugs.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the war on drugs",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-039",
@@ -3966,13 +4042,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Iran-Contra affair.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Iran-Contra affair",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-040",
@@ -3992,13 +4070,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Reagan and Gorbachev.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Reagan and Gorbachev",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-041",
@@ -4018,13 +4098,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Vietnamization.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Vietnamization",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-042",
@@ -4044,13 +4126,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Kent State and Jackson State.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Kent State and Jackson State",
-      "apTheme": "Culture and Society"
+      "apTheme": "Culture and Society",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-043",
@@ -4070,13 +4154,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Watergate.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Watergate",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-044",
@@ -4096,13 +4182,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Nixon's trip to China.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Nixon's trip to China",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-045",
@@ -4122,13 +4210,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Debates over racial remedies showed that civil rights politics continued after the 1960s.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of affirmative action.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "affirmative action",
-      "apTheme": "Politics and Power"
+      "apTheme": "Politics and Power",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-046",
@@ -4148,13 +4238,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of stagflation.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "stagflation",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-047",
@@ -4174,13 +4266,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of deindustrialization.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "deindustrialization",
-      "apTheme": "Work, Exchange, Technology"
+      "apTheme": "Work, Exchange, Technology",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-048",
@@ -4200,13 +4294,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the oil shocks.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the oil shocks",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-049",
@@ -4226,13 +4322,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of Carter's human rights policy.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "Carter's human rights policy",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     },
     {
       "id": "chapter26-mcq-050",
@@ -4252,13 +4350,15 @@ window.chapter26Data = {
       },
       "correctAnswer": "A",
       "explanation": {
+        "wrongA": null,
         "correct": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
         "wrongB": "This is plausible because it uses period language, but it misidentifies the central cause or consequence of the Iranian hostage crisis.",
         "wrongC": "This choice points to a real APUSH theme, but it belongs more directly to another period or to a different development in the chapter.",
         "wrongD": "This answer overstates, reverses, or ignores the main historical relationship tested by the question."
       },
       "topicTag": "the Iranian hostage crisis",
-      "apTheme": "America in the World"
+      "apTheme": "America in the World",
+      "stimulus": null
     }
   ],
   "flashcards": [
@@ -4272,7 +4372,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-002",
@@ -4284,7 +4385,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-003",
@@ -4296,7 +4398,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-004",
@@ -4308,7 +4411,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-005",
@@ -4320,7 +4424,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-006",
@@ -4332,7 +4437,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-007",
@@ -4344,7 +4450,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-008",
@@ -4356,7 +4463,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-009",
@@ -4368,7 +4476,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-010",
@@ -4380,7 +4489,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-011",
@@ -4392,7 +4502,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-012",
@@ -4404,7 +4515,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-013",
@@ -4416,7 +4528,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-014",
@@ -4428,7 +4541,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-015",
@@ -4440,7 +4554,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-016",
@@ -4452,7 +4567,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-017",
@@ -4464,7 +4580,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-018",
@@ -4476,7 +4593,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-019",
@@ -4488,7 +4606,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-020",
@@ -4500,7 +4619,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-021",
@@ -4512,7 +4632,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-022",
@@ -4524,7 +4645,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-023",
@@ -4536,7 +4658,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-024",
@@ -4548,7 +4671,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Easy",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-025",
@@ -4560,7 +4684,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-026",
@@ -4572,7 +4697,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-027",
@@ -4584,7 +4710,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-028",
@@ -4596,7 +4723,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-001",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-029",
@@ -4608,7 +4736,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-015",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-030",
@@ -4620,7 +4749,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-014",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-031",
@@ -4632,7 +4762,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-032",
@@ -4644,7 +4775,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-033",
@@ -4656,7 +4788,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-019",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-034",
@@ -4668,7 +4801,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-035",
@@ -4680,7 +4814,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-004",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-036",
@@ -4692,7 +4827,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-021",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-037",
@@ -4704,7 +4840,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-017",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-038",
@@ -4716,7 +4853,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-005",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-039",
@@ -4728,7 +4866,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-040",
@@ -4740,7 +4879,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-020",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-041",
@@ -4752,7 +4892,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-008",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-042",
@@ -4764,7 +4905,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-009",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-043",
@@ -4776,7 +4918,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Hard",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-044",
@@ -4788,7 +4931,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-045",
@@ -4800,7 +4944,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Hard",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-046",
@@ -4812,7 +4957,8 @@ window.chapter26Data = {
       "imageId": null,
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-047",
@@ -4824,7 +4970,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-001",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-048",
@@ -4836,7 +4983,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-002",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-049",
@@ -4848,7 +4996,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-003",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-050",
@@ -4860,7 +5009,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-004",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-051",
@@ -4872,7 +5022,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-005",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-052",
@@ -4884,7 +5035,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-006",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-053",
@@ -4896,7 +5048,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-007",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-054",
@@ -4908,7 +5061,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-008",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-055",
@@ -4920,7 +5074,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-009",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-056",
@@ -4932,7 +5087,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-010",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-057",
@@ -4944,7 +5100,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-011",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-058",
@@ -4956,7 +5113,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-012",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-059",
@@ -4968,7 +5126,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-013",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-060",
@@ -4980,7 +5139,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-014",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-061",
@@ -4992,7 +5152,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-015",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-062",
@@ -5004,7 +5165,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-016",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-063",
@@ -5016,7 +5178,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-017",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-064",
@@ -5028,7 +5191,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-018",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-065",
@@ -5040,7 +5204,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-019",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-066",
@@ -5052,7 +5217,8 @@ window.chapter26Data = {
       "imageId": "chapter26-img-020",
       "periodId": "p8",
       "difficulty": "Medium",
-      "apPriority": true
+      "apPriority": true,
+      "period": 8
     },
     {
       "id": "chapter26-fc-067",
@@ -5064,6 +5230,72 @@ window.chapter26Data = {
       "imageId": "chapter26-img-021",
       "periodId": "p8",
       "difficulty": "Medium",
+      "apPriority": true,
+      "period": 8
+    }
+  ],
+  "overallTimelineEvents": [
+    {
+      "id": "chapter26-nixon-takes-office",
+      "year": 1969,
+      "title": "Nixon Takes Office",
+      "summary": "Richard Nixon entered office promising law and order and peace with honor in Vietnam.",
+      "period": 8,
+      "significance": "Useful for explaining the transition from 1960s liberalism to conservative politics.",
+      "categories": [
+        "Political"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter26-vietnamization-begins",
+      "year": 1969,
+      "title": "Vietnamization Begins",
+      "summary": "Nixon began shifting combat responsibilities to South Vietnamese forces.",
+      "period": 8,
+      "significance": "Strong evidence for limits of containment and domestic effects of war.",
+      "categories": [
+        "Military",
+        "Diplomatic"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter26-kent-state-shootings",
+      "year": 1970,
+      "title": "Kent State Shootings",
+      "summary": "National Guardsmen killed four students during antiwar protest at Kent State.",
+      "period": 8,
+      "significance": "Useful evidence for Vietnam's effects on domestic society.",
+      "categories": [
+        "Social",
+        "Military",
+        "Political"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter26-nixon-visits-china",
+      "year": 1972,
+      "title": "Nixon Visits China",
+      "summary": "Nixon visited China and opened diplomatic relations with the People's Republic.",
+      "period": 8,
+      "significance": "Excellent evidence for détente and realpolitik.",
+      "categories": [
+        "Diplomatic"
+      ],
+      "apPriority": true
+    },
+    {
+      "id": "chapter26-watergate-break-in",
+      "year": 1972,
+      "title": "Watergate Break-In",
+      "summary": "Nixon campaign operatives broke into Democratic headquarters at the Watergate complex.",
+      "period": 8,
+      "significance": "Central evidence for executive power and distrust of government.",
+      "categories": [
+        "Political"
+      ],
       "apPriority": true
     }
   ]
