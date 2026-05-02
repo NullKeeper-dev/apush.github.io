@@ -1,5 +1,61 @@
 window.chapterManifest = [
   {
+    id: "ch1",
+    number: 1,
+    short: "Ch 1",
+    title: "A New World",
+    script: "chapters1-6-data.js",
+    global: "chapter1Data"
+  },
+  {
+    id: "ch2",
+    number: 2,
+    short: "Ch 2",
+    title: "Beginnings of English America, 1607-1660",
+    script: "chapters1-6-data.js",
+    global: "chapter2Data"
+  },
+  {
+    id: "ch3",
+    number: 3,
+    short: "Ch 3",
+    title: "Creating Anglo-America, 1660-1750",
+    script: "chapters1-6-data.js",
+    global: "chapter3Data"
+  },
+  {
+    id: "ch4",
+    number: 4,
+    short: "Ch 4",
+    title: "Slavery, Freedom, and the Struggle for Empire, to 1763",
+    script: "chapters1-6-data.js",
+    global: "chapter4Data"
+  },
+  {
+    id: "ch5",
+    number: 5,
+    short: "Ch 5",
+    title: "The American Revolution, 1763-1783",
+    script: "chapters1-6-data.js",
+    global: "chapter5Data"
+  },
+  {
+    id: "ch6",
+    number: 6,
+    short: "Ch 6",
+    title: "The Revolution Within",
+    script: "chapters1-6-data.js",
+    global: "chapter6Data"
+  },
+  {
+    id: "ch7",
+    number: 7,
+    short: "Ch 7",
+    title: "Founding a Nation, 1783-1791",
+    script: "chapter7-data.js",
+    global: "chapter7Data"
+  },
+  {
     id: "ch19",
     number: 19,
     short: "Ch 19",
