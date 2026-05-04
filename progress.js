@@ -10,8 +10,7 @@
     { key: "overview", label: "Overview" },
     { key: "context", label: "Historical Context" },
     { key: "figures", label: "Key Figures" },
-    { key: "vocabulary", label: "Vocabulary" },
-    { key: "essay", label: "Essay Tips" }
+    { key: "vocabulary", label: "Vocabulary" }
   ];
 
   const state = {
@@ -40,6 +39,12 @@
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+
+  const groupChaptersByPeriod = (entries) => (
+    typeof window.groupChapterEntriesByPeriod === "function"
+      ? window.groupChapterEntriesByPeriod(entries)
+      : [{ id: "all", label: "Chapters", range: "", entries }]
+  );
 
   const normalizeCopy = (value) => String(value || "")
     .replace(/\s+/g, " ")
@@ -355,7 +360,7 @@
   }
 
   function buildReviewChapter(entry) {
-    const { id, short, data } = entry;
+    const { id, short, data, periodId, periodNumber, periodShort, periodLabel, periodRange, periodDisplay } = entry;
     const vocabulary = Array.isArray(data.vocabulary) ? data.vocabulary : [];
     const sections = (data.notes?.sections || []).map((section, index) => {
       const sectionId = buildEventId(id, section.sectionTitle, index);
@@ -391,6 +396,12 @@
     return {
       id,
       short,
+      periodId,
+      periodNumber,
+      periodShort,
+      periodLabel,
+      periodRange,
+      periodDisplay,
       title: data.chapterMeta?.chapterTitle || entry.title || short,
       range: data.chapterMeta?.dateRange || "",
       weightLabel: data.chapterMeta?.apExamWeight || "",
@@ -543,22 +554,32 @@
   }
 
   function renderChapterJumps() {
-    chapterJumps.innerHTML = state.chapters.map((chapter) => {
-      const counts = getChapterCounts(chapter);
-      const completionPercent = counts.total ? Math.round((counts.ready / counts.total) * 100) : 0;
-      const stateClass = counts.review ? "has-review" : counts.ready === counts.total ? "is-ready" : "";
-      return `
-        <a class="jump-card ${stateClass}" href="#review-${escapeHtml(chapter.id)}">
-          <div class="jump-card-head">
-            <span>${escapeHtml(chapter.short)}</span>
-            <strong>${completionPercent}%</strong>
-          </div>
-          <strong class="jump-card-title">${escapeHtml(chapter.title)}</strong>
-          <span class="jump-card-copy">${counts.ready}/${counts.total} ready · ${counts.review} flagged</span>
-          <span class="jump-meter"><span style="width:${completionPercent}%"></span></span>
-        </a>
-      `;
-    }).join("");
+    chapterJumps.innerHTML = groupChaptersByPeriod(state.chapters).map((group) => `
+      <section class="jump-group">
+        <div class="jump-group-heading">
+          <strong>${escapeHtml(group.label)}</strong>
+          ${group.range ? `<span>${escapeHtml(group.range)}</span>` : ""}
+        </div>
+        <div class="jump-group-cards">
+          ${group.entries.map((chapter) => {
+            const counts = getChapterCounts(chapter);
+            const completionPercent = counts.total ? Math.round((counts.ready / counts.total) * 100) : 0;
+            const stateClass = counts.review ? "has-review" : counts.ready === counts.total ? "is-ready" : "";
+            return `
+              <a class="jump-card ${stateClass}" href="#review-${escapeHtml(chapter.id)}">
+                <div class="jump-card-head">
+                  <span>${escapeHtml(`${chapter.short} · ${chapter.periodLabel || "APUSH Period"}`)}</span>
+                  <strong>${completionPercent}%</strong>
+                </div>
+                <strong class="jump-card-title">${escapeHtml(chapter.title)}</strong>
+                <span class="jump-card-copy">${counts.ready}/${counts.total} ready · ${counts.review} flagged</span>
+                <span class="jump-meter"><span style="width:${completionPercent}%"></span></span>
+              </a>
+            `;
+          }).join("")}
+        </div>
+      </section>
+    `).join("");
   }
 
   function renderSupportLinks(chapter) {
@@ -663,6 +684,7 @@
           <div>
             <div class="chapter-kicker">
               <span class="chapter-code">${escapeHtml(chapter.short)}</span>
+              ${chapter.periodLabel ? `<span class="chapter-period-pill">${escapeHtml(chapter.periodLabel)}</span>` : ""}
               <span>${escapeHtml(chapter.range)}</span>
               <span class="chapter-weight">${escapeHtml(chapter.weightLabel || "Review Check")}</span>
             </div>
@@ -717,7 +739,17 @@
       return;
     }
 
-    progressBoard.innerHTML = state.chapters.map((chapter) => renderChapterCard(chapter)).join("");
+    progressBoard.innerHTML = groupChaptersByPeriod(state.chapters).map((group) => `
+      <section class="progress-period-group">
+        <div class="progress-period-heading">
+          <strong>${escapeHtml(group.label)}</strong>
+          ${group.range ? `<span>${escapeHtml(group.range)}</span>` : ""}
+        </div>
+        <div class="progress-period-cards">
+          ${group.entries.map((chapter) => renderChapterCard(chapter)).join("")}
+        </div>
+      </section>
+    `).join("");
   }
 
   function scrollToHashTarget() {

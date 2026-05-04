@@ -37,6 +37,71 @@ function normalizeText(value) {
     .trim();
 }
 
+function splitStudySentences(value) {
+  return normalizeText(value)
+    .split(/(?<=[.!?])\s+/)
+    .map((sentence) => normalizeText(sentence))
+    .filter(Boolean);
+}
+
+function studySentenceKey(value) {
+  return normalizeText(value)
+    .replace(/[“”]/g, "\"")
+    .replace(/[‘’]/g, "'")
+    .replace(/[.,;:!?]+$/g, "")
+    .toLowerCase();
+}
+
+function sanitizeLearningCopy(value) {
+  const text = normalizeText(value)
+    .replace(/Link this event to a larger APUSH theme\./gi, "This event connects to a broader historical pattern.")
+    .replace(/Connect this event to a broader APUSH theme\./gi, "This event connects to a broader historical pattern.")
+    .replace(/\bAPUSH\b/gi, "this chapter")
+    .replace(/\bAP exam\b/gi, "this chapter")
+    .replace(/\bAP-relevant\b/gi, "historically important")
+    .replace(/\bAP relevance\b/gi, "historical relevance");
+
+  return /^[a-z]/.test(text) ? text.charAt(0).toUpperCase() + text.slice(1) : text;
+}
+
+function dedupeStudySentences(values = []) {
+  const seen = new Set();
+
+  return values
+    .flatMap((value) => splitStudySentences(value))
+    .map((sentence) => sanitizeLearningCopy(sentence))
+    .filter((sentence) => {
+      const key = studySentenceKey(sentence);
+      if (!key || seen.has(key)) {
+        return false;
+      }
+
+      seen.add(key);
+      return true;
+    });
+}
+
+function buildVocabularyExplanation(definition, context) {
+  const sentences = dedupeStudySentences([definition, context]).filter((sentence) => sentence.length >= 28);
+  return sentences.length ? sentences.slice(0, 3).join(" ") : normalizeText(definition);
+}
+
+function buildVocabularyContext(context) {
+  return dedupeStudySentences([context]).find((sentence) => (
+    sentence.length >= 24
+    && !/^(?:this event|this term|this image)\s+(?:connects|fits|helps)\s+to\b/i.test(sentence)
+  )) || "";
+}
+
+function enhanceVocabularyList(vocabulary = []) {
+  return vocabulary.map((term) => ({
+    ...term,
+    definition: buildVocabularyExplanation(term.definition, term.context),
+    context: buildVocabularyContext(term.context),
+    apRelevance: ""
+  }));
+}
+
 function decodeHtml(value) {
   return String(value || "")
     .replace(/&nbsp;/g, " ")
@@ -803,6 +868,7 @@ function makeSaqs(spec, images) {
 function makeFlashcards(spec, images, timeline) {
   const cards = [];
   let count = 1;
+  const vocabulary = enhanceVocabularyList(spec.vocabulary || []);
   const push = (type, front, back, hint, imageId, difficulty = "Medium", apPriority = true) => {
     cards.push({
       id: `${spec.chapterId}-fc-${String(count).padStart(3, "0")}`,
@@ -819,8 +885,8 @@ function makeFlashcards(spec, images, timeline) {
     count += 1;
   };
 
-  (spec.vocabulary || []).forEach((term) => {
-    push("Term", term.term, `${term.definition} ${term.apRelevance}`.trim(), term.context, null, "Easy", true);
+  vocabulary.forEach((term) => {
+    push("Term", term.term, term.definition, term.context, null, "Easy", true);
   });
 
   (spec.keyFigures || []).forEach((figure) => {
@@ -857,6 +923,7 @@ function makeFlashcards(spec, images, timeline) {
 
 function buildChapterFromSpec(spec) {
   const images = materializeSelectedImages(spec.chapterNum, spec.imageSelections, spec.periodId);
+  const vocabulary = enhanceVocabularyList(spec.vocabulary || []);
   const timeline = spec.timeline.map((event) => makeTimelineEvent(spec, event));
   const data = {
     chapterId: spec.chapterId,
@@ -869,7 +936,7 @@ function buildChapterFromSpec(spec) {
     chapterTimeline: timeline,
     periodTimelineEvents: makePeriodTimelineEvents(spec.chapterId, spec.periodId, timeline),
     periodTimeline: JSON.parse(JSON.stringify(timeline)),
-    vocabulary: spec.vocabulary,
+    vocabulary,
     mcqQuestions: makeMcqsFromFacts(spec, images),
     essayPractice: {
       saq: makeSaqs(spec, images),
@@ -879,7 +946,7 @@ function buildChapterFromSpec(spec) {
     flashcards: []
   };
 
-  data.flashcards = makeFlashcards(spec, images, timeline);
+  data.flashcards = makeFlashcards({ ...spec, vocabulary }, images, timeline);
   updateSuggestedUse(data);
   return data;
 }

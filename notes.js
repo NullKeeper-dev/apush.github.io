@@ -1,48 +1,29 @@
 (window.chapterDataReady || Promise.resolve()).then(() => {
-const themeLabels = {
-  nat: "American and National Identity",
-  pol: "Politics and Power",
-  wxt: "Work, Exchange, and Technology",
-  cul: "Culture and Society",
-  mig: "Migration and Settlement",
-  geo: "Geography and Environment",
-  wor: "America in the World"
-};
-
-const themeKeyMap = {
-  "American and National Identity": "nat",
-  "Politics and Power": "pol",
-  "Work, Exchange, Technology": "wxt",
-  "Work, Exchange, and Technology": "wxt",
-  "Culture and Society": "cul",
-  "Migration and Settlement": "mig",
-  "Geography and Environment": "geo",
-  "America in the World": "wor"
-};
 
 const subtopics = [
   { key: "overview", label: "Overview" },
   { key: "context", label: "Historical Context" },
   { key: "events", label: "Key Events" },
   { key: "figures", label: "Key Figures" },
-  { key: "vocabulary", label: "Vocabulary" },
-  { key: "essay", label: "Essay Tips" }
+  { key: "vocabulary", label: "Vocabulary" }
 ];
 
 const alphabet = ["All", ...Array.from({ length: 26 }, (_, index) => String.fromCharCode(65 + index))];
 
 const chapterConfigs = (window.getChapterConfigs ? window.getChapterConfigs() : [])
-  .map(({ id, short, data }) => ({ id, short, data }))
+  .map(({ id, number, short, data, periodId, periodNumber, periodShort, periodLabel, periodRange, periodDisplay }) => ({
+    id,
+    number,
+    short,
+    data,
+    periodId,
+    periodNumber,
+    periodShort,
+    periodLabel,
+    periodRange,
+    periodDisplay
+  }))
   .filter((entry) => entry.data?.chapterMeta && entry.data?.notes);
-
-const parseWeightValue = (label) => {
-  const values = String(label || "").match(/\d+/g);
-  if (!values || !values.length) {
-    return 0;
-  }
-
-  return Number(values[values.length - 1]);
-};
 
 const normalizeTerm = (value) => String(value || "").trim().toLowerCase();
 
@@ -62,18 +43,6 @@ const slugifyFragment = (value) => String(value || "")
   .toLowerCase()
   .replace(/[^a-z0-9]+/g, "-")
   .replace(/^-+|-+$/g, "");
-
-const toThemeKeys = (themes = []) => Array.from(
-  new Set(themes.map((theme) => themeKeyMap[theme]).filter(Boolean))
-);
-
-const mergeThemeKeys = (sections = [], fallback = []) => {
-  const keys = new Set(fallback);
-  sections.forEach((section) => {
-    toThemeKeys(section.apThemes).forEach((key) => keys.add(key));
-  });
-  return Array.from(keys);
-};
 
 const buildImageLookup = (images = []) => new Map(
   images
@@ -249,7 +218,7 @@ const buildLegacyBlocks = (section) => {
       type: "fact",
       label: index === 0 ? section.sectionTitle : `Section Detail ${index + 1}`,
       text: sentence,
-      apSignificance: section.significance || ""
+      apSignificance: ""
     });
   });
 
@@ -269,7 +238,7 @@ const buildLegacyBlocks = (section) => {
     steps.push({
       step: steps.length + 1,
       event: section.sectionTitle,
-      result: section.significance || `${section.sectionTitle} reshaped the politics of the era.`
+      result: effects[0] || `${section.sectionTitle} changed how events unfolded in this period.`
     });
 
     effects.forEach((effect) => {
@@ -284,26 +253,12 @@ const buildLegacyBlocks = (section) => {
       type: "chain",
       label: `How ${section.sectionTitle} unfolded`,
       steps: steps.slice(0, 5),
-      apSignificance: section.significance || ""
-    });
-  }
-
-  if ((section.primarySourceConnections || []).length) {
-    blocks.push({
-      type: "cluster",
-      label: "Primary source windows",
-      items: normalizeTextList(section.primarySourceConnections || []).map((item, index) => ({
-        name: `Source ${index + 1}`,
-        description: item,
-        date: null
-      })),
-      apSignificance: "Primary-source analysis questions often use these examples to test contextualization and argumentation."
+      apSignificance: ""
     });
   }
 
   (section.keyFigures || []).forEach((figure) => {
     const bioSentences = splitIntoSentences(figure.bio || "");
-    const significanceSentences = splitIntoSentences(figure.significance || "");
     blocks.push({
       type: "who",
       name: figure.name,
@@ -311,23 +266,14 @@ const buildLegacyBlocks = (section) => {
       dates: "",
       keyActions: dedupeTextList([
         bioSentences[0] || figure.bio || "",
-        significanceSentences[0] || bioSentences[1] || ""
+        bioSentences[1] || ""
       ]),
-      perspective: dedupeSentencesInText(figure.perspective || ""),
-      legacy: dedupeSentencesInText(figure.significance || ""),
-      apSignificance: dedupeSentencesInText(figure.significance || figure.bio || ""),
+      perspective: "",
+      legacy: "",
+      apSignificance: "",
       imageId: figure.imageId || null
     });
   });
-
-  if (section.significance) {
-    blocks.push({
-      type: "fact",
-      label: "AP significance",
-      text: section.significance,
-      apSignificance: "This is the clearest claim the section makes about why the development matters."
-    });
-  }
 
   while (blocks.length < 5) {
     const fallbackSentence = sentences[blocks.length + 1] || sentences[0] || section.sectionTitle || "";
@@ -335,7 +281,7 @@ const buildLegacyBlocks = (section) => {
       type: "fact",
       label: "Section takeaway",
       text: fallbackSentence,
-      apSignificance: section.significance || ""
+      apSignificance: ""
     });
   }
 
@@ -386,34 +332,6 @@ const deriveSectionEffects = (section, blocks) => {
 
   return dedupeTextList(chain.steps.map((step) => step.result)).slice(-3);
 };
-
-const deriveSectionSources = (section, blocks) => {
-  if (Array.isArray(section?.primarySourceConnections) && section.primarySourceConnections.length) {
-    return normalizeTextList(section.primarySourceConnections);
-  }
-
-  const sources = [];
-  blocks.forEach((block) => {
-    if (block?.type === "quote") {
-      sources.push([block.attribution, block.text].filter(Boolean).join(": "));
-    }
-
-    if (block?.type === "cluster" && /primary source/i.test(String(block.label || ""))) {
-      (block.items || []).forEach((item) => {
-        sources.push([item.name, item.description].filter(Boolean).join(": "));
-      });
-    }
-  });
-
-  return dedupeTextList(sources);
-};
-
-const deriveSectionSignificance = (section, blocks) => dedupeSentencesInText(
-  section?.significance
-  || (Array.isArray(section?.apExamAngles) ? section.apExamAngles[0] : "")
-  || blocks.map((block) => block?.apSignificance || block?.apRelevance).find(Boolean)
-  || ""
-);
 
 const collectSectionFigures = (section, blocks, imageLookup) => {
   const figures = [];
@@ -475,7 +393,7 @@ const buildPlacedImages = (images = []) => {
   return placed;
 };
 
-const buildNotesPeriod = ({ id, short, data }) => {
+const buildNotesPeriod = ({ id, number, short, data, periodId, periodNumber, periodShort, periodLabel, periodRange, periodDisplay }) => {
   const sections = data.notes.sections || [];
   const imageLookup = buildImageLookup(data.images || []);
   const figureMap = new Map();
@@ -515,38 +433,31 @@ const buildNotesPeriod = ({ id, short, data }) => {
       eventId: `${id}-event-${slugifyFragment(section.sectionTitle) || `section-${index + 1}`}-${index + 1}`,
       title: section.sectionTitle,
       date: `Section ${index + 1}`,
-      meta: (section.apThemes || []).join(" · "),
+      meta: "",
       overview: getSectionOverview(section),
       blocks,
-      significance: deriveSectionSignificance(section, blocks),
       causes: deriveSectionCauses(section, blocks),
       effects: deriveSectionEffects(section, blocks),
       connections: dedupeTextList(section.connections || []),
-      sources: deriveSectionSources(section, blocks),
-      apExamAngles: dedupeTextList(section.apExamAngles || []),
       images: buildPlacedImages(resolvedImages)
     };
   });
 
   return {
     id,
+    number,
     short,
+    periodId,
+    periodNumber,
+    periodShort,
+    periodLabel,
+    periodRange,
+    periodDisplay,
     images: data.images || [],
     navTitle: data.chapterMeta.chapterTitle,
     title: data.chapterMeta.chapterTitle,
     range: data.chapterMeta.dateRange,
-    weightLabel: data.chapterMeta.apExamWeight,
-    weightValue: parseWeightValue(data.chapterMeta.apExamWeight),
     overview: dedupeSentencesInText(data.chapterMeta.oneLineSummary),
-    bigThemes: data.chapterMeta.bigPictureThemes || [],
-    examTips: dedupeTextList(data.chapterMeta.examTips || []),
-    sectionThemes: {
-      context: mergeThemeKeys(sections, ["wor", "pol", "mig"]),
-      events: mergeThemeKeys(sections, ["wor", "pol", "cul"]),
-      figures: mergeThemeKeys(sections, ["wor", "pol", "nat"]),
-      vocabulary: mergeThemeKeys(sections, ["wor", "pol", "cul"]),
-      essay: mergeThemeKeys(sections, ["pol", "wor", "nat"])
-    },
     context: dedupeSentencesInText(data.notes.historicalContext?.overview || ""),
     contextHighlights: [
       {
@@ -563,24 +474,7 @@ const buildNotesPeriod = ({ id, short, data }) => {
     figures: Array.from(figureMap.values()),
     vocabulary,
     vocabLookup,
-    vocabPattern,
-    essay: {
-      intro: dedupeSentencesInText(data.notes.overarchingAnalysis?.complexity || ""),
-      prompts: dedupeTextList([
-        ...(data.essayPractice?.saq || []).map((item) => item.prompt),
-        ...(data.essayPractice?.leq || []).map((item) => item.prompt),
-        ...(data.essayPractice?.dbq || []).map((item) => item.prompt)
-      ]),
-      theses: dedupeTextList([
-        ...(data.essayPractice?.leq || []).flatMap((item) => item.thesisExamples || []),
-        ...(data.essayPractice?.dbq || []).map((item) => item.thesisExample).filter(Boolean)
-      ]),
-      analysis: dedupeTextList([
-        data.notes.overarchingAnalysis?.continuity ? `Continuity: ${data.notes.overarchingAnalysis.continuity}` : "",
-        data.notes.overarchingAnalysis?.change ? `Change: ${data.notes.overarchingAnalysis.change}` : "",
-        ...(data.notes.overarchingAnalysis?.comparisonAngles || [])
-      ])
-    }
+    vocabPattern
   };
 };
 
@@ -589,15 +483,26 @@ const fallbackPeriodId = String(window.notesDefaultChapterId || "").toLowerCase(
 const periods = fallbackPeriodId && allPeriods.some((period) => period.id === fallbackPeriodId)
   ? allPeriods.filter((period) => period.id === fallbackPeriodId)
   : allPeriods;
-const maxWeightValue = Math.max(1, ...periods.map((period) => period.weightValue));
 const pageUrl = new URL(window.location.href);
 const requestedChapterId = String(pageUrl.searchParams.get("chapter") || "").toLowerCase();
 const requestedSectionKey = String(pageUrl.searchParams.get("section") || "").toLowerCase();
 const chapterEntries = (Array.isArray(window.chapterManifest) ? window.chapterManifest : []).map((entry) => ({
   id: String(entry.id || "").toLowerCase(),
+  number: entry.number,
   short: entry.short,
-  title: entry.title
+  title: entry.title,
+  periodId: entry.periodId,
+  periodNumber: entry.periodNumber,
+  periodShort: entry.periodShort,
+  periodLabel: entry.periodLabel,
+  periodRange: entry.periodRange,
+  periodDisplay: entry.periodDisplay
 }));
+const groupChaptersByPeriod = (entries) => (
+  typeof window.groupChapterEntriesByPeriod === "function"
+    ? window.groupChapterEntriesByPeriod(entries)
+    : [{ id: "all", label: "Chapters", range: "", entries }]
+);
 const resolvedRequestedSectionKey = subtopics.some((subtopic) => subtopic.key === requestedSectionKey)
   ? requestedSectionKey
   : "overview";
@@ -678,6 +583,16 @@ const escapeHtml = (value) => String(value)
   .replace(/>/g, "&gt;")
   .replace(/"/g, "&quot;")
   .replace(/'/g, "&#39;");
+
+const formatChapterMetaLine = (chapter, options = {}) => {
+  const { includeChapter = true, includeRange = true } = options;
+
+  return [
+    chapter.periodLabel || chapter.periodShort || "",
+    includeChapter ? chapter.short : "",
+    includeRange ? (chapter.periodRange || chapter.range || "") : ""
+  ].filter(Boolean).join(" · ");
+};
 
 const noteIgnoredEmphasisPhrases = new Set([
   "United States",
@@ -894,17 +809,9 @@ const renderNoteText = (value, period) => {
 
 const renderKeyPointText = (value, period) => `<span class="note-point">${renderNoteText(value, period)}</span>`;
 
-const renderThemeChips = (themeKeys) => themeKeys
-  .map((key) => `<span class="theme-chip">${escapeHtml(themeLabels[key])}</span>`)
-  .join("");
-
-const renderSectionHeading = (title, themeKeys) => `
+const renderSectionHeading = (title) => `
   <div class="section-heading">
     <h3>${escapeHtml(title)}</h3>
-    <div class="theme-meta">
-      <p class="theme-meta-label">APUSH Themes</p>
-      <div class="theme-row">${renderThemeChips(themeKeys)}</div>
-    </div>
   </div>
 `;
 
@@ -929,6 +836,35 @@ const renderNoteMediaGrid = (images, period) => {
   return `<div class="note-media-grid">${images.map((image) => renderNoteMedia(image, period)).join("")}</div>`;
 };
 
+const renderChapterMediaGrid = (images, period, imageTracker = null, options = {}) => {
+  const countTowardReuse = options.countTowardReuse !== false;
+
+  if (!images?.length) {
+    return "";
+  }
+
+  const uniqueImages = images.filter((image) => {
+    const imageKey = image?.imageId || image?.src || "";
+
+    if (!image?.src) {
+      return false;
+    }
+
+    if (!imageTracker || !countTowardReuse || !imageKey) {
+      return true;
+    }
+
+    if (imageTracker.has(imageKey)) {
+      return false;
+    }
+
+    imageTracker.add(imageKey);
+    return true;
+  });
+
+  return renderNoteMediaGrid(uniqueImages, period);
+};
+
 const contentBlockTypeLabels = {
   fact: "Fact",
   chain: "Cause and Effect",
@@ -936,7 +872,7 @@ const contentBlockTypeLabels = {
   comparison: "Comparison",
   cluster: "Cluster",
   quote: "Quote",
-  who: "Who",
+  who: "Person",
   stat: "Statistic",
   definition: "Definition"
 };
@@ -961,21 +897,9 @@ const renderContentBlockHeader = (block, label) => `
   </div>
 `;
 
-const renderContentBlockFooter = (block, period, seenValues = []) => {
-  const significance = pickUniqueText(block.apSignificance || block.apRelevance || "", seenValues);
-  if (!significance) {
-    return "";
-  }
+const renderContentBlockFooter = () => "";
 
-  return `
-    <div class="content-block-footer">
-      <strong>AP Angle</strong>
-      <p>${renderNoteText(significance, period)}</p>
-    </div>
-  `;
-};
-
-const renderContentBlock = (block, period) => {
+const renderContentBlock = (block, period, imageTracker = null) => {
   if (!block?.type) {
     return "";
   }
@@ -995,15 +919,13 @@ const renderContentBlock = (block, period) => {
   if (block.type === "definition") {
     const definition = dedupeSentencesInText(block.definition);
     const inContext = pickUniqueText(block.inContext, [definition]);
-    const apRelevance = pickUniqueText(block.apRelevance, [definition, inContext]);
 
     return `
       <article class="content-block content-block-definition">
         ${renderContentBlockHeader(block, block.term)}
         <div class="content-block-copy">
           <p>${renderNoteText(definition, period)}</p>
-          ${inContext ? `<p><strong>In Context:</strong> ${renderNoteText(inContext, period)}</p>` : ""}
-          ${apRelevance ? `<p><strong>AP Relevance:</strong> ${renderNoteText(apRelevance, period)}</p>` : ""}
+          ${inContext ? `<p><strong>In This Chapter:</strong> ${renderNoteText(inContext, period)}</p>` : ""}
         </div>
       </article>
     `;
@@ -1037,33 +959,19 @@ const renderContentBlock = (block, period) => {
 
   if (block.type === "who") {
     const keyActions = dedupeTextList(block.keyActions || []);
-    const perspective = pickUniqueText(block.perspective, keyActions);
-    const legacy = pickUniqueText(block.legacy, [...keyActions, perspective, block.apSignificance]);
-    const bodyText = [...keyActions];
-
-    if (perspective) {
-      bodyText.push(perspective);
-    }
-
-    if (legacy) {
-      bodyText.push(legacy);
-    }
 
     return `
       <article class="content-block content-block-who">
         ${renderContentBlockHeader(block, block.name)}
         <div class="content-block-who-grid">
           ${block.imageId && getPeriodById(period.id)
-            ? renderNoteMediaGrid([buildImageLookup(getPeriodById(period.id)?.images || []).get(block.imageId)].filter(Boolean), period)
+            ? renderChapterMediaGrid([buildImageLookup(getPeriodById(period.id)?.images || []).get(block.imageId)].filter(Boolean), period, imageTracker, { countTowardReuse: false })
             : ""}
           <div class="content-block-copy">
             ${block.title ? `<p><strong>${escapeHtml(block.title)}</strong>${block.dates ? ` · ${escapeHtml(block.dates)}` : ""}</p>` : ""}
             ${keyActions.length ? renderBulletList(keyActions, period, "content-block-list") : ""}
-            ${perspective ? `<p><strong>Perspective:</strong> ${renderNoteText(perspective, period)}</p>` : ""}
-            ${legacy ? `<p><strong>Legacy:</strong> ${renderNoteText(legacy, period)}</p>` : ""}
           </div>
         </div>
-        ${renderContentBlockFooter(block, period, bodyText)}
       </article>
     `;
   }
@@ -1148,16 +1056,16 @@ const renderContentBlock = (block, period) => {
   `;
 };
 
-const renderEventBlockStack = (event, period) => {
+const renderEventBlockStack = (event, period, imageTracker = null) => {
   const blockMarkup = event.blocks.map((block, index) => `
-    ${renderContentBlock(block, period)}
-    ${renderNoteMediaGrid(event.images.afterBlocks.get(index + 1) || [], period)}
+    ${renderContentBlock(block, period, imageTracker)}
+    ${renderChapterMediaGrid(event.images.afterBlocks.get(index + 1) || [], period, imageTracker)}
   `).join("");
 
   return `
     <div class="content-block-stack">
       ${blockMarkup}
-      ${renderNoteMediaGrid(event.images.afterKeyFigures || [], period)}
+      ${renderChapterMediaGrid(event.images.afterKeyFigures || [], period, imageTracker)}
     </div>
   `;
 };
@@ -1165,9 +1073,12 @@ const renderEventBlockStack = (event, period) => {
 const updateHero = () => {
   const totalSections = periods.reduce((sum, period) => sum + period.events.length, 0);
   const totalVocabulary = periods.reduce((sum, period) => sum + period.vocabulary.length, 0);
+  const periodGroups = groupChaptersByPeriod(periods);
 
   if (heroEyebrow) {
-    heroEyebrow.textContent = periods.length === 1 ? `${periods[0].short} Study Notes` : `${periods.length} Live Chapters`;
+    heroEyebrow.textContent = periods.length === 1
+      ? formatChapterMetaLine(periods[0], { includeRange: false })
+      : "Live Chapters by APUSH Period";
   }
 
   if (heroTitle) {
@@ -1176,8 +1087,8 @@ const updateHero = () => {
 
   if (heroSubtitle) {
     heroSubtitle.textContent = periods.length === 1
-      ? `${periods[0].short} only: section analysis, figures, vocabulary, and essay-ready review cues built from the integrated textbook chapter.`
-      : `Study ${periods.length} live chapters together with source-backed notes, section explainers, key figures, vocabulary, and essay-ready synthesis.`;
+      ? `${formatChapterMetaLine(periods[0])}: chapter notes, key figures, and expanded vocabulary written to be readable even if you are starting from zero background knowledge.`
+      : `Study ${periods.length} live chapters grouped into ${periodGroups.length} APUSH period section${periodGroups.length === 1 ? "" : "s"} with cleaner chapter notes, clearer explanations, key figures, and expanded vocabulary.`;
   }
 
   if (heroChapters) {
@@ -1198,32 +1109,33 @@ const renderChapterSwitcher = () => {
     return;
   }
 
-  chapterSwitcher.innerHTML = chapterEntries.map((chapter) => {
-    const isActive = chapter.id === state.currentPeriodId;
-    return `
-      <a class="chapter-link${isActive ? " is-active" : ""}" href="${escapeHtml(buildChapterHref(chapter.id))}"${isActive ? ' aria-current="page"' : ""}>
-        <span class="chapter-link-code">${escapeHtml(chapter.short)}</span>
-        <span class="chapter-link-copy">
-          <strong>${escapeHtml(chapter.title)}</strong>
-          <span>${isActive ? "Current notes page" : "Open chapter notes"}</span>
-        </span>
-      </a>
-    `;
-  }).join("");
+  chapterSwitcher.innerHTML = groupChaptersByPeriod(chapterEntries).map((group) => `
+    <section class="chapter-switch-group">
+      <div class="chapter-switch-group-head">
+        <strong>${escapeHtml(group.label)}</strong>
+        ${group.range ? `<span>${escapeHtml(group.range)}</span>` : ""}
+      </div>
+      <div class="chapter-switch-group-list">
+        ${group.entries.map((chapter) => {
+          const isActive = chapter.id === state.currentPeriodId;
+          return `
+            <a class="chapter-link${isActive ? " is-active" : ""}" href="${escapeHtml(buildChapterHref(chapter.id))}"${isActive ? ' aria-current="page"' : ""}>
+              <span class="chapter-link-code">${escapeHtml(chapter.short)}</span>
+              <span class="chapter-link-copy">
+                <strong>${escapeHtml(chapter.title)}</strong>
+                <span>${escapeHtml(`${formatChapterMetaLine(chapter)}${isActive ? " · Current notes page" : ""}`)}</span>
+              </span>
+            </a>
+          `;
+        }).join("")}
+      </div>
+    </section>
+  `).join("");
 };
 
 const renderPeriod = (period) => {
-  const weightWidth = Math.min(100, (period.weightValue / maxWeightValue) * 100);
   const vocabLetters = new Set(period.vocabulary.map((item) => item.term.charAt(0).toUpperCase()));
-  const examTipsListMarkup = renderBulletList(period.examTips || [], period, "arrow-list");
-  const examTipsMarkup = examTipsListMarkup
-    ? `
-      <div class="significance-callout">
-        <strong>Exam Tips</strong>
-        ${examTipsListMarkup}
-      </div>
-    `
-    : "";
+  const usedChapterImageIds = new Set();
   const contextHighlightsMarkup = (period.contextHighlights || []).length
     ? `
       <div class="arrow-grid">
@@ -1238,7 +1150,7 @@ const renderPeriod = (period) => {
       </div>
     `
     : "";
-  const contextImageMarkup = renderNoteMediaGrid(period.contextImage ? [period.contextImage] : [], period);
+  const contextImageMarkup = renderChapterMediaGrid(period.contextImage ? [period.contextImage] : [], period, usedChapterImageIds);
 
   const eventsMarkup = period.events.map((event) => `
     <article class="event-card" id="${escapeHtml(event.eventId)}" data-period="${period.id}">
@@ -1250,18 +1162,9 @@ const renderPeriod = (period) => {
         <span class="event-date">${escapeHtml(event.date)}</span>
       </div>
       ${event.overview ? `<p class="event-overview">${renderNoteText(event.overview, period)}</p>` : ""}
-      ${renderNoteMediaGrid(event.images.afterOverview || [], period)}
-      ${renderEventBlockStack(event, period)}
-      ${(() => {
-        const eventSignificance = pickUniqueText(event.significance, [event.overview, ...event.apExamAngles]);
-        return eventSignificance ? `
-        <div class="significance-callout">
-          <strong>Section Significance</strong>
-          <p>${renderKeyPointText(eventSignificance, period)}</p>
-        </div>
-      ` : "";
-      })()}
-      ${(event.causes.length || event.effects.length || event.apExamAngles.length || event.connections?.length || event.sources?.length) ? `
+      ${renderChapterMediaGrid(event.images.afterOverview || [], period, usedChapterImageIds)}
+      ${renderEventBlockStack(event, period, usedChapterImageIds)}
+      ${(event.causes.length || event.effects.length || event.connections?.length) ? `
         <div class="arrow-grid">
           ${event.causes.length ? `
             <div class="arrow-block">
@@ -1275,22 +1178,10 @@ const renderPeriod = (period) => {
               ${renderBulletList(event.effects, period, "arrow-list", "&rarr; ")}
             </div>
           ` : ""}
-          ${event.apExamAngles.length ? `
-            <div class="arrow-block">
-              <h5>AP Exam Angles</h5>
-              ${renderBulletList(event.apExamAngles, period)}
-            </div>
-          ` : ""}
           ${event.connections?.length ? `
             <div class="arrow-block">
               <h5>Connections</h5>
               ${renderBulletList(event.connections, period)}
-            </div>
-          ` : ""}
-          ${event.sources?.length ? `
-            <div class="arrow-block">
-              <h5>Primary Sources</h5>
-              ${renderBulletList(event.sources, period)}
             </div>
           ` : ""}
         </div>
@@ -1300,8 +1191,6 @@ const renderPeriod = (period) => {
 
   const figuresMarkup = period.figures.map((figure) => {
     const bio = dedupeSentencesInText(figure.bio);
-    const significance = pickUniqueText(figure.significance, [bio]);
-    const perspective = pickUniqueText(figure.perspective, [bio, significance]);
 
     return `
       <article class="figure-card">
@@ -1312,8 +1201,6 @@ const renderPeriod = (period) => {
         <div class="figure-body">
           ${figure.image ? renderNoteMediaGrid([figure.image], period) : ""}
           ${bio ? `<p>${renderNoteText(bio, period)}</p>` : ""}
-          ${significance ? `<p class="figure-extra"><strong>Significance:</strong> ${renderNoteText(significance, period)}</p>` : ""}
-          ${perspective ? `<p class="figure-extra"><strong>Perspective:</strong> ${renderNoteText(perspective, period)}</p>` : ""}
         </div>
       </article>
     `;
@@ -1333,8 +1220,7 @@ const renderPeriod = (period) => {
       <div class="term">${escapeHtml(item.term)}</div>
       <div>
         <div class="definition">${escapeHtml(item.definition)}</div>
-        ${item.context ? `<div class="definition definition-note"><strong>Context:</strong> ${escapeHtml(item.context)}</div>` : ""}
-        ${item.apRelevance ? `<div class="definition definition-note"><strong>AP Relevance:</strong> ${escapeHtml(item.apRelevance)}</div>` : ""}
+        ${item.context ? `<div class="definition definition-note"><strong>In This Chapter:</strong> ${escapeHtml(item.context)}</div>` : ""}
       </div>
     </article>
   `).join("");
@@ -1344,74 +1230,38 @@ const renderPeriod = (period) => {
       <article class="period-header-card section-anchor" id="${period.id}-overview" data-period="${period.id}" data-label="Overview">
         <div class="period-topline">
           <div class="period-kicker">
-            <span class="period-number">${escapeHtml(period.short)}</span>
+            <span class="period-number">${escapeHtml(period.periodLabel || "APUSH Period")}</span>
+            <span class="period-chapter-code">${escapeHtml(period.short)}</span>
             <span class="period-range">${escapeHtml(period.range)}</span>
-          </div>
-          <div class="period-weight">
-            <span><strong>Exam Weight</strong><em>${escapeHtml(period.weightLabel)}</em></span>
-            <div class="weight-track"><div class="weight-bar" style="width:${weightWidth}%"></div></div>
           </div>
         </div>
         <h2>${escapeHtml(period.title)}</h2>
         <p>${renderNoteText(period.overview, period)}</p>
-        <div class="big-theme-row">
-          ${period.bigThemes.map((theme) => `<span class="big-theme">${escapeHtml(theme)}</span>`).join("")}
-        </div>
-        ${examTipsMarkup}
       </article>
 
       <article class="notes-section section-anchor" id="${period.id}-context" data-period="${period.id}" data-label="Historical Context">
-        ${renderSectionHeading("Historical Context", period.sectionThemes.context)}
+        ${renderSectionHeading("Historical Context")}
         <p class="section-intro">${renderNoteText(period.context, period)}</p>
         ${contextImageMarkup}
         ${contextHighlightsMarkup}
       </article>
 
       <article class="notes-section section-anchor" id="${period.id}-events" data-period="${period.id}" data-label="Key Events">
-        ${renderSectionHeading("Key Events", period.sectionThemes.events)}
+        ${renderSectionHeading("Key Events")}
         <div class="event-stack">${eventsMarkup}</div>
       </article>
 
       <article class="notes-section section-anchor" id="${period.id}-figures" data-period="${period.id}" data-label="Key Figures">
-        ${renderSectionHeading("Key Figures", period.sectionThemes.figures)}
+        ${renderSectionHeading("Key Figures")}
         <div class="figure-grid">${figuresMarkup}</div>
       </article>
 
       <article class="notes-section section-anchor" id="${period.id}-vocabulary" data-period="${period.id}" data-label="Vocabulary">
-        ${renderSectionHeading("Key Vocabulary", period.sectionThemes.vocabulary)}
+        ${renderSectionHeading("Key Vocabulary")}
         <div class="vocab-filter" data-filter-period="${period.id}">
           ${vocabFilterMarkup}
         </div>
         <div class="vocab-list">${vocabMarkup}</div>
-      </article>
-
-      <article class="notes-section section-anchor" id="${period.id}-essay" data-period="${period.id}" data-label="Essay Tips">
-        ${renderSectionHeading("Essay Tips", period.sectionThemes.essay)}
-        <div class="essay-callout">
-          <p>${renderNoteText(period.essay.intro || "Use these prompts to move from recall to argument. The strongest answers connect chronology, change over time, and causation instead of listing facts.", period)}</p>
-          <div class="essay-grid">
-            <div class="essay-block">
-              <h4>Practice Prompts</h4>
-              <ul class="essay-list">
-                ${period.essay.prompts.map((prompt) => `<li>${renderNoteText(prompt, period)}</li>`).join("")}
-              </ul>
-            </div>
-            <div class="essay-block">
-              <h4>LEQ Thesis Models</h4>
-              <ul class="essay-list">
-                ${period.essay.theses.map((thesis) => `<li>${renderNoteText(thesis, period)}</li>`).join("")}
-              </ul>
-            </div>
-            ${period.essay.analysis?.length ? `
-              <div class="essay-block">
-                <h4>Analysis Angles</h4>
-                <ul class="essay-list">
-                  ${period.essay.analysis.map((item) => `<li>${renderNoteText(item, period)}</li>`).join("")}
-                </ul>
-              </div>
-            ` : ""}
-          </div>
-        </div>
       </article>
     </section>
   `;
@@ -1424,16 +1274,19 @@ const renderNotes = () => {
 
 const renderNavTree = () => {
   navTree.innerHTML = periods.map((period) => {
-    const periodNumber = String(period.short).match(/\d+/)?.[0] || String(period.short).replace(/\D+/g, "");
+    const periodNumber = String(period.periodNumber || "").trim()
+      || String(period.periodShort || "").replace(/\D+/g, "")
+      || String(period.short).match(/\d+/)?.[0]
+      || String(period.short).replace(/\D+/g, "");
 
     return `
       <section class="nav-period" data-period="${period.id}">
         <button class="nav-period-toggle" type="button" data-action="toggle-period" data-period="${period.id}">
           <span class="nav-period-main">
-            <span class="nav-period-code"><small>Ch</small><strong>${escapeHtml(periodNumber || period.short)}</strong></span>
+            <span class="nav-period-code"><small>P</small><strong>${escapeHtml(periodNumber || period.short)}</strong></span>
             <span class="nav-period-copy">
               <strong>${escapeHtml(period.title)}</strong>
-              <span>${escapeHtml(period.range)}</span>
+              <span>${escapeHtml(formatChapterMetaLine(period))}</span>
             </span>
           </span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1456,7 +1309,7 @@ const renderNavTree = () => {
 const renderMiniToc = () => {
   miniToc.innerHTML = periods.map((period) => `
     <a class="toc-link" href="#${period.id}-overview" data-period="${period.id}">
-      ${escapeHtml(period.short)} · ${escapeHtml(period.navTitle)}
+      ${escapeHtml(formatChapterMetaLine(period, { includeRange: false }))} · ${escapeHtml(period.navTitle)}
     </a>
   `).join("");
 
@@ -1639,7 +1492,7 @@ const openVocabPreview = (periodId, termKey, options = {}) => {
   if (vocabPreviewContext) {
     const supportingText = vocabItem.context || "";
     vocabPreviewContext.hidden = !supportingText;
-    vocabPreviewContext.textContent = supportingText ? `Context: ${supportingText}` : "";
+    vocabPreviewContext.textContent = supportingText ? `In this chapter: ${supportingText}` : "";
   }
 
   setPreviewVisibility(true);

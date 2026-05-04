@@ -455,6 +455,33 @@
       background: linear-gradient(180deg, rgba(91, 91, 214, 0.46), rgba(96, 196, 255, 0.34));
     }
 
+    .chapter-switch-group {
+      display: grid;
+      gap: 10px;
+    }
+
+    .chapter-switch-group-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 0 4px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .chapter-switch-group-head strong {
+      color: var(--gold);
+      font-size: 0.8rem;
+    }
+
+    .chapter-switch-group-list {
+      display: grid;
+      gap: 10px;
+    }
+
     .chapter-link {
       display: grid;
       grid-template-columns: auto minmax(0, 1fr);
@@ -888,6 +915,20 @@
       font-weight: 600;
       letter-spacing: 0.03em;
       box-shadow: var(--raised-shadow);
+    }
+
+    .period-chapter-code {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
 
     .period-range {
@@ -1836,7 +1877,8 @@
       .theme-chip,
       .big-theme,
       .event-date,
-      .period-number {
+      .period-number,
+      .period-chapter-code {
         color: #111111 !important;
         background: #f2f2f2 !important;
         box-shadow: none !important;
@@ -1880,7 +1922,7 @@
       <div class="hero-copy">
         <span class="eyebrow" id="notes-hero-eyebrow">Live Chapter Notes</span>
         <h1 id="notes-hero-title">Integrated APUSH Chapter Notes</h1>
-        <p class="hero-subtitle" id="notes-hero-subtitle">Study the integrated chapter builds with section analysis, key figures, vocabulary, and essay-ready review cues derived from the loaded textbook chapters.</p>
+        <p class="hero-subtitle" id="notes-hero-subtitle">Study the integrated chapter builds with clearer explanations, key figures, and expanded vocabulary support written for first-time APUSH learners.</p>
         <div class="hero-stats">
           <article class="hero-stat">
             <strong id="notes-hero-chapters">0</strong>

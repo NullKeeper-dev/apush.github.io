@@ -4,8 +4,7 @@
     { key: "context", label: "Historical Context" },
     { key: "events", label: "Key Events" },
     { key: "figures", label: "Key Figures" },
-    { key: "vocabulary", label: "Vocabulary" },
-    { key: "essay", label: "Essay Tips" }
+    { key: "vocabulary", label: "Vocabulary" }
   ];
 
   const state = {
@@ -152,9 +151,9 @@
       },
       {
         label: "Notes",
-        subtitle: "Integrated chapter notes with context, figures, vocabulary, and essay review.",
+        subtitle: "Integrated chapter notes grouped by APUSH period with context, figures, and expanded vocabulary support.",
         url: "notes.html",
-        keywords: ["notes", "study map", "vocabulary", "essay"]
+        keywords: ["notes", "study map", "vocabulary"]
       },
       {
         label: "Progress Check",
@@ -183,49 +182,53 @@
     ];
 
     chapters.forEach(function (chapter) {
+      const chapterMeta = [chapter.periodLabel, chapter.periodRange].filter(Boolean).join(" · ");
+      const chapterSubtitle = chapterMeta ? chapter.title + " · " + chapterMeta : chapter.title;
+      const chapterKeywords = [chapter.id, chapter.short, chapter.title, chapter.periodLabel, chapter.periodRange].filter(Boolean);
+
       baseEntries.push({
-        label: chapter.short + " · Timeline",
-        subtitle: chapter.title,
+        label: chapter.short + " · " + (chapter.periodLabel || "APUSH Period") + " · Timeline",
+        subtitle: chapterSubtitle,
         url: "timeline.html?chapter=" + encodeURIComponent(chapter.short),
-        keywords: [chapter.id, chapter.short, "timeline", "events", chapter.title]
+        keywords: chapterKeywords.concat(["timeline", "events"])
       });
 
       baseEntries.push({
-        label: chapter.short + " · Progress Check",
-        subtitle: chapter.title,
+        label: chapter.short + " · " + (chapter.periodLabel || "APUSH Period") + " · Progress Check",
+        subtitle: chapterSubtitle,
         url: "progress.html#review-" + encodeURIComponent(chapter.id),
-        keywords: [chapter.id, chapter.short, "progress", "review", "checkpoint", chapter.title]
+        keywords: chapterKeywords.concat(["progress", "review", "checkpoint"])
       });
 
       NOTES_SECTIONS.forEach(function (section) {
         const hash = "#" + chapter.id + "-" + section.key;
         baseEntries.push({
-          label: chapter.short + " · " + section.label,
-          subtitle: chapter.title,
+          label: chapter.short + " · " + (chapter.periodLabel || "APUSH Period") + " · " + section.label,
+          subtitle: chapterSubtitle,
           url: "notes.html?chapter=" + encodeURIComponent(chapter.id) + "&section=" + encodeURIComponent(section.key) + hash,
-          keywords: [chapter.id, chapter.short, "notes", section.label, chapter.title]
+          keywords: chapterKeywords.concat(["notes", section.label])
         });
       });
 
       baseEntries.push({
-        label: chapter.short + " · MCQ Quiz",
-        subtitle: chapter.title,
+        label: chapter.short + " · " + (chapter.periodLabel || "APUSH Period") + " · MCQ Quiz",
+        subtitle: chapterSubtitle,
         url: "practice.html?tool=mcq&period=" + encodeURIComponent(chapter.id) + "#mcq",
-        keywords: [chapter.id, chapter.short, "mcq", "quiz", chapter.title]
+        keywords: chapterKeywords.concat(["mcq", "quiz"])
       });
 
       baseEntries.push({
-        label: chapter.short + " · Flashcards",
-        subtitle: chapter.title,
+        label: chapter.short + " · " + (chapter.periodLabel || "APUSH Period") + " · Flashcards",
+        subtitle: chapterSubtitle,
         url: "practice.html?tool=flashcards&deck=" + encodeURIComponent(chapter.id) + "#flashcards",
-        keywords: [chapter.id, chapter.short, "flashcards", "terms", chapter.title]
+        keywords: chapterKeywords.concat(["flashcards", "terms"])
       });
 
       baseEntries.push({
-        label: chapter.short + " · Essay Builder",
-        subtitle: chapter.title,
+        label: chapter.short + " · " + (chapter.periodLabel || "APUSH Period") + " · Essay Builder",
+        subtitle: chapterSubtitle,
         url: "practice.html?tool=essay&promptPeriod=" + encodeURIComponent(chapter.id) + "#essay",
-        keywords: [chapter.id, chapter.short, "essay", "saq", "leq", "dbq", chapter.title]
+        keywords: chapterKeywords.concat(["essay", "saq", "leq", "dbq"])
       });
 
       ((chapter.data && chapter.data.notes && chapter.data.notes.sections) || []).forEach(function (section, index) {
@@ -233,17 +236,17 @@
         const reviewAnchor = "review-" + eventId;
 
         baseEntries.push({
-          label: chapter.short + " · Review · " + section.sectionTitle,
-          subtitle: chapter.title,
+          label: chapter.short + " · " + (chapter.periodLabel || "APUSH Period") + " · Review · " + section.sectionTitle,
+          subtitle: chapterSubtitle,
           url: "progress.html#" + encodeURIComponent(reviewAnchor),
-          keywords: [chapter.id, chapter.short, "progress", "review", "section", section.sectionTitle].concat(section.apThemes || [], [chapter.title])
+          keywords: chapterKeywords.concat(["progress", "review", "section", section.sectionTitle], section.apThemes || [])
         });
 
         baseEntries.push({
-          label: chapter.short + " · Notes · " + section.sectionTitle,
-          subtitle: chapter.title,
+          label: chapter.short + " · " + (chapter.periodLabel || "APUSH Period") + " · Notes · " + section.sectionTitle,
+          subtitle: chapterSubtitle,
           url: "notes.html?chapter=" + encodeURIComponent(chapter.id) + "&section=events#" + encodeURIComponent(eventId),
-          keywords: [chapter.id, chapter.short, "notes", "events", "section", section.sectionTitle].concat(section.apThemes || [], [chapter.title])
+          keywords: chapterKeywords.concat(["notes", "events", "section", section.sectionTitle], section.apThemes || [])
         });
       });
     });
@@ -254,23 +257,53 @@
   function getChapterEntries() {
     const configs = typeof window.getChapterConfigs === "function" ? window.getChapterConfigs() : [];
     const configMap = new Map((Array.isArray(configs) ? configs : []).map(function (entry) {
-      return [entry.id, {
-        id: entry.id,
-        short: entry.short,
-        title: (entry.data && entry.data.chapterMeta && entry.data.chapterMeta.chapterTitle) || entry.title || entry.short,
-        data: entry.data || null
-      }];
+      const chapterEntry = typeof window.enrichChapterEntry === "function"
+        ? window.enrichChapterEntry({
+            id: entry.id,
+            short: entry.short,
+            title: (entry.data && entry.data.chapterMeta && entry.data.chapterMeta.chapterTitle) || entry.title || entry.short,
+            periodId: entry.periodId,
+            periodNumber: entry.periodNumber,
+            periodShort: entry.periodShort,
+            periodLabel: entry.periodLabel,
+            periodRange: entry.periodRange,
+            periodDisplay: entry.periodDisplay,
+            data: entry.data || null
+          })
+        : {
+            id: entry.id,
+            short: entry.short,
+            title: (entry.data && entry.data.chapterMeta && entry.data.chapterMeta.chapterTitle) || entry.title || entry.short,
+            data: entry.data || null
+          };
+
+      return [entry.id, chapterEntry];
     }));
     const manifestEntries = Array.isArray(window.chapterManifest) ? window.chapterManifest : [];
 
     if (manifestEntries.length) {
       return manifestEntries.map(function (entry) {
-        return configMap.get(entry.id) || {
-          id: entry.id,
-          short: entry.short,
-          title: entry.title,
-          data: null
-        };
+        return configMap.get(entry.id) || (
+          typeof window.enrichChapterEntry === "function"
+            ? window.enrichChapterEntry({
+                id: entry.id,
+                short: entry.short,
+                title: entry.title,
+                periodId: entry.periodId,
+                periodNumber: entry.periodNumber,
+                periodShort: entry.periodShort,
+                periodLabel: entry.periodLabel,
+                periodRange: entry.periodRange,
+                periodDisplay: entry.periodDisplay,
+                data: null
+              })
+            : {
+                id: entry.id,
+                short: entry.short,
+                title: entry.title,
+                data: null
+              }
+        );
       });
     }
 

@@ -208,7 +208,7 @@ const heroEssayCount = document.getElementById("practice-hero-essay-count");
 const state = {
   activeTool: "mcq",
   quiz: {
-    selectedPeriods: new Set(periodMeta.map((period) => period.id)),
+    selectedPeriods: new Set(),
     targetCount: 10,
     session: null
   },
@@ -451,10 +451,23 @@ const renderQuizControls = () => {
   const periodCount = state.quiz.selectedPeriods.size;
   const desired = state.quiz.targetCount;
   const suffix = available < desired ? ` This setup only has ${available} available, so the quiz will use all of them.` : "";
-  quizAvailability.textContent = `${available} questions available across ${periodCount} selected ${periodCount === 1 ? "chapter" : "chapters"}.${suffix}`;
+
+  if (periodCount === 0) {
+    quizAvailability.textContent = "No chapters selected yet. Pick one or more chapters to build a quiz.";
+  } else {
+    quizAvailability.textContent = `${available} questions available across ${periodCount} selected ${periodCount === 1 ? "chapter" : "chapters"}.${suffix}`;
+  }
+
+  quizStartButton.disabled = periodCount === 0 || available === 0;
 };
 
 const startQuiz = (periodIds = Array.from(state.quiz.selectedPeriods)) => {
+  if (!periodIds.length) {
+    renderQuizControls();
+    renderQuizStage();
+    return;
+  }
+
   const pool = shuffle(
     mcqBank
       .filter((question) => periodIds.includes(question.period))
@@ -476,7 +489,7 @@ const startQuiz = (periodIds = Array.from(state.quiz.selectedPeriods)) => {
 };
 
 const resetQuiz = () => {
-  state.quiz.selectedPeriods = new Set(periodMeta.map((period) => period.id));
+  state.quiz.selectedPeriods = new Set();
   state.quiz.targetCount = 10;
   state.quiz.session = null;
   renderQuizControls();
@@ -588,7 +601,7 @@ const renderQuizStage = () => {
     quizStage.innerHTML = `
       <article class="quiz-empty">
         <h3>Build a chapter question set.</h3>
-        <p>Pick a target size and start. Explanations appear immediately after each answer so you can connect the question back to the chapter's themes and argument patterns.</p>
+        <p>${state.quiz.selectedPeriods.size ? "Pick a target size and start. Explanations appear immediately after each answer so you can connect the question back to the chapter's themes and argument patterns." : "Choose one or more chapters first, then pick a target size and start your quiz."}</p>
       </article>
     `;
     return;
@@ -1099,10 +1112,6 @@ quizPeriodChips.addEventListener("click", (event) => {
   }
 
   const periodId = button.dataset.quizPeriod;
-
-  if (state.quiz.selectedPeriods.has(periodId) && state.quiz.selectedPeriods.size === 1) {
-    return;
-  }
 
   if (state.quiz.selectedPeriods.has(periodId)) {
     state.quiz.selectedPeriods.delete(periodId);

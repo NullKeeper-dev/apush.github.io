@@ -469,6 +469,37 @@
       gap: 12px;
     }
 
+    .jump-group,
+    .progress-period-group {
+      display: grid;
+      gap: 12px;
+    }
+
+    .jump-group-heading,
+    .progress-period-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 0 4px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .jump-group-heading strong,
+    .progress-period-heading strong {
+      color: var(--gold);
+      font-size: 0.84rem;
+    }
+
+    .jump-group-cards,
+    .progress-period-cards {
+      display: grid;
+      gap: 12px;
+    }
+
     .jump-card {
       display: grid;
       gap: 10px;
@@ -554,6 +585,7 @@
     }
 
     .chapter-code,
+    .chapter-period-pill,
     .chapter-weight,
     .section-order,
     .status-pill {
@@ -572,6 +604,13 @@
       background: linear-gradient(135deg, rgba(91, 91, 214, 0.26), rgba(232, 184, 75, 0.16));
       border: 1px solid rgba(123, 230, 255, 0.1);
       box-shadow: var(--inset-shadow);
+    }
+
+    .chapter-period-pill {
+      padding: 7px 12px;
+      color: var(--gold);
+      background: rgba(232, 184, 75, 0.08);
+      border: 1px solid rgba(232, 184, 75, 0.16);
     }
 
     .chapter-weight {

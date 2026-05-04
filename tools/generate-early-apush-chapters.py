@@ -43,11 +43,60 @@ def image(chapter_num, image_id, ext, caption, description, themes, relevance=5,
     }
 
 
+def normalize_copy(value):
+    return " ".join(str(value or "").split()).strip()
+
+
+def split_sentences(value):
+    return [normalize_copy(part) for part in re.split(r"(?<=[.!?])\s+", normalize_copy(value)) if normalize_copy(part)]
+
+
+def sanitize_learning_copy(value):
+    text = normalize_copy(value)
+    text = re.sub(r"Link this event to a larger APUSH theme\.", "This event connects to a broader historical pattern.", text, flags=re.I)
+    text = re.sub(r"Connect this event to a broader APUSH theme\.", "This event connects to a broader historical pattern.", text, flags=re.I)
+    text = re.sub(r"\bAPUSH\b", "this chapter", text, flags=re.I)
+    text = re.sub(r"\bAP exam\b", "this chapter", text, flags=re.I)
+    text = re.sub(r"\bAP-relevant\b", "historically important", text, flags=re.I)
+    text = re.sub(r"\bAP relevance\b", "historical relevance", text, flags=re.I)
+    if text and text[0].islower():
+        text = text[0].upper() + text[1:]
+    return normalize_copy(text)
+
+
+def dedupe_sentences(*values):
+    seen = set()
+    output = []
+    for value in values:
+        for sentence in split_sentences(value):
+            cleaned = sanitize_learning_copy(sentence)
+            key = re.sub(r"[“”‘’]", "", cleaned).rstrip(".,;:!?").lower()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            output.append(cleaned)
+    return output
+
+
+def build_vocab_definition(definition, context):
+    sentences = [sentence for sentence in dedupe_sentences(definition, context) if len(sentence) >= 28]
+    if not sentences:
+        return normalize_copy(definition)
+    return " ".join(sentences[:3])
+
+
+def build_vocab_context(context):
+    for sentence in dedupe_sentences(context):
+        if len(sentence) >= 24 and not re.match(r"^(?:this event|this term|this image)\s+(?:connects|fits|helps)\s+to\b", sentence, flags=re.I):
+            return sentence
+    return ""
+
+
 def vocab(term, definition, context, ap_relevance):
     return {
         "term": term,
-        "definition": definition,
-        "context": context,
+        "definition": build_vocab_definition(definition, context),
+        "context": build_vocab_context(context),
         "apRelevance": ap_relevance,
     }
 
@@ -316,7 +365,7 @@ def build_flashcards(spec):
         card_id += 1
 
     for term in spec["vocabulary"]:
-        add("Term", term["term"], f"{term['definition']} {term['apRelevance']}", term["context"], spec["periodNumber"], "Easy", True)
+        add("Term", term["term"], term["definition"], term["context"], spec["periodNumber"], "Easy", True)
 
     for fig in flatten_figures(spec["notes"]["sections"]):
         add("Person", fig["name"], f"{fig['title']}: {fig['bio']} {fig['significance']}", fig["perspective"], spec["periodNumber"], "Medium", True, fig.get("imageId"))

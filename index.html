@@ -455,6 +455,40 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
+    .chapter-period-group {
+      grid-column: 1 / -1;
+      display: grid;
+      gap: 16px;
+    }
+
+    .chapter-period-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 4px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .chapter-period-heading p,
+    .chapter-period-heading span {
+      margin: 0;
+    }
+
+    .chapter-period-heading p {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .chapter-period-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
     .feature-strip {
       grid-template-columns: repeat(5, minmax(0, 1fr));
     }
@@ -803,6 +837,10 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .chapter-period-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .feature-strip {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
@@ -861,6 +899,10 @@
       .period-grid,
       .feature-strip,
       .flow-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .chapter-period-cards {
         grid-template-columns: 1fr;
       }
 
@@ -1110,7 +1152,18 @@
       const navLinkItems = Array.from(document.querySelectorAll(".nav-link"));
       const navSections = Array.from(document.querySelectorAll("[data-nav-section]"));
       const chapterData = (window.getChapterConfigs ? window.getChapterConfigs() : [])
-        .map(({ number, data }) => ({ number, short: `Chapter ${number}`, data }))
+        .map(({ id, number, short, periodId, periodNumber, periodShort, periodLabel, periodRange, periodDisplay, data }) => ({
+          id,
+          number,
+          short,
+          periodId,
+          periodNumber,
+          periodShort,
+          periodLabel,
+          periodRange,
+          periodDisplay,
+          data
+        }))
         .filter((entry) => entry.data?.chapterMeta);
 
     const truncate = (text, maxLength = 96) => {
@@ -1118,15 +1171,26 @@
       return value.length > maxLength ? `${value.slice(0, maxLength - 3).trim()}...` : value;
     };
 
-    const chapterCards = chapterData.map(({ number, short, data }) => ({
+    const chapterCards = chapterData.map(({ id, number, periodId, periodNumber, periodShort, periodLabel, periodRange, periodDisplay, data }) => ({
+      id,
       number,
-      title: short,
-      range: `${data.chapterMeta.period} - ${data.chapterMeta.dateRange}`,
+      short: `Chapter ${number}`,
+      chapterCode: `Ch ${number}`,
+      periodId,
+      periodNumber,
+      periodShort,
+      periodLabel: periodLabel || data.chapterMeta.period || "",
+      periodRange: periodRange || data.chapterMeta.dateRange || "",
+      periodDisplay: periodDisplay || [periodLabel || data.chapterMeta.period || "", periodRange || data.chapterMeta.dateRange || ""].filter(Boolean).join(" · "),
       theme: data.chapterMeta.chapterTitle,
       summary: data.chapterMeta.oneLineSummary,
       note: truncate(data.chapterMeta.bigPictureThemes?.[0] || data.chapterMeta.oneLineSummary),
       points: (data.chapterMeta.bigPictureThemes || []).slice(0, 3)
     }));
+    const chapterCardGroups = typeof window.groupChapterEntriesByPeriod === "function"
+      ? window.groupChapterEntriesByPeriod(chapterCards)
+      : [{ id: "all", label: "Live Chapters", range: "", entries: chapterCards }];
+    const firstChapterCardId = chapterCards[0]?.id || "";
 
     const escapeHtml = (value) => String(value)
       .replace(/&/g, "&amp;")
@@ -1192,22 +1256,32 @@
     );
 
     const renderChapterCards = () => {
-      chapterGrid.innerHTML = chapterCards.map((card, index) => `
-        <button
-          class="period-card reveal-card${index === 0 ? " is-active" : ""}"
-          type="button"
-          data-reveal
-          data-title="${escapeHtml(card.title)}"
-          data-range="${escapeHtml(card.range)}"
-          data-theme="${escapeHtml(card.theme)}"
-          data-summary="${escapeHtml(card.summary)}"
-          data-points="${escapeHtml(card.points.join("|"))}"
-          aria-pressed="${index === 0 ? "true" : "false"}">
-          <span class="period-chip"><strong>${escapeHtml(card.title)}</strong> Live</span>
-          <span class="period-range">${escapeHtml(card.range)}</span>
-          <h3 class="period-theme">${escapeHtml(card.theme)}</h3>
-          <p class="period-note">${escapeHtml(card.note)}</p>
-        </button>
+      chapterGrid.innerHTML = chapterCardGroups.map((group) => `
+        <section class="chapter-period-group">
+          <div class="chapter-period-heading" data-reveal>
+            <p>${escapeHtml(group.label)}</p>
+            ${group.range ? `<span>${escapeHtml(group.range)}</span>` : ""}
+          </div>
+          <div class="chapter-period-cards">
+            ${group.entries.map((card) => `
+              <button
+                class="period-card reveal-card${card.id === firstChapterCardId ? " is-active" : ""}"
+                type="button"
+                data-reveal
+                data-title="${escapeHtml(card.short)}"
+                data-range="${escapeHtml(card.periodDisplay)}"
+                data-theme="${escapeHtml(card.theme)}"
+                data-summary="${escapeHtml(card.summary)}"
+                data-points="${escapeHtml(card.points.join("|"))}"
+                aria-pressed="${card.id === firstChapterCardId ? "true" : "false"}">
+                <span class="period-chip"><strong>${escapeHtml(card.periodLabel || "APUSH Period")}</strong><span>${escapeHtml(card.short)}</span></span>
+                <span class="period-range">${escapeHtml(card.periodRange)}</span>
+                <h3 class="period-theme">${escapeHtml(card.theme)}</h3>
+                <p class="period-note">${escapeHtml(card.note)}</p>
+              </button>
+            `).join("")}
+          </div>
+        </section>
       `).join("");
 
       periodCards = Array.from(chapterGrid.querySelectorAll(".period-card"));
@@ -1215,17 +1289,18 @@
     };
 
     const updateHomeCopy = () => {
-      const chapterNames = chapterCards.map((card) => card.title);
+      const chapterNames = chapterCards.map((card) => card.short);
+      const periodGroupCount = chapterCardGroups.length;
       const joinedNames = chapterNames.length <= 2
         ? chapterNames.join(" and ")
         : `${chapterNames.slice(0, -1).join(", ")}, and ${chapterNames[chapterNames.length - 1]}`;
 
       if (heroSubtitle) {
-        heroSubtitle.textContent = `${joinedNames} ${chapterCards.length === 1 ? "is" : "are"} live now. Use the site to move from chapter chronology to theme-level argument practice.`;
+        heroSubtitle.textContent = `${joinedNames} ${chapterCards.length === 1 ? "is" : "are"} live now across ${periodGroupCount} APUSH period${periodGroupCount === 1 ? "" : "s"}. Use the site to move from chapter chronology to theme-level argument practice.`;
       }
 
       if (chapterFocusCopy) {
-        chapterFocusCopy.textContent = `The chapter cards below are generated from the ${chapterCards.length} loaded source-backed chapter file${chapterCards.length === 1 ? "" : "s"}.`;
+        chapterFocusCopy.textContent = `The chapter cards below are grouped into ${periodGroupCount} APUSH period section${periodGroupCount === 1 ? "" : "s"} and generated from the ${chapterCards.length} loaded source-backed chapter file${chapterCards.length === 1 ? "" : "s"}.`;
       }
     };
 

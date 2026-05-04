@@ -42,6 +42,79 @@ function stripTags(value) {
     .trim();
 }
 
+function normalizeCopy(value) {
+  return String(value || "")
+    .replace(/[\u0000-\u001f\u007f\u00a0\u2028\u2029]+/g, " ")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;:!?])/g, "$1")
+    .trim();
+}
+
+function splitStudySentences(value) {
+  return normalizeCopy(value)
+    .split(/(?<=[.!?])\s+/)
+    .map((sentence) => normalizeCopy(sentence))
+    .filter(Boolean);
+}
+
+function studySentenceKey(value) {
+  return normalizeCopy(value)
+    .replace(/[“”]/g, "\"")
+    .replace(/[‘’]/g, "'")
+    .replace(/[.,;:!?]+$/g, "")
+    .toLowerCase();
+}
+
+function sanitizeLearningCopy(value) {
+  const text = normalizeCopy(value)
+    .replace(/Link this event to a larger APUSH theme\./gi, "This event connects to a broader historical pattern.")
+    .replace(/Connect this event to a broader APUSH theme\./gi, "This event connects to a broader historical pattern.")
+    .replace(/\bAPUSH\b/gi, "this chapter")
+    .replace(/\bAP exam\b/gi, "this chapter")
+    .replace(/\bAP-relevant\b/gi, "historically important")
+    .replace(/\bAP relevance\b/gi, "historical relevance");
+
+  return /^[a-z]/.test(text) ? text.charAt(0).toUpperCase() + text.slice(1) : text;
+}
+
+function dedupeStudySentences(values = []) {
+  const seen = new Set();
+
+  return values
+    .flatMap((value) => splitStudySentences(value))
+    .map((sentence) => sanitizeLearningCopy(sentence))
+    .filter((sentence) => {
+      const key = studySentenceKey(sentence);
+      if (!key || seen.has(key)) {
+        return false;
+      }
+
+      seen.add(key);
+      return true;
+    });
+}
+
+function buildVocabularyExplanation(definition, context) {
+  const sentences = dedupeStudySentences([definition, context]).filter((sentence) => sentence.length >= 28);
+  return sentences.length ? sentences.slice(0, 3).join(" ") : normalizeCopy(definition);
+}
+
+function buildVocabularyContext(context) {
+  return dedupeStudySentences([context]).find((sentence) => (
+    sentence.length >= 24
+    && !/^(?:this event|this term|this image)\s+(?:connects|fits|helps)\s+to\b/i.test(sentence)
+  )) || "";
+}
+
+function enhanceVocabularyList(vocabulary = []) {
+  return vocabulary.map((term) => ({
+    ...term,
+    definition: buildVocabularyExplanation(term.definition, term.context),
+    context: buildVocabularyContext(term.context),
+    apRelevance: ""
+  }));
+}
+
 function getAttr(tag, name) {
   const normalizedTag = decodeHtml(tag);
   const quoted = normalizedTag.match(new RegExp(`${name}\\s*=\\s*(["'])([\\s\\S]*?)\\1`, "i"));
@@ -531,6 +604,7 @@ function makeSaq(spec, images) {
 function makeFlashcards(spec, images, timeline) {
   const cards = [];
   let count = 1;
+  const vocabulary = enhanceVocabularyList(spec.vocabulary || []);
   const add = (type, front, back, hint, imageId, difficulty = "Medium", apPriority = true) => {
     cards.push({
       id: `${spec.chapterId}-fc-${String(count).padStart(3, "0")}`,
@@ -547,7 +621,7 @@ function makeFlashcards(spec, images, timeline) {
     count += 1;
   };
 
-  for (const term of spec.vocabulary) add("Term", term.term, `${term.definition} ${term.apRelevance}`, term.context, null, "Easy", true);
+  for (const term of vocabulary) add("Term", term.term, term.definition, term.context, null, "Easy", true);
   for (const figure of spec.keyFigures) add("Person", figure.name, `${figure.title}: ${figure.bio} ${figure.significance}`, figure.perspective, figure.imageId, "Medium", true);
   for (const event of timeline.slice(0, 12)) add("Event", event.title, `${event.year}: ${event.summary} ${event.essayRelevance}`, event.commonMisconception || "Link this event to a larger APUSH theme.", event.imageId, event.apPriority ? "Medium" : "Easy", event.apPriority);
   for (const item of spec.conceptCards) add(item.type, item.front, item.back, item.hint, null, item.difficulty || "Hard", item.apPriority !== false);
@@ -565,6 +639,7 @@ function makeFlashcards(spec, images, timeline) {
 
 function buildChapter(spec) {
   const images = materializeImages(spec);
+  const vocabulary = enhanceVocabularyList(spec.vocabulary || []);
   const imageIds = images.map((image) => image.imageId);
   const timeline = spec.timeline.map((event) => makeTimelineEvent(spec, { ...event, imageId: event.imageIndex ? imageIds[event.imageIndex - 1] : event.imageId || null }));
   const highPriorityEvents = timeline.filter((event) => event.apPriority && event.significance === "High").slice(0, 5);
@@ -580,14 +655,14 @@ function buildChapter(spec) {
     chapterTimeline: timeline,
     periodTimelineEvents: highPriorityEvents.map((event) => makePeriodEvent(spec, event)),
     periodTimeline: timeline,
-    vocabulary: spec.vocabulary,
+    vocabulary,
     essayPractice: {
       saq: makeSaq(spec, images),
       leq: spec.leq,
       dbq: spec.dbq(imageIds),
     },
     mcqQuestions: makeMcqs(spec, images),
-    flashcards: makeFlashcards(spec, images, timeline),
+    flashcards: makeFlashcards({ ...spec, vocabulary }, images, timeline),
   };
 
   fs.writeFileSync(path.join(ROOT, `chapter${spec.chapterNum}-data.js`), `window.chapter${spec.chapterNum}Data = ${JSON.stringify(data, null, 2)};\n`);
