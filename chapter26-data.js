@@ -1,4 +1,4 @@
-window.chapter26Data = {
+window.chapter26Data = JSON.parse(String.raw`{
   "chapterId": "chapter26",
   "chapterNum": 26,
   "periodId": "p8",
@@ -2972,9 +2972,9 @@ window.chapter26Data = {
       "question": "The historical development associated with Vietnamization most directly contributed to which of the following?",
       "options": {
         "A": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
+        "C": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
+        "D": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2999,12 +2999,12 @@ window.chapter26Data = {
       "stimulusCaption": "President Nixon met with African American leaders and celebrities, including Jim Brown, while promoting black capitalism and limited civil rights accommodation.",
       "question": "Which claim would be best supported by evidence about Kent State and Jackson State?",
       "options": {
-        "A": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
+        "B": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
+        "C": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
+        "D": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
@@ -3027,12 +3027,12 @@ window.chapter26Data = {
       "stimulusCaption": "Figure 26.1, Median Age at First Marriage, 1947-1981, shows delayed marriage during and after the sexual revolution.",
       "question": "A historian studying Watergate would most likely connect it to which broader trend?",
       "options": {
-        "A": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The abortion controversy helped unite religious conservatives and reshape party politics.",
+        "B": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
+        "C": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
+        "D": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
@@ -3055,12 +3055,12 @@ window.chapter26Data = {
       "stimulusCaption": "Richard Nixon attended a banquet during his 1972 visit to China with Premier Zhou Enlai.",
       "question": "Which development best explains the APUSH significance of Nixon's trip to China?",
       "options": {
-        "A": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
+        "B": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
+        "C": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
+        "D": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
@@ -3084,9 +3084,9 @@ window.chapter26Data = {
       "question": "The historical development associated with affirmative action most directly contributed to which of the following?",
       "options": {
         "A": "Debates over racial remedies showed that civil rights politics continued after the 1960s.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending.",
+        "C": "The abortion controversy helped unite religious conservatives and reshape party politics.",
+        "D": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3111,12 +3111,12 @@ window.chapter26Data = {
       "stimulusCaption": "Figure 26.2, Real Average Weekly Wages, 1955-1990, shows wages peaking in the early 1970s and then declining.",
       "question": "Which claim would be best supported by evidence about stagflation?",
       "options": {
-        "A": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
+        "B": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
+        "C": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor.",
+        "D": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
@@ -3139,12 +3139,12 @@ window.chapter26Data = {
       "stimulusCaption": "The WIN card came from Ford's Whip Inflation Now campaign.",
       "question": "A historian studying deindustrialization would most likely connect it to which broader trend?",
       "options": {
-        "A": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
+        "B": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
+        "C": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
+        "D": "The 1980s saw growing inequality as wealth gains flowed disproportionately to higher-income Americans."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
@@ -3167,12 +3167,12 @@ window.chapter26Data = {
       "stimulusCaption": "Jimmy Carter, Anwar Sadat, and Menachem Begin celebrated the 1979 Egypt-Israel peace treaty after the Camp David Accords.",
       "question": "Which development best explains the APUSH significance of the oil shocks?",
       "options": {
-        "A": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
+        "B": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
+        "C": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
+        "D": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
@@ -3196,9 +3196,9 @@ window.chapter26Data = {
       "question": "The historical development associated with Carter's human rights policy most directly contributed to which of the following?",
       "options": {
         "A": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
+        "C": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
+        "D": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3223,12 +3223,12 @@ window.chapter26Data = {
       "stimulusCaption": "Watergate-era constitutional principle",
       "question": "Which claim would be best supported by evidence about the Iranian hostage crisis?",
       "options": {
-        "A": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
+        "B": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
+        "C": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
+        "D": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
@@ -3251,12 +3251,12 @@ window.chapter26Data = {
       "stimulusCaption": "Paraphrase of Carter's crisis of confidence theme, 1979",
       "question": "A historian studying the Equal Rights Amendment battle would most likely connect it to which broader trend?",
       "options": {
-        "A": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
+        "B": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
+        "C": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
+        "D": "The abortion controversy helped unite religious conservatives and reshape party politics."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
@@ -3279,12 +3279,12 @@ window.chapter26Data = {
       "stimulusCaption": "Ronald Reagan, first inaugural address, 1981",
       "question": "Which development best explains the APUSH significance of Roe v. Wade and abortion politics?",
       "options": {
-        "A": "The abortion controversy helped unite religious conservatives and reshape party politics.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
+        "B": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
+        "C": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending.",
+        "D": "The abortion controversy helped unite religious conservatives and reshape party politics."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "The abortion controversy helped unite religious conservatives and reshape party politics.",
@@ -3308,9 +3308,9 @@ window.chapter26Data = {
       "question": "The historical development associated with the tax revolt most directly contributed to which of the following?",
       "options": {
         "A": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
+        "C": "Debates over racial remedies showed that civil rights politics continued after the 1960s.",
+        "D": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3335,12 +3335,12 @@ window.chapter26Data = {
       "stimulusCaption": "Paraphrase of Reagan Doctrine rhetoric",
       "question": "Which claim would be best supported by evidence about the election of 1980?",
       "options": {
-        "A": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The abortion controversy helped unite religious conservatives and reshape party politics.",
+        "B": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
+        "C": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
+        "D": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
@@ -3363,12 +3363,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "A historian studying Reaganomics would most likely connect it to which broader trend?",
       "options": {
-        "A": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
+        "B": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
+        "C": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
+        "D": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
@@ -3391,12 +3391,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the PATCO strike?",
       "options": {
-        "A": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The 1980s saw growing inequality as wealth gains flowed disproportionately to higher-income Americans.",
+        "B": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
+        "C": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
+        "D": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor.",
@@ -3420,9 +3420,9 @@ window.chapter26Data = {
       "question": "The historical development associated with the second Gilded Age most directly contributed to which of the following?",
       "options": {
         "A": "The 1980s saw growing inequality as wealth gains flowed disproportionately to higher-income Americans.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor.",
+        "C": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
+        "D": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3447,12 +3447,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the war on drugs?",
       "options": {
-        "A": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
+        "B": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
+        "C": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
+        "D": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
@@ -3475,12 +3475,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Iran-Contra affair would most likely connect it to which broader trend?",
       "options": {
-        "A": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
+        "B": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
+        "C": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
+        "D": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
@@ -3503,12 +3503,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of Reagan and Gorbachev?",
       "options": {
-        "A": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
+        "B": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
+        "C": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
+        "D": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
@@ -3532,9 +3532,9 @@ window.chapter26Data = {
       "question": "The historical development associated with Vietnamization most directly contributed to which of the following?",
       "options": {
         "A": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
+        "C": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
+        "D": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3559,12 +3559,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about Kent State and Jackson State?",
       "options": {
-        "A": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
+        "B": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
+        "C": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
+        "D": "Debates over racial remedies showed that civil rights politics continued after the 1960s."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
@@ -3587,12 +3587,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "A historian studying Watergate would most likely connect it to which broader trend?",
       "options": {
-        "A": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
+        "B": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
+        "C": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
+        "D": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
@@ -3615,12 +3615,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of Nixon's trip to China?",
       "options": {
-        "A": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
+        "B": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
+        "C": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
+        "D": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
@@ -3644,9 +3644,9 @@ window.chapter26Data = {
       "question": "The historical development associated with affirmative action most directly contributed to which of the following?",
       "options": {
         "A": "Debates over racial remedies showed that civil rights politics continued after the 1960s.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending.",
+        "C": "The abortion controversy helped unite religious conservatives and reshape party politics.",
+        "D": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3671,12 +3671,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about stagflation?",
       "options": {
-        "A": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
+        "B": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
+        "C": "The 1980s saw growing inequality as wealth gains flowed disproportionately to higher-income Americans.",
+        "D": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
@@ -3699,12 +3699,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "A historian studying deindustrialization would most likely connect it to which broader trend?",
       "options": {
-        "A": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
+        "B": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
+        "C": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
+        "D": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
@@ -3727,12 +3727,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the oil shocks?",
       "options": {
-        "A": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
+        "B": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
+        "C": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
+        "D": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
@@ -3756,9 +3756,9 @@ window.chapter26Data = {
       "question": "The historical development associated with Carter's human rights policy most directly contributed to which of the following?",
       "options": {
         "A": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
+        "C": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
+        "D": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3783,12 +3783,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Iranian hostage crisis?",
       "options": {
-        "A": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
+        "B": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
+        "C": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
+        "D": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
@@ -3811,12 +3811,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Equal Rights Amendment battle would most likely connect it to which broader trend?",
       "options": {
-        "A": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
+        "B": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
+        "C": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
+        "D": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
@@ -3839,12 +3839,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of Roe v. Wade and abortion politics?",
       "options": {
-        "A": "The abortion controversy helped unite religious conservatives and reshape party politics.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
+        "B": "Debates over racial remedies showed that civil rights politics continued after the 1960s.",
+        "C": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
+        "D": "The abortion controversy helped unite religious conservatives and reshape party politics."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "The abortion controversy helped unite religious conservatives and reshape party politics.",
@@ -3868,9 +3868,9 @@ window.chapter26Data = {
       "question": "The historical development associated with the tax revolt most directly contributed to which of the following?",
       "options": {
         "A": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "The abortion controversy helped unite religious conservatives and reshape party politics.",
+        "C": "Debates over racial remedies showed that civil rights politics continued after the 1960s.",
+        "D": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3895,12 +3895,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the election of 1980?",
       "options": {
-        "A": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The abortion controversy helped unite religious conservatives and reshape party politics.",
+        "B": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
+        "C": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
+        "D": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
@@ -3923,12 +3923,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "A historian studying Reaganomics would most likely connect it to which broader trend?",
       "options": {
-        "A": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
+        "B": "The 1980s saw growing inequality as wealth gains flowed disproportionately to higher-income Americans.",
+        "C": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
+        "D": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
@@ -3951,12 +3951,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the PATCO strike?",
       "options": {
-        "A": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
+        "B": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
+        "C": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
+        "D": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor.",
@@ -3980,9 +3980,9 @@ window.chapter26Data = {
       "question": "The historical development associated with the second Gilded Age most directly contributed to which of the following?",
       "options": {
         "A": "The 1980s saw growing inequality as wealth gains flowed disproportionately to higher-income Americans.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor.",
+        "C": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
+        "D": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -4007,12 +4007,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the war on drugs?",
       "options": {
-        "A": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks.",
+        "B": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
+        "C": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
+        "D": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
@@ -4035,12 +4035,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Iran-Contra affair would most likely connect it to which broader trend?",
       "options": {
-        "A": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Crime and drug policy expanded policing and incarceration while reflecting law-and-order conservatism.",
+        "B": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
+        "C": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
+        "D": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
@@ -4063,12 +4063,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of Reagan and Gorbachev?",
       "options": {
-        "A": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
+        "B": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
+        "C": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
+        "D": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
@@ -4092,9 +4092,9 @@ window.chapter26Data = {
       "question": "The historical development associated with Vietnamization most directly contributed to which of the following?",
       "options": {
         "A": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
+        "C": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
+        "D": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -4119,12 +4119,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about Kent State and Jackson State?",
       "options": {
-        "A": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
+        "B": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
+        "C": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
+        "D": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front.",
@@ -4147,12 +4147,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "A historian studying Watergate would most likely connect it to which broader trend?",
       "options": {
-        "A": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Secret arms sales and aid to the Contras revealed executive overreach in Reagan-era foreign policy.",
+        "B": "Conservative women helped defeat the ERA by defending family roles and mobilizing against feminism.",
+        "C": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
+        "D": "Reagan's victory united economic conservatives, religious conservatives, and Cold War hawks."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Nixon's abuses of power and cover-up damaged trust in the presidency and strengthened demands for accountability.",
@@ -4175,12 +4175,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of Nixon's trip to China?",
       "options": {
-        "A": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
+        "B": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
+        "C": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
+        "D": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
@@ -4204,9 +4204,9 @@ window.chapter26Data = {
       "question": "The historical development associated with affirmative action most directly contributed to which of the following?",
       "options": {
         "A": "Debates over racial remedies showed that civil rights politics continued after the 1960s.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Anti-tax activism signaled a broader conservative challenge to liberal government and public spending.",
+        "C": "The abortion controversy helped unite religious conservatives and reshape party politics.",
+        "D": "Campus shootings intensified distrust of government and showed how Vietnam divided the home front."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -4231,12 +4231,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about stagflation?",
       "options": {
-        "A": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
+        "B": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
+        "C": "The 1980s saw growing inequality as wealth gains flowed disproportionately to higher-income Americans.",
+        "D": "Reagan's firing of striking air traffic controllers symbolized a new offensive against organized labor."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
@@ -4259,12 +4259,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "A historian studying deindustrialization would most likely connect it to which broader trend?",
       "options": {
-        "A": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Supply-side tax cuts, deregulation, and reduced social spending shifted policy toward market-centered conservatism.",
+        "B": "High inflation combined with unemployment weakened confidence in Keynesian liberalism and postwar prosperity.",
+        "C": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
+        "D": "The 1980s saw growing inequality as wealth gains flowed disproportionately to higher-income Americans."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Manufacturing decline weakened unions, blue-collar communities, and the postwar social contract.",
@@ -4287,12 +4287,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the oil shocks?",
       "options": {
-        "A": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
+        "B": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy.",
+        "C": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
+        "D": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
@@ -4316,9 +4316,9 @@ window.chapter26Data = {
       "question": "The historical development associated with Carter's human rights policy most directly contributed to which of the following?",
       "options": {
         "A": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy.",
+        "C": "Nixon tried to reduce U.S. troop levels while preserving American credibility in South Vietnam.",
+        "D": "Détente used diplomatic realism to exploit the Sino-Soviet split and reshape Cold War strategy."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -4343,12 +4343,12 @@ window.chapter26Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Iranian hostage crisis?",
       "options": {
-        "A": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Late Cold War diplomacy helped reduce nuclear tensions and set the stage for the Cold War's end.",
+        "B": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
+        "C": "Carter tried to put human rights at the center of foreign policy, though Cold War crises limited the approach.",
+        "D": "Energy crises revealed U.S. dependence on global markets and intensified frustration with the economy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "The hostage crisis made Carter appear weak and intensified doubts about U.S. power after Vietnam.",
@@ -5299,4 +5299,4 @@ window.chapter26Data = {
       "apPriority": true
     }
   ]
-};
+}`);

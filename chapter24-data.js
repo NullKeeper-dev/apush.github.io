@@ -1,4 +1,4 @@
-window.chapter24Data = {
+window.chapter24Data = JSON.parse(String.raw`{
   "chapterId": "chapter24",
   "chapterNum": 24,
   "periodId": "p8",
@@ -2412,9 +2412,9 @@ window.chapter24Data = {
       "question": "The historical development associated with suburbanization most directly contributed to which of the following?",
       "options": {
         "A": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Defense spending, air conditioning, and migration shifted population and political influence toward the South and West.",
+        "C": "Federal enforcement became necessary when states resisted school desegregation.",
+        "D": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2439,12 +2439,12 @@ window.chapter24Data = {
       "stimulusCaption": "Eisenhower's popularity was evident during his 1952 presidential campaign.",
       "question": "Which claim would be best supported by evidence about consumer culture?",
       "options": {
-        "A": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy.",
+        "B": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
+        "C": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
+        "D": "Mass media standardized consumer desires and political messaging across the nation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
@@ -2467,12 +2467,12 @@ window.chapter24Data = {
       "stimulusCaption": "A 1955 family bomb shelter photograph captures nuclear anxiety under massive retaliation.",
       "question": "A historian studying the Interstate Highway Act would most likely connect it to which broader trend?",
       "options": {
-        "A": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
+        "B": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
+        "C": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
+        "D": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
@@ -2495,12 +2495,12 @@ window.chapter24Data = {
       "stimulusCaption": "Elvis Presley symbolized youth culture and the commercialization of rock and roll.",
       "question": "Which development best explains the APUSH significance of modern Republicanism?",
       "options": {
-        "A": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal enforcement became necessary when states resisted school desegregation.",
+        "B": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
+        "C": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
+        "D": "Eisenhower accepted much of the New Deal state while trying to limit federal spending."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
@@ -2524,9 +2524,9 @@ window.chapter24Data = {
       "question": "The historical development associated with the social contract most directly contributed to which of the following?",
       "options": {
         "A": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
+        "C": "Television became a powerful force in shaping presidential politics and public image.",
+        "D": "The 1960 election exposed continuing debates over religion, identity, and national leadership."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2551,12 +2551,12 @@ window.chapter24Data = {
       "stimulusCaption": "The 1960 presidential election map shows the narrow Kennedy-Nixon contest.",
       "question": "Which claim would be best supported by evidence about massive retaliation?",
       "options": {
-        "A": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
+        "B": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
+        "C": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
+        "D": "Eisenhower accepted much of the New Deal state while trying to limit federal spending."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
@@ -2579,12 +2579,12 @@ window.chapter24Data = {
       "stimulusCaption": "Linda Brown was connected to the legal challenge that became Brown v. Board of Education.",
       "question": "A historian studying the Suez crisis would most likely connect it to which broader trend?",
       "options": {
-        "A": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
+        "B": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
+        "C": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
+        "D": "The 1960 election exposed continuing debates over religion, identity, and national leadership."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
@@ -2607,12 +2607,12 @@ window.chapter24Data = {
       "stimulusCaption": "Rosa Parks helped spark the Montgomery bus boycott after refusing to give up her bus seat.",
       "question": "Which development best explains the APUSH significance of youth culture?",
       "options": {
-        "A": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Postwar population growth increased demand for housing, schools, and consumer goods.",
+        "B": "Grassroots black activism used boycotts and nonviolent protest to attack segregation.",
+        "C": "Mass media standardized consumer desires and political messaging across the nation.",
+        "D": "Teenagers became a major consumer audience and challenged older ideas about conformity."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
@@ -2636,9 +2636,9 @@ window.chapter24Data = {
       "question": "The historical development associated with anti-Catholic attacks on Kennedy most directly contributed to which of the following?",
       "options": {
         "A": "The 1960 election exposed continuing debates over religion, identity, and national leadership.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Grassroots black activism used boycotts and nonviolent protest to attack segregation.",
+        "C": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
+        "D": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2663,12 +2663,12 @@ window.chapter24Data = {
       "stimulusCaption": "John F. Kennedy, Houston ministers speech, 1960",
       "question": "Which claim would be best supported by evidence about the Kennedy-Nixon debates?",
       "options": {
-        "A": "Television became a powerful force in shaping presidential politics and public image.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
+        "B": "Television became a powerful force in shaping presidential politics and public image.",
+        "C": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy.",
+        "D": "A narrow Democratic victory signaled generational change and the growing importance of television politics."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Television became a powerful force in shaping presidential politics and public image.",
@@ -2691,12 +2691,12 @@ window.chapter24Data = {
       "stimulusCaption": "Paraphrase of Eisenhower-era containment logic",
       "question": "A historian studying Brown v. Board of Education would most likely connect it to which broader trend?",
       "options": {
-        "A": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal enforcement became necessary when states resisted school desegregation.",
+        "B": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
+        "C": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
+        "D": "Grassroots black activism used boycotts and nonviolent protest to attack segregation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
@@ -2719,12 +2719,12 @@ window.chapter24Data = {
       "stimulusCaption": "Civil rights movement argument, 1950s context",
       "question": "Which development best explains the APUSH significance of Rosa Parks and Montgomery?",
       "options": {
-        "A": "Grassroots black activism used boycotts and nonviolent protest to attack segregation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
+        "B": "The 1960 election exposed continuing debates over religion, identity, and national leadership.",
+        "C": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
+        "D": "Grassroots black activism used boycotts and nonviolent protest to attack segregation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Grassroots black activism used boycotts and nonviolent protest to attack segregation.",
@@ -2748,9 +2748,9 @@ window.chapter24Data = {
       "question": "The historical development associated with Little Rock most directly contributed to which of the following?",
       "options": {
         "A": "Federal enforcement became necessary when states resisted school desegregation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
+        "C": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
+        "D": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2775,12 +2775,12 @@ window.chapter24Data = {
       "stimulusCaption": "Interstate highway justification, 1956 context",
       "question": "Which claim would be best supported by evidence about the Kitchen Debate?",
       "options": {
-        "A": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Postwar population growth increased demand for housing, schools, and consumer goods.",
+        "B": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
+        "C": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
+        "D": "Mass media standardized consumer desires and political messaging across the nation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
@@ -2803,12 +2803,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "A historian studying restrictive suburban practices would most likely connect it to which broader trend?",
       "options": {
-        "A": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs.",
+        "B": "Defense spending, air conditioning, and migration shifted population and political influence toward the South and West.",
+        "C": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
+        "D": "The federal government accelerated suburban growth, automobile dependency, and defense planning."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
@@ -2831,12 +2831,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the baby boom?",
       "options": {
-        "A": "Postwar population growth increased demand for housing, schools, and consumer goods.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
+        "B": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
+        "C": "Mass media standardized consumer desires and political messaging across the nation.",
+        "D": "Postwar population growth increased demand for housing, schools, and consumer goods."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Postwar population growth increased demand for housing, schools, and consumer goods.",
@@ -2860,9 +2860,9 @@ window.chapter24Data = {
       "question": "The historical development associated with the Sunbelt most directly contributed to which of the following?",
       "options": {
         "A": "Defense spending, air conditioning, and migration shifted population and political influence toward the South and West.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs.",
+        "C": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
+        "D": "Eisenhower accepted much of the New Deal state while trying to limit federal spending."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2887,12 +2887,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about television advertising?",
       "options": {
-        "A": "Mass media standardized consumer desires and political messaging across the nation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Postwar population growth increased demand for housing, schools, and consumer goods.",
+        "B": "Mass media standardized consumer desires and political messaging across the nation.",
+        "C": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
+        "D": "Television became a powerful force in shaping presidential politics and public image."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Mass media standardized consumer desires and political messaging across the nation.",
@@ -2915,12 +2915,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Civil Rights Act of 1957 would most likely connect it to which broader trend?",
       "options": {
-        "A": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal enforcement became necessary when states resisted school desegregation.",
+        "B": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
+        "C": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
+        "D": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
@@ -2943,12 +2943,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the election of 1960?",
       "options": {
-        "A": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Television became a powerful force in shaping presidential politics and public image.",
+        "B": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
+        "C": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
+        "D": "A narrow Democratic victory signaled generational change and the growing importance of television politics."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
@@ -2972,9 +2972,9 @@ window.chapter24Data = {
       "question": "The historical development associated with suburbanization most directly contributed to which of the following?",
       "options": {
         "A": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
+        "C": "Defense spending, air conditioning, and migration shifted population and political influence toward the South and West.",
+        "D": "Affluence and advertising encouraged Americans to define freedom through purchasing power."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2999,12 +2999,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about consumer culture?",
       "options": {
-        "A": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy.",
+        "B": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
+        "C": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
+        "D": "Mass media standardized consumer desires and political messaging across the nation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
@@ -3027,12 +3027,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Interstate Highway Act would most likely connect it to which broader trend?",
       "options": {
-        "A": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
+        "B": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
+        "C": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
+        "D": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
@@ -3055,12 +3055,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of modern Republicanism?",
       "options": {
-        "A": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
+        "B": "Federal enforcement became necessary when states resisted school desegregation.",
+        "C": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
+        "D": "Eisenhower accepted much of the New Deal state while trying to limit federal spending."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
@@ -3084,9 +3084,9 @@ window.chapter24Data = {
       "question": "The historical development associated with the social contract most directly contributed to which of the following?",
       "options": {
         "A": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
+        "C": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
+        "D": "Television became a powerful force in shaping presidential politics and public image."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3111,12 +3111,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about massive retaliation?",
       "options": {
-        "A": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
+        "B": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
+        "C": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
+        "D": "Postwar population growth increased demand for housing, schools, and consumer goods."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
@@ -3139,12 +3139,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Suez crisis would most likely connect it to which broader trend?",
       "options": {
-        "A": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
+        "B": "Federal enforcement became necessary when states resisted school desegregation.",
+        "C": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
+        "D": "The federal government accelerated suburban growth, automobile dependency, and defense planning."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
@@ -3167,12 +3167,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of youth culture?",
       "options": {
-        "A": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Postwar population growth increased demand for housing, schools, and consumer goods.",
+        "B": "Mass media standardized consumer desires and political messaging across the nation.",
+        "C": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
+        "D": "Teenagers became a major consumer audience and challenged older ideas about conformity."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
@@ -3196,9 +3196,9 @@ window.chapter24Data = {
       "question": "The historical development associated with anti-Catholic attacks on Kennedy most directly contributed to which of the following?",
       "options": {
         "A": "The 1960 election exposed continuing debates over religion, identity, and national leadership.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Grassroots black activism used boycotts and nonviolent protest to attack segregation.",
+        "C": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
+        "D": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3223,12 +3223,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Kennedy-Nixon debates?",
       "options": {
-        "A": "Television became a powerful force in shaping presidential politics and public image.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
+        "B": "Television became a powerful force in shaping presidential politics and public image.",
+        "C": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
+        "D": "Mass media standardized consumer desires and political messaging across the nation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Television became a powerful force in shaping presidential politics and public image.",
@@ -3251,12 +3251,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "A historian studying Brown v. Board of Education would most likely connect it to which broader trend?",
       "options": {
-        "A": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
+        "B": "The 1960 election exposed continuing debates over religion, identity, and national leadership.",
+        "C": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
+        "D": "The first civil rights law since Reconstruction showed modest federal support for voting rights."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
@@ -3279,12 +3279,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of Rosa Parks and Montgomery?",
       "options": {
-        "A": "Grassroots black activism used boycotts and nonviolent protest to attack segregation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The 1960 election exposed continuing debates over religion, identity, and national leadership.",
+        "B": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
+        "C": "Defense spending, air conditioning, and migration shifted population and political influence toward the South and West.",
+        "D": "Grassroots black activism used boycotts and nonviolent protest to attack segregation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Grassroots black activism used boycotts and nonviolent protest to attack segregation.",
@@ -3308,9 +3308,9 @@ window.chapter24Data = {
       "question": "The historical development associated with Little Rock most directly contributed to which of the following?",
       "options": {
         "A": "Federal enforcement became necessary when states resisted school desegregation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
+        "C": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs.",
+        "D": "The first civil rights law since Reconstruction showed modest federal support for voting rights."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3335,12 +3335,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Kitchen Debate?",
       "options": {
-        "A": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Postwar population growth increased demand for housing, schools, and consumer goods.",
+        "B": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
+        "C": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
+        "D": "Affluence and advertising encouraged Americans to define freedom through purchasing power."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
@@ -3363,12 +3363,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "A historian studying restrictive suburban practices would most likely connect it to which broader trend?",
       "options": {
-        "A": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs.",
+        "B": "Defense spending, air conditioning, and migration shifted population and political influence toward the South and West.",
+        "C": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
+        "D": "The federal government accelerated suburban growth, automobile dependency, and defense planning."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
@@ -3391,12 +3391,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the baby boom?",
       "options": {
-        "A": "Postwar population growth increased demand for housing, schools, and consumer goods.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
+        "B": "Mass media standardized consumer desires and political messaging across the nation.",
+        "C": "Television became a powerful force in shaping presidential politics and public image.",
+        "D": "Postwar population growth increased demand for housing, schools, and consumer goods."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Postwar population growth increased demand for housing, schools, and consumer goods.",
@@ -3420,9 +3420,9 @@ window.chapter24Data = {
       "question": "The historical development associated with the Sunbelt most directly contributed to which of the following?",
       "options": {
         "A": "Defense spending, air conditioning, and migration shifted population and political influence toward the South and West.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs.",
+        "C": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
+        "D": "The 1960 election exposed continuing debates over religion, identity, and national leadership."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3447,12 +3447,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about television advertising?",
       "options": {
-        "A": "Mass media standardized consumer desires and political messaging across the nation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Postwar population growth increased demand for housing, schools, and consumer goods.",
+        "B": "Mass media standardized consumer desires and political messaging across the nation.",
+        "C": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
+        "D": "Affluence and advertising encouraged Americans to define freedom through purchasing power."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Mass media standardized consumer desires and political messaging across the nation.",
@@ -3475,12 +3475,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Civil Rights Act of 1957 would most likely connect it to which broader trend?",
       "options": {
-        "A": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
+        "B": "Federal enforcement became necessary when states resisted school desegregation.",
+        "C": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
+        "D": "Grassroots black activism used boycotts and nonviolent protest to attack segregation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
@@ -3503,12 +3503,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the election of 1960?",
       "options": {
-        "A": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Television became a powerful force in shaping presidential politics and public image.",
+        "B": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
+        "C": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
+        "D": "A narrow Democratic victory signaled generational change and the growing importance of television politics."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
@@ -3532,9 +3532,9 @@ window.chapter24Data = {
       "question": "The historical development associated with suburbanization most directly contributed to which of the following?",
       "options": {
         "A": "Federal policy, highways, and mortgage subsidies helped white middle-class families move to suburbs.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Defense spending, air conditioning, and migration shifted population and political influence toward the South and West.",
+        "C": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy.",
+        "D": "Federal enforcement became necessary when states resisted school desegregation."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3559,12 +3559,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about consumer culture?",
       "options": {
-        "A": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy.",
+        "B": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
+        "C": "Mass media standardized consumer desires and political messaging across the nation.",
+        "D": "Decolonization complicated U.S. Cold War strategy in the Middle East."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
@@ -3587,12 +3587,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Interstate Highway Act would most likely connect it to which broader trend?",
       "options": {
-        "A": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Cold War competition included consumer abundance and domestic comfort as symbols of freedom.",
+        "B": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
+        "C": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
+        "D": "Suburban growth often reinforced racial exclusion through lending, covenants, and local policy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
@@ -3615,12 +3615,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of modern Republicanism?",
       "options": {
-        "A": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
+        "B": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
+        "C": "The first civil rights law since Reconstruction showed modest federal support for voting rights.",
+        "D": "Eisenhower accepted much of the New Deal state while trying to limit federal spending."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Eisenhower accepted much of the New Deal state while trying to limit federal spending.",
@@ -3644,9 +3644,9 @@ window.chapter24Data = {
       "question": "The historical development associated with the social contract most directly contributed to which of the following?",
       "options": {
         "A": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Affluence and advertising encouraged Americans to define freedom through purchasing power.",
+        "C": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
+        "D": "Television became a powerful force in shaping presidential politics and public image."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3671,12 +3671,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about massive retaliation?",
       "options": {
-        "A": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
+        "B": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
+        "C": "The federal government accelerated suburban growth, automobile dependency, and defense planning.",
+        "D": "Grassroots black activism used boycotts and nonviolent protest to attack segregation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
@@ -3699,12 +3699,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Suez crisis would most likely connect it to which broader trend?",
       "options": {
-        "A": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars.",
+        "B": "The Supreme Court declared school segregation unconstitutional and gave the freedom movement legal momentum.",
+        "C": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
+        "D": "Federal enforcement became necessary when states resisted school desegregation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Decolonization complicated U.S. Cold War strategy in the Middle East.",
@@ -3727,12 +3727,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of youth culture?",
       "options": {
-        "A": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Postwar population growth increased demand for housing, schools, and consumer goods.",
+        "B": "Mass media standardized consumer desires and political messaging across the nation.",
+        "C": "Television became a powerful force in shaping presidential politics and public image.",
+        "D": "Teenagers became a major consumer audience and challenged older ideas about conformity."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
@@ -3756,9 +3756,9 @@ window.chapter24Data = {
       "question": "The historical development associated with anti-Catholic attacks on Kennedy most directly contributed to which of the following?",
       "options": {
         "A": "The 1960 election exposed continuing debates over religion, identity, and national leadership.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Grassroots black activism used boycotts and nonviolent protest to attack segregation.",
+        "C": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy.",
+        "D": "Eisenhower relied on nuclear deterrence to contain communism while avoiding expensive conventional wars."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3783,12 +3783,12 @@ window.chapter24Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Kennedy-Nixon debates?",
       "options": {
-        "A": "Television became a powerful force in shaping presidential politics and public image.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "A narrow Democratic victory signaled generational change and the growing importance of television politics.",
+        "B": "Television became a powerful force in shaping presidential politics and public image.",
+        "C": "Teenagers became a major consumer audience and challenged older ideas about conformity.",
+        "D": "Many unionized workers gained wages and benefits while accepting corporate authority and limited militancy."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Television became a powerful force in shaping presidential politics and public image.",
@@ -4571,4 +4571,4 @@ window.chapter24Data = {
       "apPriority": true
     }
   ]
-};
+}`);

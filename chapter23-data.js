@@ -1,4 +1,4 @@
-window.chapter23Data = {
+window.chapter23Data = JSON.parse(String.raw`{
   "chapterId": "chapter23",
   "chapterNum": 23,
   "periodId": "p8",
@@ -2284,9 +2284,9 @@ window.chapter23Data = {
       "question": "The historical development associated with This Godless Communism most directly contributed to which of the following?",
       "options": {
         "A": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
+        "C": "Private industries enforced anticommunist conformity even without criminal convictions.",
+        "D": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2311,12 +2311,12 @@ window.chapter23Data = {
       "stimulusCaption": "The Marshall Plan offered a positive economic vision to accompany containment.",
       "question": "Which claim would be best supported by evidence about the Marshall Plan?",
       "options": {
-        "A": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
+        "B": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
+        "C": "The fall of China intensified American fears that containment was failing in Asia.",
+        "D": "Human rights language gave reformers a global vocabulary for criticizing racial inequality."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
@@ -2339,12 +2339,12 @@ window.chapter23Data = {
       "stimulusCaption": "Children in Berlin celebrate supplies arriving during the Berlin Airlift, 1948.",
       "question": "A historian studying the Berlin Airlift would most likely connect it to which broader trend?",
       "options": {
-        "A": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The United States committed itself to supporting governments resisting communist influence.",
+        "B": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
+        "C": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
+        "D": "Human rights language gave reformers a global vocabulary for criticizing racial inequality."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
@@ -2367,12 +2367,12 @@ window.chapter23Data = {
       "stimulusCaption": "The division of Europe between communist and noncommunist nations hardened by the early 1950s.",
       "question": "Which development best explains the APUSH significance of the division of Europe?",
       "options": {
-        "A": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Civil rights groups used global criticism of racism to press the federal government for reform.",
+        "B": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
+        "C": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
+        "D": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
@@ -2396,9 +2396,9 @@ window.chapter23Data = {
       "question": "The historical development associated with the Korean War most directly contributed to which of the following?",
       "options": {
         "A": "Containment expanded into Asia and produced a limited war under United Nations authority.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "The war ended in stalemate, showing both the reach and limits of containment.",
+        "C": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
+        "D": "The fall of China intensified American fears that containment was failing in Asia."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2423,12 +2423,12 @@ window.chapter23Data = {
       "stimulusCaption": "Humphrey Bogart, Lauren Bacall, and other movie figures travel to the 1947 HUAC hearings.",
       "question": "Which claim would be best supported by evidence about HUAC hearings?",
       "options": {
-        "A": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
+        "B": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
+        "C": "Southern Democrats split from Truman over federal civil rights initiatives.",
+        "D": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
@@ -2451,12 +2451,12 @@ window.chapter23Data = {
       "stimulusCaption": "Senator Joseph R. McCarthy became the best-known figure in the domestic anticommunist crusade.",
       "question": "A historian studying Joseph McCarthy would most likely connect it to which broader trend?",
       "options": {
-        "A": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
+        "B": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
+        "C": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
+        "D": "Southern Democrats split from Truman over federal civil rights initiatives."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
@@ -2479,12 +2479,12 @@ window.chapter23Data = {
       "stimulusCaption": "This cartoon criticizes the atmosphere of fear created by the anticommunist crusade.",
       "question": "Which development best explains the APUSH significance of Cold War civil rights arguments?",
       "options": {
-        "A": "Civil rights groups used global criticism of racism to press the federal government for reform.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
+        "B": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
+        "C": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
+        "D": "Civil rights groups used global criticism of racism to press the federal government for reform."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Civil rights groups used global criticism of racism to press the federal government for reform.",
@@ -2508,9 +2508,9 @@ window.chapter23Data = {
       "question": "The historical development associated with the Truman Doctrine most directly contributed to which of the following?",
       "options": {
         "A": "The United States committed itself to supporting governments resisting communist influence.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
+        "C": "Southern Democrats split from Truman over federal civil rights initiatives.",
+        "D": "Containment expanded into Asia and produced a limited war under United Nations authority."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2535,12 +2535,12 @@ window.chapter23Data = {
       "stimulusCaption": "George Marshall, Harvard University speech, 1947",
       "question": "Which claim would be best supported by evidence about NSC-68?",
       "options": {
-        "A": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
+        "B": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
+        "C": "The United States committed itself to supporting governments resisting communist influence.",
+        "D": "Containment expanded into Asia and produced a limited war under United Nations authority."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
@@ -2563,12 +2563,12 @@ window.chapter23Data = {
       "stimulusCaption": "Joseph McCarthy, Wheeling speech, 1950",
       "question": "A historian studying the Fair Deal would most likely connect it to which broader trend?",
       "options": {
-        "A": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
+        "B": "Spy cases encouraged Americans to view dissent and espionage as closely connected threats.",
+        "C": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
+        "D": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
@@ -2591,12 +2591,12 @@ window.chapter23Data = {
       "stimulusCaption": "Universal Declaration of Human Rights, 1948",
       "question": "Which development best explains the APUSH significance of Taft-Hartley?",
       "options": {
-        "A": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Human rights language gave reformers a global vocabulary for criticizing racial inequality.",
+        "B": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
+        "C": "Civil rights groups used global criticism of racism to press the federal government for reform.",
+        "D": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
@@ -2620,9 +2620,9 @@ window.chapter23Data = {
       "question": "The historical development associated with the Dixiecrat revolt most directly contributed to which of the following?",
       "options": {
         "A": "Southern Democrats split from Truman over federal civil rights initiatives.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "The United States committed itself to supporting governments resisting communist influence.",
+        "C": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
+        "D": "Spy cases encouraged Americans to view dissent and espionage as closely connected threats."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2647,12 +2647,12 @@ window.chapter23Data = {
       "stimulusCaption": "Executive Order 9981, 1948",
       "question": "Which claim would be best supported by evidence about the National Security Act?",
       "options": {
-        "A": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Southern Democrats split from Truman over federal civil rights initiatives.",
+        "B": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
+        "C": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
+        "D": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
@@ -2675,12 +2675,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "A historian studying the reconstruction of Japan would most likely connect it to which broader trend?",
       "options": {
-        "A": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
+        "B": "Containment expanded into Asia and produced a limited war under United Nations authority.",
+        "C": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
+        "D": "The war ended in stalemate, showing both the reach and limits of containment."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
@@ -2703,12 +2703,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the Chinese Communist Revolution?",
       "options": {
-        "A": "The fall of China intensified American fears that containment was failing in Asia.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
+        "B": "The war ended in stalemate, showing both the reach and limits of containment.",
+        "C": "The United States committed itself to supporting governments resisting communist influence.",
+        "D": "The fall of China intensified American fears that containment was failing in Asia."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "The fall of China intensified American fears that containment was failing in Asia.",
@@ -2732,9 +2732,9 @@ window.chapter23Data = {
       "question": "The historical development associated with the Rosenberg trial most directly contributed to which of the following?",
       "options": {
         "A": "Spy cases encouraged Americans to view dissent and espionage as closely connected threats.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
+        "C": "Southern Democrats split from Truman over federal civil rights initiatives.",
+        "D": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2759,12 +2759,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Hollywood blacklist?",
       "options": {
-        "A": "Private industries enforced anticommunist conformity even without criminal convictions.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
+        "B": "Private industries enforced anticommunist conformity even without criminal convictions.",
+        "C": "Civil rights groups used global criticism of racism to press the federal government for reform.",
+        "D": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Private industries enforced anticommunist conformity even without criminal convictions.",
@@ -2787,12 +2787,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Universal Declaration of Human Rights would most likely connect it to which broader trend?",
       "options": {
-        "A": "Human rights language gave reformers a global vocabulary for criticizing racial inequality.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
+        "B": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
+        "C": "Human rights language gave reformers a global vocabulary for criticizing racial inequality.",
+        "D": "The fall of China intensified American fears that containment was failing in Asia."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Human rights language gave reformers a global vocabulary for criticizing racial inequality.",
@@ -2815,12 +2815,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the Korean armistice?",
       "options": {
-        "A": "The war ended in stalemate, showing both the reach and limits of containment.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Containment expanded into Asia and produced a limited war under United Nations authority.",
+        "B": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
+        "C": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
+        "D": "The war ended in stalemate, showing both the reach and limits of containment."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "The war ended in stalemate, showing both the reach and limits of containment.",
@@ -2844,9 +2844,9 @@ window.chapter23Data = {
       "question": "The historical development associated with This Godless Communism most directly contributed to which of the following?",
       "options": {
         "A": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Private industries enforced anticommunist conformity even without criminal convictions.",
+        "C": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
+        "D": "Civil rights groups used global criticism of racism to press the federal government for reform."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2871,12 +2871,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Marshall Plan?",
       "options": {
-        "A": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
+        "B": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
+        "C": "The fall of China intensified American fears that containment was failing in Asia.",
+        "D": "Human rights language gave reformers a global vocabulary for criticizing racial inequality."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
@@ -2899,12 +2899,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Berlin Airlift would most likely connect it to which broader trend?",
       "options": {
-        "A": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The United States committed itself to supporting governments resisting communist influence.",
+        "B": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
+        "C": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
+        "D": "Human rights language gave reformers a global vocabulary for criticizing racial inequality."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
@@ -2927,12 +2927,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the division of Europe?",
       "options": {
-        "A": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Civil rights groups used global criticism of racism to press the federal government for reform.",
+        "B": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
+        "C": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
+        "D": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
@@ -2956,9 +2956,9 @@ window.chapter23Data = {
       "question": "The historical development associated with the Korean War most directly contributed to which of the following?",
       "options": {
         "A": "Containment expanded into Asia and produced a limited war under United Nations authority.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "The war ended in stalemate, showing both the reach and limits of containment.",
+        "C": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
+        "D": "National security planners called for a major military buildup to meet perceived Soviet expansion."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2983,12 +2983,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about HUAC hearings?",
       "options": {
-        "A": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
+        "B": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
+        "C": "Spy cases encouraged Americans to view dissent and espionage as closely connected threats.",
+        "D": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
@@ -3011,12 +3011,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "A historian studying Joseph McCarthy would most likely connect it to which broader trend?",
       "options": {
-        "A": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
+        "B": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
+        "C": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
+        "D": "Southern Democrats split from Truman over federal civil rights initiatives."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
@@ -3039,12 +3039,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of Cold War civil rights arguments?",
       "options": {
-        "A": "Civil rights groups used global criticism of racism to press the federal government for reform.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
+        "B": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
+        "C": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
+        "D": "Civil rights groups used global criticism of racism to press the federal government for reform."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Civil rights groups used global criticism of racism to press the federal government for reform.",
@@ -3068,9 +3068,9 @@ window.chapter23Data = {
       "question": "The historical development associated with the Truman Doctrine most directly contributed to which of the following?",
       "options": {
         "A": "The United States committed itself to supporting governments resisting communist influence.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
+        "C": "The fall of China intensified American fears that containment was failing in Asia.",
+        "D": "Containment expanded into Asia and produced a limited war under United Nations authority."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3095,12 +3095,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about NSC-68?",
       "options": {
-        "A": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The war ended in stalemate, showing both the reach and limits of containment.",
+        "B": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
+        "C": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
+        "D": "Containment expanded into Asia and produced a limited war under United Nations authority."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
@@ -3123,12 +3123,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Fair Deal would most likely connect it to which broader trend?",
       "options": {
-        "A": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
+        "B": "Spy cases encouraged Americans to view dissent and espionage as closely connected threats.",
+        "C": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
+        "D": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
@@ -3151,12 +3151,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of Taft-Hartley?",
       "options": {
-        "A": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
+        "B": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
+        "C": "Private industries enforced anticommunist conformity even without criminal convictions.",
+        "D": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
@@ -3180,9 +3180,9 @@ window.chapter23Data = {
       "question": "The historical development associated with the Dixiecrat revolt most directly contributed to which of the following?",
       "options": {
         "A": "Southern Democrats split from Truman over federal civil rights initiatives.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Civil rights groups used global criticism of racism to press the federal government for reform.",
+        "C": "Spy cases encouraged Americans to view dissent and espionage as closely connected threats.",
+        "D": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3207,12 +3207,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the National Security Act?",
       "options": {
-        "A": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Southern Democrats split from Truman over federal civil rights initiatives.",
+        "B": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
+        "C": "Spy cases encouraged Americans to view dissent and espionage as closely connected threats.",
+        "D": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
@@ -3235,12 +3235,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "A historian studying the reconstruction of Japan would most likely connect it to which broader trend?",
       "options": {
-        "A": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
+        "B": "Containment expanded into Asia and produced a limited war under United Nations authority.",
+        "C": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
+        "D": "The war ended in stalemate, showing both the reach and limits of containment."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
@@ -3263,12 +3263,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the Chinese Communist Revolution?",
       "options": {
-        "A": "The fall of China intensified American fears that containment was failing in Asia.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
+        "B": "The United States committed itself to supporting governments resisting communist influence.",
+        "C": "Human rights language gave reformers a global vocabulary for criticizing racial inequality.",
+        "D": "The fall of China intensified American fears that containment was failing in Asia."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "The fall of China intensified American fears that containment was failing in Asia.",
@@ -3292,9 +3292,9 @@ window.chapter23Data = {
       "question": "The historical development associated with the Rosenberg trial most directly contributed to which of the following?",
       "options": {
         "A": "Spy cases encouraged Americans to view dissent and espionage as closely connected threats.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
+        "C": "Southern Democrats split from Truman over federal civil rights initiatives.",
+        "D": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3319,12 +3319,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Hollywood blacklist?",
       "options": {
-        "A": "Private industries enforced anticommunist conformity even without criminal convictions.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
+        "B": "Private industries enforced anticommunist conformity even without criminal convictions.",
+        "C": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
+        "D": "Civil rights groups used global criticism of racism to press the federal government for reform."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Private industries enforced anticommunist conformity even without criminal convictions.",
@@ -3347,12 +3347,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Universal Declaration of Human Rights would most likely connect it to which broader trend?",
       "options": {
-        "A": "Human rights language gave reformers a global vocabulary for criticizing racial inequality.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
+        "B": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
+        "C": "Human rights language gave reformers a global vocabulary for criticizing racial inequality.",
+        "D": "The fall of China intensified American fears that containment was failing in Asia."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Human rights language gave reformers a global vocabulary for criticizing racial inequality.",
@@ -3375,12 +3375,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the Korean armistice?",
       "options": {
-        "A": "The war ended in stalemate, showing both the reach and limits of containment.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Containment expanded into Asia and produced a limited war under United Nations authority.",
+        "B": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
+        "C": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
+        "D": "The war ended in stalemate, showing both the reach and limits of containment."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "The war ended in stalemate, showing both the reach and limits of containment.",
@@ -3404,9 +3404,9 @@ window.chapter23Data = {
       "question": "The historical development associated with This Godless Communism most directly contributed to which of the following?",
       "options": {
         "A": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Private industries enforced anticommunist conformity even without criminal convictions.",
+        "C": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
+        "D": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3431,12 +3431,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Marshall Plan?",
       "options": {
-        "A": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
+        "B": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
+        "C": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
+        "D": "Human rights language gave reformers a global vocabulary for criticizing racial inequality."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
@@ -3459,12 +3459,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Berlin Airlift would most likely connect it to which broader trend?",
       "options": {
-        "A": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The United States committed itself to supporting governments resisting communist influence.",
+        "B": "U.S. leaders used economic aid to stabilize Western Europe and contain communism.",
+        "C": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
+        "D": "Human rights language gave reformers a global vocabulary for criticizing racial inequality."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
@@ -3487,12 +3487,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the division of Europe?",
       "options": {
-        "A": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
+        "B": "Civil rights groups used global criticism of racism to press the federal government for reform.",
+        "C": "Cold War anxieties reshaped the federal government around intelligence, defense, and permanent preparedness.",
+        "D": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
@@ -3516,9 +3516,9 @@ window.chapter23Data = {
       "question": "The historical development associated with the Korean War most directly contributed to which of the following?",
       "options": {
         "A": "Containment expanded into Asia and produced a limited war under United Nations authority.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "The war ended in stalemate, showing both the reach and limits of containment.",
+        "C": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
+        "D": "The fall of China intensified American fears that containment was failing in Asia."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3543,12 +3543,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about HUAC hearings?",
       "options": {
-        "A": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
+        "B": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
+        "C": "Spy cases encouraged Americans to view dissent and espionage as closely connected threats.",
+        "D": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
@@ -3571,12 +3571,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "A historian studying Joseph McCarthy would most likely connect it to which broader trend?",
       "options": {
-        "A": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Truman tried to extend New Deal liberalism, but conservatives blocked many domestic reforms.",
+        "B": "Anticommunist investigations pressured artists, unions, and public employees to prove loyalty.",
+        "C": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
+        "D": "Southern Democrats split from Truman over federal civil rights initiatives."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "McCarthyism used accusations of subversion to gain political power and intensify domestic fear.",
@@ -3599,12 +3599,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of Cold War civil rights arguments?",
       "options": {
-        "A": "Civil rights groups used global criticism of racism to press the federal government for reform.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The Cold War hardened Europe into U.S.-aligned and Soviet-aligned blocs.",
+        "B": "Congress limited labor power after the postwar strike wave and required union leaders to reject communism.",
+        "C": "Cold War culture linked American freedom with religion, capitalism, and anticommunism.",
+        "D": "Civil rights groups used global criticism of racism to press the federal government for reform."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Civil rights groups used global criticism of racism to press the federal government for reform.",
@@ -3628,9 +3628,9 @@ window.chapter23Data = {
       "question": "The historical development associated with the Truman Doctrine most directly contributed to which of the following?",
       "options": {
         "A": "The United States committed itself to supporting governments resisting communist influence.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "The United States used nonmilitary pressure to resist Soviet efforts to control West Berlin.",
+        "C": "The fall of China intensified American fears that containment was failing in Asia.",
+        "D": "National security planners called for a major military buildup to meet perceived Soviet expansion."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3655,12 +3655,12 @@ window.chapter23Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about NSC-68?",
       "options": {
-        "A": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The war ended in stalemate, showing both the reach and limits of containment.",
+        "B": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
+        "C": "U.S. occupation policy rebuilt Japan as a capitalist ally in Asia.",
+        "D": "Containment expanded into Asia and produced a limited war under United Nations authority."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "National security planners called for a major military buildup to meet perceived Soviet expansion.",
@@ -4392,4 +4392,4 @@ window.chapter23Data = {
       "apPriority": true
     }
   ]
-};
+}`);

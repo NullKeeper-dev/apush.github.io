@@ -1,4 +1,4 @@
-window.chapter25Data = {
+window.chapter25Data = JSON.parse(String.raw`{
   "chapterId": "chapter25",
   "chapterNum": 25,
   "periodId": "p8",
@@ -2701,9 +2701,9 @@ window.chapter25Data = {
       "question": "The historical development associated with the Cuban Missile Crisis most directly contributed to which of the following?",
       "options": {
         "A": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Congress gave Johnson broad authority to escalate the Vietnam War.",
+        "C": "Betty Friedan challenged the idea that middle-class domesticity fulfilled all women.",
+        "D": "Student activists criticized bureaucracy, racism, and Cold War militarism through calls for participatory democracy."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2728,12 +2728,12 @@ window.chapter25Data = {
       "stimulusCaption": "A poverty chart shows racial inequality and the effects of 1960s antipoverty policy.",
       "question": "Which claim would be best supported by evidence about the Birmingham campaign?",
       "options": {
-        "A": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal protection of voting rights transformed southern politics and black political participation.",
+        "B": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
+        "C": "Federal law banned segregation in public accommodations and employment discrimination.",
+        "D": "Supreme Court rulings expanded civil liberties, due process, and privacy rights."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
@@ -2756,12 +2756,12 @@ window.chapter25Data = {
       "stimulusCaption": "Residents watch buildings burn during the Detroit uprising of 1967.",
       "question": "A historian studying the March on Washington would most likely connect it to which broader trend?",
       "options": {
-        "A": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
+        "B": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights.",
+        "C": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
+        "D": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
@@ -2784,12 +2784,12 @@ window.chapter25Data = {
       "stimulusCaption": "Malcolm X was a major intellectual influence on Black Power.",
       "question": "Which development best explains the APUSH significance of the Civil Rights Act of 1964?",
       "options": {
-        "A": "Federal law banned segregation in public accommodations and employment discrimination.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal protection of voting rights transformed southern politics and black political participation.",
+        "B": "Feminists demanded equal employment, legal rights, and full participation in public life.",
+        "C": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
+        "D": "Federal law banned segregation in public accommodations and employment discrimination."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Federal law banned segregation in public accommodations and employment discrimination.",
@@ -2813,9 +2813,9 @@ window.chapter25Data = {
       "question": "The historical development associated with Freedom Summer most directly contributed to which of the following?",
       "options": {
         "A": "Grassroots activists exposed violent resistance to black voting rights in Mississippi.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Federal law banned segregation in public accommodations and employment discrimination.",
+        "C": "Federal protection of voting rights transformed southern politics and black political participation.",
+        "D": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2840,12 +2840,12 @@ window.chapter25Data = {
       "stimulusCaption": "Events in Birmingham forced white Americans to confront the violence used to defend segregation.",
       "question": "Which claim would be best supported by evidence about the Voting Rights Act of 1965?",
       "options": {
-        "A": "Federal protection of voting rights transformed southern politics and black political participation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal law banned segregation in public accommodations and employment discrimination.",
+        "B": "Federal protection of voting rights transformed southern politics and black political participation.",
+        "C": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
+        "D": "Grassroots activists exposed violent resistance to black voting rights in Mississippi."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Federal protection of voting rights transformed southern politics and black political participation.",
@@ -2868,12 +2868,12 @@ window.chapter25Data = {
       "stimulusCaption": "James Meredith became the first black student to attend the University of Mississippi.",
       "question": "A historian studying the Great Society would most likely connect it to which broader trend?",
       "options": {
-        "A": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
+        "B": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
+        "C": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
+        "D": "Many voters responded to disorder and rapid social change by supporting law-and-order politics."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
@@ -2896,12 +2896,12 @@ window.chapter25Data = {
       "stimulusCaption": "Kathrine Switzer's 1967 Boston Marathon run became a celebrated image of second-wave feminism.",
       "question": "Which development best explains the APUSH significance of the Gulf of Tonkin Resolution?",
       "options": {
-        "A": "Congress gave Johnson broad authority to escalate the Vietnam War.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
+        "B": "The offensive undermined official claims that victory in Vietnam was near.",
+        "C": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
+        "D": "Congress gave Johnson broad authority to escalate the Vietnam War."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Congress gave Johnson broad authority to escalate the Vietnam War.",
@@ -2925,9 +2925,9 @@ window.chapter25Data = {
       "question": "The historical development associated with the New Left most directly contributed to which of the following?",
       "options": {
         "A": "Student activists criticized bureaucracy, racism, and Cold War militarism through calls for participatory democracy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Betty Friedan challenged the idea that middle-class domesticity fulfilled all women.",
+        "C": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
+        "D": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2952,12 +2952,12 @@ window.chapter25Data = {
       "stimulusCaption": "Martin Luther King Jr., Letter from Birmingham Jail, 1963",
       "question": "Which claim would be best supported by evidence about antiwar protest?",
       "options": {
-        "A": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Grassroots activists exposed violent resistance to black voting rights in Mississippi.",
+        "B": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
+        "C": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
+        "D": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
@@ -2980,12 +2980,12 @@ window.chapter25Data = {
       "stimulusCaption": "Lyndon B. Johnson, Great Society theme, 1964",
       "question": "A historian studying Black Power would most likely connect it to which broader trend?",
       "options": {
-        "A": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
+        "B": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights.",
+        "C": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
+        "D": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
@@ -3008,12 +3008,12 @@ window.chapter25Data = {
       "stimulusCaption": "Feminist movement slogan, 1960s context",
       "question": "Which development best explains the APUSH significance of urban uprisings?",
       "options": {
-        "A": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
+        "B": "Federal protection of voting rights transformed southern politics and black political participation.",
+        "C": "Federal law banned segregation in public accommodations and employment discrimination.",
+        "D": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation.",
@@ -3037,9 +3037,9 @@ window.chapter25Data = {
       "question": "The historical development associated with The Feminine Mystique most directly contributed to which of the following?",
       "options": {
         "A": "Betty Friedan challenged the idea that middle-class domesticity fulfilled all women.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Student activists criticized bureaucracy, racism, and Cold War militarism through calls for participatory democracy.",
+        "C": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
+        "D": "Feminists demanded equal employment, legal rights, and full participation in public life."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3064,12 +3064,12 @@ window.chapter25Data = {
       "stimulusCaption": "Barry Goldwater, Republican nomination acceptance speech, 1964",
       "question": "Which claim would be best supported by evidence about the National Organization for Women?",
       "options": {
-        "A": "Feminists demanded equal employment, legal rights, and full participation in public life.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal law banned segregation in public accommodations and employment discrimination.",
+        "B": "Feminists demanded equal employment, legal rights, and full participation in public life.",
+        "C": "Supreme Court rulings expanded civil liberties, due process, and privacy rights.",
+        "D": "Federal protection of voting rights transformed southern politics and black political participation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Feminists demanded equal employment, legal rights, and full participation in public life.",
@@ -3092,12 +3092,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "A historian studying gay liberation would most likely connect it to which broader trend?",
       "options": {
-        "A": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
+        "B": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights.",
+        "C": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
+        "D": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
@@ -3120,12 +3120,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of Native American activism?",
       "options": {
-        "A": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
+        "B": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
+        "C": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
+        "D": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights.",
@@ -3149,9 +3149,9 @@ window.chapter25Data = {
       "question": "The historical development associated with the Warren Court most directly contributed to which of the following?",
       "options": {
         "A": "Supreme Court rulings expanded civil liberties, due process, and privacy rights.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Feminists demanded equal employment, legal rights, and full participation in public life.",
+        "C": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
+        "D": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3176,12 +3176,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about 1968?",
       "options": {
-        "A": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
+        "B": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
+        "C": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
+        "D": "Grassroots activists exposed violent resistance to black voting rights in Mississippi."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
@@ -3204,12 +3204,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "A historian studying the conservative backlash would most likely connect it to which broader trend?",
       "options": {
-        "A": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
+        "B": "Supreme Court rulings expanded civil liberties, due process, and privacy rights.",
+        "C": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
+        "D": "The Vietnam War fractured the liberal consensus and fueled mass protest."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
@@ -3232,12 +3232,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the Tet Offensive?",
       "options": {
-        "A": "The offensive undermined official claims that victory in Vietnam was near.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Congress gave Johnson broad authority to escalate the Vietnam War.",
+        "B": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
+        "C": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
+        "D": "The offensive undermined official claims that victory in Vietnam was near."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "The offensive undermined official claims that victory in Vietnam was near.",
@@ -3261,9 +3261,9 @@ window.chapter25Data = {
       "question": "The historical development associated with the Cuban Missile Crisis most directly contributed to which of the following?",
       "options": {
         "A": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Congress gave Johnson broad authority to escalate the Vietnam War.",
+        "C": "The offensive undermined official claims that victory in Vietnam was near.",
+        "D": "Betty Friedan challenged the idea that middle-class domesticity fulfilled all women."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3288,12 +3288,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Birmingham campaign?",
       "options": {
-        "A": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal protection of voting rights transformed southern politics and black political participation.",
+        "B": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
+        "C": "Supreme Court rulings expanded civil liberties, due process, and privacy rights.",
+        "D": "Federal law banned segregation in public accommodations and employment discrimination."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
@@ -3316,12 +3316,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "A historian studying the March on Washington would most likely connect it to which broader trend?",
       "options": {
-        "A": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
+        "B": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
+        "C": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
+        "D": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
@@ -3344,12 +3344,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the Civil Rights Act of 1964?",
       "options": {
-        "A": "Federal law banned segregation in public accommodations and employment discrimination.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal protection of voting rights transformed southern politics and black political participation.",
+        "B": "Feminists demanded equal employment, legal rights, and full participation in public life.",
+        "C": "Grassroots activists exposed violent resistance to black voting rights in Mississippi.",
+        "D": "Federal law banned segregation in public accommodations and employment discrimination."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Federal law banned segregation in public accommodations and employment discrimination.",
@@ -3373,9 +3373,9 @@ window.chapter25Data = {
       "question": "The historical development associated with Freedom Summer most directly contributed to which of the following?",
       "options": {
         "A": "Grassroots activists exposed violent resistance to black voting rights in Mississippi.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
+        "C": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
+        "D": "Supreme Court rulings expanded civil liberties, due process, and privacy rights."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3400,12 +3400,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Voting Rights Act of 1965?",
       "options": {
-        "A": "Federal protection of voting rights transformed southern politics and black political participation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal law banned segregation in public accommodations and employment discrimination.",
+        "B": "Federal protection of voting rights transformed southern politics and black political participation.",
+        "C": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
+        "D": "Feminists demanded equal employment, legal rights, and full participation in public life."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Federal protection of voting rights transformed southern politics and black political participation.",
@@ -3428,12 +3428,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Great Society would most likely connect it to which broader trend?",
       "options": {
-        "A": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
+        "B": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
+        "C": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
+        "D": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
@@ -3456,12 +3456,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the Gulf of Tonkin Resolution?",
       "options": {
-        "A": "Congress gave Johnson broad authority to escalate the Vietnam War.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The offensive undermined official claims that victory in Vietnam was near.",
+        "B": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
+        "C": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation.",
+        "D": "Congress gave Johnson broad authority to escalate the Vietnam War."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Congress gave Johnson broad authority to escalate the Vietnam War.",
@@ -3485,9 +3485,9 @@ window.chapter25Data = {
       "question": "The historical development associated with the New Left most directly contributed to which of the following?",
       "options": {
         "A": "Student activists criticized bureaucracy, racism, and Cold War militarism through calls for participatory democracy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Betty Friedan challenged the idea that middle-class domesticity fulfilled all women.",
+        "C": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation.",
+        "D": "Congress gave Johnson broad authority to escalate the Vietnam War."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3512,12 +3512,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about antiwar protest?",
       "options": {
-        "A": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Grassroots activists exposed violent resistance to black voting rights in Mississippi.",
+        "B": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
+        "C": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
+        "D": "The offensive undermined official claims that victory in Vietnam was near."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
@@ -3540,12 +3540,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "A historian studying Black Power would most likely connect it to which broader trend?",
       "options": {
-        "A": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
+        "B": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights.",
+        "C": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
+        "D": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
@@ -3568,12 +3568,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of urban uprisings?",
       "options": {
-        "A": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
+        "B": "Student activists criticized bureaucracy, racism, and Cold War militarism through calls for participatory democracy.",
+        "C": "Congress gave Johnson broad authority to escalate the Vietnam War.",
+        "D": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation.",
@@ -3597,9 +3597,9 @@ window.chapter25Data = {
       "question": "The historical development associated with The Feminine Mystique most directly contributed to which of the following?",
       "options": {
         "A": "Betty Friedan challenged the idea that middle-class domesticity fulfilled all women.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Student activists criticized bureaucracy, racism, and Cold War militarism through calls for participatory democracy.",
+        "C": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation.",
+        "D": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3624,12 +3624,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the National Organization for Women?",
       "options": {
-        "A": "Feminists demanded equal employment, legal rights, and full participation in public life.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal law banned segregation in public accommodations and employment discrimination.",
+        "B": "Feminists demanded equal employment, legal rights, and full participation in public life.",
+        "C": "Supreme Court rulings expanded civil liberties, due process, and privacy rights.",
+        "D": "Federal protection of voting rights transformed southern politics and black political participation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Feminists demanded equal employment, legal rights, and full participation in public life.",
@@ -3652,12 +3652,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "A historian studying gay liberation would most likely connect it to which broader trend?",
       "options": {
-        "A": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
+        "B": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
+        "C": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
+        "D": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
@@ -3680,12 +3680,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of Native American activism?",
       "options": {
-        "A": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
+        "B": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
+        "C": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
+        "D": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights.",
@@ -3709,9 +3709,9 @@ window.chapter25Data = {
       "question": "The historical development associated with the Warren Court most directly contributed to which of the following?",
       "options": {
         "A": "Supreme Court rulings expanded civil liberties, due process, and privacy rights.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Feminists demanded equal employment, legal rights, and full participation in public life.",
+        "C": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
+        "D": "Many voters responded to disorder and rapid social change by supporting law-and-order politics."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3736,12 +3736,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about 1968?",
       "options": {
-        "A": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
+        "B": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
+        "C": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
+        "D": "Grassroots activists exposed violent resistance to black voting rights in Mississippi."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
@@ -3764,12 +3764,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "A historian studying the conservative backlash would most likely connect it to which broader trend?",
       "options": {
-        "A": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
+        "B": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
+        "C": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
+        "D": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
@@ -3792,12 +3792,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the Tet Offensive?",
       "options": {
-        "A": "The offensive undermined official claims that victory in Vietnam was near.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Congress gave Johnson broad authority to escalate the Vietnam War.",
+        "B": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
+        "C": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
+        "D": "The offensive undermined official claims that victory in Vietnam was near."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "The offensive undermined official claims that victory in Vietnam was near.",
@@ -3821,9 +3821,9 @@ window.chapter25Data = {
       "question": "The historical development associated with the Cuban Missile Crisis most directly contributed to which of the following?",
       "options": {
         "A": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Congress gave Johnson broad authority to escalate the Vietnam War.",
+        "C": "Student activists criticized bureaucracy, racism, and Cold War militarism through calls for participatory democracy.",
+        "D": "Betty Friedan challenged the idea that middle-class domesticity fulfilled all women."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3848,12 +3848,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Birmingham campaign?",
       "options": {
-        "A": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal protection of voting rights transformed southern politics and black political participation.",
+        "B": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
+        "C": "Federal law banned segregation in public accommodations and employment discrimination.",
+        "D": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Televised police violence against demonstrators pushed federal leaders toward civil rights legislation.",
@@ -3876,12 +3876,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "A historian studying the March on Washington would most likely connect it to which broader trend?",
       "options": {
-        "A": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Activists connected personal freedom, police harassment, and civil rights claims after Stonewall.",
+        "B": "Some activists emphasized racial pride, self-defense, and community control after frustration with slow change.",
+        "C": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
+        "D": "Red Power activists challenged termination policy and demanded sovereignty and treaty rights."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Civil rights activists linked racial equality with jobs, citizenship, and federal responsibility.",
@@ -3904,12 +3904,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the Civil Rights Act of 1964?",
       "options": {
-        "A": "Federal law banned segregation in public accommodations and employment discrimination.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Feminists demanded equal employment, legal rights, and full participation in public life.",
+        "B": "Federal protection of voting rights transformed southern politics and black political participation.",
+        "C": "Supreme Court rulings expanded civil liberties, due process, and privacy rights.",
+        "D": "Federal law banned segregation in public accommodations and employment discrimination."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Federal law banned segregation in public accommodations and employment discrimination.",
@@ -3933,9 +3933,9 @@ window.chapter25Data = {
       "question": "The historical development associated with Freedom Summer most directly contributed to which of the following?",
       "options": {
         "A": "Grassroots activists exposed violent resistance to black voting rights in Mississippi.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
+        "C": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
+        "D": "Supreme Court rulings expanded civil liberties, due process, and privacy rights."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -3960,12 +3960,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about the Voting Rights Act of 1965?",
       "options": {
-        "A": "Federal protection of voting rights transformed southern politics and black political participation.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Federal law banned segregation in public accommodations and employment discrimination.",
+        "B": "Federal protection of voting rights transformed southern politics and black political participation.",
+        "C": "Grassroots activists exposed violent resistance to black voting rights in Mississippi.",
+        "D": "Feminists demanded equal employment, legal rights, and full participation in public life."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "Federal protection of voting rights transformed southern politics and black political participation.",
@@ -3988,12 +3988,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "A historian studying the Great Society would most likely connect it to which broader trend?",
       "options": {
-        "A": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Assassinations, war, protest, and backlash exposed the collapse of the 1960s liberal consensus.",
+        "B": "Many voters responded to disorder and rapid social change by supporting law-and-order politics.",
+        "C": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
+        "D": "Supreme Court rulings expanded civil liberties, due process, and privacy rights."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": {
         "wrongA": null,
         "correct": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding.",
@@ -4016,12 +4016,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which development best explains the APUSH significance of the Gulf of Tonkin Resolution?",
       "options": {
-        "A": "Congress gave Johnson broad authority to escalate the Vietnam War.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "The offensive undermined official claims that victory in Vietnam was near.",
+        "B": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
+        "C": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation.",
+        "D": "Congress gave Johnson broad authority to escalate the Vietnam War."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": {
         "wrongA": null,
         "correct": "Congress gave Johnson broad authority to escalate the Vietnam War.",
@@ -4045,9 +4045,9 @@ window.chapter25Data = {
       "question": "The historical development associated with the New Left most directly contributed to which of the following?",
       "options": {
         "A": "Student activists criticized bureaucracy, racism, and Cold War militarism through calls for participatory democracy.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "B": "Betty Friedan challenged the idea that middle-class domesticity fulfilled all women.",
+        "C": "Superpower confrontation brought the world close to nuclear war and encouraged later crisis-management diplomacy.",
+        "D": "Northern and western rebellions revealed that legal equality did not end poverty, police violence, or segregation."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -4072,12 +4072,12 @@ window.chapter25Data = {
       "stimulusCaption": null,
       "question": "Which claim would be best supported by evidence about antiwar protest?",
       "options": {
-        "A": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
-        "B": "The federal government retreated completely from international and domestic commitments.",
-        "C": "Most Americans rejected consumer capitalism and demanded a return to preindustrial localism.",
-        "D": "The Supreme Court and Congress immediately eliminated all racial and economic inequality."
+        "A": "Grassroots activists exposed violent resistance to black voting rights in Mississippi.",
+        "B": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
+        "C": "The offensive undermined official claims that victory in Vietnam was near.",
+        "D": "Johnson expanded liberal reform through antipoverty programs, health insurance, and education funding."
       },
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": {
         "wrongA": null,
         "correct": "The Vietnam War fractured the liberal consensus and fueled mass protest.",
@@ -4913,4 +4913,4 @@ window.chapter25Data = {
       "apPriority": true
     }
   ]
-};
+}`);

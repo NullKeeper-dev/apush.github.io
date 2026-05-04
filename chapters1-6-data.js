@@ -1868,9 +1868,9 @@ window.chapter1Data = JSON.parse(String.raw`{
       "question": "The historical development associated with Cahokia most directly contributed to which of the following?",
       "options": {
         "A": "Large Native urban and ceremonial centers existed in North America before European contact.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Critics inside Spain condemned conquest abuses even while empire continued.",
+        "C": "Disease devastated Native populations and often reshaped the balance of conquest more than direct combat did.",
+        "D": "Sustained contact moved crops, animals, microbes, and people between hemispheres and transformed both worlds."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -1894,10 +1894,10 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch01ph02",
       "question": "Which claim would be best supported by evidence about Native regional diversity?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Large Native urban and ceremonial centers existed in North America before European contact.",
         "B": "Native peoples developed different economies and social structures in response to varied environments.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Many Native societies valued autonomy and kin-based obligation rather than European-style property hierarchy.",
+        "D": "French colonization relied heavily on trade and Native alliances in the interior of North America."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -1921,10 +1921,10 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch01map02",
       "question": "A historian studying Native ideas of freedom would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Native peoples developed different economies and social structures in response to varied environments.",
+        "B": "Spanish America developed racially mixed populations and caste hierarchies rather than simple settler majorities.",
         "C": "Many Native societies valued autonomy and kin-based obligation rather than European-style property hierarchy.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Spanish empire expanded through violence, Native alliances, missionary projects, and coerced labor systems."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -1948,9 +1948,9 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch01map04",
       "question": "Which development best explains the APUSH significance of Atlantic exploration?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Rival Europeans used Spanish cruelty to attack Spain and justify their own imperial ambitions.",
+        "B": "Columbus's 1492 voyage created sustained contact but did not 'discover' an empty continent.",
+        "C": "Non-Iberian powers quickly joined Atlantic exploration after Spain's initial breakthroughs.",
         "D": "European expansion grew from competition for trade, wealth, and imperial advantage, not simple curiosity alone."
       },
       "correctAnswer": "D",
@@ -1976,9 +1976,9 @@ window.chapter1Data = JSON.parse(String.raw`{
       "question": "The historical development associated with the Columbian Exchange most directly contributed to which of the following?",
       "options": {
         "A": "Sustained contact moved crops, animals, microbes, and people between hemispheres and transformed both worlds.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "After 1492, Europe, Africa, and the Americas became connected through exchange, migration, warfare, and empire.",
+        "C": "European expansion grew from competition for trade, wealth, and imperial advantage, not simple curiosity alone.",
+        "D": "Large Native urban and ceremonial centers existed in North America before European contact."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2002,10 +2002,10 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about smallpox epidemics?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Catholic missions were religious institutions but also tools of labor discipline and imperial control.",
         "B": "Disease devastated Native populations and often reshaped the balance of conquest more than direct combat did.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Large Native urban and ceremonial centers existed in North America before European contact.",
+        "D": "Critics inside Spain condemned conquest abuses even while empire continued."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -2029,10 +2029,10 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying Spanish conquest would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "European empires claimed and divided lands they had not fully explored or controlled.",
+        "B": "Critics inside Spain condemned conquest abuses even while empire continued.",
         "C": "Spanish empire expanded through violence, Native alliances, missionary projects, and coerced labor systems.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Spanish colonization in what is now the United States predated permanent English settlement."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -2056,9 +2056,9 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of the encomienda?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Champlain symbolizes the French strategy of alliance, trade, and waterway empire building.",
+        "B": "European empires claimed and divided lands they had not fully explored or controlled.",
+        "C": "European expansion grew from competition for trade, wealth, and imperial advantage, not simple curiosity alone.",
         "D": "Spanish colonization linked conquest to coerced Native labor and tribute extraction."
       },
       "correctAnswer": "D",
@@ -2084,9 +2084,9 @@ window.chapter1Data = JSON.parse(String.raw`{
       "question": "The historical development associated with Las Casas most directly contributed to which of the following?",
       "options": {
         "A": "Critics inside Spain condemned conquest abuses even while empire continued.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Large Native urban and ceremonial centers existed in North America before European contact.",
+        "C": "Disease devastated Native populations and often reshaped the balance of conquest more than direct combat did.",
+        "D": "Catholic missions were religious institutions but also tools of labor discipline and imperial control."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2110,10 +2110,10 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about mestizo societies?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Many Native societies valued autonomy and kin-based obligation rather than European-style property hierarchy.",
         "B": "Spanish America developed racially mixed populations and caste hierarchies rather than simple settler majorities.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Champlain symbolizes the French strategy of alliance, trade, and waterway empire building.",
+        "D": "Spanish colonization linked conquest to coerced Native labor and tribute extraction."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -2137,10 +2137,10 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying the Black Legend would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "European expansion grew from competition for trade, wealth, and imperial advantage, not simple curiosity alone.",
+        "B": "French colonization relied heavily on trade and Native alliances in the interior of North America.",
         "C": "Rival Europeans used Spanish cruelty to attack Spain and justify their own imperial ambitions.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Columbus's 1492 voyage created sustained contact but did not 'discover' an empty continent."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -2164,9 +2164,9 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of New France?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Champlain symbolizes the French strategy of alliance, trade, and waterway empire building.",
+        "B": "Spanish colonization in what is now the United States predated permanent English settlement.",
+        "C": "Rival Europeans used Spanish cruelty to attack Spain and justify their own imperial ambitions.",
         "D": "French colonization relied heavily on trade and Native alliances in the interior of North America."
       },
       "correctAnswer": "D",
@@ -2192,9 +2192,9 @@ window.chapter1Data = JSON.parse(String.raw`{
       "question": "The historical development associated with New Netherland most directly contributed to which of the following?",
       "options": {
         "A": "Dutch colonization emphasized commerce, shipping, and ethnic diversity.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Spanish colonization linked conquest to coerced Native labor and tribute extraction.",
+        "C": "Spanish America developed racially mixed populations and caste hierarchies rather than simple settler majorities.",
+        "D": "French colonization relied heavily on trade and Native alliances in the interior of North America."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2218,10 +2218,10 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about Treaty of Tordesillas?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Spanish colonization linked conquest to coerced Native labor and tribute extraction.",
         "B": "European empires claimed and divided lands they had not fully explored or controlled.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Spanish empire expanded through violence, Native alliances, missionary projects, and coerced labor systems.",
+        "D": "European expansion grew from competition for trade, wealth, and imperial advantage, not simple curiosity alone."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -2245,10 +2245,10 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying Christopher Columbus would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Non-Iberian powers quickly joined Atlantic exploration after Spain's initial breakthroughs.",
+        "B": "Sustained contact moved crops, animals, microbes, and people between hemispheres and transformed both worlds.",
         "C": "Columbus's 1492 voyage created sustained contact but did not 'discover' an empty continent.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Rival Europeans used Spanish cruelty to attack Spain and justify their own imperial ambitions."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -2272,9 +2272,9 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of Samuel de Champlain?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "French colonization relied heavily on trade and Native alliances in the interior of North America.",
+        "B": "After 1492, Europe, Africa, and the Americas became connected through exchange, migration, warfare, and empire.",
+        "C": "Columbus's 1492 voyage created sustained contact but did not 'discover' an empty continent.",
         "D": "Champlain symbolizes the French strategy of alliance, trade, and waterway empire building."
       },
       "correctAnswer": "D",
@@ -2300,9 +2300,9 @@ window.chapter1Data = JSON.parse(String.raw`{
       "question": "The historical development associated with the Atlantic World most directly contributed to which of the following?",
       "options": {
         "A": "After 1492, Europe, Africa, and the Americas became connected through exchange, migration, warfare, and empire.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Sustained contact moved crops, animals, microbes, and people between hemispheres and transformed both worlds.",
+        "C": "Non-Iberian powers quickly joined Atlantic exploration after Spain's initial breakthroughs.",
+        "D": "Spanish colonization in what is now the United States predated permanent English settlement."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -2326,10 +2326,10 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about mission systems?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Critics inside Spain condemned conquest abuses even while empire continued.",
         "B": "Catholic missions were religious institutions but also tools of labor discipline and imperial control.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Disease devastated Native populations and often reshaped the balance of conquest more than direct combat did.",
+        "D": "Spanish empire expanded through violence, Native alliances, missionary projects, and coerced labor systems."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -2353,10 +2353,10 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying John Cabot's voyage would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Spanish colonization in what is now the United States predated permanent English settlement.",
+        "B": "French colonization relied heavily on trade and Native alliances in the interior of North America.",
         "C": "Non-Iberian powers quickly joined Atlantic exploration after Spain's initial breakthroughs.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Columbus's 1492 voyage created sustained contact but did not 'discover' an empty continent."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -2380,9 +2380,9 @@ window.chapter1Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of St. Augustine?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Non-Iberian powers quickly joined Atlantic exploration after Spain's initial breakthroughs.",
+        "B": "French colonization relied heavily on trade and Native alliances in the interior of North America.",
+        "C": "Champlain symbolizes the French strategy of alliance, trade, and waterway empire building.",
         "D": "Spanish colonization in what is now the United States predated permanent English settlement."
       },
       "correctAnswer": "D",
@@ -5208,9 +5208,9 @@ window.chapter2Data = JSON.parse(String.raw`{
       "question": "The historical development associated with Jamestown most directly contributed to which of the following?",
       "options": {
         "A": "The colony survived because tobacco and Native interaction mattered more than dreams of quick gold.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Tobacco created a land-hungry, labor-intensive plantation economy in the Chesapeake.",
+        "C": "Early Chesapeake labor depended heavily on bound European migrants before slavery hardened fully in law.",
+        "D": "English colonies could share plantation economics while differing sharply in religion and governance."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -5234,10 +5234,10 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch02map01",
       "question": "Which claim would be best supported by evidence about the Virginia Company?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Native peoples remained powerful actors who could sustain, negotiate with, or attack English settlements.",
         "B": "English colonization in North America began as a commercial and imperial venture backed by chartered investment.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "New England settlement expanded through organized violence against Native peoples as well as through piety and town building.",
+        "D": "Colonial elites expected a voice in local lawmaking while remaining loyal to the crown."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -5261,10 +5261,10 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch02ph10",
       "question": "A historian studying the tobacco boom would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "The colony survived because tobacco and Native interaction mattered more than dreams of quick gold.",
+        "B": "English colonization in North America began as a commercial and imperial venture backed by chartered investment.",
         "C": "Tobacco created a land-hungry, labor-intensive plantation economy in the Chesapeake.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Early Chesapeake labor depended heavily on bound European migrants before slavery hardened fully in law."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -5288,9 +5288,9 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch02ph11",
       "question": "Which development best explains the APUSH significance of 1619 in Virginia?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Government by consent in New England was tied to covenant and communal order, not universal democracy.",
+        "B": "English colonies could share plantation economics while differing sharply in religion and governance.",
+        "C": "Colonial ideas about rights and sovereignty were shaped by upheaval in England itself.",
         "D": "Representative government and African labor both took root in Virginia in the same foundational year."
       },
       "correctAnswer": "D",
@@ -5316,9 +5316,9 @@ window.chapter2Data = JSON.parse(String.raw`{
       "question": "The historical development associated with indentured servitude most directly contributed to which of the following?",
       "options": {
         "A": "Early Chesapeake labor depended heavily on bound European migrants before slavery hardened fully in law.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Puritan leaders defined liberty as moral discipline within a covenanted community.",
+        "C": "The colony survived because tobacco and Native interaction mattered more than dreams of quick gold.",
+        "D": "Tobacco created a land-hungry, labor-intensive plantation economy in the Chesapeake."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -5342,10 +5342,10 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about the House of Burgesses?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Government by consent in New England was tied to covenant and communal order, not universal democracy.",
         "B": "Colonial elites expected a voice in local lawmaking while remaining loyal to the crown.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Colonial ideas about rights and sovereignty were shaped by upheaval in England itself.",
+        "D": "Imperial oversight could increase without eliminating colonial assemblies."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -5369,10 +5369,10 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying the Mayflower Compact would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Colonial elites expected a voice in local lawmaking while remaining loyal to the crown.",
+        "B": "Arguments for liberty of conscience emerged partly because colonies punished dissent.",
         "C": "Government by consent in New England was tied to covenant and communal order, not universal democracy.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Representative government and African labor both took root in Virginia in the same foundational year."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -5396,9 +5396,9 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of Puritan migration?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Land policy encouraged migration while strengthening elite control over territory and labor.",
+        "B": "Many colonists believed freedom meant living under godly or lawful authority rather than escaping authority altogether.",
+        "C": "New England settlement expanded through organized violence against Native peoples as well as through piety and town building.",
         "D": "Family migration and religious purpose gave New England a more stable social structure than the Chesapeake."
       },
       "correctAnswer": "D",
@@ -5424,9 +5424,9 @@ window.chapter2Data = JSON.parse(String.raw`{
       "question": "The historical development associated with John Winthrop most directly contributed to which of the following?",
       "options": {
         "A": "Puritan leaders defined liberty as moral discipline within a covenanted community.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Colonial toleration often protected only limited groups and was rooted in political necessity.",
+        "C": "Arguments for liberty of conscience emerged partly because colonies punished dissent.",
+        "D": "Puritan authorities saw dissenting women and direct spiritual claims as threats to social order."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -5450,10 +5450,10 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about Roger Williams?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Colonial toleration often protected only limited groups and was rooted in political necessity.",
         "B": "Arguments for liberty of conscience emerged partly because colonies punished dissent.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Puritan leaders defined liberty as moral discipline within a covenanted community.",
+        "D": "Puritan authorities saw dissenting women and direct spiritual claims as threats to social order."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -5477,10 +5477,10 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying Anne Hutchinson would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Puritan leaders defined liberty as moral discipline within a covenanted community.",
+        "B": "English colonization in North America began as a commercial and imperial venture backed by chartered investment.",
         "C": "Puritan authorities saw dissenting women and direct spiritual claims as threats to social order.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Arguments for liberty of conscience emerged partly because colonies punished dissent."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -5504,9 +5504,9 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of the Pequot War?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Family migration and religious purpose gave New England a more stable social structure than the Chesapeake.",
+        "B": "Native peoples remained powerful actors who could sustain, negotiate with, or attack English settlements.",
+        "C": "English colonization in North America began as a commercial and imperial venture backed by chartered investment.",
         "D": "New England settlement expanded through organized violence against Native peoples as well as through piety and town building."
       },
       "correctAnswer": "D",
@@ -5532,9 +5532,9 @@ window.chapter2Data = JSON.parse(String.raw`{
       "question": "The historical development associated with Maryland most directly contributed to which of the following?",
       "options": {
         "A": "English colonies could share plantation economics while differing sharply in religion and governance.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Representative government and African labor both took root in Virginia in the same foundational year.",
+        "C": "Imperial oversight could increase without eliminating colonial assemblies.",
+        "D": "The colony survived because tobacco and Native interaction mattered more than dreams of quick gold."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -5558,10 +5558,10 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about the Maryland Toleration Act?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Arguments for liberty of conscience emerged partly because colonies punished dissent.",
         "B": "Colonial toleration often protected only limited groups and was rooted in political necessity.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Puritan authorities saw dissenting women and direct spiritual claims as threats to social order.",
+        "D": "Puritan leaders defined liberty as moral discipline within a covenanted community."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -5585,10 +5585,10 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying English Civil War would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Colonial elites expected a voice in local lawmaking while remaining loyal to the crown.",
+        "B": "Imperial oversight could increase without eliminating colonial assemblies.",
         "C": "Colonial ideas about rights and sovereignty were shaped by upheaval in England itself.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Government by consent in New England was tied to covenant and communal order, not universal democracy."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -5612,9 +5612,9 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of the Great Migration?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Land policy encouraged migration while strengthening elite control over territory and labor.",
+        "B": "Tobacco created a land-hungry, labor-intensive plantation economy in the Chesapeake.",
+        "C": "Many colonists believed freedom meant living under godly or lawful authority rather than escaping authority altogether.",
         "D": "New England grew through family settlement and town life rather than through a single export staple."
       },
       "correctAnswer": "D",
@@ -5640,9 +5640,9 @@ window.chapter2Data = JSON.parse(String.raw`{
       "question": "The historical development associated with Powhatan diplomacy most directly contributed to which of the following?",
       "options": {
         "A": "Native peoples remained powerful actors who could sustain, negotiate with, or attack English settlements.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "English colonization in North America began as a commercial and imperial venture backed by chartered investment.",
+        "C": "New England settlement expanded through organized violence against Native peoples as well as through piety and town building.",
+        "D": "English colonies could share plantation economics while differing sharply in religion and governance."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -5666,10 +5666,10 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about royal colonies?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Colonial ideas about rights and sovereignty were shaped by upheaval in England itself.",
         "B": "Imperial oversight could increase without eliminating colonial assemblies.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "English colonies could share plantation economics while differing sharply in religion and governance.",
+        "D": "Colonial elites expected a voice in local lawmaking while remaining loyal to the crown."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -5693,10 +5693,10 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying headright system would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Family migration and religious purpose gave New England a more stable social structure than the Chesapeake.",
+        "B": "New England grew through family settlement and town life rather than through a single export staple.",
         "C": "Land policy encouraged migration while strengthening elite control over territory and labor.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Representative government and African labor both took root in Virginia in the same foundational year."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -5720,9 +5720,9 @@ window.chapter2Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of ordered liberty?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Family migration and religious purpose gave New England a more stable social structure than the Chesapeake.",
+        "B": "New England grew through family settlement and town life rather than through a single export staple.",
+        "C": "Puritan leaders defined liberty as moral discipline within a covenanted community.",
         "D": "Many colonists believed freedom meant living under godly or lawful authority rather than escaping authority altogether."
       },
       "correctAnswer": "D",
@@ -7345,7 +7345,7 @@ window.chapter3Data = JSON.parse(String.raw`{
       "month": null,
       "title": "Pueblo Revolt",
       "summary": "Pueblo peoples revolted against Spanish rule in 1680 and temporarily drove the Spanish out of New Mexico. The revolt showed that Native resistance remained potent across North America, not just in English colonies.",
-      "fullDescription": "Led by Pop\u00e9, Pueblo communities rose against Spanish missions, labor demands, and cultural repression. They killed priests and colonists and forced the Spanish to retreat for more than a decade. The revolt was one of the most successful Indigenous uprisings in North American colonial history. Although it took place in the Spanish borderlands, it matters in APUSH because it highlights the continent-wide struggle over Native autonomy. It also reminds students that English America developed alongside other empires and other Native wars. Native power remained a defining force across the continent.",
+      "fullDescription": "Led by Popé, Pueblo communities rose against Spanish missions, labor demands, and cultural repression. They killed priests and colonists and forced the Spanish to retreat for more than a decade. The revolt was one of the most successful Indigenous uprisings in North American colonial history. Although it took place in the Spanish borderlands, it matters in APUSH because it highlights the continent-wide struggle over Native autonomy. It also reminds students that English America developed alongside other empires and other Native wars. Native power remained a defining force across the continent.",
       "categories": [
         "Military"
       ],
@@ -7354,7 +7354,7 @@ window.chapter3Data = JSON.parse(String.raw`{
         "Culture and Society"
       ],
       "keyFigures": [
-        "Pop\u00e9"
+        "Popé"
       ],
       "causes": [
         "Spanish mission coercion",
@@ -7878,7 +7878,7 @@ window.chapter3Data = JSON.parse(String.raw`{
       "month": null,
       "title": "Pueblo Revolt",
       "summary": "Pueblo peoples revolted against Spanish rule in 1680 and temporarily drove the Spanish out of New Mexico. The revolt showed that Native resistance remained potent across North America, not just in English colonies.",
-      "fullDescription": "Led by Pop\u00e9, Pueblo communities rose against Spanish missions, labor demands, and cultural repression. They killed priests and colonists and forced the Spanish to retreat for more than a decade. The revolt was one of the most successful Indigenous uprisings in North American colonial history. Although it took place in the Spanish borderlands, it matters in APUSH because it highlights the continent-wide struggle over Native autonomy. It also reminds students that English America developed alongside other empires and other Native wars. Native power remained a defining force across the continent.",
+      "fullDescription": "Led by Popé, Pueblo communities rose against Spanish missions, labor demands, and cultural repression. They killed priests and colonists and forced the Spanish to retreat for more than a decade. The revolt was one of the most successful Indigenous uprisings in North American colonial history. Although it took place in the Spanish borderlands, it matters in APUSH because it highlights the continent-wide struggle over Native autonomy. It also reminds students that English America developed alongside other empires and other Native wars. Native power remained a defining force across the continent.",
       "categories": [
         "Military"
       ],
@@ -7887,7 +7887,7 @@ window.chapter3Data = JSON.parse(String.raw`{
         "Culture and Society"
       ],
       "keyFigures": [
-        "Pop\u00e9"
+        "Popé"
       ],
       "causes": [
         "Spanish mission coercion",
@@ -8475,9 +8475,9 @@ window.chapter3Data = JSON.parse(String.raw`{
       "question": "The historical development associated with the Navigation Acts most directly contributed to which of the following?",
       "options": {
         "A": "England tried to channel colonial trade into a mercantilist empire that strengthened the mother country.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Pennsylvania grew rapidly through immigration, commerce, and relative religious pluralism.",
+        "C": "By 1750, English colonies formed a larger Atlantic society shaped by empire, migration, slavery, and trade.",
+        "D": "Imported goods and market exchange reshaped colonial life while tying prosperity to British commerce."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -8501,10 +8501,10 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch03map01",
       "question": "Which claim would be best supported by evidence about Restoration colonization?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Colonial law made slavery hereditary by tying a child's status to the mother.",
         "B": "After 1660, English America expanded through new colonies, migration, and stronger imperial management.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Colonial expansion continued well into the eighteenth century for strategic as well as economic reasons.",
+        "D": "By 1750, English colonies formed a larger Atlantic society shaped by empire, migration, slavery, and trade."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -8528,10 +8528,10 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch03map02",
       "question": "A historian studying Pennsylvania would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Penn represented a more pluralistic and commercially dynamic colonial model.",
+        "B": "England tried to channel colonial trade into a mercantilist empire that strengthened the mother country.",
         "C": "Pennsylvania grew rapidly through immigration, commerce, and relative religious pluralism.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "England increased administrative oversight as colonies became more valuable and populous."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -8555,9 +8555,9 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch03ph03",
       "question": "Which development best explains the APUSH significance of colonial inequality?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Imported goods and market exchange reshaped colonial life while tying prosperity to British commerce.",
+        "B": "England tried to channel colonial trade into a mercantilist empire that strengthened the mother country.",
+        "C": "Class tension and frontier anger in Virginia helped push elites toward a more racialized labor system.",
         "D": "Commercial growth increased wealth but also deepened class divisions and dependence on credit."
       },
       "correctAnswer": "D",
@@ -8583,9 +8583,9 @@ window.chapter3Data = JSON.parse(String.raw`{
       "question": "The historical development associated with partus sequitur ventrem most directly contributed to which of the following?",
       "options": {
         "A": "Colonial law made slavery hereditary by tying a child's status to the mother.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Class tension and frontier anger in Virginia helped push elites toward a more racialized labor system.",
+        "C": "England tried to channel colonial trade into a mercantilist empire that strengthened the mother country.",
+        "D": "Imperial centralization could provoke colonial claims that English rights were being violated."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -8609,10 +8609,10 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about the slave trade?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "By 1750, English colonies formed a larger Atlantic society shaped by empire, migration, slavery, and trade.",
         "B": "Access to enslaved African labor helped colonies shift away from heavy dependence on indentured servitude.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Native resistance remained powerful and made New England expansion violent and costly.",
+        "D": "Native resistance to European empires was a continent-wide pattern, not just an English story."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -8636,10 +8636,10 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying racial slavery would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Colonists believed that subjects could resist arbitrary rulers while remaining loyal to the English constitution.",
+        "B": "Colonial law made slavery hereditary by tying a child's status to the mother.",
         "C": "By the late seventeenth century, slavery had become more permanent, hereditary, and racially defined.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Pennsylvania grew rapidly through immigration, commerce, and relative religious pluralism."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -8663,9 +8663,9 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of Bacon's Rebellion?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Colonial law made slavery hereditary by tying a child's status to the mother.",
+        "B": "Imperial centralization could provoke colonial claims that English rights were being violated.",
+        "C": "Colonists increasingly described local autonomy and due process as inherited English rights.",
         "D": "Class tension and frontier anger in Virginia helped push elites toward a more racialized labor system."
       },
       "correctAnswer": "D",
@@ -8691,9 +8691,9 @@ window.chapter3Data = JSON.parse(String.raw`{
       "question": "The historical development associated with King Philip's War most directly contributed to which of the following?",
       "options": {
         "A": "Native resistance remained powerful and made New England expansion violent and costly.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Colonial expansion continued well into the eighteenth century for strategic as well as economic reasons.",
+        "C": "Access to enslaved African labor helped colonies shift away from heavy dependence on indentured servitude.",
+        "D": "Native resistance to European empires was a continent-wide pattern, not just an English story."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -8717,10 +8717,10 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about the Pueblo Revolt?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Native resistance remained powerful and made New England expansion violent and costly.",
         "B": "Native resistance to European empires was a continent-wide pattern, not just an English story.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Access to enslaved African labor helped colonies shift away from heavy dependence on indentured servitude.",
+        "D": "By 1750, English colonies formed a larger Atlantic society shaped by empire, migration, slavery, and trade."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -8744,10 +8744,10 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying William Penn would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Pennsylvania grew rapidly through immigration, commerce, and relative religious pluralism.",
+        "B": "The Salem crisis reflected fear, political instability, and social strain rather than timeless Puritan superstition alone.",
         "C": "Penn represented a more pluralistic and commercially dynamic colonial model.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "By the late seventeenth century, slavery had become more permanent, hereditary, and racially defined."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -8771,9 +8771,9 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of the Dominion of New England?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Colonists increasingly described local autonomy and due process as inherited English rights.",
+        "B": "England increased administrative oversight as colonies became more valuable and populous.",
+        "C": "Class tension and frontier anger in Virginia helped push elites toward a more racialized labor system.",
         "D": "Imperial centralization could provoke colonial claims that English rights were being violated."
       },
       "correctAnswer": "D",
@@ -8799,9 +8799,9 @@ window.chapter3Data = JSON.parse(String.raw`{
       "question": "The historical development associated with the Glorious Revolution most directly contributed to which of the following?",
       "options": {
         "A": "Colonists believed that subjects could resist arbitrary rulers while remaining loyal to the English constitution.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "By the late seventeenth century, slavery had become more permanent, hereditary, and racially defined.",
+        "C": "After 1660, English America expanded through new colonies, migration, and stronger imperial management.",
+        "D": "Commercial growth increased wealth but also deepened class divisions and dependence on credit."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -8825,10 +8825,10 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about Salem?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Penn represented a more pluralistic and commercially dynamic colonial model.",
         "B": "The Salem crisis reflected fear, political instability, and social strain rather than timeless Puritan superstition alone.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "The former Dutch colony showed that English America was ethnically and commercially diverse.",
+        "D": "Pennsylvania grew rapidly through immigration, commerce, and relative religious pluralism."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -8852,10 +8852,10 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying the Board of Trade would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Imperial centralization could provoke colonial claims that English rights were being violated.",
+        "B": "Colonists increasingly described local autonomy and due process as inherited English rights.",
         "C": "England increased administrative oversight as colonies became more valuable and populous.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Colonial law made slavery hereditary by tying a child's status to the mother."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -8879,9 +8879,9 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of New York?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "After 1660, English America expanded through new colonies, migration, and stronger imperial management.",
+        "B": "Imperial centralization could provoke colonial claims that English rights were being violated.",
+        "C": "The Salem crisis reflected fear, political instability, and social strain rather than timeless Puritan superstition alone.",
         "D": "The former Dutch colony showed that English America was ethnically and commercially diverse."
       },
       "correctAnswer": "D",
@@ -8907,9 +8907,9 @@ window.chapter3Data = JSON.parse(String.raw`{
       "question": "The historical development associated with Georgia most directly contributed to which of the following?",
       "options": {
         "A": "Colonial expansion continued well into the eighteenth century for strategic as well as economic reasons.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Native resistance remained powerful and made New England expansion violent and costly.",
+        "C": "Native resistance to European empires was a continent-wide pattern, not just an English story.",
+        "D": "Access to enslaved African labor helped colonies shift away from heavy dependence on indentured servitude."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -8933,10 +8933,10 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about consumer society?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Commercial growth increased wealth but also deepened class divisions and dependence on credit.",
         "B": "Imported goods and market exchange reshaped colonial life while tying prosperity to British commerce.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "England tried to channel colonial trade into a mercantilist empire that strengthened the mother country.",
+        "D": "Colonists believed that subjects could resist arbitrary rulers while remaining loyal to the English constitution."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -8960,10 +8960,10 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying rights of Englishmen would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "England increased administrative oversight as colonies became more valuable and populous.",
+        "B": "Imperial centralization could provoke colonial claims that English rights were being violated.",
         "C": "Colonists increasingly described local autonomy and due process as inherited English rights.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Class tension and frontier anger in Virginia helped push elites toward a more racialized labor system."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -8987,9 +8987,9 @@ window.chapter3Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of Anglo-America?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Native resistance to European empires was a continent-wide pattern, not just an English story.",
+        "B": "Colonial expansion continued well into the eighteenth century for strategic as well as economic reasons.",
+        "C": "After 1660, English America expanded through new colonies, migration, and stronger imperial management.",
         "D": "By 1750, English colonies formed a larger Atlantic society shaped by empire, migration, slavery, and trade."
       },
       "correctAnswer": "D",
@@ -11816,9 +11816,9 @@ window.chapter4Data = JSON.parse(String.raw`{
       "question": "The historical development associated with British liberty in the colonies most directly contributed to which of the following?",
       "options": {
         "A": "Many colonists believed they enjoyed broad self-government and the rights of Englishmen within the empire.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Open rebellion by enslaved people intensified white fear and surveillance in South Carolina.",
+        "C": "The Zenger case symbolized the legitimacy of criticizing arbitrary power in print.",
+        "D": "Colonial leaders began discussing union and shared defense before the Revolution."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -11842,10 +11842,10 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch04map01",
       "question": "Which claim would be best supported by evidence about salutary neglect?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "The mainland colonies were deeply tied to a wider imperial system linking Africa, the Caribbean, Europe, and North America.",
         "B": "Loose imperial enforcement allowed colonies to grow accustomed to local autonomy and practical self-direction.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Many colonists believed they enjoyed broad self-government and the rights of Englishmen within the empire.",
+        "D": "Northern merchants and consumers also benefited from the Atlantic slave economy even when slavery was regionally concentrated."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -11869,10 +11869,10 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch04map02",
       "question": "A historian studying the Atlantic economy would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Colonial prosperity in the South depended heavily on enslaved African labor.",
+        "B": "The war grew from imperial rivalry in the Ohio Valley and became a global struggle.",
         "C": "The mainland colonies were deeply tied to a wider imperial system linking Africa, the Caribbean, Europe, and North America.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Native leaders resisted British postwar power and forced the empire to reconsider westward settlement."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -11896,9 +11896,9 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch04ph06",
       "question": "Which development best explains the APUSH significance of plantation slavery?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "The mainland colonies were deeply tied to a wider imperial system linking Africa, the Caribbean, Europe, and North America.",
+        "B": "Northern merchants and consumers also benefited from the Atlantic slave economy even when slavery was regionally concentrated.",
+        "C": "Colonial liberty expanded for many white colonists even as slavery deepened and racial hierarchy hardened.",
         "D": "Colonial prosperity in the South depended heavily on enslaved African labor."
       },
       "correctAnswer": "D",
@@ -11924,9 +11924,9 @@ window.chapter4Data = JSON.parse(String.raw`{
       "question": "The historical development associated with northern complicity in slavery most directly contributed to which of the following?",
       "options": {
         "A": "Northern merchants and consumers also benefited from the Atlantic slave economy even when slavery was regionally concentrated.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Colonial prosperity in the South depended heavily on enslaved African labor.",
+        "C": "The Zenger case symbolized the legitimacy of criticizing arbitrary power in print.",
+        "D": "Colonial liberty expanded for many white colonists even as slavery deepened and racial hierarchy hardened."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -11950,10 +11950,10 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about slave resistance?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Open rebellion by enslaved people intensified white fear and surveillance in South Carolina.",
         "B": "Enslaved people resisted through rebellion, flight, sabotage, and the preservation of family and culture.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Colonial liberty expanded for many white colonists even as slavery deepened and racial hierarchy hardened.",
+        "D": "Whitefield's tours turned revival into a mass intercolonial event."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -11977,10 +11977,10 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying Stono Rebellion would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Many colonists believed they enjoyed broad self-government and the rights of Englishmen within the empire.",
+        "B": "Enslaved people resisted through rebellion, flight, sabotage, and the preservation of family and culture.",
         "C": "Open rebellion by enslaved people intensified white fear and surveillance in South Carolina.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Colonial leaders began discussing union and shared defense before the Revolution."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -12004,9 +12004,9 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of the public sphere?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Reason, science, and civic improvement shaped elite and urban colonial culture.",
+        "B": "Franklin embodied the combination of print culture, civic improvement, and practical Enlightenment thought.",
+        "C": "Edwards represented the emotional and theological power of revival preaching.",
         "D": "Newspapers, taverns, and pamphlets expanded colonial political discussion beyond officeholders."
       },
       "correctAnswer": "D",
@@ -12032,9 +12032,9 @@ window.chapter4Data = JSON.parse(String.raw`{
       "question": "The historical development associated with the Zenger trial most directly contributed to which of the following?",
       "options": {
         "A": "The Zenger case symbolized the legitimacy of criticizing arbitrary power in print.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Newspapers, taverns, and pamphlets expanded colonial political discussion beyond officeholders.",
+        "C": "Many colonists believed they enjoyed broad self-government and the rights of Englishmen within the empire.",
+        "D": "Loose imperial enforcement allowed colonies to grow accustomed to local autonomy and practical self-direction."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -12058,10 +12058,10 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about Benjamin Franklin?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Newspapers, taverns, and pamphlets expanded colonial political discussion beyond officeholders.",
         "B": "Franklin embodied the combination of print culture, civic improvement, and practical Enlightenment thought.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Revival religion challenged established churches and encouraged ordinary people to question authority.",
+        "D": "Edwards represented the emotional and theological power of revival preaching."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -12085,10 +12085,10 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying the Great Awakening would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Reason, science, and civic improvement shaped elite and urban colonial culture.",
+        "B": "Franklin embodied the combination of print culture, civic improvement, and practical Enlightenment thought.",
         "C": "Revival religion challenged established churches and encouraged ordinary people to question authority.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Edwards represented the emotional and theological power of revival preaching."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -12112,9 +12112,9 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of George Whitefield?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "The war grew from imperial rivalry in the Ohio Valley and became a global struggle.",
+        "B": "British victory removed France from mainland North America but created new imperial burdens and expectations.",
+        "C": "Native leaders resisted British postwar power and forced the empire to reconsider westward settlement.",
         "D": "Whitefield's tours turned revival into a mass intercolonial event."
       },
       "correctAnswer": "D",
@@ -12140,9 +12140,9 @@ window.chapter4Data = JSON.parse(String.raw`{
       "question": "The historical development associated with Jonathan Edwards most directly contributed to which of the following?",
       "options": {
         "A": "Edwards represented the emotional and theological power of revival preaching.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Newspapers, taverns, and pamphlets expanded colonial political discussion beyond officeholders.",
+        "C": "Revival religion challenged established churches and encouraged ordinary people to question authority.",
+        "D": "Reason, science, and civic improvement shaped elite and urban colonial culture."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -12166,10 +12166,10 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about the Enlightenment?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Revival religion challenged established churches and encouraged ordinary people to question authority.",
         "B": "Reason, science, and civic improvement shaped elite and urban colonial culture.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Franklin embodied the combination of print culture, civic improvement, and practical Enlightenment thought.",
+        "D": "Newspapers, taverns, and pamphlets expanded colonial political discussion beyond officeholders."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -12193,10 +12193,10 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying the Albany Congress would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Open rebellion by enslaved people intensified white fear and surveillance in South Carolina.",
+        "B": "Loose imperial enforcement allowed colonies to grow accustomed to local autonomy and practical self-direction.",
         "C": "Colonial leaders began discussing union and shared defense before the Revolution.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "The Zenger case symbolized the legitimacy of criticizing arbitrary power in print."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -12220,9 +12220,9 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of the French and Indian War?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "British victory removed France from mainland North America but created new imperial burdens and expectations.",
+        "B": "Whitefield's tours turned revival into a mass intercolonial event.",
+        "C": "The mainland colonies were deeply tied to a wider imperial system linking Africa, the Caribbean, Europe, and North America.",
         "D": "The war grew from imperial rivalry in the Ohio Valley and became a global struggle."
       },
       "correctAnswer": "D",
@@ -12248,9 +12248,9 @@ window.chapter4Data = JSON.parse(String.raw`{
       "question": "The historical development associated with the Treaty of Paris of 1763 most directly contributed to which of the following?",
       "options": {
         "A": "British victory removed France from mainland North America but created new imperial burdens and expectations.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "The war grew from imperial rivalry in the Ohio Valley and became a global struggle.",
+        "C": "Native leaders resisted British postwar power and forced the empire to reconsider westward settlement.",
+        "D": "Whitefield's tours turned revival into a mass intercolonial event."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -12274,10 +12274,10 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about Pontiac's Rebellion?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "British victory removed France from mainland North America but created new imperial burdens and expectations.",
         "B": "Native leaders resisted British postwar power and forced the empire to reconsider westward settlement.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "The war grew from imperial rivalry in the Ohio Valley and became a global struggle.",
+        "D": "The mainland colonies were deeply tied to a wider imperial system linking Africa, the Caribbean, Europe, and North America."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -12301,10 +12301,10 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying the Proclamation of 1763 would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Colonial leaders began discussing union and shared defense before the Revolution.",
+        "B": "Enslaved people resisted through rebellion, flight, sabotage, and the preservation of family and culture.",
         "C": "Britain limited westward settlement to control costs and conflict, angering colonists who wanted land.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Open rebellion by enslaved people intensified white fear and surveillance in South Carolina."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -12328,9 +12328,9 @@ window.chapter4Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of freedom and slavery?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Enslaved people resisted through rebellion, flight, sabotage, and the preservation of family and culture.",
+        "B": "Colonial prosperity in the South depended heavily on enslaved African labor.",
+        "C": "Northern merchants and consumers also benefited from the Atlantic slave economy even when slavery was regionally concentrated.",
         "D": "Colonial liberty expanded for many white colonists even as slavery deepened and racial hierarchy hardened."
       },
       "correctAnswer": "D",
@@ -15322,9 +15322,9 @@ window.chapter5Data = JSON.parse(String.raw`{
       "question": "The historical development associated with post-1763 imperial reform most directly contributed to which of the following?",
       "options": {
         "A": "British efforts to raise revenue and tighten control challenged colonial expectations of self-government.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Britain's repeal of one tax did not end the larger sovereignty dispute.",
+        "C": "Open warfare made reconciliation much harder and accelerated the move toward independence.",
+        "D": "Washington's greatest strategic contribution was often preserving the army and the cause rather than winning constant victories."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -15348,10 +15348,10 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch05ph05",
       "question": "Which claim would be best supported by evidence about the Stamp Act?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Direct action against tea made compromise harder and triggered punitive British measures.",
         "B": "Direct internal taxation triggered the strongest early burst of intercolonial resistance.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "British efforts to raise revenue and tighten control challenged colonial expectations of self-government.",
+        "D": "Britain's repeal of one tax did not end the larger sovereignty dispute."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -15375,10 +15375,10 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch05ph07",
       "question": "A historian studying taxation without representation would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Popular groups transformed protest into organized public action through intimidation, symbolism, and crowd politics.",
+        "B": "The Revolution replaced monarchy with a political language centered on virtue, consent, and the common good.",
         "C": "Colonists objected less to taxes in the abstract than to taxation imposed without their own consent through local assemblies.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "The Declaration grounded American sovereignty in natural rights and consent of the governed."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -15402,9 +15402,9 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch05ph14",
       "question": "Which development best explains the APUSH significance of the Sons of Liberty?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Colonists objected less to taxes in the abstract than to taxation imposed without their own consent through local assemblies.",
+        "B": "Paine popularized the case for independence by attacking monarchy itself.",
+        "C": "Patriot leaders used the shooting in Boston as propaganda against standing armies and imperial coercion.",
         "D": "Popular groups transformed protest into organized public action through intimidation, symbolism, and crowd politics."
       },
       "correctAnswer": "D",
@@ -15430,9 +15430,9 @@ window.chapter5Data = JSON.parse(String.raw`{
       "question": "The historical development associated with the Declaratory Act most directly contributed to which of the following?",
       "options": {
         "A": "Britain's repeal of one tax did not end the larger sovereignty dispute.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "British efforts to raise revenue and tighten control challenged colonial expectations of self-government.",
+        "C": "Direct internal taxation triggered the strongest early burst of intercolonial resistance.",
+        "D": "Direct action against tea made compromise harder and triggered punitive British measures."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -15456,10 +15456,10 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about the Townshend Acts?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Cheap tea could still provoke resistance when colonists believed a principle of taxation was at stake.",
         "B": "New duties and stronger enforcement revived boycotts and tension in the colonies.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Paine popularized the case for independence by attacking monarchy itself.",
+        "D": "British efforts to raise revenue and tighten control challenged colonial expectations of self-government."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -15483,10 +15483,10 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying the Boston Massacre would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Paine popularized the case for independence by attacking monarchy itself.",
+        "B": "Popular groups transformed protest into organized public action through intimidation, symbolism, and crowd politics.",
         "C": "Patriot leaders used the shooting in Boston as propaganda against standing armies and imperial coercion.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Open warfare made reconciliation much harder and accelerated the move toward independence."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -15510,9 +15510,9 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of the Tea Act?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "New duties and stronger enforcement revived boycotts and tension in the colonies.",
+        "B": "Foreign aid transformed the American cause from a rebellion into an international war Britain struggled to sustain.",
+        "C": "Britain's repeal of one tax did not end the larger sovereignty dispute.",
         "D": "Cheap tea could still provoke resistance when colonists believed a principle of taxation was at stake."
       },
       "correctAnswer": "D",
@@ -15538,9 +15538,9 @@ window.chapter5Data = JSON.parse(String.raw`{
       "question": "The historical development associated with the Boston Tea Party most directly contributed to which of the following?",
       "options": {
         "A": "Direct action against tea made compromise harder and triggered punitive British measures.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Direct internal taxation triggered the strongest early burst of intercolonial resistance.",
+        "C": "Colonial leaders created new intercolonial institutions before they created a new nation.",
+        "D": "Open warfare made reconciliation much harder and accelerated the move toward independence."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -15564,10 +15564,10 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about the Continental Congress?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Washington's greatest strategic contribution was often preserving the army and the cause rather than winning constant victories.",
         "B": "Colonial leaders created new intercolonial institutions before they created a new nation.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Direct internal taxation triggered the strongest early burst of intercolonial resistance.",
+        "D": "Direct action against tea made compromise harder and triggered punitive British measures."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -15591,10 +15591,10 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying Lexington and Concord would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "British efforts to raise revenue and tighten control challenged colonial expectations of self-government.",
+        "B": "Colonial leaders created new intercolonial institutions before they created a new nation.",
         "C": "Open warfare made reconciliation much harder and accelerated the move toward independence.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Direct internal taxation triggered the strongest early burst of intercolonial resistance."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -15618,9 +15618,9 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of Common Sense?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Patriot leaders used the shooting in Boston as propaganda against standing armies and imperial coercion.",
+        "B": "Popular groups transformed protest into organized public action through intimidation, symbolism, and crowd politics.",
+        "C": "Saratoga mattered most because it made the French alliance possible.",
         "D": "Paine popularized the case for independence by attacking monarchy itself."
       },
       "correctAnswer": "D",
@@ -15646,9 +15646,9 @@ window.chapter5Data = JSON.parse(String.raw`{
       "question": "The historical development associated with the Declaration of Independence most directly contributed to which of the following?",
       "options": {
         "A": "The Declaration grounded American sovereignty in natural rights and consent of the governed.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "The Revolution replaced monarchy with a political language centered on virtue, consent, and the common good.",
+        "C": "Colonists objected less to taxes in the abstract than to taxation imposed without their own consent through local assemblies.",
+        "D": "The Revolution divided the colonial population and was never supported identically by everyone."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -15672,10 +15672,10 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about George Washington?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Colonial leaders created new intercolonial institutions before they created a new nation.",
         "B": "Washington's greatest strategic contribution was often preserving the army and the cause rather than winning constant victories.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Open warfare made reconciliation much harder and accelerated the move toward independence.",
+        "D": "Direct action against tea made compromise harder and triggered punitive British measures."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -15699,10 +15699,10 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying Saratoga would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Yorktown depended heavily on French naval and military support as well as American persistence.",
+        "B": "Foreign aid transformed the American cause from a rebellion into an international war Britain struggled to sustain.",
         "C": "Saratoga mattered most because it made the French alliance possible.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Peace brought independence and huge western claims but left many domestic and Native issues unresolved."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -15726,9 +15726,9 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of the French alliance?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Yorktown depended heavily on French naval and military support as well as American persistence.",
+        "B": "Saratoga mattered most because it made the French alliance possible.",
+        "C": "The Declaration grounded American sovereignty in natural rights and consent of the governed.",
         "D": "Foreign aid transformed the American cause from a rebellion into an international war Britain struggled to sustain."
       },
       "correctAnswer": "D",
@@ -15754,9 +15754,9 @@ window.chapter5Data = JSON.parse(String.raw`{
       "question": "The historical development associated with Yorktown most directly contributed to which of the following?",
       "options": {
         "A": "Yorktown depended heavily on French naval and military support as well as American persistence.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Saratoga mattered most because it made the French alliance possible.",
+        "C": "Foreign aid transformed the American cause from a rebellion into an international war Britain struggled to sustain.",
+        "D": "The Declaration grounded American sovereignty in natural rights and consent of the governed."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -15780,10 +15780,10 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about loyalists?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "The Revolution replaced monarchy with a political language centered on virtue, consent, and the common good.",
         "B": "The Revolution divided the colonial population and was never supported identically by everyone.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Colonists objected less to taxes in the abstract than to taxation imposed without their own consent through local assemblies.",
+        "D": "The Declaration grounded American sovereignty in natural rights and consent of the governed."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -15807,10 +15807,10 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying the Treaty of Paris of 1783 would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Cheap tea could still provoke resistance when colonists believed a principle of taxation was at stake.",
+        "B": "Patriot leaders used the shooting in Boston as propaganda against standing armies and imperial coercion.",
         "C": "Peace brought independence and huge western claims but left many domestic and Native issues unresolved.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Washington's greatest strategic contribution was often preserving the army and the cause rather than winning constant victories."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -15834,9 +15834,9 @@ window.chapter5Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of republicanism?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Colonists objected less to taxes in the abstract than to taxation imposed without their own consent through local assemblies.",
+        "B": "The Revolution divided the colonial population and was never supported identically by everyone.",
+        "C": "The Declaration grounded American sovereignty in natural rights and consent of the governed.",
         "D": "The Revolution replaced monarchy with a political language centered on virtue, consent, and the common good."
       },
       "correctAnswer": "D",
@@ -18596,9 +18596,9 @@ window.chapter6Data = JSON.parse(String.raw`{
       "question": "The historical development associated with popular sovereignty most directly contributed to which of the following?",
       "options": {
         "A": "Revolutionary politics made government seem more accountable to the people rather than to inherited rulers.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Revolutionary Americans attacked hereditary privilege while still tolerating inequality and debt.",
+        "C": "African Americans actively used Revolutionary ideals to demand liberty and rights.",
+        "D": "The most important domestic effect of the Revolution was not perfect equality but a new political language that later reformers could use."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -18622,10 +18622,10 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch06ph01",
       "question": "Which claim would be best supported by evidence about state constitutions?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "The new national order preserved slavery through political compromise.",
         "B": "The states became laboratories for new ideas about rights, representation, and institutional design.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Jefferson's statute made liberty of conscience a concrete legal principle.",
+        "D": "Northern states moved unevenly toward ending slavery after independence."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -18649,10 +18649,10 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch06ph04",
       "question": "A historian studying decline of deference would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Women's domestic labor and boycotts became visible forms of political participation.",
+        "B": "Women used Revolutionary language to challenge male authority even when reform remained limited.",
         "C": "Ordinary white men increasingly expected a more active role in politics after the Revolution.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "The Revolution accelerated attacks on established churches and support for liberty of conscience."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -18676,9 +18676,9 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": "ch06ph12",
       "question": "Which development best explains the APUSH significance of religious toleration?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Women's domestic labor and boycotts became visible forms of political participation.",
+        "B": "Women used Revolutionary language to challenge male authority even when reform remained limited.",
+        "C": "Ordinary white men increasingly expected a more active role in politics after the Revolution.",
         "D": "The Revolution accelerated attacks on established churches and support for liberty of conscience."
       },
       "correctAnswer": "D",
@@ -18704,9 +18704,9 @@ window.chapter6Data = JSON.parse(String.raw`{
       "question": "The historical development associated with Virginia Statute for Religious Freedom most directly contributed to which of the following?",
       "options": {
         "A": "Jefferson's statute made liberty of conscience a concrete legal principle.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "The states became laboratories for new ideas about rights, representation, and institutional design.",
+        "C": "Women gained ideological importance as educators of virtuous citizens in the new republic.",
+        "D": "Northern states moved unevenly toward ending slavery after independence."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -18730,10 +18730,10 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about economic freedom?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Attacks on inherited privilege reflected a broader anti-aristocratic spirit in the new republic.",
         "B": "Revolutionary Americans attacked hereditary privilege while still tolerating inequality and debt.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Revolutionary politics made government seem more accountable to the people rather than to inherited rulers.",
+        "D": "Jefferson's statute made liberty of conscience a concrete legal principle."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -18757,10 +18757,10 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying Daughters of Liberty would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Ordinary white men increasingly expected a more active role in politics after the Revolution.",
+        "B": "The Revolution accelerated attacks on established churches and support for liberty of conscience.",
         "C": "Women's domestic labor and boycotts became visible forms of political participation.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Women used Revolutionary language to challenge male authority even when reform remained limited."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -18784,9 +18784,9 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of republican motherhood?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Revolutionary freedom was constrained by race, gender, property, and western expansion.",
+        "B": "Citizenship in the new republic was legally tied to whiteness.",
+        "C": "The most important domestic effect of the Revolution was not perfect equality but a new political language that later reformers could use.",
         "D": "Women gained ideological importance as educators of virtuous citizens in the new republic."
       },
       "correctAnswer": "D",
@@ -18812,9 +18812,9 @@ window.chapter6Data = JSON.parse(String.raw`{
       "question": "The historical development associated with Abigail Adams most directly contributed to which of the following?",
       "options": {
         "A": "Women used Revolutionary language to challenge male authority even when reform remained limited.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "The Revolution accelerated attacks on established churches and support for liberty of conscience.",
+        "C": "Women's domestic labor and boycotts became visible forms of political participation.",
+        "D": "Revolutionary freedom was constrained by race, gender, property, and western expansion."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -18838,10 +18838,10 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about the limits of liberty?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "African Americans actively used Revolutionary ideals to demand liberty and rights.",
         "B": "Revolutionary freedom was constrained by race, gender, property, and western expansion.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Women gained ideological importance as educators of virtuous citizens in the new republic.",
+        "D": "The Revolutionary era briefly increased private manumission in parts of the Upper South."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -18865,10 +18865,10 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying Lord Dunmore's Proclamation would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Many groups experienced the Revolution as dispossession or exclusion rather than liberation.",
+        "B": "Revolutionary Americans attacked hereditary privilege while still tolerating inequality and debt.",
         "C": "British wartime emancipation offers made slavery a central issue in the Revolution itself.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Western policy linked republican expansion to a sectional boundary over slavery."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -18892,9 +18892,9 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of Black petitions?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "The Revolutionary era briefly increased private manumission in parts of the Upper South.",
+        "B": "Revolutionary freedom was constrained by race, gender, property, and western expansion.",
+        "C": "Revolutionary politics made government seem more accountable to the people rather than to inherited rulers.",
         "D": "African Americans actively used Revolutionary ideals to demand liberty and rights."
       },
       "correctAnswer": "D",
@@ -18920,9 +18920,9 @@ window.chapter6Data = JSON.parse(String.raw`{
       "question": "The historical development associated with gradual emancipation most directly contributed to which of the following?",
       "options": {
         "A": "Northern states moved unevenly toward ending slavery after independence.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "The new national order preserved slavery through political compromise.",
+        "C": "Jefferson's statute made liberty of conscience a concrete legal principle.",
+        "D": "The states became laboratories for new ideas about rights, representation, and institutional design."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -18946,10 +18946,10 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about Virginia manumission?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "Citizenship in the new republic was legally tied to whiteness.",
         "B": "The Revolutionary era briefly increased private manumission in parts of the Upper South.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "African Americans actively used Revolutionary ideals to demand liberty and rights.",
+        "D": "Revolutionary politics made government seem more accountable to the people rather than to inherited rulers."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -18973,10 +18973,10 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying the Northwest Ordinance would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "British wartime emancipation offers made slavery a central issue in the Revolution itself.",
+        "B": "Attacks on inherited privilege reflected a broader anti-aristocratic spirit in the new republic.",
         "C": "Western policy linked republican expansion to a sectional boundary over slavery.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "The Revolution accelerated attacks on established churches and support for liberty of conscience."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -19000,9 +19000,9 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of constitutional protection of slavery?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Northern states moved unevenly toward ending slavery after independence.",
+        "B": "Jefferson's statute made liberty of conscience a concrete legal principle.",
+        "C": "The states became laboratories for new ideas about rights, representation, and institutional design.",
         "D": "The new national order preserved slavery through political compromise."
       },
       "correctAnswer": "D",
@@ -19028,9 +19028,9 @@ window.chapter6Data = JSON.parse(String.raw`{
       "question": "The historical development associated with Naturalization Act of 1790 most directly contributed to which of the following?",
       "options": {
         "A": "Citizenship in the new republic was legally tied to whiteness.",
-        "B": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "B": "Women gained ideological importance as educators of virtuous citizens in the new republic.",
+        "C": "Revolutionary freedom was constrained by race, gender, property, and western expansion.",
+        "D": "The Revolutionary era briefly increased private manumission in parts of the Upper South."
       },
       "correctAnswer": "A",
       "explanation": {
@@ -19054,10 +19054,10 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which claim would be best supported by evidence about loyalists and Native peoples?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
+        "A": "British wartime emancipation offers made slavery a central issue in the Revolution itself.",
         "B": "Many groups experienced the Revolution as dispossession or exclusion rather than liberation.",
-        "C": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "C": "Revolutionary Americans attacked hereditary privilege while still tolerating inequality and debt.",
+        "D": "The most important domestic effect of the Revolution was not perfect equality but a new political language that later reformers could use."
       },
       "correctAnswer": "B",
       "explanation": {
@@ -19081,10 +19081,10 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "A historian studying primogeniture and entail would most likely connect it to which broader trend?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
+        "A": "Revolutionary Americans attacked hereditary privilege while still tolerating inequality and debt.",
+        "B": "Ordinary white men increasingly expected a more active role in politics after the Revolution.",
         "C": "Attacks on inherited privilege reflected a broader anti-aristocratic spirit in the new republic.",
-        "D": "It indicates that broad equality already existed for all groups in early America."
+        "D": "Western policy linked republican expansion to a sectional boundary over slavery."
       },
       "correctAnswer": "C",
       "explanation": {
@@ -19108,9 +19108,9 @@ window.chapter6Data = JSON.parse(String.raw`{
       "stimulusImageId": null,
       "question": "Which development best explains the APUSH significance of the Revolution within?",
       "options": {
-        "A": "It shows that colonial leaders rejected all forms of market exchange and overseas trade.",
-        "B": "It proves that political conflict disappeared once imperial governments issued formal laws.",
-        "C": "It indicates that broad equality already existed for all groups in early America.",
+        "A": "Women gained ideological importance as educators of virtuous citizens in the new republic.",
+        "B": "Revolutionary politics made government seem more accountable to the people rather than to inherited rulers.",
+        "C": "African Americans actively used Revolutionary ideals to demand liberty and rights.",
         "D": "The most important domestic effect of the Revolution was not perfect equality but a new political language that later reformers could use."
       },
       "correctAnswer": "D",
@@ -19944,4 +19944,3 @@ window.chapter6Data = JSON.parse(String.raw`{
     }
   ]
 }`);
-

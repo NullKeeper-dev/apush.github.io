@@ -226,6 +226,233 @@ function makePeriodEvent(spec, event) {
   };
 }
 
+const MCQ_LETTERS = ["A", "B", "C", "D"];
+const MCQ_STOP_WORDS = new Set([
+  "a", "an", "and", "are", "as", "at", "be", "because", "been", "before", "by", "during", "for", "from",
+  "had", "has", "have", "in", "into", "is", "it", "its", "most", "not", "of", "on", "or", "that", "the",
+  "their", "them", "these", "they", "this", "those", "through", "to", "was", "were", "which", "while", "with",
+  "would", "best", "broader", "claim", "contributed", "development", "directly", "evidence", "following",
+  "historian", "historical", "likely", "significance", "studying", "support", "supported", "trend"
+]);
+
+function normalizeMcqText(value) {
+  return String(value || "")
+    .replace(/[\u0000-\u001f\u007f\u00a0\u2028\u2029]+/g, " ")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;:!?])/g, "$1")
+    .trim();
+}
+
+function normalizeMcqKey(value) {
+  return normalizeMcqText(value)
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
+    .replace(/[.,;:!?]+$/g, "")
+    .toLowerCase();
+}
+
+function extractMcqKeywords(...values) {
+  const tokens = values
+    .map((value) => normalizeMcqText(value).toLowerCase())
+    .join(" ")
+    .match(/[a-z][a-z'-]{2,}/g) || [];
+
+  return new Set(tokens.filter((token) => !MCQ_STOP_WORDS.has(token)));
+}
+
+function sharedMcqKeywordCount(left, right) {
+  let count = 0;
+  left.forEach((token) => {
+    if (right.has(token)) {
+      count += 1;
+    }
+  });
+  return count;
+}
+
+function mcqJaccard(left, right) {
+  const union = new Set([...left, ...right]);
+  if (!union.size) {
+    return 0;
+  }
+
+  return sharedMcqKeywordCount(left, right) / union.size;
+}
+
+function countMcqOptionFrequency(questions = []) {
+  const counts = new Map();
+
+  questions.forEach((question) => {
+    Object.values(question.options || {}).forEach((optionText) => {
+      const key = normalizeMcqKey(optionText);
+      if (!key) {
+        return;
+      }
+
+      counts.set(key, (counts.get(key) || 0) + 1);
+    });
+  });
+
+  return counts;
+}
+
+function needsMcqDistractorRepair(questions = []) {
+  if (questions.length < 4) {
+    return false;
+  }
+
+  const threshold = Math.max(6, Math.ceil(questions.length * 0.6));
+  const overused = Array.from(countMcqOptionFrequency(questions).values()).filter((count) => count >= threshold);
+  return overused.length >= 3;
+}
+
+function buildMcqRecords(questions = []) {
+  return questions.map((question, index) => {
+    const correctText = normalizeMcqText(question.options?.[question.correctAnswer] || "");
+    return {
+      question,
+      index,
+      correctText,
+      correctKey: normalizeMcqKey(correctText),
+      apTheme: normalizeMcqText(question.apTheme || ""),
+      apSkill: normalizeMcqText(question.apSkill || ""),
+      topicKey: normalizeMcqKey(question.topicTag || ""),
+      questionKeywords: extractMcqKeywords(
+        question.question,
+        question.stimulusText,
+        question.stimulusCaption,
+        question.explanation?.correct
+      ),
+      correctKeywords: extractMcqKeywords(correctText)
+    };
+  });
+}
+
+function buildMcqCandidatePool(records = []) {
+  const grouped = new Map();
+
+  records.forEach((record) => {
+    if (!record.correctKey) {
+      return;
+    }
+
+    if (!grouped.has(record.correctKey)) {
+      grouped.set(record.correctKey, {
+        key: record.correctKey,
+        text: record.correctText,
+        themes: new Set(),
+        skills: new Set(),
+        topicKeys: new Set(),
+        keywords: new Set(),
+        indexes: []
+      });
+    }
+
+    const candidate = grouped.get(record.correctKey);
+    if (record.apTheme) {
+      candidate.themes.add(record.apTheme);
+    }
+    if (record.apSkill) {
+      candidate.skills.add(record.apSkill);
+    }
+    if (record.topicKey) {
+      candidate.topicKeys.add(record.topicKey);
+    }
+    record.questionKeywords.forEach((token) => candidate.keywords.add(token));
+    record.correctKeywords.forEach((token) => candidate.keywords.add(token));
+    candidate.indexes.push(record.index);
+  });
+
+  return Array.from(grouped.values()).map((candidate) => ({
+    ...candidate,
+    averageIndex: candidate.indexes.reduce((sum, value) => sum + value, 0) / candidate.indexes.length
+  }));
+}
+
+function scoreMcqCandidate(record, candidate, reuseCount) {
+  if (!candidate?.key || candidate.key === record.correctKey) {
+    return Number.NEGATIVE_INFINITY;
+  }
+
+  if (record.topicKey && candidate.topicKeys.has(record.topicKey)) {
+    return Number.NEGATIVE_INFINITY;
+  }
+
+  const promptOverlap = sharedMcqKeywordCount(record.questionKeywords, candidate.keywords);
+  const correctOverlap = sharedMcqKeywordCount(record.correctKeywords, candidate.keywords);
+  const similarity = mcqJaccard(record.correctKeywords, candidate.keywords);
+
+  if (similarity >= 0.4 || correctOverlap >= 4) {
+    return Number.NEGATIVE_INFINITY;
+  }
+
+  let score = 0;
+  if (record.apTheme && candidate.themes.has(record.apTheme)) {
+    score += 14;
+  }
+  if (record.apSkill && candidate.skills.has(record.apSkill)) {
+    score += 7;
+  }
+
+  score += promptOverlap * 4;
+  score += Math.min(correctOverlap, 2);
+
+  const lengthRatio = candidate.text.length / Math.max(record.correctText.length, 1);
+  if (lengthRatio >= 0.65 && lengthRatio <= 1.6) {
+    score += 2;
+  }
+
+  score -= (reuseCount.get(candidate.key) || 0) * 3;
+  score -= Math.abs(candidate.averageIndex - record.index) * 0.05;
+  return score;
+}
+
+function repairMcqDistractors(questions = []) {
+  const records = buildMcqRecords(questions);
+  const candidates = buildMcqCandidatePool(records);
+  const reuseCount = new Map();
+
+  return records.map((record) => {
+    const distractors = candidates
+      .map((candidate) => ({
+        candidate,
+        score: scoreMcqCandidate(record, candidate, reuseCount)
+      }))
+      .filter((entry) => Number.isFinite(entry.score))
+      .sort((left, right) => (
+        right.score - left.score
+        || (reuseCount.get(left.candidate.key) || 0) - (reuseCount.get(right.candidate.key) || 0)
+        || left.candidate.text.localeCompare(right.candidate.text)
+      ))
+      .slice(0, 3)
+      .map((entry) => entry.candidate);
+
+    distractors.forEach((candidate) => {
+      reuseCount.set(candidate.key, (reuseCount.get(candidate.key) || 0) + 1);
+    });
+
+    const correctSlot = MCQ_LETTERS[record.index % MCQ_LETTERS.length];
+    const options = {};
+    let distractorIndex = 0;
+
+    MCQ_LETTERS.forEach((letter) => {
+      if (letter === correctSlot) {
+        options[letter] = record.correctText;
+        return;
+      }
+
+      options[letter] = distractors[distractorIndex]?.text || record.question.options?.[letter] || "";
+      distractorIndex += 1;
+    });
+
+    return {
+      ...record.question,
+      options,
+      correctAnswer: correctSlot
+    };
+  });
+}
+
 function makeMcqs(spec, images) {
   const questions = [];
   const facts = spec.mcqFacts;
@@ -276,7 +503,7 @@ function makeMcqs(spec, images) {
     });
   }
 
-  return questions;
+  return needsMcqDistractorRepair(questions) ? repairMcqDistractors(questions) : questions;
 }
 
 function makeSaq(spec, images) {

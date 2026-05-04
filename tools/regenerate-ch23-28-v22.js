@@ -467,7 +467,41 @@ function upgradeLegacyChapter(data) {
   return upgraded;
 }
 
+function normalizeMcqRepairKey(value) {
+  return String(value || "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/[.,;:!?]+$/g, "")
+    .toLowerCase();
+}
+
+function needsMcqDistractorRepair(mcqQuestions = []) {
+  if (mcqQuestions.length < 4) {
+    return false;
+  }
+
+  const counts = new Map();
+  mcqQuestions.forEach((question) => {
+    Object.values(question.options || {}).forEach((optionText) => {
+      const key = normalizeMcqRepairKey(optionText);
+      if (!key) {
+        return;
+      }
+
+      counts.set(key, (counts.get(key) || 0) + 1);
+    });
+  });
+
+  const threshold = Math.max(6, Math.ceil(mcqQuestions.length * 0.6));
+  const overused = Array.from(counts.values()).filter((count) => count >= threshold);
+  return overused.length >= 3;
+}
+
 function enhanceMcqDistractors(mcqQuestions = []) {
+  if (!needsMcqDistractorRepair(mcqQuestions)) {
+    return mcqQuestions;
+  }
+
   const correctPool = mcqQuestions
     .map((question) => question.options?.[question.correctAnswer])
     .filter(Boolean);

@@ -133,9 +133,67 @@ const splitIntoSentences = (value) => {
     .filter(Boolean);
 };
 
-const dedupeTextList = (values = []) => Array.from(new Set(
-  normalizeTextList(values).filter(Boolean)
-));
+const normalizeTextComparisonKey = (value) => normalizeInlineText(value)
+  .replace(/[“”]/g, "\"")
+  .replace(/[‘’]/g, "'")
+  .replace(/[.,;:!?]+$/g, "")
+  .toLowerCase();
+
+const isSameNoteText = (left, right) => {
+  const leftKey = normalizeTextComparisonKey(left);
+  const rightKey = normalizeTextComparisonKey(right);
+  return Boolean(leftKey && rightKey && leftKey === rightKey);
+};
+
+const dedupeSentencesInText = (value) => {
+  const text = normalizeInlineText(value);
+  if (!text) {
+    return "";
+  }
+
+  const sentences = splitIntoSentences(text);
+  if (sentences.length < 2) {
+    return text;
+  }
+
+  const seen = new Set();
+  const uniqueSentences = sentences.filter((sentence) => {
+    const key = normalizeTextComparisonKey(sentence);
+    if (!key || seen.has(key)) {
+      return false;
+    }
+
+    seen.add(key);
+    return true;
+  });
+
+  return uniqueSentences.join(" ") || text;
+};
+
+const dedupeTextList = (values = []) => {
+  const seen = new Set();
+
+  return normalizeTextList(values)
+    .map((value) => dedupeSentencesInText(value))
+    .filter((value) => {
+      const key = normalizeTextComparisonKey(value);
+      if (!key || seen.has(key)) {
+        return false;
+      }
+
+      seen.add(key);
+      return true;
+    });
+};
+
+const pickUniqueText = (value, seenValues = []) => {
+  const text = dedupeSentencesInText(value);
+  if (!text) {
+    return "";
+  }
+
+  return seenValues.some((seenValue) => isSameNoteText(text, seenValue)) ? "" : text;
+};
 
 const flattenContentBlock = (block) => {
   if (!block || typeof block !== "object") {
@@ -251,13 +309,13 @@ const buildLegacyBlocks = (section) => {
       name: figure.name,
       title: figure.title,
       dates: "",
-      keyActions: [
+      keyActions: dedupeTextList([
         bioSentences[0] || figure.bio || "",
         significanceSentences[0] || bioSentences[1] || ""
-      ].filter(Boolean),
-      perspective: figure.perspective || "",
-      legacy: figure.significance || "",
-      apSignificance: figure.significance || figure.bio || "",
+      ]),
+      perspective: dedupeSentencesInText(figure.perspective || ""),
+      legacy: dedupeSentencesInText(figure.significance || ""),
+      apSignificance: dedupeSentencesInText(figure.significance || figure.bio || ""),
       imageId: figure.imageId || null
     });
   });
@@ -286,10 +344,10 @@ const buildLegacyBlocks = (section) => {
 
 const getSectionOverview = (section) => {
   if (section?.overview) {
-    return normalizeInlineText(section.overview);
+    return dedupeSentencesInText(section.overview);
   }
 
-  return splitIntoSentences(section?.narrative || "").slice(0, 2).join(" ");
+  return dedupeSentencesInText(splitIntoSentences(section?.narrative || "").slice(0, 2).join(" "));
 };
 
 const getSectionBlocks = (section) => {
@@ -350,7 +408,7 @@ const deriveSectionSources = (section, blocks) => {
   return dedupeTextList(sources);
 };
 
-const deriveSectionSignificance = (section, blocks) => normalizeInlineText(
+const deriveSectionSignificance = (section, blocks) => dedupeSentencesInText(
   section?.significance
   || (Array.isArray(section?.apExamAngles) ? section.apExamAngles[0] : "")
   || blocks.map((block) => block?.apSignificance || block?.apRelevance).find(Boolean)
@@ -364,9 +422,9 @@ const collectSectionFigures = (section, blocks, imageLookup) => {
     figures.push({
       name: figure.name,
       role: figure.title,
-      bio: figure.bio,
-      significance: figure.significance,
-      perspective: figure.perspective,
+      bio: dedupeSentencesInText(figure.bio),
+      significance: dedupeSentencesInText(figure.significance),
+      perspective: dedupeSentencesInText(figure.perspective),
       image: figure.imageId ? (imageLookup.get(figure.imageId) || null) : null
     });
   });
@@ -377,9 +435,9 @@ const collectSectionFigures = (section, blocks, imageLookup) => {
       figures.push({
         name: block.name,
         role: block.title,
-        bio: normalizeTextList(block.keyActions || []).join(" "),
-        significance: block.legacy || block.apSignificance || "",
-        perspective: block.perspective || "",
+        bio: dedupeTextList(block.keyActions || []).join(" "),
+        significance: dedupeSentencesInText(block.legacy || block.apSignificance || ""),
+        perspective: dedupeSentencesInText(block.perspective || ""),
         image: block.imageId ? (imageLookup.get(block.imageId) || null) : null
       });
     });
@@ -463,9 +521,9 @@ const buildNotesPeriod = ({ id, short, data }) => {
       significance: deriveSectionSignificance(section, blocks),
       causes: deriveSectionCauses(section, blocks),
       effects: deriveSectionEffects(section, blocks),
-      connections: normalizeTextList(section.connections || []),
+      connections: dedupeTextList(section.connections || []),
       sources: deriveSectionSources(section, blocks),
-      apExamAngles: normalizeTextList(section.apExamAngles || []),
+      apExamAngles: dedupeTextList(section.apExamAngles || []),
       images: buildPlacedImages(resolvedImages)
     };
   });
@@ -479,9 +537,9 @@ const buildNotesPeriod = ({ id, short, data }) => {
     range: data.chapterMeta.dateRange,
     weightLabel: data.chapterMeta.apExamWeight,
     weightValue: parseWeightValue(data.chapterMeta.apExamWeight),
-    overview: normalizeInlineText(data.chapterMeta.oneLineSummary),
+    overview: dedupeSentencesInText(data.chapterMeta.oneLineSummary),
     bigThemes: data.chapterMeta.bigPictureThemes || [],
-    examTips: normalizeTextList(data.chapterMeta.examTips || []),
+    examTips: dedupeTextList(data.chapterMeta.examTips || []),
     sectionThemes: {
       context: mergeThemeKeys(sections, ["wor", "pol", "mig"]),
       events: mergeThemeKeys(sections, ["wor", "pol", "cul"]),
@@ -489,15 +547,15 @@ const buildNotesPeriod = ({ id, short, data }) => {
       vocabulary: mergeThemeKeys(sections, ["wor", "pol", "cul"]),
       essay: mergeThemeKeys(sections, ["pol", "wor", "nat"])
     },
-    context: normalizeInlineText(data.notes.historicalContext?.overview || ""),
+    context: dedupeSentencesInText(data.notes.historicalContext?.overview || ""),
     contextHighlights: [
       {
         title: "Preceding Causes",
-        items: normalizeTextList(data.notes.historicalContext?.precedingCauses || [])
+        items: dedupeTextList(data.notes.historicalContext?.precedingCauses || [])
       },
       {
         title: "Geographic Context",
-        text: normalizeInlineText(data.notes.historicalContext?.geographicContext || "")
+        text: dedupeSentencesInText(data.notes.historicalContext?.geographicContext || "")
       }
     ],
     contextImage: resolveNoteImage(data.notes.historicalContext?.contextImage, imageLookup),
@@ -507,21 +565,21 @@ const buildNotesPeriod = ({ id, short, data }) => {
     vocabLookup,
     vocabPattern,
     essay: {
-      intro: normalizeInlineText(data.notes.overarchingAnalysis?.complexity || ""),
-      prompts: [
+      intro: dedupeSentencesInText(data.notes.overarchingAnalysis?.complexity || ""),
+      prompts: dedupeTextList([
         ...(data.essayPractice?.saq || []).map((item) => item.prompt),
         ...(data.essayPractice?.leq || []).map((item) => item.prompt),
         ...(data.essayPractice?.dbq || []).map((item) => item.prompt)
-      ].map((item) => normalizeInlineText(item)).filter(Boolean),
-      theses: [
+      ]),
+      theses: dedupeTextList([
         ...(data.essayPractice?.leq || []).flatMap((item) => item.thesisExamples || []),
         ...(data.essayPractice?.dbq || []).map((item) => item.thesisExample).filter(Boolean)
-      ].map((item) => normalizeInlineText(item)).filter(Boolean),
-      analysis: [
+      ]),
+      analysis: dedupeTextList([
         data.notes.overarchingAnalysis?.continuity ? `Continuity: ${data.notes.overarchingAnalysis.continuity}` : "",
         data.notes.overarchingAnalysis?.change ? `Change: ${data.notes.overarchingAnalysis.change}` : "",
         ...(data.notes.overarchingAnalysis?.comparisonAngles || [])
-      ].map((item) => normalizeInlineText(item)).filter(Boolean)
+      ])
     }
   };
 };
@@ -784,7 +842,7 @@ const ensureElementId = (element, prefix = "notes-link") => {
 };
 
 const renderNoteText = (value, period) => {
-  const text = normalizeInlineText(value);
+  const text = dedupeSentencesInText(value);
 
   if (!text) {
     return "";
@@ -883,11 +941,18 @@ const contentBlockTypeLabels = {
   definition: "Definition"
 };
 
-const renderBulletList = (items, period, className = "arrow-list", prefix = "") => `
-  <ul class="${className}">
-    ${items.map((item) => `<li>${prefix}${renderKeyPointText(item, period)}</li>`).join("")}
-  </ul>
-`;
+const renderBulletList = (items, period, className = "arrow-list", prefix = "") => {
+  const uniqueItems = dedupeTextList(items);
+  if (!uniqueItems.length) {
+    return "";
+  }
+
+  return `
+    <ul class="${className}">
+      ${uniqueItems.map((item) => `<li>${prefix}${renderKeyPointText(item, period)}</li>`).join("")}
+    </ul>
+  `;
+};
 
 const renderContentBlockHeader = (block, label) => `
   <div class="content-block-head">
@@ -896,8 +961,8 @@ const renderContentBlockHeader = (block, label) => `
   </div>
 `;
 
-const renderContentBlockFooter = (block, period) => {
-  const significance = normalizeInlineText(block.apSignificance || block.apRelevance || "");
+const renderContentBlockFooter = (block, period, seenValues = []) => {
+  const significance = pickUniqueText(block.apSignificance || block.apRelevance || "", seenValues);
   if (!significance) {
     return "";
   }
@@ -922,19 +987,23 @@ const renderContentBlock = (block, period) => {
         <div class="content-block-copy">
           <p>${renderNoteText(block.text, period)}</p>
         </div>
-        ${renderContentBlockFooter(block, period)}
+        ${renderContentBlockFooter(block, period, [block.text])}
       </article>
     `;
   }
 
   if (block.type === "definition") {
+    const definition = dedupeSentencesInText(block.definition);
+    const inContext = pickUniqueText(block.inContext, [definition]);
+    const apRelevance = pickUniqueText(block.apRelevance, [definition, inContext]);
+
     return `
       <article class="content-block content-block-definition">
         ${renderContentBlockHeader(block, block.term)}
         <div class="content-block-copy">
-          <p>${renderNoteText(block.definition, period)}</p>
-          ${block.inContext ? `<p><strong>In Context:</strong> ${renderNoteText(block.inContext, period)}</p>` : ""}
-          ${block.apRelevance ? `<p><strong>AP Relevance:</strong> ${renderNoteText(block.apRelevance, period)}</p>` : ""}
+          <p>${renderNoteText(definition, period)}</p>
+          ${inContext ? `<p><strong>In Context:</strong> ${renderNoteText(inContext, period)}</p>` : ""}
+          ${apRelevance ? `<p><strong>AP Relevance:</strong> ${renderNoteText(apRelevance, period)}</p>` : ""}
         </div>
       </article>
     `;
@@ -948,7 +1017,7 @@ const renderContentBlock = (block, period) => {
           <strong class="content-block-value">${escapeHtml(block.value || "")}</strong>
           ${block.date ? `<span class="content-block-date">${escapeHtml(block.date)}</span>` : ""}
         </div>
-        ${renderContentBlockFooter(block, period)}
+        ${renderContentBlockFooter(block, period, [block.value, block.date])}
       </article>
     `;
   }
@@ -961,12 +1030,25 @@ const renderContentBlock = (block, period) => {
           <p>${renderNoteText(block.text, period)}</p>
           ${block.context ? `<footer>${renderNoteText(block.context, period)}</footer>` : ""}
         </blockquote>
-        ${renderContentBlockFooter(block, period)}
+        ${renderContentBlockFooter(block, period, [block.text, block.context])}
       </article>
     `;
   }
 
   if (block.type === "who") {
+    const keyActions = dedupeTextList(block.keyActions || []);
+    const perspective = pickUniqueText(block.perspective, keyActions);
+    const legacy = pickUniqueText(block.legacy, [...keyActions, perspective, block.apSignificance]);
+    const bodyText = [...keyActions];
+
+    if (perspective) {
+      bodyText.push(perspective);
+    }
+
+    if (legacy) {
+      bodyText.push(legacy);
+    }
+
     return `
       <article class="content-block content-block-who">
         ${renderContentBlockHeader(block, block.name)}
@@ -976,17 +1058,18 @@ const renderContentBlock = (block, period) => {
             : ""}
           <div class="content-block-copy">
             ${block.title ? `<p><strong>${escapeHtml(block.title)}</strong>${block.dates ? ` · ${escapeHtml(block.dates)}` : ""}</p>` : ""}
-            ${(block.keyActions || []).length ? renderBulletList(block.keyActions, period, "content-block-list") : ""}
-            ${block.perspective ? `<p><strong>Perspective:</strong> ${renderNoteText(block.perspective, period)}</p>` : ""}
-            ${block.legacy ? `<p><strong>Legacy:</strong> ${renderNoteText(block.legacy, period)}</p>` : ""}
+            ${keyActions.length ? renderBulletList(keyActions, period, "content-block-list") : ""}
+            ${perspective ? `<p><strong>Perspective:</strong> ${renderNoteText(perspective, period)}</p>` : ""}
+            ${legacy ? `<p><strong>Legacy:</strong> ${renderNoteText(legacy, period)}</p>` : ""}
           </div>
         </div>
-        ${renderContentBlockFooter(block, period)}
+        ${renderContentBlockFooter(block, period, bodyText)}
       </article>
     `;
   }
 
   if (block.type === "chain") {
+    const stepText = (block.steps || []).flatMap((step) => [step.event, step.result]);
     return `
       <article class="content-block content-block-chain">
         ${renderContentBlockHeader(block, block.label)}
@@ -999,12 +1082,13 @@ const renderContentBlock = (block, period) => {
             </div>
           `).join("")}
         </div>
-        ${renderContentBlockFooter(block, period)}
+        ${renderContentBlockFooter(block, period, stepText)}
       </article>
     `;
   }
 
   if (block.type === "cluster") {
+    const itemText = (block.items || []).flatMap((item) => [item.name, item.description, item.date]);
     return `
       <article class="content-block content-block-cluster">
         ${renderContentBlockHeader(block, block.label)}
@@ -1016,7 +1100,7 @@ const renderContentBlock = (block, period) => {
             </div>
           `).join("")}
         </div>
-        ${renderContentBlockFooter(block, period)}
+        ${renderContentBlockFooter(block, period, itemText)}
       </article>
     `;
   }
@@ -1024,8 +1108,15 @@ const renderContentBlock = (block, period) => {
   if (block.type === "comparison" || block.type === "tension") {
     const left = block.type === "comparison" ? block.itemA : block.sideA;
     const right = block.type === "comparison" ? block.itemB : block.sideB;
-    const shared = block.type === "comparison" ? (block.sharedTraits || []) : [];
-    const outro = block.type === "comparison" ? "" : normalizeInlineText(block.outcome || "");
+    const leftPoints = dedupeTextList(left?.points || []);
+    const rightPoints = dedupeTextList(right?.points || []);
+    const shared = block.type === "comparison"
+      ? dedupeTextList(block.sharedTraits || []).filter((item) => (
+        !leftPoints.some((point) => isSameNoteText(point, item))
+        && !rightPoints.some((point) => isSameNoteText(point, item))
+      ))
+      : [];
+    const outro = block.type === "comparison" ? "" : pickUniqueText(block.outcome || "", [...leftPoints, ...rightPoints, ...shared]);
 
     return `
       <article class="content-block content-block-grid-wrap">
@@ -1033,16 +1124,16 @@ const renderContentBlock = (block, period) => {
         <div class="content-block-grid">
           <div class="content-block-panel">
             <h5>${escapeHtml(left?.label || "Side A")}</h5>
-            ${(left?.points || []).length ? renderBulletList(left.points, period, "content-block-list") : ""}
+            ${leftPoints.length ? renderBulletList(leftPoints, period, "content-block-list") : ""}
           </div>
           <div class="content-block-panel">
             <h5>${escapeHtml(right?.label || "Side B")}</h5>
-            ${(right?.points || []).length ? renderBulletList(right.points, period, "content-block-list") : ""}
+            ${rightPoints.length ? renderBulletList(rightPoints, period, "content-block-list") : ""}
           </div>
         </div>
         ${shared.length ? `<div class="content-block-footer"><strong>Shared Traits</strong>${renderBulletList(shared, period, "content-block-list")}</div>` : ""}
         ${outro ? `<div class="content-block-footer"><strong>Outcome</strong><p>${renderNoteText(outro, period)}</p></div>` : ""}
-        ${renderContentBlockFooter(block, period)}
+        ${renderContentBlockFooter(block, period, [...leftPoints, ...rightPoints, ...shared, outro])}
       </article>
     `;
   }
@@ -1124,13 +1215,12 @@ const renderChapterSwitcher = () => {
 const renderPeriod = (period) => {
   const weightWidth = Math.min(100, (period.weightValue / maxWeightValue) * 100);
   const vocabLetters = new Set(period.vocabulary.map((item) => item.term.charAt(0).toUpperCase()));
-  const examTipsMarkup = (period.examTips || []).length
+  const examTipsListMarkup = renderBulletList(period.examTips || [], period, "arrow-list");
+  const examTipsMarkup = examTipsListMarkup
     ? `
       <div class="significance-callout">
         <strong>Exam Tips</strong>
-        <ul class="arrow-list">
-          ${(period.examTips || []).map((tip) => `<li>${renderKeyPointText(tip, period)}</li>`).join("")}
-        </ul>
+        ${examTipsListMarkup}
       </div>
     `
     : "";
@@ -1141,7 +1231,7 @@ const renderPeriod = (period) => {
           <div class="arrow-block">
             <h5>${escapeHtml(block.title)}</h5>
             ${block.items?.length
-              ? `<ul class="arrow-list">${block.items.map((item) => `<li>${renderKeyPointText(item, period)}</li>`).join("")}</ul>`
+              ? renderBulletList(block.items, period, "arrow-list")
               : `<p>${renderKeyPointText(block.text || "", period)}</p>`}
           </div>
         `).join("")}
@@ -1162,12 +1252,15 @@ const renderPeriod = (period) => {
       ${event.overview ? `<p class="event-overview">${renderNoteText(event.overview, period)}</p>` : ""}
       ${renderNoteMediaGrid(event.images.afterOverview || [], period)}
       ${renderEventBlockStack(event, period)}
-      ${event.significance ? `
+      ${(() => {
+        const eventSignificance = pickUniqueText(event.significance, [event.overview, ...event.apExamAngles]);
+        return eventSignificance ? `
         <div class="significance-callout">
           <strong>Section Significance</strong>
-          <p>${renderKeyPointText(event.significance, period)}</p>
+          <p>${renderKeyPointText(eventSignificance, period)}</p>
         </div>
-      ` : ""}
+      ` : "";
+      })()}
       ${(event.causes.length || event.effects.length || event.apExamAngles.length || event.connections?.length || event.sources?.length) ? `
         <div class="arrow-grid">
           ${event.causes.length ? `
@@ -1205,20 +1298,26 @@ const renderPeriod = (period) => {
     </article>
   `).join("");
 
-  const figuresMarkup = period.figures.map((figure) => `
-    <article class="figure-card">
-      <div class="figure-meta">
-        <h4>${escapeHtml(figure.name)}</h4>
-        <div class="figure-role">${escapeHtml(figure.role)}</div>
-      </div>
-      <div class="figure-body">
-        ${figure.image ? renderNoteMediaGrid([figure.image], period) : ""}
-        <p>${renderNoteText(figure.bio, period)}</p>
-        ${figure.significance ? `<p class="figure-extra"><strong>Significance:</strong> ${renderNoteText(figure.significance, period)}</p>` : ""}
-        ${figure.perspective ? `<p class="figure-extra"><strong>Perspective:</strong> ${renderNoteText(figure.perspective, period)}</p>` : ""}
-      </div>
-    </article>
-  `).join("");
+  const figuresMarkup = period.figures.map((figure) => {
+    const bio = dedupeSentencesInText(figure.bio);
+    const significance = pickUniqueText(figure.significance, [bio]);
+    const perspective = pickUniqueText(figure.perspective, [bio, significance]);
+
+    return `
+      <article class="figure-card">
+        <div class="figure-meta">
+          <h4>${escapeHtml(figure.name)}</h4>
+          <div class="figure-role">${escapeHtml(figure.role)}</div>
+        </div>
+        <div class="figure-body">
+          ${figure.image ? renderNoteMediaGrid([figure.image], period) : ""}
+          ${bio ? `<p>${renderNoteText(bio, period)}</p>` : ""}
+          ${significance ? `<p class="figure-extra"><strong>Significance:</strong> ${renderNoteText(significance, period)}</p>` : ""}
+          ${perspective ? `<p class="figure-extra"><strong>Perspective:</strong> ${renderNoteText(perspective, period)}</p>` : ""}
+        </div>
+      </article>
+    `;
+  }).join("");
 
   const vocabFilterMarkup = alphabet.map((letter) => {
     if (letter === "All") {

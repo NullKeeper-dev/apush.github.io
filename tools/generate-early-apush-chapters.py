@@ -1,4 +1,5 @@
 import json
+import re
 from copy import deepcopy
 from pathlib import Path
 
@@ -15,6 +16,15 @@ THEME = {
     "mig": "Migration and Settlement",
     "geo": "Geography and Environment",
     "wor": "America in the World",
+}
+
+MCQ_STOP_WORDS = {
+    "a", "an", "and", "are", "as", "at", "be", "because", "before", "best", "broader", "by",
+    "claim", "contributed", "development", "directly", "during", "evidence", "following", "for",
+    "from", "historian", "historical", "in", "into", "is", "it", "its", "likely", "most", "not",
+    "of", "on", "or", "significance", "studying", "support", "supported", "that", "the", "their",
+    "them", "these", "they", "this", "those", "through", "to", "trend", "was", "were", "which",
+    "while", "with", "would",
 }
 
 
@@ -136,11 +146,97 @@ def rotate_options(correct, wrong, index):
     return options, letters[slot]
 
 
+def normalize_mcq_text(value):
+    return " ".join(str(value or "").split()).strip()
+
+
+def normalize_mcq_key(value):
+    return normalize_mcq_text(value).rstrip(".,;:!?").lower()
+
+
+def extract_mcq_keywords(*values):
+    text = " ".join(normalize_mcq_text(value).lower() for value in values)
+    tokens = re.findall(r"[a-z][a-z'-]{2,}", text)
+    return {token for token in tokens if token not in MCQ_STOP_WORDS}
+
+
+def shared_keyword_count(left, right):
+    return len(left & right)
+
+
+def needs_mcq_distractor_repair(facts):
+    counts = {}
+    for item in facts:
+        for wrong in item.get("wrong", []):
+            key = normalize_mcq_key(wrong)
+            if key:
+                counts[key] = counts.get(key, 0) + 1
+
+    threshold = max(6, int(len(facts) * 0.6))
+    overused = [count for count in counts.values() if count >= threshold]
+    return len(overused) >= 3
+
+
+def generate_mcq_distractors(item, question_text, facts, reuse_counts):
+    prompt_keywords = extract_mcq_keywords(item["topic"], item["correct"], question_text, item["explanation"])
+    correct_keywords = extract_mcq_keywords(item["correct"])
+    candidates = []
+
+    for candidate in facts:
+        if candidate["correct"] == item["correct"] or candidate["topic"] == item["topic"]:
+            continue
+
+        candidate_keywords = extract_mcq_keywords(candidate["topic"], candidate["correct"], candidate["explanation"])
+        overlap_prompt = shared_keyword_count(prompt_keywords, candidate_keywords)
+        overlap_correct = shared_keyword_count(correct_keywords, candidate_keywords)
+        if overlap_correct >= 4:
+            continue
+
+        score = 0
+        if candidate["theme"] == item["theme"]:
+            score += 14
+        if candidate.get("skill") == item.get("skill"):
+            score += 7
+        score += overlap_prompt * 4
+        score += min(overlap_correct, 2)
+
+        length_ratio = len(candidate["correct"]) / max(len(item["correct"]), 1)
+        if 0.65 <= length_ratio <= 1.6:
+            score += 2
+
+        score -= reuse_counts.get(candidate["correct"], 0) * 3
+        candidates.append((score, candidate["correct"]))
+
+    candidates.sort(key=lambda entry: (-entry[0], reuse_counts.get(entry[1], 0), entry[1]))
+    selected = []
+    for _, text in candidates:
+        if text in selected:
+            continue
+        selected.append(text)
+        reuse_counts[text] = reuse_counts.get(text, 0) + 1
+        if len(selected) == 3:
+            break
+
+    if len(selected) < 3:
+        fallback = sorted(
+            {candidate["correct"] for candidate in facts if candidate["correct"] != item["correct"]} - set(selected),
+            key=lambda text: (reuse_counts.get(text, 0), text),
+        )
+        while len(selected) < 3 and fallback:
+            text = fallback.pop(0)
+            selected.append(text)
+            reuse_counts[text] = reuse_counts.get(text, 0) + 1
+
+    return selected
+
+
 def build_mcqs(spec):
     questions = []
     images = spec["images"]
     texts = spec["textStimuli"]
     facts = spec["mcqFacts"]
+    auto_distractors = needs_mcq_distractor_repair(facts)
+    reuse_counts = {}
     for index in range(20):
         item = facts[index % len(facts)]
         difficulty = "Easy" if index < 6 else "Medium" if index < 14 else "Hard"
@@ -155,7 +251,8 @@ def build_mcqs(spec):
             question_text = f"A historian studying {item['topic']} would most likely connect it to which broader trend?"
         else:
             question_text = f"Which development best explains the APUSH significance of {item['topic']}?"
-        options, correct_letter = rotate_options(item["correct"], item["wrong"], index)
+        wrong_answers = generate_mcq_distractors(item, question_text, facts, reuse_counts) if auto_distractors else item["wrong"]
+        options, correct_letter = rotate_options(item["correct"], wrong_answers, index)
         image = images[index % len(images)] if use_image else None
         text = texts[(index - 4) % len(texts)] if use_text else None
         questions.append(
