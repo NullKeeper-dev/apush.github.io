@@ -79,6 +79,105 @@
       global: "chapter7Data"
     },
     {
+      id: "ch8",
+      number: 8,
+      short: "Ch 8",
+      title: "Securing the Republic",
+      periodId: "p3",
+      script: "chapter8-data.js",
+      global: "chapter8Data"
+    },
+    {
+      id: "ch9",
+      number: 9,
+      short: "Ch 9",
+      title: "The Market Revolution",
+      periodId: "p4",
+      script: "chapter9-data.js",
+      global: "chapter9Data"
+    },
+    {
+      id: "ch10",
+      number: 10,
+      short: "Ch 10",
+      title: "Democracy in America",
+      periodId: "p4",
+      script: "chapter10-data.js",
+      global: "chapter10Data"
+    },
+    {
+      id: "ch11",
+      number: 11,
+      short: "Ch 11",
+      title: "The Peculiar Institution",
+      periodId: "p4",
+      script: "chapter11-data.js",
+      global: "chapter11Data"
+    },
+    {
+      id: "ch12",
+      number: 12,
+      short: "Ch 12",
+      title: "An Age of Reform",
+      periodId: "p5",
+      script: "chapter12-data.js",
+      global: "chapter12Data"
+    },
+    {
+      id: "ch13",
+      number: 13,
+      short: "Ch 13",
+      title: "A House Divided",
+      periodId: "p5",
+      script: "chapter13-data.js",
+      global: "chapter13Data"
+    },
+    {
+      id: "ch14",
+      number: 14,
+      short: "Ch 14",
+      title: "A New Birth of Freedom: The Civil War",
+      periodId: "p5",
+      script: "chapter14-data.js",
+      global: "chapter14Data"
+    },
+    {
+      id: "ch15",
+      number: 15,
+      short: "Ch 15",
+      title: "\"What Is Freedom?\": Reconstruction",
+      periodId: "p5",
+      script: "chapter15-data.js",
+      global: "chapter15Data"
+    },
+    {
+      id: "ch16",
+      number: 16,
+      short: "Ch 16",
+      title: "America's Gilded Age",
+      periodId: "p6",
+      script: "chapter16-data.js",
+      global: "chapter16Data"
+    },
+    {
+      id: "ch17",
+      number: 17,
+      short: "Ch 17",
+      title: "Freedom's Boundaries, at Home and Abroad",
+      periodId: "p6",
+      script: "chapter17-data.js",
+      global: "chapter17Data"
+    },
+    {
+      id: "ch18",
+      number: 18,
+      short: "Ch 18",
+      title: "The Progressive Era",
+      periodId: "p7",
+      script: "chapter18-data.js",
+      global: "chapter18Data"
+    },
+    {
       id: "ch19",
       number: 19,
       short: "Ch 19",
