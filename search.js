@@ -150,10 +150,22 @@
         keywords: ["timeline", "events", "chronology"]
       },
       {
+        label: "Significant Timeline",
+        subtitle: "Essay-focused timeline of major APUSH evidence events for DBQs and LEQs.",
+        url: "significant-timeline.html",
+        keywords: ["significant timeline", "dbq evidence", "leq evidence", "civil war", "new deal", "reconstruction", "cold war", "civil rights"]
+      },
+      {
         label: "Notes",
         subtitle: "Integrated chapter notes grouped by APUSH period with context, figures, and expanded vocabulary support.",
         url: "notes.html",
         keywords: ["notes", "study map", "vocabulary"]
+      },
+      {
+        label: "Presidents",
+        subtitle: "APUSH presidents review page with significance notes, era filters, and quick jumps.",
+        url: "presidents.html",
+        keywords: ["presidents", "presidencies", "executive branch", "washington", "lincoln", "fdr", "reagan", "biden", "trump"]
       },
       {
         label: "Progress Check",

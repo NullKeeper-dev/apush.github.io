@@ -337,7 +337,7 @@ window.chapter11Data = {
       "Work, Exchange, Technology",
       "American and National Identity"
     ],
-    "oneLineSummary": "How did slavery shape social and economic relations in the Old South? 396 What were the legal and material constraints on slaves' lives and work? Slavery expanded, reshaped the southern economy, and provoked resistance and abolition.",
+    "oneLineSummary": "How did slavery shape social and economic relations in the Old South? What were the legal and material constraints on slaves' lives and work? Slavery expanded, reshaped the southern economy, and provoked resistance and abolition.",
     "periodContext": "As cotton production surged, slavery became more profitable and more deeply embedded in the national economy, even while enslaved people built families, cultures, and forms of resistance under brutal conditions.",
     "examTips": [
       "Track how the peculiar institution changed who held political power and who remained excluded from it.",
@@ -347,7 +347,7 @@ window.chapter11Data = {
   },
   "notes": {
     "historicalContext": {
-      "overview": "How did slavery shape social and economic relations in the Old South? 396 What were the legal and material constraints on slaves' lives and work? 406 How did family, gender, religion, and values combine to create a distinct slave culture in the Old South?",
+      "overview": "How did slavery shape social and economic relations in the Old South? What were the legal and material constraints on slaves' lives and work? How did family, gender, religion, and values combine to create a distinct slave culture in the Old South?",
       "precedingCauses": [],
       "geographicContext": "The Peculiar Institution connected national debates to wider regional, territorial, and international developments in ways that reshaped the United States beyond a single city or state.",
       "contextImage": {
@@ -2257,7 +2257,7 @@ window.chapter11Data = {
           "Another strong thesis could argue that the peculiar institution reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "How did slavery shape social and economic relations in the Old South? 396 What were the legal and material constraints on slaves' lives and work? 406 How did family, gender, religion, and values combine to create a distinct slave culture in the Old South?",
+          "contextualization": "How did slavery shape social and economic relations in the Old South? What were the legal and material constraints on slaves' lives and work? How did family, gender, religion, and values combine to create a distinct slave culture in the Old South?",
           "bodyParagraph1": {
             "claim": "Life Under Slavery",
             "evidence": [
@@ -2302,7 +2302,7 @@ window.chapter11Data = {
           "Another strong thesis could argue that the peculiar institution reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "How did slavery shape social and economic relations in the Old South? 396 What were the legal and material constraints on slaves' lives and work? 406 How did family, gender, religion, and values combine to create a distinct slave culture in the Old South?",
+          "contextualization": "How did slavery shape social and economic relations in the Old South? What were the legal and material constraints on slaves' lives and work? How did family, gender, religion, and values combine to create a distinct slave culture in the Old South?",
           "bodyParagraph1": {
             "claim": "Life Under Slavery",
             "evidence": [

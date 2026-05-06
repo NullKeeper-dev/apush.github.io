@@ -337,7 +337,7 @@ window.chapter8Data = {
       "American and National Identity",
       "America in the World"
     ],
-    "oneLineSummary": "What issues made the politics of the 1790s so divisive? 279 How did competing views of freedom and global events promote the political divisions of the 1790s? Political parties, Jeffersonian power, and the War of 1812 transformed the early republic.",
+    "oneLineSummary": "What issues made the politics of the 1790s so divisive? How did competing views of freedom and global events promote the political divisions of the 1790s? Political parties, Jeffersonian power, and the War of 1812 transformed the early republic.",
     "periodContext": "In the early republic, Americans had to decide how much power the federal government should hold, how the new nation would respond to European wars, and what freedom would mean in a rapidly expanding United States.",
     "examTips": [
       "Track how securing the republic changed who held political power and who remained excluded from it.",
@@ -347,7 +347,7 @@ window.chapter8Data = {
   },
   "notes": {
     "historicalContext": {
-      "overview": "What issues made the politics of the 1790s so divisive? 279 How did competing views of freedom and global events promote the political divisions of the 1790s? 285 What were the achievements and failures of Jefferson's presidency?",
+      "overview": "What issues made the politics of the 1790s so divisive? How did competing views of freedom and global events promote the political divisions of the 1790s? What were the achievements and failures of Jefferson's presidency?",
       "precedingCauses": [],
       "geographicContext": "Securing the Republic connected national debates to wider regional, territorial, and international developments in ways that reshaped the United States beyond a single city or state.",
       "contextImage": {
@@ -2597,7 +2597,7 @@ window.chapter8Data = {
           "Another strong thesis could argue that securing the republic reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What issues made the politics of the 1790s so divisive? 279 How did competing views of freedom and global events promote the political divisions of the 1790s? 285 What were the achievements and failures of Jefferson's presidency?",
+          "contextualization": "What issues made the politics of the 1790s so divisive? How did competing views of freedom and global events promote the political divisions of the 1790s? What were the achievements and failures of Jefferson's presidency?",
           "bodyParagraph1": {
             "claim": "Jefferson in Power",
             "evidence": [
@@ -2642,7 +2642,7 @@ window.chapter8Data = {
           "Another strong thesis could argue that securing the republic reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What issues made the politics of the 1790s so divisive? 279 How did competing views of freedom and global events promote the political divisions of the 1790s? 285 What were the achievements and failures of Jefferson's presidency?",
+          "contextualization": "What issues made the politics of the 1790s so divisive? How did competing views of freedom and global events promote the political divisions of the 1790s? What were the achievements and failures of Jefferson's presidency?",
           "bodyParagraph1": {
             "claim": "Jefferson in Power",
             "evidence": [

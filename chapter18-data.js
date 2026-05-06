@@ -337,7 +337,7 @@ window.chapter18Data = {
       "Work, Exchange, Technology",
       "Culture and Society"
     ],
-    "oneLineSummary": "Why was the city such a central element in Progressive America? 696 How did the labor and women's movements challenge the nineteenth-century meanings of American freedom? Reformers, workers, and progressive presidents tried to make industrial America more democratic and efficient.",
+    "oneLineSummary": "Why was the city such a central element in Progressive America? How did the labor and women's movements challenge the nineteenth-century meanings of American freedom? Reformers, workers, and progressive presidents tried to make industrial America more democratic and efficient.",
     "periodContext": "In the early twentieth century, reformers responded to urban growth, corporate power, labor conflict, and mass immigration by expanding government oversight while still arguing over race, democracy, and the limits of freedom.",
     "examTips": [
       "Track how the progressive era changed who held political power and who remained excluded from it.",
@@ -347,7 +347,7 @@ window.chapter18Data = {
   },
   "notes": {
     "historicalContext": {
-      "overview": "Why was the city such a central element in Progressive America? 696 How did the labor and women's movements challenge the nineteenth-century meanings of American freedom? 704 In what ways did Progressivism include both democratic and anti-democratic impulses?",
+      "overview": "Why was the city such a central element in Progressive America? How did the labor and women's movements challenge the nineteenth-century meanings of American freedom? In what ways did Progressivism include both democratic and anti-democratic impulses?",
       "precedingCauses": [],
       "geographicContext": "The Progressive Era connected national debates to wider regional, territorial, and international developments in ways that reshaped the United States beyond a single city or state.",
       "contextImage": {
@@ -2796,7 +2796,7 @@ window.chapter18Data = {
           "Another strong thesis could argue that the progressive era reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "Why was the city such a central element in Progressive America? 696 How did the labor and women's movements challenge the nineteenth-century meanings of American freedom? 704 In what ways did Progressivism include both democratic and anti-democratic impulses?",
+          "contextualization": "Why was the city such a central element in Progressive America? How did the labor and women's movements challenge the nineteenth-century meanings of American freedom? In what ways did Progressivism include both democratic and anti-democratic impulses?",
           "bodyParagraph1": {
             "claim": "An Urban Age and a Consumer Society",
             "evidence": [
@@ -2841,7 +2841,7 @@ window.chapter18Data = {
           "Another strong thesis could argue that the progressive era reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "Why was the city such a central element in Progressive America? 696 How did the labor and women's movements challenge the nineteenth-century meanings of American freedom? 704 In what ways did Progressivism include both democratic and anti-democratic impulses?",
+          "contextualization": "Why was the city such a central element in Progressive America? How did the labor and women's movements challenge the nineteenth-century meanings of American freedom? In what ways did Progressivism include both democratic and anti-democratic impulses?",
           "bodyParagraph1": {
             "claim": "An Urban Age and a Consumer Society",
             "evidence": [

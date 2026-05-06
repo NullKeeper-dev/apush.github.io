@@ -337,7 +337,7 @@ window.chapter13Data = {
       "American and National Identity",
       "America in the World"
     ],
-    "oneLineSummary": "What were the major factors contributing to U.S. Territorial expansion in the 1840s? 465 Why did the expansion of slavery become the most divisive political issue in the 1840s and 1850s?",
+    "oneLineSummary": "What were the major factors contributing to U.S. Territorial expansion in the 1840s? Why did the expansion of slavery become the most divisive political issue in the 1840s and 1850s?",
     "periodContext": "Territorial expansion after the 1840s intensified the national struggle over slavery, turning political compromise into repeated crisis and making sectional identity stronger than party loyalty.",
     "examTips": [
       "Track how a house divided changed who held political power and who remained excluded from it.",
@@ -347,7 +347,7 @@ window.chapter13Data = {
   },
   "notes": {
     "historicalContext": {
-      "overview": "What were the major factors contributing to U.S. Territorial expansion in the 1840s? 465 Why did the expansion of slavery become the most divisive political issue in the 1840s and 1850s?",
+      "overview": "What were the major factors contributing to U.S. Territorial expansion in the 1840s? Why did the expansion of slavery become the most divisive political issue in the 1840s and 1850s?",
       "precedingCauses": [],
       "geographicContext": "A House Divided connected national debates to wider regional, territorial, and international developments in ways that reshaped the United States beyond a single city or state.",
       "contextImage": {
@@ -2713,7 +2713,7 @@ window.chapter13Data = {
           "Another strong thesis could argue that a house divided reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What were the major factors contributing to U.S. Territorial expansion in the 1840s? 465 Why did the expansion of slavery become the most divisive political issue in the 1840s and 1850s?",
+          "contextualization": "What were the major factors contributing to U.S. Territorial expansion in the 1840s? Why did the expansion of slavery become the most divisive political issue in the 1840s and 1850s?",
           "bodyParagraph1": {
             "claim": "A Dose of Arsenic",
             "evidence": [
@@ -2758,7 +2758,7 @@ window.chapter13Data = {
           "Another strong thesis could argue that a house divided reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What were the major factors contributing to U.S. Territorial expansion in the 1840s? 465 Why did the expansion of slavery become the most divisive political issue in the 1840s and 1850s?",
+          "contextualization": "What were the major factors contributing to U.S. Territorial expansion in the 1840s? Why did the expansion of slavery become the most divisive political issue in the 1840s and 1850s?",
           "bodyParagraph1": {
             "claim": "A Dose of Arsenic",
             "evidence": [

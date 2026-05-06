@@ -337,7 +337,7 @@ window.chapter15Data = {
       "American and National Identity",
       "Culture and Society"
     ],
-    "oneLineSummary": "What visions of freedom did the former slaves and slaveholders pursue in the postwar South? 558 What were the sources, goals, and competing visions for Reconstruction? Reconstruction rewrote citizenship and rights before white supremacy regained political power.",
+    "oneLineSummary": "What visions of freedom did the former slaves and slaveholders pursue in the postwar South? What were the sources, goals, and competing visions for Reconstruction? Reconstruction rewrote citizenship and rights before white supremacy regained political power.",
     "periodContext": "After emancipation, Reconstruction became a struggle over the meaning of freedom, federal power, labor, and black citizenship, producing major constitutional changes that outlasted the era's political defeat.",
     "examTips": [
       "Track how \"what is freedom?\": reconstruction changed who held political power and who remained excluded from it.",
@@ -347,7 +347,7 @@ window.chapter15Data = {
   },
   "notes": {
     "historicalContext": {
-      "overview": "What visions of freedom did the former slaves and slaveholders pursue in the postwar South? 558 What were the sources, goals, and competing visions for Reconstruction? 570 What were the social and political effects of Radical Reconstruction in the South?",
+      "overview": "What visions of freedom did the former slaves and slaveholders pursue in the postwar South? What were the sources, goals, and competing visions for Reconstruction? What were the social and political effects of Radical Reconstruction in the South?",
       "precedingCauses": [],
       "geographicContext": "\"What Is Freedom?\": Reconstruction connected national debates to wider regional, territorial, and international developments in ways that reshaped the United States beyond a single city or state.",
       "contextImage": {
@@ -2198,7 +2198,7 @@ window.chapter15Data = {
           "Another strong thesis could argue that \"what is freedom?\": reconstruction reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What visions of freedom did the former slaves and slaveholders pursue in the postwar South? 558 What were the sources, goals, and competing visions for Reconstruction? 570 What were the social and political effects of Radical Reconstruction in the South?",
+          "contextualization": "What visions of freedom did the former slaves and slaveholders pursue in the postwar South? What were the sources, goals, and competing visions for Reconstruction? What were the social and political effects of Radical Reconstruction in the South?",
           "bodyParagraph1": {
             "claim": "Radical Reconstruction in the South",
             "evidence": [
@@ -2243,7 +2243,7 @@ window.chapter15Data = {
           "Another strong thesis could argue that \"what is freedom?\": reconstruction reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What visions of freedom did the former slaves and slaveholders pursue in the postwar South? 558 What were the sources, goals, and competing visions for Reconstruction? 570 What were the social and political effects of Radical Reconstruction in the South?",
+          "contextualization": "What visions of freedom did the former slaves and slaveholders pursue in the postwar South? What were the sources, goals, and competing visions for Reconstruction? What were the social and political effects of Radical Reconstruction in the South?",
           "bodyParagraph1": {
             "claim": "Radical Reconstruction in the South",
             "evidence": [

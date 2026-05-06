@@ -337,7 +337,7 @@ window.chapter16Data = {
       "Migration and Settlement",
       "Politics and Power"
     ],
-    "oneLineSummary": "What factors combined to make the United States a mature industrial society after the Civil War? 601 How did the economic development of the Gilded Age affect American freedom? Industrial capitalism, western conquest, and labor unrest reshaped the nation after Reconstruction.",
+    "oneLineSummary": "What factors combined to make the United States a mature industrial society after the Civil War? How did the economic development of the Gilded Age affect American freedom? Industrial capitalism, western conquest, and labor unrest reshaped the nation after Reconstruction.",
     "periodContext": "Rapid industrial growth linked the nation into a single market, but the Gilded Age also intensified inequality, corporate power, labor protest, and conflict over land, citizenship, and democracy.",
     "examTips": [
       "Track how america's gilded age changed who held political power and who remained excluded from it.",
@@ -347,7 +347,7 @@ window.chapter16Data = {
   },
   "notes": {
     "historicalContext": {
-      "overview": "What factors combined to make the United States a mature industrial society after the Civil War? 601 How did the economic development of the Gilded Age affect American freedom? 612 How did reformers of the period approach the problems of an industrial society?",
+      "overview": "What factors combined to make the United States a mature industrial society after the Civil War? How did the economic development of the Gilded Age affect American freedom? How did reformers of the period approach the problems of an industrial society?",
       "precedingCauses": [
         "Although the Civil War was over, the country in the late nineteenth century was racked by violence, by not only white supremacists in the South but widespread labor conflict, warfare against Native Americans in the West, and political assassinations. Indeed, the year of the statue's dedication, 1886, also witnessed the \"great upheaval,\" a wave of strikes and labor protests that touched every part of the nation. The 600 dignitaries (598 of them men) who gathered on what is now called Liberty Island for the dedication hoped the Statue of Liberty would inspire renewed devotion to the nation's political and economic system. But for all its grandeur, the statue could not conceal the deep social divisions and fears about the future of American freedom that accompanied the country's emergence as the world's leading industrial power. Nor did the celebrations address the crucial questions that moved to the center stage of American public life during the 1870s and 1880s and remained there for decades to come: What are the social conditions that make freedom possible, and what role should the national government play in defining and protecting the liberty of its citizens"
       ],
@@ -2753,7 +2753,7 @@ window.chapter16Data = {
           "Another strong thesis could argue that america's gilded age reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What factors combined to make the United States a mature industrial society after the Civil War? 601 How did the economic development of the Gilded Age affect American freedom? 612 How did reformers of the period approach the problems of an industrial society?",
+          "contextualization": "What factors combined to make the United States a mature industrial society after the Civil War? How did the economic development of the Gilded Age affect American freedom? How did reformers of the period approach the problems of an industrial society?",
           "bodyParagraph1": {
             "claim": "Freedom in the Gilded Age",
             "evidence": [
@@ -2798,7 +2798,7 @@ window.chapter16Data = {
           "Another strong thesis could argue that america's gilded age reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What factors combined to make the United States a mature industrial society after the Civil War? 601 How did the economic development of the Gilded Age affect American freedom? 612 How did reformers of the period approach the problems of an industrial society?",
+          "contextualization": "What factors combined to make the United States a mature industrial society after the Civil War? How did the economic development of the Gilded Age affect American freedom? How did reformers of the period approach the problems of an industrial society?",
           "bodyParagraph1": {
             "claim": "Freedom in the Gilded Age",
             "evidence": [

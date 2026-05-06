@@ -337,7 +337,7 @@ window.chapter14Data = {
       "American and National Identity",
       "Work, Exchange, Technology"
     ],
-    "oneLineSummary": "Why is the Civil War considered the first modern war? 509 How did a war to preserve the Union become a war to end slavery? Civil war mobilized the nation and transformed the meaning of union and emancipation.",
+    "oneLineSummary": "Why is the Civil War considered the first modern war? How did a war to preserve the Union become a war to end slavery? Civil war mobilized the nation and transformed the meaning of union and emancipation.",
     "periodContext": "The Civil War began as a struggle to preserve the Union, but military conflict, emancipation, and unprecedented state power transformed the war into a revolution in citizenship, labor, and federal authority.",
     "examTips": [
       "Track how a new birth of freedom: the civil war changed who held political power and who remained excluded from it.",
@@ -347,7 +347,7 @@ window.chapter14Data = {
   },
   "notes": {
     "historicalContext": {
-      "overview": "Why is the Civil War considered the first modern war? 509 How did a war to preserve the Union become a war to end slavery? 517 How did the Civil War transform the national economy and create a stronger nation-state?",
+      "overview": "Why is the Civil War considered the first modern war? How did a war to preserve the Union become a war to end slavery? How did the Civil War transform the national economy and create a stronger nation-state?",
       "precedingCauses": [],
       "geographicContext": "A New Birth of Freedom: The Civil War connected national debates to wider regional, territorial, and international developments in ways that reshaped the United States beyond a single city or state.",
       "contextImage": {
@@ -1855,7 +1855,7 @@ window.chapter14Data = {
           "Another strong thesis could argue that a new birth of freedom: the civil war reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "Why is the Civil War considered the first modern war? 509 How did a war to preserve the Union become a war to end slavery? 517 How did the Civil War transform the national economy and create a stronger nation-state?",
+          "contextualization": "Why is the Civil War considered the first modern war? How did a war to preserve the Union become a war to end slavery? How did the Civil War transform the national economy and create a stronger nation-state?",
           "bodyParagraph1": {
             "claim": "Rehearsals for Reconstruction and the End of the War",
             "evidence": [
@@ -1900,7 +1900,7 @@ window.chapter14Data = {
           "Another strong thesis could argue that a new birth of freedom: the civil war reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "Why is the Civil War considered the first modern war? 509 How did a war to preserve the Union become a war to end slavery? 517 How did the Civil War transform the national economy and create a stronger nation-state?",
+          "contextualization": "Why is the Civil War considered the first modern war? How did a war to preserve the Union become a war to end slavery? How did the Civil War transform the national economy and create a stronger nation-state?",
           "bodyParagraph1": {
             "claim": "Rehearsals for Reconstruction and the End of the War",
             "evidence": [

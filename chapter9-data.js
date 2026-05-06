@@ -337,7 +337,7 @@ window.chapter9Data = {
       "Migration and Settlement",
       "Culture and Society"
     ],
-    "oneLineSummary": "What were the main elements of the market revolution? 316 How did the market revolution spark social change? Transportation, industry, and reform remade work, migration, and ideas of freedom.",
+    "oneLineSummary": "What were the main elements of the market revolution? How did the market revolution spark social change? Transportation, industry, and reform remade work, migration, and ideas of freedom.",
     "periodContext": "During the early nineteenth century, transportation revolutions, industrial growth, and westward migration connected distant regions while creating new inequalities in labor, race, gender, and opportunity.",
     "examTips": [
       "Track how the market revolution changed who held political power and who remained excluded from it.",
@@ -347,7 +347,7 @@ window.chapter9Data = {
   },
   "notes": {
     "historicalContext": {
-      "overview": "What were the main elements of the market revolution? 316 How did the market revolution spark social change? 326 How did the meanings of American freedom change in this period?",
+      "overview": "What were the main elements of the market revolution? How did the market revolution spark social change? How did the meanings of American freedom change in this period?",
       "precedingCauses": [],
       "geographicContext": "The Market Revolution connected national debates to wider regional, territorial, and international developments in ways that reshaped the United States beyond a single city or state.",
       "contextImage": {
@@ -2437,7 +2437,7 @@ window.chapter9Data = {
           "Another strong thesis could argue that the market revolution reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What were the main elements of the market revolution? 316 How did the market revolution spark social change? 326 How did the meanings of American freedom change in this period?",
+          "contextualization": "What were the main elements of the market revolution? How did the market revolution spark social change? How did the meanings of American freedom change in this period?",
           "bodyParagraph1": {
             "claim": "A New Economy",
             "evidence": [
@@ -2482,7 +2482,7 @@ window.chapter9Data = {
           "Another strong thesis could argue that the market revolution reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What were the main elements of the market revolution? 316 How did the market revolution spark social change? 326 How did the meanings of American freedom change in this period?",
+          "contextualization": "What were the main elements of the market revolution? How did the market revolution spark social change? How did the meanings of American freedom change in this period?",
           "bodyParagraph1": {
             "claim": "A New Economy",
             "evidence": [

@@ -337,7 +337,7 @@ window.chapter10Data = {
       "American and National Identity",
       "America in the World"
     ],
-    "oneLineSummary": "What were the social bases for the flourishing democracy of the early mid-nineteenth century? 356 What efforts were made in this period to strengthen the economic integration of the nation, and what major crises hindered these efforts? Mass politics widened participation while sharpening sectional conflict and democratic limits.",
+    "oneLineSummary": "What were the social bases for the flourishing democracy of the early mid-nineteenth century? What efforts were made in this period to strengthen the economic integration of the nation, and what major crises hindered these efforts? Mass politics widened participation while sharpening sectional conflict and democratic limits.",
     "periodContext": "After the War of 1812, the United States experienced a surge in popular political participation, but that democratic expansion unfolded alongside banking crises, sectional arguments, Native removal, and racial exclusion.",
     "examTips": [
       "Track how democracy in america changed who held political power and who remained excluded from it.",
@@ -347,7 +347,7 @@ window.chapter10Data = {
   },
   "notes": {
     "historicalContext": {
-      "overview": "What were the social bases for the flourishing democracy of the early mid-nineteenth century? 356 What efforts were made in this period to strengthen the economic integration of the nation, and what major crises hindered these efforts? 361 What were the major areas of conflict between nationalism and sectionalism?",
+      "overview": "What were the social bases for the flourishing democracy of the early mid-nineteenth century? What efforts were made in this period to strengthen the economic integration of the nation, and what major crises hindered these efforts? What were the major areas of conflict between nationalism and sectionalism?",
       "precedingCauses": [],
       "geographicContext": "Democracy in America connected national debates to wider regional, territorial, and international developments in ways that reshaped the United States beyond a single city or state.",
       "contextImage": {
@@ -2805,7 +2805,7 @@ window.chapter10Data = {
           "Another strong thesis could argue that democracy in america reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What were the social bases for the flourishing democracy of the early mid-nineteenth century? 356 What efforts were made in this period to strengthen the economic integration of the nation, and what major crises hindered these efforts? 361 What were the major areas of conflict between nationalism and sectionalism?",
+          "contextualization": "What were the social bases for the flourishing democracy of the early mid-nineteenth century? What efforts were made in this period to strengthen the economic integration of the nation, and what major crises hindered these efforts? What were the major areas of conflict between nationalism and sectionalism?",
           "bodyParagraph1": {
             "claim": "Nation, Section, and Party",
             "evidence": [
@@ -2850,7 +2850,7 @@ window.chapter10Data = {
           "Another strong thesis could argue that democracy in america reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What were the social bases for the flourishing democracy of the early mid-nineteenth century? 356 What efforts were made in this period to strengthen the economic integration of the nation, and what major crises hindered these efforts? 361 What were the major areas of conflict between nationalism and sectionalism?",
+          "contextualization": "What were the social bases for the flourishing democracy of the early mid-nineteenth century? What efforts were made in this period to strengthen the economic integration of the nation, and what major crises hindered these efforts? What were the major areas of conflict between nationalism and sectionalism?",
           "bodyParagraph1": {
             "claim": "Nation, Section, and Party",
             "evidence": [

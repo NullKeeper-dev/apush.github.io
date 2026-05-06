@@ -337,7 +337,7 @@ window.chapter17Data = {
       "Politics and Power",
       "America in the World"
     ],
-    "oneLineSummary": "What were the origins and the significance of Populism? 650 How did the liberties of blacks after 1877 give way to legal segregation across the South? Segregation, Populism, labor conflict, and imperial expansion redefined who counted as American.",
+    "oneLineSummary": "What were the origins and the significance of Populism? How did the liberties of blacks after 1877 give way to legal segregation across the South? Segregation, Populism, labor conflict, and imperial expansion redefined who counted as American.",
     "periodContext": "By the 1890s, older promises of freedom collided with Jim Crow, nativism, labor unrest, and overseas empire, forcing Americans to ask who belonged inside democracy and who remained excluded from it.",
     "examTips": [
       "Track how freedom's boundaries, at home and abroad changed who held political power and who remained excluded from it.",
@@ -347,7 +347,7 @@ window.chapter17Data = {
   },
   "notes": {
     "historicalContext": {
-      "overview": "What were the origins and the significance of Populism? 650 How did the liberties of blacks after 1877 give way to legal segregation across the South? 658 In what ways did the boundaries of American freedom grow narrower in this period?",
+      "overview": "What were the origins and the significance of Populism? How did the liberties of blacks after 1877 give way to legal segregation across the South? In what ways did the boundaries of American freedom grow narrower in this period?",
       "precedingCauses": [],
       "geographicContext": "Freedom's Boundaries, at Home and Abroad connected national debates to wider regional, territorial, and international developments in ways that reshaped the United States beyond a single city or state.",
       "contextImage": {
@@ -2686,7 +2686,7 @@ window.chapter17Data = {
           "Another strong thesis could argue that freedom's boundaries, at home and abroad reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What were the origins and the significance of Populism? 650 How did the liberties of blacks after 1877 give way to legal segregation across the South? 658 In what ways did the boundaries of American freedom grow narrower in this period?",
+          "contextualization": "What were the origins and the significance of Populism? How did the liberties of blacks after 1877 give way to legal segregation across the South? In what ways did the boundaries of American freedom grow narrower in this period?",
           "bodyParagraph1": {
             "claim": "Becoming a World Power",
             "evidence": [
@@ -2731,7 +2731,7 @@ window.chapter17Data = {
           "Another strong thesis could argue that freedom's boundaries, at home and abroad reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What were the origins and the significance of Populism? 650 How did the liberties of blacks after 1877 give way to legal segregation across the South? 658 In what ways did the boundaries of American freedom grow narrower in this period?",
+          "contextualization": "What were the origins and the significance of Populism? How did the liberties of blacks after 1877 give way to legal segregation across the South? In what ways did the boundaries of American freedom grow narrower in this period?",
           "bodyParagraph1": {
             "claim": "Becoming a World Power",
             "evidence": [

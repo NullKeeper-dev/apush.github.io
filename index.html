@@ -958,7 +958,9 @@
       <div class="nav-links" id="nav-links">
         <a class="nav-link is-active" href="#top">Home</a>
         <a class="nav-link" href="#timeline">Timeline</a>
+        <a class="nav-link" href="significant-timeline.html">Significant Timeline</a>
         <a class="nav-link" href="#features">Tools</a>
+        <a class="nav-link" href="presidents.html">Presidents</a>
         <a class="nav-link" href="#how-to">Method</a>
         <span class="nav-underline" id="nav-underline" aria-hidden="true"></span>
       </div>
@@ -980,7 +982,7 @@
       <div class="hero-copy">
         <span class="eyebrow">Premium APUSH Study Guide</span>
         <h1>Master APUSH</h1>
-        <p class="hero-subtitle" id="home-hero-subtitle">Live chapters will appear here as their textbook data is integrated into the site.</p>
+        <p class="hero-subtitle" id="home-hero-subtitle">Live chapter overviews load here immediately, while the deeper study tools handle the heavier chapter data separately.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="timeline.html">Start Timeline</a>
           <a class="button button-ghost" href="#chapter-focus">Browse Live Chapters</a>
@@ -992,7 +994,7 @@
       <div class="section-head">
         <span class="section-label">Current Chapters</span>
         <h2 id="chapter-focus">Study the live chapter builds.</h2>
-        <p id="chapter-focus-copy">The chapter cards below are generated from the loaded source-backed chapter files.</p>
+        <p id="chapter-focus-copy">The chapter cards below render from a lightweight overview dataset so the home page loads faster.</p>
       </div>
 
       <div class="period-grid" id="chapter-grid" data-stagger-group>
@@ -1002,13 +1004,13 @@
         <div class="detail-meta">
           <p class="detail-label">Selected Chapter</p>
           <h3 class="detail-title" id="detail-title">Live Chapter</h3>
-          <p class="detail-range" id="detail-range">Period data loads here</p>
-          <span class="detail-theme" id="detail-theme">Source-backed chapter</span>
+          <p class="detail-range" id="detail-range">Period overview</p>
+          <span class="detail-theme" id="detail-theme">Fast chapter snapshot</span>
         </div>
         <div class="detail-body">
-          <p id="detail-summary">Use the chapter cards to inspect the loaded APUSH chapter builds and compare their central themes.</p>
+          <p id="detail-summary">Use the chapter cards to compare the major argument, period placement, and themes of each live APUSH chapter.</p>
           <ul class="detail-list" id="detail-list">
-            <li>Each card is generated from the active chapter data files.</li>
+            <li>Each card is rendered from a lightweight home-page overview record.</li>
             <li>The detail panel highlights summary themes and major takeaways.</li>
             <li>Use the Notes Study Map and term-definition flashcards to turn those chapter patterns into review and argument practice.</li>
           </ul>
@@ -1037,6 +1039,21 @@
           <p>Track continuity and change over time without losing chronology.</p>
         </a>
 
+        <a class="feature-card reveal-card" data-reveal href="significant-timeline.html" aria-label="Open the essay-focused APUSH significant timeline page">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 4v16"></path>
+              <path d="M12 7v13"></path>
+              <path d="M18 10v10"></path>
+              <path d="M4 6h4"></path>
+              <path d="M10 9h4"></path>
+              <path d="M16 12h4"></path>
+            </svg>
+          </span>
+          <h3>Significant Timeline</h3>
+          <p>Study only the high-value events that repeatedly work as named evidence in DBQs and LEQs.</p>
+        </a>
+
         <a class="feature-card reveal-card" data-reveal href="notes.html" aria-label="Open the APUSH notes page">
           <span class="feature-icon" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -1048,6 +1065,18 @@
           </span>
           <h3>Detailed Notes</h3>
           <p>Use the expanded Study Map to move through overview, context, events, figures, vocabulary, and essay prep without cramped navigation.</p>
+        </a>
+
+        <a class="feature-card reveal-card" data-reveal href="presidents.html" aria-label="Open the APUSH presidents review page">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3 4 7v3c0 5.2 3.4 9.92 8 11 4.6-1.08 8-5.8 8-11V7l-8-4Z"></path>
+              <path d="M9 11h6"></path>
+              <path d="M10 15h4"></path>
+            </svg>
+          </span>
+          <h3>Presidents Review</h3>
+          <p>Scan every completed presidency with APUSH significance, era filters, and fast comparisons across federal power, reform, war, and party shifts.</p>
         </a>
 
         <a class="feature-card reveal-card" data-reveal href="progress.html" aria-label="Open the APUSH progress check page">
@@ -1128,11 +1157,11 @@
   <p class="footer-note">Master the chronology, then use it to explain change, continuity, causation, and comparison.</p>
 
   <script src="chapter-manifest.js"></script>
-  <script src="chapter-loader.js"></script>
+  <script src="chapter-overview-data.js"></script>
   <script src="search.js"></script>
   <script src="mobile-nav.js"></script>
   <script>
-    window.chapterDataReady.then(() => {
+    (() => {
       const body = document.body;
       const particlesRoot = document.getElementById("particles");
       const revealGroups = document.querySelectorAll("[data-stagger-group]");
@@ -1151,27 +1180,22 @@
       const underline = document.getElementById("nav-underline");
       const navLinkItems = Array.from(document.querySelectorAll(".nav-link"));
       const navSections = Array.from(document.querySelectorAll("[data-nav-section]"));
-      const chapterData = (window.getChapterConfigs ? window.getChapterConfigs() : [])
-        .map(({ id, number, short, periodId, periodNumber, periodShort, periodLabel, periodRange, periodDisplay, data }) => ({
-          id,
-          number,
-          short,
-          periodId,
-          periodNumber,
-          periodShort,
-          periodLabel,
-          periodRange,
-          periodDisplay,
-          data
-        }))
-        .filter((entry) => entry.data?.chapterMeta);
+      const overviewLookup = window.chapterOverviewData || {};
+      const chapterData = (Array.isArray(window.chapterManifest) ? window.chapterManifest : [])
+        .map((entry) => {
+          const overview = overviewLookup[entry.id] || {};
+          return typeof window.enrichChapterEntry === "function"
+            ? window.enrichChapterEntry({ ...entry, ...overview })
+            : { ...entry, ...overview };
+        })
+        .filter((entry) => entry.id && entry.summary);
 
     const truncate = (text, maxLength = 96) => {
       const value = String(text || "").trim();
       return value.length > maxLength ? `${value.slice(0, maxLength - 3).trim()}...` : value;
     };
 
-    const chapterCards = chapterData.map(({ id, number, periodId, periodNumber, periodShort, periodLabel, periodRange, periodDisplay, data }) => ({
+    const chapterCards = chapterData.map(({ id, number, periodId, periodNumber, periodShort, periodLabel, periodRange, periodDisplay, title, summary, themes }) => ({
       id,
       number,
       short: `Chapter ${number}`,
@@ -1179,13 +1203,13 @@
       periodId,
       periodNumber,
       periodShort,
-      periodLabel: periodLabel || data.chapterMeta.period || "",
-      periodRange: periodRange || data.chapterMeta.dateRange || "",
-      periodDisplay: periodDisplay || [periodLabel || data.chapterMeta.period || "", periodRange || data.chapterMeta.dateRange || ""].filter(Boolean).join(" · "),
-      theme: data.chapterMeta.chapterTitle,
-      summary: data.chapterMeta.oneLineSummary,
-      note: truncate(data.chapterMeta.bigPictureThemes?.[0] || data.chapterMeta.oneLineSummary),
-      points: (data.chapterMeta.bigPictureThemes || []).slice(0, 3)
+      periodLabel: periodLabel || "",
+      periodRange: periodRange || "",
+      periodDisplay: periodDisplay || [periodLabel || "", periodRange || ""].filter(Boolean).join(" · "),
+      theme: title,
+      summary,
+      note: truncate((themes || [])[0] || summary),
+      points: (themes || []).slice(0, 3)
     }));
     const chapterCardGroups = typeof window.groupChapterEntriesByPeriod === "function"
       ? window.groupChapterEntriesByPeriod(chapterCards)
@@ -1300,7 +1324,7 @@
       }
 
       if (chapterFocusCopy) {
-        chapterFocusCopy.textContent = `The chapter cards below are grouped into ${periodGroupCount} APUSH period section${periodGroupCount === 1 ? "" : "s"} and generated from the ${chapterCards.length} loaded source-backed chapter file${chapterCards.length === 1 ? "" : "s"}.`;
+        chapterFocusCopy.textContent = `The chapter cards below are grouped into ${periodGroupCount} APUSH period section${periodGroupCount === 1 ? "" : "s"} and rendered from ${chapterCards.length} lightweight chapter overview record${chapterCards.length === 1 ? "" : "s"} for faster loading.`;
       }
     };
 
@@ -1399,9 +1423,7 @@
 
       createParticles();
       syncNavToScroll();
-    }).catch((error) => {
-      console.error("Failed to initialize chapter data on the home page.", error);
-    });
+    })();
   </script>
 
 </body>

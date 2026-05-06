@@ -221,13 +221,13 @@
 
   window.getChapterConfigs = () => buildConfigs();
 
-  window.chapterDataReady = activeManifest
-    .reduce((promise, entry) => promise.then(() => {
-      if (window[entry.global]) {
-        return null;
-      }
+  const uniqueScripts = Array.from(new Set(
+    activeManifest
+      .map((entry) => entry.script)
+      .filter(Boolean)
+  ));
 
-      return loadScript(entry.script);
-    }), Promise.resolve())
+  window.chapterDataReady = Promise
+    .all(uniqueScripts.map((script) => loadScript(script)))
     .then(() => buildConfigs());
 })();

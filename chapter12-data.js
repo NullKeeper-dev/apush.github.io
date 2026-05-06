@@ -337,7 +337,7 @@ window.chapter12Data = {
       "American and National Identity",
       "Politics and Power"
     ],
-    "oneLineSummary": "What were the major movements and goals of antebellum reform? 431 What were the different varieties of abolitionism? Evangelical energy, abolitionism, and early feminism widened public activism.",
+    "oneLineSummary": "What were the major movements and goals of antebellum reform? What were the different varieties of abolitionism? Evangelical energy, abolitionism, and early feminism widened public activism.",
     "periodContext": "Religious revival, print culture, and democratic politics encouraged Americans to believe society could be improved, but reform movements also exposed conflicts over race, slavery, gender, and citizenship.",
     "examTips": [
       "Track how an age of reform changed who held political power and who remained excluded from it.",
@@ -347,7 +347,7 @@ window.chapter12Data = {
   },
   "notes": {
     "historicalContext": {
-      "overview": "What were the major movements and goals of antebellum reform? 431 What were the different varieties of abolitionism? 440 How did abolitionism challenge barriers to racial equality and free speech?",
+      "overview": "What were the major movements and goals of antebellum reform? What were the different varieties of abolitionism? How did abolitionism challenge barriers to racial equality and free speech?",
       "precedingCauses": [],
       "geographicContext": "An Age of Reform connected national debates to wider regional, territorial, and international developments in ways that reshaped the United States beyond a single city or state.",
       "contextImage": {
@@ -2660,7 +2660,7 @@ window.chapter12Data = {
           "Another strong thesis could argue that an age of reform reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What were the major movements and goals of antebellum reform? 431 What were the different varieties of abolitionism? 440 How did abolitionism challenge barriers to racial equality and free speech?",
+          "contextualization": "What were the major movements and goals of antebellum reform? What were the different varieties of abolitionism? How did abolitionism challenge barriers to racial equality and free speech?",
           "bodyParagraph1": {
             "claim": "Black and White Abolitionism",
             "evidence": [
@@ -2705,7 +2705,7 @@ window.chapter12Data = {
           "Another strong thesis could argue that an age of reform reshaped the United States in important ways while also preserving older inequalities and conflicts."
         ],
         "outlineScaffold": {
-          "contextualization": "What were the major movements and goals of antebellum reform? 431 What were the different varieties of abolitionism? 440 How did abolitionism challenge barriers to racial equality and free speech?",
+          "contextualization": "What were the major movements and goals of antebellum reform? What were the different varieties of abolitionism? How did abolitionism challenge barriers to racial equality and free speech?",
           "bodyParagraph1": {
             "claim": "Black and White Abolitionism",
             "evidence": [

@@ -283,6 +283,12 @@ function normalizeCopy(value) {
     .trim();
 }
 
+function stripQuestionPageNumbers(value) {
+  return normalizeCopy(value)
+    .replace(/(\?)\s+\d{2,4}(?=(?:\s+[A-Z]|$))/g, "$1")
+    .trim();
+}
+
 function stripTags(value) {
   return normalizeCopy(
     String(value || "")
@@ -585,7 +591,7 @@ function extractChapterIntro(mainFile) {
   }
 
   const chunk = html.slice(focusHeading.index, focusHeading.nextIndex);
-  const items = extractChunkItems(chunk);
+  const items = extractChunkItems(chunk).map(stripQuestionPageNumbers);
   const focusQuestions = items.filter((item) => /\?$/.test(item)).slice(0, 5);
   const timelineLines = items.filter((item) => /^\d{4}(?:\s*[--]\s*\d{4})?\s+/.test(item));
   const introParagraphs = items
@@ -612,7 +618,7 @@ function extractReviewData(reviewFile) {
 
   headings.forEach((heading) => {
     const chunk = html.slice(heading.index, heading.nextIndex);
-    byHeading.set(heading.text, extractChunkItems(chunk));
+    byHeading.set(heading.text, extractChunkItems(chunk).map(stripQuestionPageNumbers));
   });
 
   return {
