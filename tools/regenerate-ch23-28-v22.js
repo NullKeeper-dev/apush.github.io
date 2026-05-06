@@ -952,13 +952,14 @@ function buildChapterFromSpec(spec) {
 }
 
 function writeChapterData(data) {
-  const outputPath = path.join(ROOT, `chapter${data.chapterNum}-data.js`);
+  const outputPath = path.join(ROOT, "data", "chapters", `chapter${data.chapterNum}-data.js`);
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, escapeForJsAssignment(data));
 }
 
 function loadLegacyBaseChapter(chapterNum) {
   return loadAssignedWindowData(
-    path.join(ROOT, `chapter${chapterNum}-data.js`),
+    path.join(ROOT, "data", "chapters", `chapter${chapterNum}-data.js`),
     `chapter${chapterNum}Data`
   );
 }

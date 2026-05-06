@@ -665,7 +665,9 @@ function buildChapter(spec) {
     flashcards: makeFlashcards({ ...spec, vocabulary }, images, timeline),
   };
 
-  fs.writeFileSync(path.join(ROOT, `chapter${spec.chapterNum}-data.js`), `window.chapter${spec.chapterNum}Data = ${JSON.stringify(data, null, 2)};\n`);
+  const outputPath = path.join(ROOT, "data", "chapters", `chapter${spec.chapterNum}-data.js`);
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, `window.chapter${spec.chapterNum}Data = ${JSON.stringify(data, null, 2)};\n`);
   return data;
 }
 

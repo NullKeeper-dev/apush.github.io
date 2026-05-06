@@ -21,7 +21,7 @@
       short: "Ch 1",
       title: "A New World",
       periodId: "p1",
-      script: "chapters1-6-data.js",
+      script: "data/chapters/chapters1-6-data.js",
       global: "chapter1Data"
     },
     {
@@ -30,7 +30,7 @@
       short: "Ch 2",
       title: "Beginnings of English America, 1607-1660",
       periodId: "p2",
-      script: "chapters1-6-data.js",
+      script: "data/chapters/chapters1-6-data.js",
       global: "chapter2Data"
     },
     {
@@ -39,7 +39,7 @@
       short: "Ch 3",
       title: "Creating Anglo-America, 1660-1750",
       periodId: "p2",
-      script: "chapters1-6-data.js",
+      script: "data/chapters/chapters1-6-data.js",
       global: "chapter3Data"
     },
     {
@@ -48,7 +48,7 @@
       short: "Ch 4",
       title: "Slavery, Freedom, and the Struggle for Empire, to 1763",
       periodId: "p2",
-      script: "chapters1-6-data.js",
+      script: "data/chapters/chapters1-6-data.js",
       global: "chapter4Data"
     },
     {
@@ -57,7 +57,7 @@
       short: "Ch 5",
       title: "The American Revolution, 1763-1783",
       periodId: "p3",
-      script: "chapters1-6-data.js",
+      script: "data/chapters/chapters1-6-data.js",
       global: "chapter5Data"
     },
     {
@@ -66,7 +66,7 @@
       short: "Ch 6",
       title: "The Revolution Within",
       periodId: "p3",
-      script: "chapters1-6-data.js",
+      script: "data/chapters/chapters1-6-data.js",
       global: "chapter6Data"
     },
     {
@@ -75,7 +75,7 @@
       short: "Ch 7",
       title: "Founding a Nation, 1783-1791",
       periodId: "p3",
-      script: "chapter7-data.js",
+      script: "data/chapters/chapter7-data.js",
       global: "chapter7Data"
     },
     {
@@ -84,7 +84,7 @@
       short: "Ch 8",
       title: "Securing the Republic",
       periodId: "p3",
-      script: "chapter8-data.js",
+      script: "data/chapters/chapter8-data.js",
       global: "chapter8Data"
     },
     {
@@ -93,7 +93,7 @@
       short: "Ch 9",
       title: "The Market Revolution",
       periodId: "p4",
-      script: "chapter9-data.js",
+      script: "data/chapters/chapter9-data.js",
       global: "chapter9Data"
     },
     {
@@ -102,7 +102,7 @@
       short: "Ch 10",
       title: "Democracy in America",
       periodId: "p4",
-      script: "chapter10-data.js",
+      script: "data/chapters/chapter10-data.js",
       global: "chapter10Data"
     },
     {
@@ -111,7 +111,7 @@
       short: "Ch 11",
       title: "The Peculiar Institution",
       periodId: "p4",
-      script: "chapter11-data.js",
+      script: "data/chapters/chapter11-data.js",
       global: "chapter11Data"
     },
     {
@@ -120,7 +120,7 @@
       short: "Ch 12",
       title: "An Age of Reform",
       periodId: "p5",
-      script: "chapter12-data.js",
+      script: "data/chapters/chapter12-data.js",
       global: "chapter12Data"
     },
     {
@@ -129,7 +129,7 @@
       short: "Ch 13",
       title: "A House Divided",
       periodId: "p5",
-      script: "chapter13-data.js",
+      script: "data/chapters/chapter13-data.js",
       global: "chapter13Data"
     },
     {
@@ -138,7 +138,7 @@
       short: "Ch 14",
       title: "A New Birth of Freedom: The Civil War",
       periodId: "p5",
-      script: "chapter14-data.js",
+      script: "data/chapters/chapter14-data.js",
       global: "chapter14Data"
     },
     {
@@ -147,7 +147,7 @@
       short: "Ch 15",
       title: "\"What Is Freedom?\": Reconstruction",
       periodId: "p5",
-      script: "chapter15-data.js",
+      script: "data/chapters/chapter15-data.js",
       global: "chapter15Data"
     },
     {
@@ -156,7 +156,7 @@
       short: "Ch 16",
       title: "America's Gilded Age",
       periodId: "p6",
-      script: "chapter16-data.js",
+      script: "data/chapters/chapter16-data.js",
       global: "chapter16Data"
     },
     {
@@ -165,7 +165,7 @@
       short: "Ch 17",
       title: "Freedom's Boundaries, at Home and Abroad",
       periodId: "p6",
-      script: "chapter17-data.js",
+      script: "data/chapters/chapter17-data.js",
       global: "chapter17Data"
     },
     {
@@ -174,7 +174,7 @@
       short: "Ch 18",
       title: "The Progressive Era",
       periodId: "p7",
-      script: "chapter18-data.js",
+      script: "data/chapters/chapter18-data.js",
       global: "chapter18Data"
     },
     {
@@ -183,7 +183,7 @@
       short: "Ch 19",
       title: "Safe for Democracy: The United States and World War I",
       periodId: "p7",
-      script: "chapter19-data.js",
+      script: "data/chapters/chapter19-data.js",
       global: "chapter19Data"
     },
     {
@@ -192,7 +192,7 @@
       short: "Ch 20",
       title: "From Business Culture to Great Depression",
       periodId: "p7",
-      script: "chapter20-data.js",
+      script: "data/chapters/chapter20-data.js",
       global: "chapter20Data"
     },
     {
@@ -201,7 +201,7 @@
       short: "Ch 21",
       title: "The New Deal",
       periodId: "p7",
-      script: "chapter21-data.js",
+      script: "data/chapters/chapter21-data.js",
       global: "chapter21Data"
     },
     {
@@ -210,7 +210,7 @@
       short: "Ch 22",
       title: "Fighting for the Four Freedoms: World War II, 1941-1945",
       periodId: "p7",
-      script: "chapter22-data.js",
+      script: "data/chapters/chapter22-data.js",
       global: "chapter22Data"
     },
     {
@@ -219,7 +219,7 @@
       short: "Ch 23",
       title: "The United States and the Cold War, 1945-1953",
       periodId: "p8",
-      script: "chapter23-data.js",
+      script: "data/chapters/chapter23-data.js",
       global: "chapter23Data"
     },
     {
@@ -228,7 +228,7 @@
       short: "Ch 24",
       title: "An Affluent Society, 1953-1960",
       periodId: "p8",
-      script: "chapter24-data.js",
+      script: "data/chapters/chapter24-data.js",
       global: "chapter24Data"
     },
     {
@@ -237,7 +237,7 @@
       short: "Ch 25",
       title: "The Sixties, 1960-1968",
       periodId: "p8",
-      script: "chapter25-data.js",
+      script: "data/chapters/chapter25-data.js",
       global: "chapter25Data"
     },
     {
@@ -246,7 +246,7 @@
       short: "Ch 26",
       title: "The Conservative Turn, 1969-1988",
       periodId: "p8",
-      script: "chapter26-data.js",
+      script: "data/chapters/chapter26-data.js",
       global: "chapter26Data"
     },
     {
@@ -255,7 +255,7 @@
       short: "Ch 27",
       title: "From Triumph to Tragedy, 1989-2004",
       periodId: "p9",
-      script: "chapter27-data.js",
+      script: "data/chapters/chapter27-data.js",
       global: "chapter27Data"
     },
     {
@@ -264,7 +264,7 @@
       short: "Ch 28",
       title: "A Divided Nation",
       periodId: "p9",
-      script: "chapter28-data.js",
+      script: "data/chapters/chapter28-data.js",
       global: "chapter28Data"
     }
   ];

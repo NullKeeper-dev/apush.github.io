@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="styles/search.css">
   <style>
     :root {
       --bg: #0d0d0f;
@@ -1989,7 +1989,7 @@
     </section>
   </main>
 
-  <script src="chapter-manifest.js"></script>
+  <script src="scripts/core/chapter-manifest.js"></script>
   <script>
     (() => {
       const chapterEntries = Array.isArray(window.chapterManifest) ? window.chapterManifest : [];
@@ -2004,9 +2004,9 @@
       }
     })();
   </script>
-  <script src="chapter-loader.js"></script>
-  <script src="search.js"></script>
-  <script src="mobile-nav.js"></script>
-  <script src="notes.js"></script>
+  <script src="scripts/core/chapter-loader.js"></script>
+  <script src="scripts/core/search.js"></script>
+  <script src="scripts/core/mobile-nav.js"></script>
+  <script src="scripts/pages/notes.js"></script>
 </body>
 </html>

@@ -232,7 +232,7 @@ function deepClone(value) {
 }
 
 function loadChapterData(chapterNum) {
-  const filePath = path.join(ROOT, `chapter${chapterNum}-data.js`);
+  const filePath = path.join(ROOT, "data", "chapters", `chapter${chapterNum}-data.js`);
   const code = fs.readFileSync(filePath, "utf8");
   const context = { window: {} };
   vm.createContext(context);
@@ -241,7 +241,8 @@ function loadChapterData(chapterNum) {
 }
 
 function writeChapterData(data) {
-  const outputPath = path.join(ROOT, `chapter${data.chapterNum}-data.js`);
+  const outputPath = path.join(ROOT, "data", "chapters", `chapter${data.chapterNum}-data.js`);
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, `window.chapter${data.chapterNum}Data = ${JSON.stringify(data, null, 2)};\n`);
 }
 

@@ -1,6 +1,6 @@
 window.significantTimelineData = {
-  scopeNote: "This page is a curated evidence bank of major APUSH events, not a full event-by-event textbook timeline.",
-  strategyNote: "For DBQ and LEQ writing, name the event, place it in the right period, then connect it to a specific consequence, policy, or historical shift.",
+  scopeNote: "This page is a curated review bank of major APUSH events, not a full event-by-event textbook timeline.",
+  strategyNote: "For DBQ and LEQ writing, name the event, place it in the right period, explain what caused it, and connect it to a clear historical effect.",
   events: [
     {
       id: "columbian-exchange",

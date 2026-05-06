@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT_PATH = ROOT / "chapters1-6-data.js"
+OUT_PATH = ROOT / "data" / "chapters" / "chapters1-6-data.js"
 
 
 THEME = {
@@ -2510,6 +2510,7 @@ chapter_specs.append(
 
 def main():
     chapters = [build_chapter(spec) for spec in chapter_specs]
+    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with OUT_PATH.open("w", encoding="utf-8", newline="\n") as handle:
         for spec, chapter in zip(chapter_specs, chapters):
             handle.write(f"window.chapter{spec['chapterNum']}Data = JSON.parse(String.raw`")

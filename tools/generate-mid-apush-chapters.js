@@ -1377,7 +1377,8 @@ function buildChapterData(config) {
 }
 
 function writeChapterFile(data) {
-  const outputPath = path.join(ROOT, `chapter${data.chapterNum}-data.js`);
+  const outputPath = path.join(ROOT, "data", "chapters", `chapter${data.chapterNum}-data.js`);
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, `window.chapter${data.chapterNum}Data = ${JSON.stringify(data, null, 2)};\n`);
 }
 

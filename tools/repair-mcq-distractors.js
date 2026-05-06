@@ -3,7 +3,7 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = path.resolve(__dirname, "..");
-const MANIFEST_FILE = path.join(ROOT, "chapter-manifest.js");
+const MANIFEST_FILE = path.join(ROOT, "scripts", "core", "chapter-manifest.js");
 const LETTERS = ["A", "B", "C", "D"];
 const QUESTION_THRESHOLD_RATIO = 0.6;
 
